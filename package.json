@@ -1,0 +1,15 @@
+{
+  "name": "il-mio-sito-internet",
+  "version": "1.0.0",
+  "description": "Il sito personale di Marta Brentan, editor e UX/UI designer, realizzato con HTML, Sass e Bootstrap 5, ospitato su GitHub Pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.93.3"
+  }
+}

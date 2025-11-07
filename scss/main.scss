@@ -1,0 +1,145 @@
+$primary: #007A78;
+$secondary: #009B98;
+$body-bg: #FAF9F6;
+$body-color: #333333;
+$font-family-base: 'Epilogue', sans-serif;
+
+@import "bootstrap";
+
+/* === Variabili di base === */
+$color-panna: #FAF9F6;
+$color-text: #333333;
+$color-accent: #007A78;
+
+$font-primary: 'Epilogue', sans-serif;
+$font-secondary: 'Fraunces', serif;
+
+/* === Impostazioni globali === */
+body {
+  background-color: $color-panna;
+  color: $color-text;
+  font-family: $font-primary;
+  line-height: 1.6;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: $color-panna !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  .nav-link {
+    color: $color-text;
+    margin: 0 0.5rem;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  .btn {
+    font-family: $font-primary;
+    border-radius: 0;
+    &.btn-primary {
+      background-color: $color-accent;
+      border: none;
+      color: white;
+      &:hover {
+        background-color: darken($color-accent, 8%);
+      }
+    }
+    &.btn-outline-primary {
+      border: 1px solid $color-accent;
+      color: $color-accent;
+      &:hover {
+        background-color: $color-accent;
+        color: white;
+      }
+    }
+  }
+}
+
+/* === Hero === */
+.hero {
+  h1 {
+    font-family: $font-secondary;
+    color: $color-text;
+  }
+  p {
+    font-family: $font-primary;
+    color: $color-text;
+  }
+}
+
+.area-card {
+  background-color: white;
+  border-radius: 16px;
+  border: none;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    font-family: $font-secondary;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+/* === Projects === */
+.project-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* === CV Box === */
+.cv-box {
+  background-color: lighten($color-accent, 45%);
+  h2 {
+    font-family: $font-secondary;
+    color: $color-text;
+  }
+}
+
+/* === Footer === */
+.footer {
+  background-color: $color-text;
+  color: $color-panna;
+  h5 {
+    font-family: $font-secondary;
+    margin-bottom: 1rem;
+    color: $color-panna;
+  }
+  a {
+    color: $color-panna;
+    text-decoration: none;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+/* --- Spaziature globali --- */
+section {
+  padding: 5rem 0;
+}
+
+/* --- Tipografia --- */
+h1, h2, h3, h4, h5 {
+  color: $color-text;
+  font-family: $font-secondary;
+}
+
+/* --- Colori link generali --- */
+a {
+  color: $color-accent;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+

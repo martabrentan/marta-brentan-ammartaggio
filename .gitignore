@@ -1,0 +1,8 @@
+# Evita di caricare librerie e file temporanei
+node_modules/
+.DS_Store
+*.log
+
+# Evita file compilati che si rigenerano
+*.map
+sass-cache/

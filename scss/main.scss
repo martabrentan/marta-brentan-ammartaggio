@@ -1,145 +1,168 @@
-$primary: #007A78;
-$secondary: #009B98;
-$body-bg: #FAF9F6;
-$body-color: #333333;
-$font-family-base: 'Epilogue', sans-serif;
+/* === VARIABILI BASE === */
+:root {
+  --panna: #FAF9F6;
+  --text: #333333;
+  --primary: #007A78;
+  --primary-2: #009B98;
+  --font-primary: "Epilogue", sans-serif;
+  --font-secondary: "Fraunces", serif;
+}
 
-@import "bootstrap";
-
-/* === Variabili di base === */
-$color-panna: #FAF9F6;
-$color-text: #333333;
-$color-accent: #007A78;
-
-$font-primary: 'Epilogue', sans-serif;
-$font-secondary: 'Fraunces', serif;
-
-/* === Impostazioni globali === */
+/* === IMPOSTAZIONI GENERALI === */
 body {
-  background-color: $color-panna;
-  color: $color-text;
-  font-family: $font-primary;
+  background-color: var(--panna);
+  color: var(--text);
+  font-family: var(--font-primary);
   line-height: 1.6;
+  margin: 0;
 }
 
-/* === Navbar === */
-.navbar {
-  background-color: $color-panna !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-
-  .nav-link {
-    color: $color-text;
-    margin: 0 0.5rem;
-    &:hover {
-      color: $color-accent;
-    }
-  }
-
-  .btn {
-    font-family: $font-primary;
-    border-radius: 0;
-    &.btn-primary {
-      background-color: $color-accent;
-      border: none;
-      color: white;
-      &:hover {
-        background-color: darken($color-accent, 8%);
-      }
-    }
-    &.btn-outline-primary {
-      border: 1px solid $color-accent;
-      color: $color-accent;
-      &:hover {
-        background-color: $color-accent;
-        color: white;
-      }
-    }
-  }
-}
-
-/* === Hero === */
-.hero {
-  h1 {
-    font-family: $font-secondary;
-    color: $color-text;
-  }
-  p {
-    font-family: $font-primary;
-    color: $color-text;
-  }
-}
-
-.area-card {
-  background-color: white;
-  border-radius: 16px;
-  border: none;
-  padding: 2.5rem 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  h3 {
-    font-family: $font-secondary;
-    margin-bottom: 1.5rem;
-  }
-}
-
-
-/* === Projects === */
-.project-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  text-align: center;
-  padding: 3rem 0;
-}
-
-/* === CV Box === */
-.cv-box {
-  background-color: lighten($color-accent, 45%);
-  h2 {
-    font-family: $font-secondary;
-    color: $color-text;
-  }
-}
-
-/* === Footer === */
-.footer {
-  background-color: $color-text;
-  color: $color-panna;
-  h5 {
-    font-family: $font-secondary;
-    margin-bottom: 1rem;
-    color: $color-panna;
-  }
-  a {
-    color: $color-panna;
-    text-decoration: none;
-    &:hover {
-      color: $color-accent;
-    }
-  }
-}
-/* --- Spaziature globali --- */
 section {
   padding: 5rem 0;
 }
 
-/* --- Tipografia --- */
-h1, h2, h3, h4, h5 {
-  color: $color-text;
-  font-family: $font-secondary;
-}
+/* === NAVBAR === */
+.navbar {
+  background-color: var(--panna) !important;
+  padding: 1.2rem 3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
-/* --- Colori link generali --- */
-a {
-  color: $color-accent;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+  .navbar-brand img {
+    height: 36px;
+  }
+
+  .nav-link {
+    color: var(--text);
+    margin: 0 0.5rem;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: var(--primary);
+    }
   }
 }
 
+/* === HERO === */
+.hero h1 {
+  font-family: var(--font-secondary);
+  color: var(--text);
+}
+
+/* === CARD BASE === */
+.card-base {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  height: 420px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--panna);
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  h3 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--panna);
+    transition: color 0.3s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+
+    h3 {
+      color: var(--primary);
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+/* === AREA CARD === */
+.area-card {
+  @extend .card-base;
+
+  &.editorial { background-image: url("../assets/img/sfondo editorial.png"); }
+  &.voice { background-image: url("../assets/img/sfondo voice.png"); }
+  &.design { background-image: url("../assets/img/sfondo design.png"); }
+  &.progettazione { background-image: url("../assets/img/sfondo progettazione.png"); }
+}
+
+/* === SCROLL ORIZZONTALE PROGETTI === */
+.projects-scroll {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 2rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  justify-content: flex-start;
+}
+
+.projects-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+/* === CARD PROGETTI === */
+.project-card {
+  @extend .card-base;
+  flex: 0 0 340px;
+  scroll-snap-align: start;
+  margin-bottom: 0;
+
+  &.progetto1 { background-image: url ("../assets/img/progetto wireframe mobile.png"); }
+  &.progetto2 { background-image: url("../assets/img/progetto wireframe desktop.png"); }
+  &.progetto3 { background-image: url("../assets/img/progetto includo.png"); }
+  &.progetto4 { background-image: url("../assets/img/progetto copywrite.png"); }
+  &.progetto5 { background-image: url("../assets/img/progetto accessibilità.png"); }
+  &.progetto6 { background-image: url("../assets/img/progetto legalescuola.png"); }
+  &.progetto7 { background-image: url("../assets/img/progetto discovery.png"); }
+  &.progetto8 { background-image: url("../assets/img/progetto prototipo desktop.png"); }
+  &.progetto9 { background-image: url("../assets/img/progetto prototipo mobile.png"); }
+}
+
+
+/* === FOOTER === */
+.footer {
+  background-color: var(--text);
+  color: var(--panna);
+
+  a {
+    color: var(--panna);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--primary-2);
+    }
+  }
+}

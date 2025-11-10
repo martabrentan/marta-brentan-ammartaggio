@@ -1,97 +1,321 @@
-/* === Variabili di base === */
-/* === Impostazioni globali === */
+:root {
+  --panna: #FAF9F6;
+  --text: #333333;
+  --primary: #007A78;
+  --primary-2: #009B98;
+  --font-primary: "Epilogue", sans-serif;
+  --font-secondary: "Fraunces", serif;
+}
+
+/* === Impostazioni generali === */
 body {
-  background-color: #FAF9F6;
-  color: #333333;
-  font-family: "Epilogue", sans-serif;
+  background-color: var(--panna);
+  color: var(--text);
+  font-family: var(--font-primary);
   line-height: 1.6;
+  margin: 0;
+}
+
+section {
+  padding: 5rem 0;
 }
 
 /* === Navbar === */
 .navbar {
-  background-color: #FAF9F6 !important;
+  background-color: var(--panna) !important;
+  padding: 1.2rem 3rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-.navbar .nav-link {
-  color: #333333;
+
+.navbar-brand img {
+  height: 36px;
+}
+
+.nav-link {
+  color: var(--text);
   margin: 0 0.5rem;
+  transition: color 0.2s ease;
 }
-.navbar .nav-link:hover {
-  color: #007A78;
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: var(--primary);
 }
+
+/* === Bottoni uniformati globalmente === */
+.btn,
 .navbar .btn {
-  font-family: "Epilogue", sans-serif;
-  border-radius: 0;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  padding: 0.7rem 1.6rem;
+  min-width: 180px; /* larghezza minima coerente */
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
-.navbar .btn.btn-primary {
-  background-color: #007A78;
+
+.btn-primary {
+  background-color: var(--primary);
   border: none;
-  color: white;
+  color: #fff;
 }
-.navbar .btn.btn-primary:hover {
-  background-color: rgb(0, 81.2, 79.868852459);
+
+.btn-primary:hover {
+  background-color: var(--primary-2);
+  transform: scale(1.03);
 }
-.navbar .btn.btn-outline-primary {
-  border: 1px solid #007A78;
-  color: #007A78;
+
+.btn-outline-primary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
 }
-.navbar .btn.btn-outline-primary:hover {
-  background-color: #007A78;
-  color: white;
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: #fff;
+  transform: scale(1.03);
 }
+
 
 /* === Hero === */
 .hero h1 {
-  font-family: "Fraunces", serif;
-  color: #333333;
+  font-family: var(--font-secondary);
+  color: var(--text);
 }
+
 .hero p {
-  font-family: "Epilogue", sans-serif;
-  color: #333333;
+  font-family: var(--font-primary);
+  color: var(--text);
 }
 
 /* === Area cards === */
 .area-card {
-  background-color: white;
-  border: 1px solid #e6e6e6;
-  padding: 2rem;
-}
-.area-card h3 {
-  font-family: "Fraunces", serif;
-  margin-bottom: 1rem;
-}
-
-/* === Projects === */
-.project-card {
-  background-color: white;
-  border: 1px solid #ddd;
+  position: relative;
+  display: flex;
+  align-items: center; /* centrato verticalmente */
+  justify-content: center; /* centrato orizzontalmente */
+  border-radius: 18px;
+  height: 420px; /* più alta, come le project-card */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--panna);
   text-align: center;
-  padding: 3rem 0;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* === CV Box === */
-.cv-box {
-  background-color: #333333(96.5, 255, 252.4016393443);
+.area-card h3 {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--panna);
+  transition: color 0.3s ease;
 }
-.cv-box h2 {
-  font-family: "Fraunces", serif;
-  color: #333333;
+
+.area-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: background 0.3s ease;
 }
+
+.area-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.area-card:hover .overlay {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.area-card:hover h3 {
+  color: var(--text); /* testo nero su hover */
+}
+
+/* immagini */
+.area-card.editorial::before,
+.area-card.voice::before,
+.area-card.design::before,
+.area-card.progettazione::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+
+.area-card.editorial::before { background-image: url("../assets/img/sfondo editorial.png"); }
+.area-card.voice::before { background-image: url("../assets/img/sfondo voice.png"); }
+.area-card.design::before { background-image: url("../assets/img/sfondo design.png"); }
+.area-card.progettazione::before { background-image: url("../assets/img/sfondo\ progettazione.png"); }
+
+
+/* === Sezione Portfolio (sfondo nero) === */
+.bg-dark-portfolio {
+  background-color: var(--text);
+  color: var(--panna);
+}
+
+.bg-dark-portfolio h2,
+.bg-dark-portfolio p {
+  color: var(--panna);
+}
+
+/* === Testo sezione Portfolio === */
+.bio p.lead {
+  font-size: 1.05rem; /* più sobrio, meno “lead tipografico” */
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+
+/* === CV === */
+.bg-dark-cv {
+  background-color: var(--text);
+  color: var(--panna);
+}
+
+.bg-dark-cv h2,
+.bg-dark-cv p {
+  color: var(--panna);
+}
+
+
+/* === Testo sezione CV (Sfondo nero)  === */
+.bio p.lead {
+  font-size: 1.05rem; /* più sobrio, meno “lead tipografico” */
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
 
 /* === Footer === */
 .footer {
-  background-color: #FAF9F6;
-}
-.footer h5 {
-  font-family: "Fraunces", serif;
-  margin-bottom: 1rem;
-}
-.footer a {
-  text-decoration: none;
-  color: #333333;
-}
-.footer a:hover {
-  color: #007A78;
+  background-color: var(--text);
+  color: var(--panna);
 }
 
-/*# sourceMappingURL=main.css.map */
+.footer h5 {
+  font-family: var(--font-secondary);
+  margin-bottom: 1rem;
+  color: var(--panna);
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--panna);
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--primary-2);
+}
+.footer i {
+  font-size: 1.1rem;
+  vertical-align: middle;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover i {
+  color: var(--primary-2);
+}
+
+
+/* === Sezione Progetti con scroll orizzontale === */
+.projects-scroll {
+  display: flex !important;
+  flex-wrap: nowrap !important; /* impedisce che le card vadano a capo */
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden; /* blocca lo scroll verticale */
+  padding: 1rem 2rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* scroll fluido su mobile */
+  justify-content: flex-start;
+}
+
+.projects-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+/* === Card dei progetti (identiche alle area-card) === */
+.project-card {
+  position: relative;
+  flex: 0 0 340px; /* larghezza fissa delle card */
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  text-decoration: none;
+  color: var(--panna);
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.project-card h3 {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--panna);
+  transition: color 0.3s ease;
+}
+
+.project-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card:hover .overlay {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.project-card:hover h3 {
+  color: var(--primary);
+}
+
+/* === Immagini specifiche dei progetti === */
+.project-card.progetto1 { background-image: url("../assets/img/progetto\ wireframe\ mobile.png"); }
+.project-card.progetto2 { background-image: url("../assets/img/progetto\ wireframe\ desktop.png"); }
+.project-card.progetto3 { background-image: url("../assets/img/progetto\ includo.png"); }
+.project-card.progetto4 { background-image: url("../assets/img/progetto\ copywrite.png"); }
+.project-card.progetto5 { background-image: url("../assets/img/progetto\ accessibilità.png"); }
+.project-card.progetto6 { background-image: url("../assets/img/progetto\ legalescuola.png"); }
+.project-card.progetto7 { background-image: url("../assets/img/progetto\ discovery.png"); }
+.project-card.progetto8 { background-image: url("../assets/img/progetto\ prototipo\ desktop.png"); }
+.project-card.progetto9 { background-image: url("../assets/img/progetto\ prototipo\ mobile.png"); }

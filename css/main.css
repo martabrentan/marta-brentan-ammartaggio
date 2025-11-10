@@ -237,6 +237,157 @@ section {
   color: var(--primary-2);
 }
 
+/* === IMPORT PAGINE SPECIFICHE === */
+/* === CHI SONO PAGE === */
+.about {
+  background-color: var(--panna);
+  color: var(--text);
+}
+.about h1 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about h3 {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+.about p {
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.about .about-img {
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* === LINK STYLING === */
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--primary);
+}
+
+/* === SOFTWARE SKILLS === */
+.skills {
+  background-color: var(--panna);
+  color: var(--text);
+}
+.skills h4 {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.skills .skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2rem;
+}
+.skills .skill-icon {
+  width: 45px;
+  height: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.skills .skill-icon:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+@media (max-width: 576px) {
+  .skills .skill-icon {
+    width: 34px;
+  }
+}
+
+/* === FIELDS === */
+.fields {
+  background-color: var(--panna);
+}
+.fields .area-card {
+  height: 240px;
+}
+.fields .area-card h3 {
+  font-size: 1.3rem;
+}
+
+/* === BLOG PREVIEW === */
+.blog-preview {
+  background-color: var(--panna);
+}
+.blog-preview p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+/* === FORM CONTATTI === */
+.contact {
+  background: linear-gradient(to bottom, #faf9f6 0%, #f2f2f2 100%);
+  color: var(--text);
+}
+.contact form .form-control {
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.contact form .form-control:focus {
+  outline: none;
+  border-color: var(--primary-2);
+  background-color: rgba(0, 122, 120, 0.15);
+  box-shadow: 0 0 0 2px rgba(0, 154, 152, 0.15);
+}
+.contact form .form-control:hover {
+  background-color: rgba(0, 122, 120, 0.1);
+}
+.contact form button {
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.contact form button:hover {
+  background-color: rgba(0, 122, 120, 0.8);
+  transform: scale(1.02);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .about {
+    text-align: center;
+  }
+  .about .about-img {
+    margin-top: 2rem;
+  }
+  .fields .area-card {
+    height: 180px;
+  }
+}
+@media (max-width: 576px) {
+  .about h1 {
+    font-size: 1.8rem;
+  }
+  .about h3 {
+    font-size: 1.1rem;
+  }
+  .skills .skill-icon {
+    width: 36px;
+  }
+}
 /* === MEDIA QUERIES === */
 @media (max-width: 992px) {
   section {
@@ -290,6 +441,156 @@ section {
   }
   .footer h5 {
     margin-top: 1rem;
+  }
+}
+/* === CHI SONO PAGE === */
+.about {
+  background-color: var(--panna);
+  color: var(--text);
+}
+.about h1 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about h3 {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+.about p {
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.about .about-img {
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* === LINK STYLING === */
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--primary);
+}
+
+/* === SOFTWARE SKILLS === */
+.skills {
+  background-color: var(--panna);
+  color: var(--text);
+}
+.skills h4 {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.skills .skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2rem;
+}
+.skills .skill-icon {
+  width: 45px;
+  height: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.skills .skill-icon:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+@media (max-width: 576px) {
+  .skills .skill-icon {
+    width: 34px;
+  }
+}
+
+/* === FIELDS === */
+.fields {
+  background-color: var(--panna);
+}
+.fields .area-card {
+  height: 240px;
+}
+.fields .area-card h3 {
+  font-size: 1.3rem;
+}
+
+/* === BLOG PREVIEW === */
+.blog-preview {
+  background-color: var(--panna);
+}
+.blog-preview p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+/* === FORM CONTATTI === */
+.contact {
+  background: linear-gradient(to bottom, #faf9f6 0%, #f2f2f2 100%);
+  color: var(--text);
+}
+.contact form .form-control {
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.contact form .form-control:focus {
+  outline: none;
+  border-color: var(--primary-2);
+  background-color: rgba(0, 122, 120, 0.15);
+  box-shadow: 0 0 0 2px rgba(0, 154, 152, 0.15);
+}
+.contact form .form-control:hover {
+  background-color: rgba(0, 122, 120, 0.1);
+}
+.contact form button {
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.contact form button:hover {
+  background-color: rgba(0, 122, 120, 0.8);
+  transform: scale(1.02);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .about {
+    text-align: center;
+  }
+  .about .about-img {
+    margin-top: 2rem;
+  }
+  .fields .area-card {
+    height: 180px;
+  }
+}
+@media (max-width: 576px) {
+  .about h1 {
+    font-size: 1.8rem;
+  }
+  .about h3 {
+    font-size: 1.1rem;
+  }
+  .skills .skill-icon {
+    width: 36px;
   }
 }
 

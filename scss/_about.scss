@@ -13,7 +13,8 @@
     font-family: var(--font-secondary);
     font-weight: 600;
     color: var(--primary);
-    font-size: 1.35rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
     margin-bottom: 2rem;
   }
 
@@ -59,25 +60,25 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem 2rem;
   }
 
   .skill-icon {
-    width: 50px;
+    width: 45px;
     height: auto;
     opacity: 0.9;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
     transition: transform 0.3s ease, opacity 0.3s ease;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.08);
       opacity: 1;
     }
   }
 
   @media (max-width: 576px) {
     .skill-icon {
-      width: 38px;
+      width: 34px;
     }
   }
 }
@@ -88,6 +89,7 @@ a {
 
   .area-card {
     height: 240px;
+
     h3 {
       font-size: 1.3rem;
     }
@@ -113,15 +115,15 @@ a {
   form {
     .form-control {
       border: 1px solid var(--primary);
-      border-radius: 8px;
-      padding: 1rem 1.2rem;
-      font-size: 0.95rem;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      font-size: 1rem;
       transition: border-color 0.3s ease, background-color 0.3s ease;
 
       &:focus {
         outline: none;
         border-color: var(--primary-2);
-        background-color: rgba(0, 122, 120, 0.1);
+        background-color: rgba(0, 122, 120, 0.15);
         box-shadow: 0 0 0 2px rgba(0, 154, 152, 0.15);
       }
 
@@ -131,12 +133,13 @@ a {
     }
 
     button {
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: 500;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
 
       &:hover {
         background-color: rgba(0, 122, 120, 0.8);
+        transform: scale(1.02);
       }
     }
   }
@@ -167,7 +170,6 @@ a {
   }
 
   .skills .skill-icon {
-    width: 40px;
+    width: 36px;
   }
 }
-

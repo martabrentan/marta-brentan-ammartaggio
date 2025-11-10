@@ -206,7 +206,6 @@ section {
   &.progetto9 { background-image: url("../assets/img/progetto-prototipo-mobile.png"); }
 }
 
-
 /* === FOOTER === */
 .footer {
   background-color: var(--text);
@@ -240,6 +239,9 @@ section {
   }
 }
 
+/* === IMPORT PAGINE SPECIFICHE === */
+@import "about";
+
 /* === MEDIA QUERIES === */
 @media (max-width: 992px) {
   section { padding: 3.5rem 0; }
@@ -265,6 +267,4 @@ section {
   .footer { text-align: center; }
   .footer h5 { margin-top: 1rem; }
 }
-
-
-
+@import "about";

@@ -8,7 +8,7 @@
   --font-secondary: "Fraunces", serif;
 }
 
-/* === IMPOSTAZIONI GENERALI === */
+/* === GENERALI === */
 body {
   background-color: var(--panna);
   color: var(--text);
@@ -44,10 +44,57 @@ section {
   }
 }
 
+/* === BOTTONI === */
+.btn,
+.navbar .btn {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  padding: 0.7rem 1.6rem;
+  min-width: 180px;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+  color: #fff;
+
+  &:hover {
+    background-color: var(--primary-2);
+    transform: scale(1.03);
+  }
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+
+  &:hover {
+    background-color: var(--primary);
+    color: #fff;
+    transform: scale(1.03);
+  }
+}
+
 /* === HERO === */
-.hero h1 {
-  font-family: var(--font-secondary);
-  color: var(--text);
+.hero {
+  text-align: center;
+
+  h1 {
+    font-family: var(--font-secondary);
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  p {
+    font-family: var(--font-primary);
+    color: var(--text);
+    font-size: 1.05rem;
+  }
 }
 
 /* === CARD BASE === */
@@ -104,32 +151,41 @@ section {
 .area-card {
   @extend .card-base;
 
-  &.editorial { background-image: url("../assets/img/sfondo editorial.png"); }
-  &.voice { background-image: url("../assets/img/sfondo voice.png"); }
-  &.design { background-image: url("../assets/img/sfondo design.png"); }
-  &.progettazione { background-image: url("../assets/img/sfondo progettazione.png"); }
+  &.editorial { background-image: url("../assets/img/sfondo-editorial.png"); }
+  &.voice { background-image: url("../assets/img/sfondo-voice.png"); }
+  &.design { background-image: url("../assets/img/sfondo-design.png"); }
+  &.progettazione { background-image: url("../assets/img/sfondo-progettazione.png"); }
+}
+
+/* === SEZIONE PORTFOLIO === */
+.bg-dark-portfolio {
+  background-color: var(--text);
+  color: var(--panna);
+
+  h2, p {
+    color: var(--panna);
+  }
 }
 
 /* === SCROLL ORIZZONTALE PROGETTI === */
 .projects-scroll {
-  display: flex !important;
-  flex-wrap: nowrap !important;
+  display: flex;
+  flex-wrap: nowrap;
   gap: 2rem;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 1rem 2rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  justify-content: flex-start;
-}
 
-.projects-scroll::-webkit-scrollbar {
-  height: 8px;
-}
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
 
-.projects-scroll::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
 }
 
 /* === CARD PROGETTI === */
@@ -139,15 +195,15 @@ section {
   scroll-snap-align: start;
   margin-bottom: 0;
 
-  &.progetto1 { background-image: url ("../assets/img/progetto wireframe mobile.png"); }
-  &.progetto2 { background-image: url("../assets/img/progetto wireframe desktop.png"); }
-  &.progetto3 { background-image: url("../assets/img/progetto includo.png"); }
-  &.progetto4 { background-image: url("../assets/img/progetto copywrite.png"); }
-  &.progetto5 { background-image: url("../assets/img/progetto accessibilità.png"); }
-  &.progetto6 { background-image: url("../assets/img/progetto legalescuola.png"); }
-  &.progetto7 { background-image: url("../assets/img/progetto discovery.png"); }
-  &.progetto8 { background-image: url("../assets/img/progetto prototipo desktop.png"); }
-  &.progetto9 { background-image: url("../assets/img/progetto prototipo mobile.png"); }
+  &.progetto1 { background-image: url("../assets/img/progetto-wireframe-mobile.png"); }
+  &.progetto2 { background-image: url("../assets/img/progetto-wireframe-desktop.png"); }
+  &.progetto3 { background-image: url("../assets/img/progetto-includo.png"); }
+  &.progetto4 { background-image: url("../assets/img/progetto-copywrite.png"); }
+  &.progetto5 { background-image: url("../assets/img/progetto-accessibilita.png"); }
+  &.progetto6 { background-image: url("../assets/img/progetto-legalescuola.png"); }
+  &.progetto7 { background-image: url("../assets/img/progetto-discovery.png"); }
+  &.progetto8 { background-image: url("../assets/img/progetto-prototipo-desktop.png"); }
+  &.progetto9 { background-image: url("../assets/img/progetto-prototipo-mobile.png"); }
 }
 
 
@@ -155,6 +211,13 @@ section {
 .footer {
   background-color: var(--text);
   color: var(--panna);
+  text-align: left;
+  margin-top: 0;
+
+  h5 {
+    font-family: var(--font-secondary);
+    margin-bottom: 1rem;
+  }
 
   a {
     color: var(--panna);
@@ -164,5 +227,44 @@ section {
     &:hover {
       color: var(--primary-2);
     }
+
+    i {
+      font-size: 1.1rem;
+      vertical-align: middle;
+      transition: color 0.2s ease;
+    }
+
+    &:hover i {
+      color: var(--primary-2);
+    }
   }
 }
+
+/* === MEDIA QUERIES === */
+@media (max-width: 992px) {
+  section { padding: 3.5rem 0; }
+  .navbar { padding: 1rem 1.5rem; }
+  .area-card, .project-card { height: 300px; }
+  .area-card h3, .project-card h3 { font-size: 1.4rem; }
+  .btn, .navbar .btn {
+    min-width: auto;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  .projects-scroll { gap: 1.2rem; padding: 1rem; }
+}
+
+@media (max-width: 576px) {
+  body { font-size: 0.95rem; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+  .area-card, .project-card { height: 240px; border-radius: 12px; }
+  .area-card h3, .project-card h3 { font-size: 1.2rem; }
+  .projects-scroll { gap: 1rem; padding: 0.5rem 1rem; }
+  .btn { border-radius: 6px; }
+  .footer { text-align: center; }
+  .footer h5 { margin-top: 1rem; }
+}
+
+
+

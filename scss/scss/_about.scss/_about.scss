@@ -1,0 +1,173 @@
+/* === CHI SONO PAGE === */
+.about {
+  background-color: var(--panna);
+  color: var(--text);
+
+  h1 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-family: var(--font-primary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  .about-img {
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* === LINK STYLING === */
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+/* === SOFTWARE SKILLS === */
+.skills {
+  background-color: var(--panna);
+  color: var(--text);
+
+  h4 {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: auto;
+    opacity: 0.9;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .skill-icon {
+      width: 38px;
+    }
+  }
+}
+
+/* === FIELDS === */
+.fields {
+  background-color: var(--panna);
+
+  .area-card {
+    height: 240px;
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+/* === BLOG PREVIEW === */
+.blog-preview {
+  background-color: var(--panna);
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+  }
+}
+
+/* === FORM CONTATTI === */
+.contact {
+  background: linear-gradient(to bottom, #faf9f6 0%, #f2f2f2 100%);
+  color: var(--text);
+
+  form {
+    .form-control {
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      font-size: 0.95rem;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: var(--primary-2);
+        background-color: rgba(0, 122, 120, 0.1);
+        box-shadow: 0 0 0 2px rgba(0, 154, 152, 0.15);
+      }
+
+      &:hover {
+        background-color: rgba(0, 122, 120, 0.1);
+      }
+    }
+
+    button {
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(0, 122, 120, 0.8);
+      }
+    }
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .about {
+    text-align: center;
+
+    .about-img {
+      margin-top: 2rem;
+    }
+  }
+
+  .fields .area-card {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about h1 {
+    font-size: 1.8rem;
+  }
+
+  .about h3 {
+    font-size: 1.1rem;
+  }
+
+  .skills .skill-icon {
+    width: 40px;
+  }
+}
+

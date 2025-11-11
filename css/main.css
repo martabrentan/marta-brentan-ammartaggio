@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* === VARIABILI BASE === */
 :root {
   --panna: #FAF9F6;
@@ -37,6 +38,19 @@ section {
 }
 .navbar .nav-link:hover, .navbar .nav-link:focus, .navbar .nav-link.active {
   color: var(--primary);
+}
+
+/* === LINK GLOBALI === */
+a {
+  color: var(--text); /* nero */
+  text-decoration: none; /* niente sottolineatura */
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary); /* verde */
+  text-decoration: underline; /* sottolineato al passaggio */
 }
 
 /* === BOTTONI === */
@@ -191,10 +205,10 @@ section {
   background-image: url("../assets/img/progetto-includo.png");
 }
 .project-card.progetto4 {
-  background-image: url("../assets/img/progetto-copywrite.png");
+  background-image: url("../assets/img/progetto-copywriting.png");
 }
 .project-card.progetto5 {
-  background-image: url("../assets/img/progetto-accessibilita.png");
+  background-image: url("../assets/img/progetto-accessibilità.png");
 }
 .project-card.progetto6 {
   background-image: url("../assets/img/progetto-legalescuola.png");
@@ -244,16 +258,18 @@ section {
   color: var(--text);
 }
 .about h1 {
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.about h3 {
+.about {
+  /* Sottotitolo in Fraunces, verde */
+}
+.about .intro {
   font-family: var(--font-secondary);
   font-weight: 600;
   color: var(--primary);
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-size: 1.35rem;
   margin-bottom: 2rem;
 }
 .about p {
@@ -269,59 +285,47 @@ section {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* === LINK STYLING === */
-a {
+/* === SEZIONI TITOLI (coerenti con homepage) === */
+.skills h2,
+.fields h2,
+.blog-preview h2 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 35px;
   color: var(--text);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: var(--primary);
+  margin-bottom: 2rem;
+  text-transform: none;
+  line-height: 1.2;
 }
 
 /* === SOFTWARE SKILLS === */
 .skills {
   background-color: var(--panna);
   color: var(--text);
-}
-.skills h4 {
-  font-family: var(--font-secondary);
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  text-align: center;
 }
 .skills .skills-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem 2rem;
+  gap: 2rem;
 }
 .skills .skill-icon {
-  width: 45px;
-  height: auto;
+  width: 50px;
+  height: 50px;
   opacity: 0.9;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .skills .skill-icon:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
   opacity: 1;
-}
-@media (max-width: 576px) {
-  .skills .skill-icon {
-    width: 34px;
-  }
 }
 
 /* === FIELDS === */
 .fields {
   background-color: var(--panna);
-}
-.fields .area-card {
-  height: 240px;
-}
-.fields .area-card h3 {
-  font-size: 1.3rem;
 }
 
 /* === BLOG PREVIEW === */
@@ -334,35 +338,27 @@ a:hover {
   line-height: 1.6;
 }
 
-/* === FORM CONTATTI === */
-.contact {
-  background: linear-gradient(to bottom, #faf9f6 0%, #f2f2f2 100%);
-  color: var(--text);
-}
+/* === CONTACT FORM (pagina Chi sono) === */
 .contact form .form-control {
-  border: 1px solid var(--primary);
-  border-radius: 10px;
-  padding: 1.2rem 1.4rem;
-  font-size: 1rem;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 100%; /* prende tutta la larghezza del form */
+  padding: 0.9rem 1.2rem; /* un po’ più grande, elegante */
+  font-size: 0.9rem; /* testo interno più piccolo */
+  color: #555; /* testo più chiaro */
+  border-radius: 10px; /* più morbido */
+  border: 1px solid #ccc; /* linea tenue e elegante */
+  background-color: #fff;
 }
+
+/* Cambiare anche il placeholder per renderlo più chiaro */
+.contact form .form-control::placeholder {
+  color: #888;
+  opacity: 1; /* importante per farlo vedere bene */
+}
+
+/* Hover/focus più pulito */
 .contact form .form-control:focus {
-  outline: none;
-  border-color: var(--primary-2);
-  background-color: rgba(0, 122, 120, 0.15);
-  box-shadow: 0 0 0 2px rgba(0, 154, 152, 0.15);
-}
-.contact form .form-control:hover {
-  background-color: rgba(0, 122, 120, 0.1);
-}
-.contact form button {
-  border-radius: 10px;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.contact form button:hover {
-  background-color: rgba(0, 122, 120, 0.8);
-  transform: scale(1.02);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.15rem rgba(0, 122, 120, 0.2);
 }
 
 /* === RESPONSIVE === */
@@ -373,19 +369,26 @@ a:hover {
   .about .about-img {
     margin-top: 2rem;
   }
-  .fields .area-card {
-    height: 180px;
+  .skills h2,
+  .fields h2,
+  .blog-preview h2 {
+    font-size: 32px;
   }
 }
 @media (max-width: 576px) {
-  .about h1 {
-    font-size: 1.8rem;
+  .skills h2,
+  .fields h2,
+  .blog-preview h2 {
+    font-size: 20px;
   }
-  .about h3 {
+  .about .intro {
     font-size: 1.1rem;
   }
-  .skills .skill-icon {
-    width: 36px;
+  .skill-icon {
+    width: 48px;
+    height: 48px;
+    padding: 4px; /* evita bordi che “tagliano” icone con molto bianco interno */
+    object-fit: contain;
   }
 }
 /* === MEDIA QUERIES === */
@@ -441,156 +444,6 @@ a:hover {
   }
   .footer h5 {
     margin-top: 1rem;
-  }
-}
-/* === CHI SONO PAGE === */
-.about {
-  background-color: var(--panna);
-  color: var(--text);
-}
-.about h1 {
-  font-family: var(--font-secondary);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.about h3 {
-  font-family: var(--font-secondary);
-  font-weight: 600;
-  color: var(--primary);
-  font-size: 1.4rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
-}
-.about p {
-  font-family: var(--font-primary);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  color: var(--text);
-}
-.about .about-img {
-  max-width: 300px;
-  border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* === LINK STYLING === */
-a {
-  color: var(--text);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: var(--primary);
-}
-
-/* === SOFTWARE SKILLS === */
-.skills {
-  background-color: var(--panna);
-  color: var(--text);
-}
-.skills h4 {
-  font-family: var(--font-secondary);
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-.skills .skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem 2rem;
-}
-.skills .skill-icon {
-  width: 45px;
-  height: auto;
-  opacity: 0.9;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.skills .skill-icon:hover {
-  transform: scale(1.08);
-  opacity: 1;
-}
-@media (max-width: 576px) {
-  .skills .skill-icon {
-    width: 34px;
-  }
-}
-
-/* === FIELDS === */
-.fields {
-  background-color: var(--panna);
-}
-.fields .area-card {
-  height: 240px;
-}
-.fields .area-card h3 {
-  font-size: 1.3rem;
-}
-
-/* === BLOG PREVIEW === */
-.blog-preview {
-  background-color: var(--panna);
-}
-.blog-preview p {
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.6;
-}
-
-/* === FORM CONTATTI === */
-.contact {
-  background: linear-gradient(to bottom, #faf9f6 0%, #f2f2f2 100%);
-  color: var(--text);
-}
-.contact form .form-control {
-  border: 1px solid var(--primary);
-  border-radius: 10px;
-  padding: 1.2rem 1.4rem;
-  font-size: 1rem;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-.contact form .form-control:focus {
-  outline: none;
-  border-color: var(--primary-2);
-  background-color: rgba(0, 122, 120, 0.15);
-  box-shadow: 0 0 0 2px rgba(0, 154, 152, 0.15);
-}
-.contact form .form-control:hover {
-  background-color: rgba(0, 122, 120, 0.1);
-}
-.contact form button {
-  border-radius: 10px;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.contact form button:hover {
-  background-color: rgba(0, 122, 120, 0.8);
-  transform: scale(1.02);
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 992px) {
-  .about {
-    text-align: center;
-  }
-  .about .about-img {
-    margin-top: 2rem;
-  }
-  .fields .area-card {
-    height: 180px;
-  }
-}
-@media (max-width: 576px) {
-  .about h1 {
-    font-size: 1.8rem;
-  }
-  .about h3 {
-    font-size: 1.1rem;
-  }
-  .skills .skill-icon {
-    width: 36px;
   }
 }
 

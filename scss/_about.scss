@@ -4,17 +4,17 @@
   color: var(--text);
 
   h1 {
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
     font-weight: 700;
     margin-bottom: 1rem;
   }
 
-  h3 {
+  /* Sottotitolo in Fraunces, verde */
+  .intro {
     font-family: var(--font-secondary);
     font-weight: 600;
     color: var(--primary);
-    font-size: 1.4rem;
-    line-height: 1.5;
+    font-size: 1.35rem;
     margin-bottom: 2rem;
   }
 
@@ -33,52 +33,44 @@
   }
 }
 
-/* === LINK STYLING === */
-a {
+/* === SEZIONI TITOLI (coerenti con homepage) === */
+.skills h2,
+.fields h2,
+.blog-preview h2 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 35px;
   color: var(--text);
-  text-decoration: none;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: var(--primary);
-  }
+  margin-bottom: 2rem;
+  text-transform: none;
+  line-height: 1.2;
 }
+
 
 /* === SOFTWARE SKILLS === */
 .skills {
   background-color: var(--panna);
   color: var(--text);
-
-  h4 {
-    font-family: var(--font-secondary);
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
+  text-align: center;
 
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem 2rem;
+    gap: 2rem;
   }
 
   .skill-icon {
-    width: 45px;
-    height: auto;
+    width: 50px;
+    height: 50px;
     opacity: 0.9;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
     transition: transform 0.3s ease, opacity 0.3s ease;
 
     &:hover {
-      transform: scale(1.08);
+      transform: scale(1.1);
       opacity: 1;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .skill-icon {
-      width: 34px;
     }
   }
 }
@@ -86,14 +78,6 @@ a {
 /* === FIELDS === */
 .fields {
   background-color: var(--panna);
-
-  .area-card {
-    height: 240px;
-
-    h3 {
-      font-size: 1.3rem;
-    }
-  }
 }
 
 /* === BLOG PREVIEW === */
@@ -107,42 +91,27 @@ a {
   }
 }
 
-/* === FORM CONTATTI === */
-.contact {
-  background: linear-gradient(to bottom, #faf9f6 0%, #f2f2f2 100%);
-  color: var(--text);
+/* === CONTACT FORM (pagina Chi sono) === */
+.contact form .form-control {
+  width: 100%;               /* prende tutta la larghezza del form */
+  padding: 0.9rem 1.2rem;    /* un po’ più grande, elegante */
+  font-size: 0.9rem;         /* testo interno più piccolo */
+  color: #555;               /* testo più chiaro */
+  border-radius: 10px;       /* più morbido */
+  border: 1px solid #ccc;    /* linea tenue e elegante */
+  background-color: #fff;
+}
 
-  form {
-    .form-control {
-      border: 1px solid var(--primary);
-      border-radius: 10px;
-      padding: 1.2rem 1.4rem;
-      font-size: 1rem;
-      transition: border-color 0.3s ease, background-color 0.3s ease;
+/* Cambiare anche il placeholder per renderlo più chiaro */
+.contact form .form-control::placeholder {
+  color: #888;
+  opacity: 1; /* importante per farlo vedere bene */
+}
 
-      &:focus {
-        outline: none;
-        border-color: var(--primary-2);
-        background-color: rgba(0, 122, 120, 0.15);
-        box-shadow: 0 0 0 2px rgba(0, 154, 152, 0.15);
-      }
-
-      &:hover {
-        background-color: rgba(0, 122, 120, 0.1);
-      }
-    }
-
-    button {
-      border-radius: 10px;
-      font-weight: 500;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-
-      &:hover {
-        background-color: rgba(0, 122, 120, 0.8);
-        transform: scale(1.02);
-      }
-    }
-  }
+/* Hover/focus più pulito */
+.contact form .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.15rem rgba(0, 122, 120, 0.2);
 }
 
 /* === RESPONSIVE === */
@@ -155,21 +124,28 @@ a {
     }
   }
 
-  .fields .area-card {
-    height: 180px;
+  .skills h2,
+  .fields h2,
+  .blog-preview h2 {
+    font-size: 32px;
   }
 }
 
 @media (max-width: 576px) {
-  .about h1 {
-    font-size: 1.8rem;
+  .skills h2,
+  .fields h2,
+  .blog-preview h2 {
+    font-size: 20px;
   }
 
-  .about h3 {
+  .about .intro {
     font-size: 1.1rem;
   }
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  padding: 4px;     /* evita bordi che “tagliano” icone con molto bianco interno */
+  object-fit: contain;
+}
 
-  .skills .skill-icon {
-    width: 36px;
-  }
 }

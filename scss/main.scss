@@ -44,6 +44,19 @@ section {
   }
 }
 
+/* === LINK GLOBALI === */
+a {
+  color: var(--text);               /* nero */
+  text-decoration: none;            /* niente sottolineatura */
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary);            /* verde */
+  text-decoration: underline;       /* sottolineato al passaggio */
+}
+
 /* === BOTTONI === */
 .btn,
 .navbar .btn {
@@ -198,8 +211,8 @@ section {
   &.progetto1 { background-image: url("../assets/img/progetto-wireframe-mobile.png"); }
   &.progetto2 { background-image: url("../assets/img/progetto-wireframe-desktop.png"); }
   &.progetto3 { background-image: url("../assets/img/progetto-includo.png"); }
-  &.progetto4 { background-image: url("../assets/img/progetto-copywrite.png"); }
-  &.progetto5 { background-image: url("../assets/img/progetto-accessibilita.png"); }
+  &.progetto4 { background-image: url("../assets/img/progetto-copywriting.png"); }
+  &.progetto5 { background-image: url("../assets/img/progetto-accessibilità.png"); }
   &.progetto6 { background-image: url("../assets/img/progetto-legalescuola.png"); }
   &.progetto7 { background-image: url("../assets/img/progetto-discovery.png"); }
   &.progetto8 { background-image: url("../assets/img/progetto-prototipo-desktop.png"); }
@@ -267,4 +280,4 @@ section {
   .footer { text-align: center; }
   .footer h5 { margin-top: 1rem; }
 }
-@import "about";
+

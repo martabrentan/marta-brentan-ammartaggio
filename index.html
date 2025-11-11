@@ -9,11 +9,11 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/LOGO.svg" />
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
@@ -22,16 +22,16 @@
 
 <body>
 
-  <!-- NAVBAR ORIGINALE -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg py-3">
     <div class="container">
 
       <!-- LOGO -->
       <a class="navbar-brand" href="index.html">
-        <img src="assets/icons/LOGO.SVG.svg" alt="Logo Marta Brentan" height="36">
+        <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
       </a>
 
-      <!-- TOGGLER -->
+      <!-- BURGER -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,42 +40,40 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
 
-          <li class="nav-item">
-            <a class="nav-link" href="chi-sono.html">Chi sono</a>
+          <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+          <!-- DESKTOP buttons -->
+          <li class="nav-item d-none d-lg-block ms-lg-3">
+            <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Scarica Portfolio</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="progetti.html">Progetti</a>
+          <li class="nav-item d-none d-lg-block ms-2">
+            <a class="btn btn-outline-primary" href="assets/docs/CV Marta Brentan.pdf" target="_blank">Scarica CV</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="contatti.html">Contatti</a>
-          </li>
-
-          <!-- BOTTONI -->
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
-              Scarica Portfolio
+          <!-- MOBILE icons -->
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+              <i class="bi bi-download me-2"></i> Portfolio
             </a>
           </li>
 
-          <li class="nav-item ms-2">
-            <a class="btn btn-outline-primary" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
-              Scarica CV
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+              <i class="bi bi-download me-2"></i> CV
             </a>
           </li>
 
         </ul>
       </div>
+
     </div>
   </nav>
 
-
-  <!-- HERO ORIGINALE -->
+  <!-- HERO -->
   <section class="hero text-center py-5">
     <div class="container">
       <h1 class="display-4 fw-bold mb-3">Marta Brentan</h1>
@@ -83,8 +81,7 @@
     </div>
   </section>
 
-
-  <!-- AREAS ORIGINALE -->
+  <!-- AREAS -->
   <section class="areas py-5">
     <div class="container text-center">
       <div class="row g-4">
@@ -121,83 +118,80 @@
     </div>
   </section>
 
-
-  <!-- CHI SONO ORIGINALE -->
+  <!-- CHI SONO -->
   <section class="bio text-center py-5 bg-dark-portfolio">
     <div class="container">
       <h2 class="mb-4">Chi sono</h2>
-      <p class="lead mb-4 text-panna">
-        Ciao, sono <strong>Marta Brentan</strong>, Editor e Junior UX/UI Designer. Lavoro tra <strong>editoria</strong> e <strong>design</strong>,
-        dove contenuto e forma si incontrano, con l’obiettivo di rendere <strong>accessibili e curati</strong> i modi
-        in cui comunichiamo (anche) cultura.
+
+      <p class="lead mb-4">
+        Ciao, sono <strong>Marta Brentan</strong>, Editor e Junior UX/UI Designer.
+        Lavoro tra editoria e design, dove contenuto e forma si incontrano,
+        con l’obiettivo di rendere accessibili e curati i modi in cui comunichiamo (anche) cultura.
       </p>
 
-      <a href="assets/docs/Portfolio Marta Brentan.pdf" class="btn btn-primary me-3" target="_blank">Scarica Portfolio</a>
-      <a href="chi-sono.html" class="btn btn-outline-primary">Scopri di più su di me</a>
+      <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="btn btn-primary me-3">
+        Scarica Portfolio
+      </a>
+
+      <a href="chi-sono.html" class="btn btn-outline-primary">
+        Scopri di più su di me
+      </a>
     </div>
   </section>
 
-
-  <!-- PROJECTS ORIGINALE -->
+  <!-- PROJECTS -->
   <section class="projects py-5">
     <div class="container-fluid px-4">
       <h2 class="text-center mb-4">Selected Projects</h2>
+
       <div class="projects-scroll">
 
         <a href="assets/img/progetto-wireframe-mobile.png" class="project-card progetto1">
-          <div class="overlay"></div>
-          <h3>Wireframe mobile</h3>
+          <div class="overlay"></div><h3>Wireframe mobile</h3>
         </a>
 
         <a href="assets/img/progetto-wireframe-desktop.png" class="project-card progetto2">
-          <div class="overlay"></div>
-          <h3>Wireframe desktop</h3>
+          <div class="overlay"></div><h3>Wireframe desktop</h3>
         </a>
 
         <a href="assets/img/progetto-includo.png" class="project-card progetto3">
-          <div class="overlay"></div>
-          <h3>Includo Brand Guidelines</h3>
+          <div class="overlay"></div><h3>Includo Brand Guidelines</h3>
         </a>
 
         <a href="assets/img/progetto-copywriting.png" class="project-card progetto4">
-          <div class="overlay"></div>
-          <h3>Copywriting Hotel Pomelia</h3>
+          <div class="overlay"></div><h3>Copywriting Hotel Pomelia</h3>
         </a>
 
         <a href="assets/img/progetto-accessibilità.png" class="project-card progetto5">
-          <div class="overlay"></div>
-          <h3>Accessibilità</h3>
+          <div class="overlay"></div><h3>Accessibilità</h3>
         </a>
 
         <a href="assets/img/progetto-legalescuola.png" class="project-card progetto6">
-          <div class="overlay"></div>
-          <h3>Legale Scuola Brand Guidelines</h3>
+          <div class="overlay"></div><h3>Legale Scuola Brand Guidelines</h3>
         </a>
 
         <a href="assets/img/progetto-discovery.png" class="project-card progetto7">
-          <div class="overlay"></div>
-          <h3>Discovery Ecodream</h3>
+          <div class="overlay"></div><h3>Discovery Ecodream</h3>
         </a>
 
         <a href="assets/img/progetto-prototipo-desktop.png" class="project-card progetto8">
-          <div class="overlay"></div>
-          <h3>Prototipi desktop</h3>
+          <div class="overlay"></div><h3>Prototipi desktop</h3>
         </a>
 
         <a href="assets/img/progetto-prototipo-mobile.png" class="project-card progetto9">
-          <div class="overlay"></div>
-          <h3>Prototipi mobile</h3>
+          <div class="overlay"></div><h3>Prototipi mobile</h3>
         </a>
 
       </div>
     </div>
   </section>
 
-
-  <!-- FOOTER ORIGINALE -->
+  <!-- FOOTER -->
   <footer class="footer py-5 mt-5">
     <div class="container">
-      <div class="row g-4">
+
+      <!-- DESKTOP FOOTER -->
+      <div class="row g-4 d-none d-lg-flex">
 
         <div class="col-md-3">
           <h5>Su di me</h5>
@@ -222,8 +216,8 @@
         <div class="col-md-3">
           <h5>Contatti</h5>
           <ul class="list-unstyled">
-            <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
-            <li><a href="tel:+393470547503">Telefono</a></li>
+            <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
+            <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
             <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
             <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
             <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
@@ -241,13 +235,80 @@
 
       </div>
 
-      <hr class="my-4" />
+      <!-- MOBILE FOOTER -->
+      <div class="footer-mobile d-lg-none">
+
+        <!-- Accordion 1 -->
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+          <div id="f1" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="chi-sono.html">Chi sono</a></li>
+              <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accordion 2 -->
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+          <div id="f2" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="editorial.html">Editorial</a></li>
+              <li><a href="voice.html">Voice</a></li>
+              <li><a href="design.html">Design</a></li>
+              <li><a href="progettazione.html">Progettazione</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accordion 3 -->
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+          <div id="f3" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+              <li><a href="tel:+393470547503">Telefono</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accordion 4 -->
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+          <div id="f4" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="policy.html">Cookies Policy</a></li>
+              <li><a href="policy.html">Privacy Policy</a></li>
+              <li><a href="policy.html">Termini e condizioni</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social icons -->
+        <div class="footer-social-mobile text-center mt-4">
+          <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
+          <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+
+      <!-- COPYRIGHT -->
+      <hr class="my-4">
       <p class="text-center small">© 2025 Marta Brentan – Tutti i diritti riservati</p>
+
     </div>
   </footer>
 
+  <!-- SCROLL UP (solo mobile) -->
+  <a href="#" class="scroll-up d-lg-none">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
-  <!-- JS Bootstrap -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

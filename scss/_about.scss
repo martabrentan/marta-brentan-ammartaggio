@@ -1,7 +1,68 @@
-/* === CHI SONO PAGE === */
+/* ============================================================
+   VARIABILI
+============================================================ */
+:root {
+  --panna: #FAF9F6;
+  --text: #333333;
+  --primary: #007A78;
+  --primary-2: #009B98;
+  --font-primary: "Epilogue", sans-serif;
+  --font-secondary: "Fraunces", serif;
+}
+
+/* ============================================================
+   RESET LINK — niente underline, colore eredita.
+============================================================ */
+a, a *, 
+a:hover, 
+a:focus, 
+a:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* ============================================================
+   NAVBAR (identica all’index)
+============================================================ */
+.navbar {
+  background-color: var(--panna) !important;
+  padding: 1.2rem 3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  .navbar-brand img {
+    height: 36px;
+  }
+
+  .nav-link {
+    color: var(--text);
+    margin: 0 0.5rem;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: var(--primary);
+    }
+
+    i {
+      font-size: 1.1rem;
+      color: var(--primary);
+      vertical-align: middle;
+    }
+  }
+}
+
+/* ============================================================
+   PAGINA CHI SONO
+============================================================ */
 .about {
   background-color: var(--panna);
   color: var(--text);
+  text-align: left;
 
   h1 {
     font-family: var(--font-primary);
@@ -9,7 +70,6 @@
     margin-bottom: 1rem;
   }
 
-  /* Sottotitolo in Fraunces, verde */
   .intro {
     font-family: var(--font-secondary);
     font-weight: 600;
@@ -23,47 +83,46 @@
     font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: 1rem;
-    color: var(--text);
   }
 
   .about-img {
     max-width: 300px;
     border-radius: 50%;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   }
 }
 
-/* === SEZIONI TITOLI (coerenti con homepage) === */
-.skills h2,
-.fields h2,
-.blog-preview h2 {
+/* ============================================================
+   TITOLI DI SEZIONE (H2)
+============================================================ */
+.section-title {
   font-family: var(--font-primary);
   font-weight: 600;
   font-size: 35px;
   color: var(--text);
-  margin-bottom: 2rem;
-  text-transform: none;
   line-height: 1.2;
+  margin-bottom: 2rem;
 }
 
-
-/* === SOFTWARE SKILLS === */
+/* ============================================================
+   SOFTWARE SKILLS
+============================================================ */
 .skills {
   background-color: var(--panna);
-  color: var(--text);
   text-align: center;
 
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 2rem;
   }
 
   .skill-icon {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    padding: 4px;
     opacity: 0.9;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -75,77 +134,193 @@
   }
 }
 
-/* === FIELDS === */
+/* ============================================================
+   FIELDS OF WORK
+============================================================ */
 .fields {
   background-color: var(--panna);
 }
 
-/* === BLOG PREVIEW === */
+/* ============================================================
+   BLOG PREVIEW
+============================================================ */
 .blog-preview {
   background-color: var(--panna);
 
   p {
     max-width: 700px;
     margin: 0 auto 1.5rem;
-    line-height: 1.6;
   }
 }
 
-/* === CONTACT FORM (pagina Chi sono) === */
+/* ============================================================
+   CONTACT FORM
+============================================================ */
 .contact form .form-control {
-  width: 100%;               /* prende tutta la larghezza del form */
-  padding: 0.9rem 1.2rem;    /* un po’ più grande, elegante */
-  font-size: 0.9rem;         /* testo interno più piccolo */
-  color: #555;               /* testo più chiaro */
-  border-radius: 10px;       /* più morbido */
-  border: 1px solid #ccc;    /* linea tenue e elegante */
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.9rem;
+  color: #555;
+  border-radius: 10px;
+  border: 1px solid #ccc;
   background-color: #fff;
 }
 
-/* Cambiare anche il placeholder per renderlo più chiaro */
 .contact form .form-control::placeholder {
   color: #888;
-  opacity: 1; /* importante per farlo vedere bene */
 }
 
-/* Hover/focus più pulito */
 .contact form .form-control:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 0.15rem rgba(0, 122, 120, 0.2);
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 992px) {
-  .about {
-    text-align: center;
+/* ============================================================
+   AREA CARD + PROJECT CARD (coerenza animazioni)
+============================================================ */
+.card-base {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  height: 420px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: var(--panna);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 
-    .about-img {
-      margin-top: 2rem;
+  h3 {
+    z-index: 2;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+
+    h3 { color: var(--primary); }
+    .overlay { background: rgba(255,255,255,0.25); }
+  }
+}
+
+.area-card {
+  @extend .card-base;
+}
+
+.project-card {
+  @extend .card-base;
+  flex: 0 0 340px;
+}
+
+/* ============================================================
+   FOOTER (identico all’index)
+============================================================ */
+.footer {
+  background-color: var(--text);
+  color: var(--panna);
+
+  h5 {
+    font-family: var(--font-secondary);
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--panna);
+
+    &:hover {
+      color: var(--primary-2);
+
+      i { color: var(--primary-2); }
     }
   }
+}
 
-  .skills h2,
-  .fields h2,
-  .blog-preview h2 {
-    font-size: 32px;
+/* FOOTER MOBILE DROPDOWN */
+.footer-mobile {
+  margin-top: 1.5rem;
+}
+
+.footer-accordion {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 0.5rem 0;
+}
+
+.accordion-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--panna);
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  padding: 0.6rem 0;
+  text-align: left;
+}
+
+.footer-social-mobile a {
+  font-size: 1.5rem;
+  color: var(--panna);
+  margin: 0 12px;
+
+  &:hover { color: var(--primary-2); }
+}
+
+/* ============================================================
+   SCROLL-UP — solo mobile
+============================================================ */
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--panna);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 999;
+  opacity: 0.9;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-3px);
   }
+}
+
+@media (min-width: 992px) {
+  .scroll-up { display: none; }
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 992px) {
+  .about .about-img { margin-top: 2rem; }
+  .section-title { font-size: 32px; }
+  .area-card, .project-card { height: 300px; }
 }
 
 @media (max-width: 576px) {
-  .skills h2,
-  .fields h2,
-  .blog-preview h2 {
-    font-size: 20px;
-  }
-
-  .about .intro {
-    font-size: 1.1rem;
-  }
-.skill-icon {
-  width: 48px;
-  height: 48px;
-  padding: 4px;     /* evita bordi che “tagliano” icone con molto bianco interno */
-  object-fit: contain;
-}
-
+  .about .intro { font-size: 1.1rem; }
+  .section-title { font-size: 22px; }
+  .area-card, .project-card { height: 240px; border-radius: 12px; }
+  body { font-size: 0.95rem; }
 }

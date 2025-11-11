@@ -1,4 +1,6 @@
-/* === VARIABILI BASE === */
+/* ===========================
+   VARIABILI
+=========================== */
 :root {
   --panna: #FAF9F6;
   --text: #333333;
@@ -8,7 +10,14 @@
   --font-secondary: "Fraunces", serif;
 }
 
-/* === GENERALI === */
+
+/* ===========================
+   GLOBAL
+=========================== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--panna);
   color: var(--text);
@@ -21,11 +30,40 @@ section {
   padding: 5rem 0;
 }
 
-/* === NAVBAR === */
+/* Niente sottolineatura MAI */
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+/* Hover generale → nessuna sottolineatura, nessuna linea */
+a:hover,
+a:focus {
+  color: var(--primary);
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+
+/* ===========================
+   TITOLI DI SEZIONE (H2)
+=========================== */
+.section-title {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 35px;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+
+/* ===========================
+   NAVBAR
+=========================== */
 .navbar {
   background-color: var(--panna) !important;
   padding: 1.2rem 3rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 
   .navbar-brand img {
     height: 36px;
@@ -41,76 +79,37 @@ section {
     &.active {
       color: var(--primary);
     }
+
+    i {
+      font-size: 1.1rem;
+      color: var(--primary);
+      vertical-align: middle;
+    }
   }
 }
 
-/* === LINK GLOBALI === */
-a {
-  color: var(--text);               /* nero */
-  text-decoration: none;            /* niente sottolineatura */
-  transition: color 0.2s ease, text-decoration 0.2s ease;
-}
 
-a:hover,
-a:focus {
-  color: var(--primary);            /* verde */
-  text-decoration: underline;       /* sottolineato al passaggio */
-}
-
-/* === BOTTONI === */
-.btn,
-.navbar .btn {
-  font-family: var(--font-primary);
-  font-weight: 500;
-  font-size: 0.95rem;
-  border-radius: 8px;
-  padding: 0.7rem 1.6rem;
-  min-width: 180px;
-  text-align: center;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  border: none;
-  color: #fff;
-
-  &:hover {
-    background-color: var(--primary-2);
-    transform: scale(1.03);
-  }
-}
-
-.btn-outline-primary {
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  background-color: transparent;
-
-  &:hover {
-    background-color: var(--primary);
-    color: #fff;
-    transform: scale(1.03);
-  }
-}
-
-/* === HERO === */
+/* ===========================
+   HERO
+=========================== */
 .hero {
   text-align: center;
 
   h1 {
     font-family: var(--font-secondary);
-    color: var(--text);
     font-weight: 700;
+    color: var(--text);
   }
 
   p {
-    font-family: var(--font-primary);
-    color: var(--text);
     font-size: 1.05rem;
   }
 }
 
-/* === CARD BASE === */
+
+/* ===========================
+   CARD BASE (AREE + PROGETTI)
+=========================== */
 .card-base {
   position: relative;
   display: flex;
@@ -118,18 +117,13 @@ a:focus {
   justify-content: center;
   border-radius: 18px;
   height: 420px;
-  overflow: hidden;
-  text-decoration: none;
   color: var(--panna);
-  text-align: center;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+  transition: 0.35s ease;
 
   h3 {
-    position: relative;
     z-index: 2;
     font-family: var(--font-secondary);
     font-weight: 700;
@@ -141,36 +135,42 @@ a:focus {
   .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0,0,0,0.35);
     z-index: 1;
     transition: background 0.3s ease;
   }
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
 
     h3 {
       color: var(--primary);
     }
 
     .overlay {
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255,255,255,0.25);
     }
   }
 }
 
-/* === AREA CARD === */
+
+/* ===========================
+   AREA CARDS
+=========================== */
 .area-card {
   @extend .card-base;
 
-  &.editorial { background-image: url("../assets/img/sfondo-editorial.png"); }
-  &.voice { background-image: url("../assets/img/sfondo-voice.png"); }
-  &.design { background-image: url("../assets/img/sfondo-design.png"); }
-  &.progettazione { background-image: url("../assets/img/sfondo-progettazione.png"); }
+  &.editorial       { background-image: url("../assets/img/sfondo-editorial.png"); }
+  &.voice           { background-image: url("../assets/img/sfondo-voice.png"); }
+  &.design          { background-image: url("../assets/img/sfondo-design.png"); }
+  &.progettazione   { background-image: url("../assets/img/sfondo-progettazione.png"); }
 }
 
-/* === SEZIONE PORTFOLIO === */
+
+/* ===========================
+   PORTFOLIO DARK SECTION
+=========================== */
 .bg-dark-portfolio {
   background-color: var(--text);
   color: var(--panna);
@@ -180,33 +180,28 @@ a:focus {
   }
 }
 
-/* === SCROLL ORIZZONTALE PROGETTI === */
+
+/* ===========================
+   PROJECT SCROLL
+=========================== */
 .projects-scroll {
   display: flex;
-  flex-wrap: nowrap;
   gap: 2rem;
   overflow-x: auto;
-  overflow-y: hidden;
-  padding: 1rem 2rem;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
 
-  &::-webkit-scrollbar {
-    height: 8px;
-  }
-
+  &::-webkit-scrollbar { height: 8px; }
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0,0,0,0.25);
     border-radius: 4px;
   }
 }
 
-/* === CARD PROGETTI === */
+/* PROJECT CARDS */
 .project-card {
   @extend .card-base;
   flex: 0 0 340px;
   scroll-snap-align: start;
-  margin-bottom: 0;
 
   &.progetto1 { background-image: url("../assets/img/progetto-wireframe-mobile.png"); }
   &.progetto2 { background-image: url("../assets/img/progetto-wireframe-desktop.png"); }
@@ -219,65 +214,101 @@ a:focus {
   &.progetto9 { background-image: url("../assets/img/progetto-prototipo-mobile.png"); }
 }
 
-/* === FOOTER === */
+
+/* ===========================
+   FOOTER
+=========================== */
 .footer {
   background-color: var(--text);
   color: var(--panna);
-  text-align: left;
-  margin-top: 0;
+
+  a {
+    color: var(--panna);
+
+    &:hover {
+      color: var(--primary-2); /* UNICO hover verde */
+    }
+  }
 
   h5 {
     font-family: var(--font-secondary);
     margin-bottom: 1rem;
   }
+}
 
-  a {
-    color: var(--panna);
-    text-decoration: none;
-    transition: color 0.2s ease;
+/* FOOTER MOBILE DROPDOWN */
+.footer-mobile {
+  margin-top: 1.5rem;
+}
 
-    &:hover {
-      color: var(--primary-2);
-    }
+.footer-accordion {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
 
-    i {
-      font-size: 1.1rem;
-      vertical-align: middle;
-      transition: color 0.2s ease;
-    }
+.accordion-btn {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 0.6rem 0;
+  color: var(--panna);
+  font-family: var(--font-secondary);
+  text-align: left;
+}
 
-    &:hover i {
-      color: var(--primary-2);
-    }
+.footer-social-mobile a {
+  font-size: 1.5rem;
+  margin: 0 12px;
+
+  &:hover {
+    color: var(--primary-2);
   }
 }
 
-/* === IMPORT PAGINE SPECIFICHE === */
-@import "about";
 
-/* === MEDIA QUERIES === */
+/* ===========================
+   SCROLL UP (solo mobile)
+=========================== */
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--panna);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  z-index: 999;
+  transition: 0.25s ease;
+}
+
+.scroll-up:hover {
+  transform: translateY(-3px);
+}
+
+@media (min-width: 992px) {
+  .scroll-up {
+    display: none;
+  }
+}
+
+
+/* ===========================
+   MEDIA QUERIES
+=========================== */
 @media (max-width: 992px) {
   section { padding: 3.5rem 0; }
   .navbar { padding: 1rem 1.5rem; }
   .area-card, .project-card { height: 300px; }
   .area-card h3, .project-card h3 { font-size: 1.4rem; }
-  .btn, .navbar .btn {
-    min-width: auto;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-  .projects-scroll { gap: 1.2rem; padding: 1rem; }
 }
 
 @media (max-width: 576px) {
   body { font-size: 0.95rem; }
   .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
-  .area-card, .project-card { height: 240px; border-radius: 12px; }
+  .area-card, .project-card { height: 240px; }
   .area-card h3, .project-card h3 { font-size: 1.2rem; }
-  .projects-scroll { gap: 1rem; padding: 0.5rem 1rem; }
-  .btn { border-radius: 6px; }
-  .footer { text-align: center; }
-  .footer h5 { margin-top: 1rem; }
 }
-

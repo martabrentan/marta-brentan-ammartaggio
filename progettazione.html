@@ -58,25 +58,30 @@
 
 
   <!-- INTRO -->
-  <section class="progettazione py-5">
+  <section class="progettazione-intro py-5">
     <div class="container">
       <h1 class="fw-bold mb-3">Progettazione</h1>
-      <h2 class = "mb" > Analisi, wireframe e prototipi per trasformare la navigazione  in un’esperienza accessibile e funzionale.</h2> 
+
+      <p class="breadcrumb small mb-4">
+        <a href="progetti.html">Home</a> › <span class="current">Progettazione</span>
+      </p>
+
+      <h2 class="intro-subtitle mb-4">
+        Progetti di ricerca, wireframe e prototipazione per creare esperienze digitali accessibili e funzionali.
+      </h2>
+
       <p>
         Progettare un sito accessibile e usabile significa garantire contenuti ottimizzati per diversi dispositivi (desktop e mobile), una scala tipografica coerente e standardizzata, dimensioni corrette degli elementi UI per garantire una navigazione intuitiva e molto altro. In questi progetti ho analizzato le pagine del sito web Ecodream Design per costruirne di nuove e migliorare l’esperienza utente e l’usabilità. Dopo aver costruito i Wireframe, li ho “animati” trasformandoli in Prototipi interattivi che possano rappresentare in maniera più precisa l’aspetto visivo e l’esperienza utente che un sito potrebbe garantire. Per creare i Wireframe e i Prototipi mi sono affidata a Figma.
       </p>
-
-      <a href="https://www.figma.com/design/RiSBPX9BpTw0RTHmDGhD2B/Sito-web-personale---Marta-Brentan?node-id=2350-3519&t=Ae5xAnJMuPFmEh1v-1" class="btn btn-outline-primary mt-3">Figma</a>
     </div>
   </section>
 
-
-   <!-- PROJECTS -->
+<!-- PROJECTS -->
   <section class="projects py-5">
-    <div class="container-fluid px-4">
-      <h2 class="text-center mb-3">Dai wireframe ai prototipi</h2>
+    <div class="container">
+        <h2 class="text-center mb-5">Dai wireframe ai prototipi</h2>
 
-      <div class="projects-scroll">
+    <div class="projects-row d-flex justify-content-center flex-wrap gap-4">
 
         <a href="assets/img/progetto-wireframe-mobile.png" class="project-card progetto1">
           <div class="overlay"></div><h3>Wireframe mobile</h3>
@@ -98,13 +103,13 @@
     </div>
   </section>
 
-   <!-- FOOTER -->
+
+  <!-- FOOTER -->
   <footer class="footer py-5 mt-5">
     <div class="container">
 
       <!-- DESKTOP FOOTER -->
       <div class="row g-4 d-none d-lg-flex">
-
         <div class="col-md-3">
           <h5>Su di me</h5>
           <ul class="list-unstyled">
@@ -144,78 +149,70 @@
             <li><a href="policy.html">Termini e condizioni</a></li>
           </ul>
         </div>
-
       </div>
 
       <!-- FOOTER MOBILE -->
-<div class="footer-mobile d-lg-none">
+      <div class="footer-mobile d-lg-none">
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">
+            Su di me <i class="bi bi-chevron-down arrow"></i>
+          </button>
+          <div id="f1" class="collapse">
+            <ul>
+              <li><a href="chi-sono.html">Chi sono</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">CV</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
 
-  <div class="footer-accordion">
-    <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">
-      Su di me
-      <i class="bi bi-chevron-down arrow"></i>
-    </button>
-    <div id="f1" class="collapse">
-      <ul>
-        <li><a href="chi-sono.html">Chi sono</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">CV</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
-  </div>
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">
+            Progetti <i class="bi bi-chevron-down arrow"></i>
+          </button>
+          <div id="f2" class="collapse">
+            <ul>
+              <li><a href="editorial.html">Editorial</a></li>
+              <li><a href="voice.html">Voice</a></li>
+              <li><a href="design.html">Design</a></li>
+              <li><a href="progettazione.html">Progettazione</a></li>
+            </ul>
+          </div>
+        </div>
 
-  <div class="footer-accordion">
-    <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">
-      Progetti
-      <i class="bi bi-chevron-down arrow"></i>
-    </button>
-    <div id="f2" class="collapse">
-      <ul>
-        <li><a href="editorial.html">Editorial</a></li>
-        <li><a href="voice.html">Voice</a></li>
-        <li><a href="design.html">Design</a></li>
-        <li><a href="progettazione.html">Progettazione</a></li>
-      </ul>
-    </div>
-  </div>
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">
+            Contatti <i class="bi bi-chevron-down arrow"></i>
+          </button>
+          <div id="f3" class="collapse">
+            <ul>
+              <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+              <li><a href="tel:+393470547503">Telefono</a></li>
+            </ul>
+          </div>
+        </div>
 
-  <div class="footer-accordion">
-    <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">
-      Contatti
-      <i class="bi bi-chevron-down arrow"></i>
-    </button>
-    <div id="f3" class="collapse">
-      <ul>
-        <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
-        <li><a href="tel:+393470547503">Telefono</a></li>
-      </ul>
-    </div>
-  </div>
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">
+            Aiuto <i class="bi bi-chevron-down arrow"></i>
+          </button>
+          <div id="f4" class="collapse">
+            <ul>
+              <li><a href="policy.html">Cookies Policy</a></li>
+              <li><a href="policy.html">Privacy Policy</a></li>
+              <li><a href="policy.html">Termini e condizioni</a></li>
+            </ul>
+          </div>
+        </div>
 
-  <div class="footer-accordion">
-    <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">
-      Aiuto
-      <i class="bi bi-chevron-down arrow"></i>
-    </button>
-    <div id="f4" class="collapse">
-      <ul>
-        <li><a href="policy.html">Cookies Policy</a></li>
-        <li><a href="policy.html">Privacy Policy</a></li>
-        <li><a href="policy.html">Termini e condizioni</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- SOCIALS -->
-  <div class="footer-social-mobile">
-    <a href="#"><i class="bi bi-instagram"></i></a>
-    <a href="#"><i class="bi bi-behance"></i></a>
-    <a href="#"><i class="bi bi-linkedin"></i></a>
-  </div>
-
-</div>
-
+        <!-- SOCIALS -->
+        <div class="footer-social-mobile">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-behance"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
 
       <!-- COPYRIGHT -->
       <hr class="my-4">
@@ -229,7 +226,6 @@
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

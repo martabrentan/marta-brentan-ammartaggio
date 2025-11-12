@@ -88,6 +88,13 @@ a:focus {
   }
 }
 
+/* === BREADCRUMB === */
+.breadcrumb .current {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+
 
 /* ===========================
    HERO
@@ -338,35 +345,18 @@ a:focus {
 }
 
 
-/* ===========================
-   SCROLL UP (solo mobile)
-=========================== */
-.scroll-up {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: var(--primary);
-  color: var(--panna);
-  display: flex;
+
+/* === GRID PROGETTI (pagina progettazione) === */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  z-index: 999;
-  transition: 0.25s ease;
+  gap: 1.5rem;
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 1rem;
 }
 
-.scroll-up:hover {
-  transform: translateY(-3px);
-}
-
-@media (min-width: 992px) {
-  .scroll-up {
-    display: none;
-  }
-}
 
 
 /* ===========================
@@ -385,3 +375,6 @@ a:focus {
   .area-card, .project-card { height: 240px; }
   .area-card h3, .project-card h3 { font-size: 1.2rem; }
 }
+
+
+

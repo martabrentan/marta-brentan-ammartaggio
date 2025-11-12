@@ -1,6 +1,6 @@
-/* ===========================
+/* 
    VARIABILI
-=========================== */
+ */
 :root {
   --panna: #FAF9F6;
   --text: #333333;
@@ -11,9 +11,9 @@
 }
 
 
-/* ===========================
+/* 
    GLOBAL
-=========================== */
+ */
 * {
   box-sizing: border-box;
 }
@@ -43,9 +43,9 @@ a:focus {
 }
 
 
-/* ===========================
+/* 
    TITOLI DI SEZIONE (H2)
-=========================== */
+ */
 .section-title {
   font-family: var(--font-primary);
   font-weight: 600;
@@ -55,9 +55,9 @@ a:focus {
 }
 
 
-/* ===========================
+/* 
    NAVBAR
-=========================== */
+ */
 .navbar {
   background-color: var(--panna) !important;
   padding: 1.2rem 3rem;
@@ -94,9 +94,9 @@ a:focus {
 
 
 
-/* ===========================
+/* 
    HERO
-=========================== */
+ */
 .hero {
   text-align: center;
 
@@ -142,9 +142,9 @@ a:focus {
 }
 
 
-/* ===========================
+/* 
    CARD BASE (AREE + PROGETTI)
-=========================== */
+ */
 .card-base {
   position: relative;
   display: flex;
@@ -190,9 +190,9 @@ a:focus {
 }
 
 
-/* ===========================
+/* 
    AREA CARDS
-=========================== */
+ */
 .area-card {
   @extend .card-base;
 
@@ -203,9 +203,9 @@ a:focus {
 }
 
 
-/* ===========================
+/* 
    PORTFOLIO DARK SECTION
-=========================== */
+ */
 .bg-dark-portfolio {
   background-color: var(--text);
   color: var(--panna);
@@ -216,9 +216,9 @@ a:focus {
 }
 
 
-/* ===========================
+/* 
    PROJECT SCROLL
-=========================== */
+ */
 .projects-scroll {
   display: flex;
   gap: 2rem;
@@ -250,9 +250,9 @@ a:focus {
 }
 
 
-/* ===========================
+/* 
    FOOTER
-=========================== */
+ */
 .footer {
   background-color: var(--text);
   color: var(--panna);
@@ -344,22 +344,9 @@ a:focus {
 
 
 
-/* === GRID PROGETTI (pagina progettazione) === */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  justify-content: center;
-  gap: 1.5rem;
-  max-width: 950px;
-  margin: 0 auto;
-  padding-top: 1rem;
-}
-
-
-
-/* ===========================
+/* 
    MEDIA QUERIES
-=========================== */
+ */
 @media (max-width: 992px) {
   section { padding: 3.5rem 0; }
   .navbar { padding: 1rem 1.5rem; }

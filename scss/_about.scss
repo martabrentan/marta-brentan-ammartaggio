@@ -1,6 +1,6 @@
-/* ============================================================
+/* 
    VARIABILI
-============================================================ */
+ */
 :root {
   --panna: #FAF9F6;
   --text: #333333;
@@ -10,9 +10,9 @@
   --font-secondary: "Fraunces", serif;
 }
 
-/* ============================================================
-   RESET LINK — niente underline, colore eredita.
-============================================================ */
+/* 
+  LINK 
+ */
 a, a *, 
 a:hover, 
 a:focus, 
@@ -25,9 +25,9 @@ a:hover {
   color: var(--primary);
 }
 
-/* ============================================================
-   NAVBAR (identica all’index)
-============================================================ */
+/* 
+   NAVBAR 
+ */
 .navbar {
   background-color: var(--panna) !important;
   padding: 1.2rem 3rem;
@@ -56,9 +56,9 @@ a:hover {
   }
 }
 
-/* ============================================================
+/* 
    PAGINA CHI SONO
-============================================================ */
+ */
 .about {
   background-color: var(--panna);
   color: var(--text);
@@ -92,9 +92,9 @@ a:hover {
   }
 }
 
-/* ============================================================
+/* 
    TITOLI DI SEZIONE (H2)
-============================================================ */
+ */
 .section-title {
   font-family: var(--font-primary);
   font-weight: 600;
@@ -104,46 +104,62 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-/* ============================================================
-   SOFTWARE SKILLS
-============================================================ */
+/* SOFTWARE SKILLS */
 .skills {
   background-color: var(--panna);
   text-align: center;
 
+  h2 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+  }
+
   .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    justify-items: center;
+    align-items: center;
     gap: 2rem;
+    max-width: 600px; /* evita che si allarghi troppo su schermi grandi */
+    margin: 0 auto;
   }
 
   .skill-icon {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    padding: 4px;
-    opacity: 0.9;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+    padding: 6px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
 
     &:hover {
       transform: scale(1.1);
       opacity: 1;
     }
   }
+
+  @media (max-width: 576px) {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+
+    .skill-icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
 
-/* ============================================================
-   FIELDS OF WORK
-============================================================ */
-.fields {
-  background-color: var(--panna);
-}
-
-/* ============================================================
+/* 
    BLOG PREVIEW
-============================================================ */
+ */
 .blog-preview {
   background-color: var(--panna);
 
@@ -153,9 +169,9 @@ a:hover {
   }
 }
 
-/* ============================================================
+/* 
    CONTACT FORM
-============================================================ */
+ */
 .contact form .form-control {
   width: 100%;
   padding: 0.9rem 1.2rem;
@@ -175,9 +191,9 @@ a:hover {
   box-shadow: 0 0 0 0.15rem rgba(0, 122, 120, 0.2);
 }
 
-/* ============================================================
+/* 
    AREA CARD + PROJECT CARD (coerenza animazioni)
-============================================================ */
+ */
 .card-base {
   position: relative;
   display: flex;
@@ -226,9 +242,9 @@ a:hover {
   flex: 0 0 340px;
 }
 
-/* ============================================================
+/* 
    FOOTER (identico all’index)
-============================================================ */
+ */
 .footer {
   background-color: var(--text);
   color: var(--panna);
@@ -278,9 +294,9 @@ a:hover {
   &:hover { color: var(--primary-2); }
 }
 
-/* ============================================================
+/* 
    RESPONSIVE
-============================================================ */
+ */
 @media (max-width: 992px) {
   .about .about-img { margin-top: 2rem; }
   .section-title { font-size: 32px; }

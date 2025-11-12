@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/* === VARIABILI BASE === */
 :root {
   --panna: #FAF9F6;
   --text: #333333;
@@ -9,7 +7,11 @@
   --font-secondary: "Fraunces", serif;
 }
 
-/* === GENERALI === */
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--panna);
   color: var(--text);
@@ -22,40 +24,141 @@ section {
   padding: 5rem 0;
 }
 
-/* === NAVBAR === */
+/* LINK */
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary);
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   TIPOGRAFIA UNIFICATA
+   ========================= */
+
+/* Titolo principale (H1) */
+h1 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+/* Titolo sezione (H2) */
+h2 {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+/* Sottotitoli con accento verde (Fraunces verde come nella pagina Chi sono) */
+.subtitle-accent {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Titoli di sezione con classe dedicata (per compatibilità con vecchi markup) */
+.section-title {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+/* NAVBAR */
 .navbar {
   background-color: var(--panna) !important;
   padding: 1.2rem 3rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
+
 .navbar .navbar-brand img {
   height: 36px;
 }
+
 .navbar .nav-link {
   color: var(--text);
   margin: 0 0.5rem;
   transition: color 0.2s ease;
 }
-.navbar .nav-link:hover, .navbar .nav-link:focus, .navbar .nav-link.active {
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
   color: var(--primary);
 }
 
-/* === LINK GLOBALI === */
-a {
-  color: var(--text); /* nero */
-  text-decoration: none; /* niente sottolineatura */
-  transition: color 0.2s ease, text-decoration 0.2s ease;
+.navbar .nav-link i {
+  font-size: 1.1rem;
+  color: var(--primary);
+  vertical-align: middle;
 }
 
-a:hover,
-a:focus {
-  color: var(--primary); /* verde */
-  text-decoration: underline; /* sottolineato al passaggio */
+/* BREADCRUMB */
+.breadcrumb .current {
+  color: var(--primary);
+  font-weight: 500;
 }
 
-/* === BOTTONI === */
-.btn,
-.navbar .btn {
+/* HERO */
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hero p {
+  font-size: 1.05rem;
+}
+
+/* CTA Bio – mobile version */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 576px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+
+  .cta-buttons .btn-outline-primary {
+    border-width: 1px;
+  }
+}
+
+/* BOTTONI */
+.btn {
   font-family: var(--font-primary);
   font-weight: 500;
   font-size: 0.95rem;
@@ -71,6 +174,7 @@ a:focus {
   border: none;
   color: #fff;
 }
+
 .btn-primary:hover {
   background-color: var(--primary-2);
   transform: scale(1.03);
@@ -81,47 +185,29 @@ a:focus {
   color: var(--primary);
   background-color: transparent;
 }
+
 .btn-outline-primary:hover {
   background-color: var(--primary);
   color: #fff;
   transform: scale(1.03);
 }
 
-/* === HERO === */
-.hero {
-  text-align: center;
-}
-.hero h1 {
-  font-family: var(--font-secondary);
-  color: var(--text);
-  font-weight: 700;
-}
-.hero p {
-  font-family: var(--font-primary);
-  color: var(--text);
-  font-size: 1.05rem;
-}
-
-/* === CARD BASE === */
-.card-base, .project-card, .area-card {
+/* CARD BASE */
+.card-base {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 18px;
   height: 420px;
-  overflow: hidden;
-  text-decoration: none;
   color: var(--panna);
-  text-align: center;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+  transition: 0.35s ease;
 }
-.card-base h3, .project-card h3, .area-card h3 {
-  position: relative;
+
+.card-base h3 {
   z-index: 2;
   font-family: var(--font-secondary);
   font-weight: 700;
@@ -129,322 +215,218 @@ a:focus {
   color: var(--panna);
   transition: color 0.3s ease;
 }
-.card-base .overlay, .project-card .overlay, .area-card .overlay {
+
+.card-base .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0,0,0,0.35);
   z-index: 1;
   transition: background 0.3s ease;
 }
-.card-base:hover, .project-card:hover, .area-card:hover {
+
+.card-base:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
 }
-.card-base:hover h3, .project-card:hover h3, .area-card:hover h3 {
+
+.card-base:hover h3 {
   color: var(--primary);
 }
-.card-base:hover .overlay, .project-card:hover .overlay, .area-card:hover .overlay {
-  background: rgba(255, 255, 255, 0.25);
+
+.card-base:hover .overlay {
+  background: rgba(255,255,255,0.25);
 }
 
-/* === AREA CARD === */
-.area-card.editorial {
-  background-image: url("../assets/img/sfondo-editorial.png");
-}
-.area-card.voice {
-  background-image: url("../assets/img/sfondo-voice.png");
-}
-.area-card.design {
-  background-image: url("../assets/img/sfondo-design.png");
-}
-.area-card.progettazione {
-  background-image: url("../assets/img/sfondo-progettazione.png");
+/* AREA CARD */
+.area-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  height: 420px;
+  color: var(--panna);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: 0.35s ease;
 }
 
-/* === SEZIONE PORTFOLIO === */
+.area-card.editorial { background-image: url("../assets/img/sfondo-editorial.png"); }
+.area-card.voice { background-image: url("../assets/img/sfondo-voice.png"); }
+.area-card.design { background-image: url("../assets/img/sfondo-design.png"); }
+.area-card.progettazione { background-image: url("../assets/img/sfondo-progettazione.png"); }
+
+/* PORTFOLIO */
 .bg-dark-portfolio {
   background-color: var(--text);
   color: var(--panna);
 }
-.bg-dark-portfolio h2, .bg-dark-portfolio p {
+
+.bg-dark-portfolio h2,
+.bg-dark-portfolio p {
   color: var(--panna);
 }
 
-/* === SCROLL ORIZZONTALE PROGETTI === */
-.projects-scroll {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 2rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 1rem 2rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-.projects-scroll::-webkit-scrollbar {
-  height: 8px;
-}
-.projects-scroll::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
+/* PROJECT SCROLL */
+.projects-scroll img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
-/* === CARD PROGETTI === */
-.project-card {
-  flex: 0 0 340px;
-  scroll-snap-align: start;
-  margin-bottom: 0;
-}
-.project-card.progetto1 {
-  background-image: url("../assets/img/progetto-wireframe-mobile.png");
-}
-.project-card.progetto2 {
-  background-image: url("../assets/img/progetto-wireframe-desktop.png");
-}
-.project-card.progetto3 {
-  background-image: url("../assets/img/progetto-includo.png");
-}
-.project-card.progetto4 {
-  background-image: url("../assets/img/progetto-copywriting.png");
-}
-.project-card.progetto5 {
-  background-image: url("../assets/img/progetto-accessibilità.png");
-}
-.project-card.progetto6 {
-  background-image: url("../assets/img/progetto-legalescuola.png");
-}
-.project-card.progetto7 {
-  background-image: url("../assets/img/progetto-discovery.png");
-}
-.project-card.progetto8 {
-  background-image: url("../assets/img/progetto-prototipo-desktop.png");
-}
-.project-card.progetto9 {
-  background-image: url("../assets/img/progetto-prototipo-mobile.png");
-}
-
-/* === FOOTER === */
+/* FOOTER */
 .footer {
   background-color: var(--text);
   color: var(--panna);
-  text-align: left;
-  margin-top: 0;
 }
+
+.footer a {
+  color: var(--panna);
+}
+
+.footer a:hover {
+  color: var(--primary-2);
+}
+
 .footer h5 {
   font-family: var(--font-secondary);
   margin-bottom: 1rem;
 }
-.footer a {
+
+.footer-mobile {
+  padding-top: 1rem;
+}
+
+.footer-accordion {
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.accordion-btn {
+  width: 100%;
+  background: none;
+  border: none;
   color: var(--panna);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-.footer a:hover {
-  color: var(--primary-2);
-}
-.footer a i {
-  font-size: 1.1rem;
-  vertical-align: middle;
-  transition: color 0.2s ease;
-}
-.footer a:hover i {
-  color: var(--primary-2);
-}
-
-/* === IMPORT PAGINE SPECIFICHE === */
-/* === CHI SONO PAGE === */
-.about {
-  background-color: var(--panna);
-  color: var(--text);
-}
-.about h1 {
+  padding: 0.9rem 0;
   font-family: var(--font-primary);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.about {
-  /* Sottotitolo in Fraunces, verde */
-}
-.about .intro {
-  font-family: var(--font-secondary);
-  font-weight: 600;
-  color: var(--primary);
-  font-size: 1.35rem;
-  margin-bottom: 2rem;
-}
-.about p {
-  font-family: var(--font-primary);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  color: var(--text);
-}
-.about .about-img {
-  max-width: 300px;
-  border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* === SEZIONI TITOLI (coerenti con homepage) === */
-.skills h2,
-.fields h2,
-.blog-preview h2 {
-  font-family: var(--font-primary);
-  font-weight: 600;
-  font-size: 35px;
-  color: var(--text);
-  margin-bottom: 2rem;
-  text-transform: none;
-  line-height: 1.2;
-}
-
-/* === SOFTWARE SKILLS === */
-.skills {
-  background-color: var(--panna);
-  color: var(--text);
-  text-align: center;
-}
-.skills .skills-grid {
+  font-size: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
 }
-.skills .skill-icon {
-  width: 50px;
-  height: 50px;
-  opacity: 0.9;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
-  transition: transform 0.3s ease, opacity 0.3s ease;
+
+.accordion-btn .arrow {
+  transition: transform 0.25s ease;
+  font-size: 1rem;
 }
-.skills .skill-icon:hover {
-  transform: scale(1.1);
+
+/* freccia che ruota quando aperto */
+.accordion-btn[aria-expanded="true"] .arrow {
+  transform: rotate(180deg);
+}
+
+/* Lista interna */
+.footer-accordion ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0 1rem 0.8rem;
+}
+
+.footer-accordion ul li {
+  margin: 0.35rem 0;
+}
+
+.footer-accordion ul li a {
+  color: var(--panna);
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.footer-accordion ul li a:hover {
   opacity: 1;
+  color: var(--primary-2);
 }
 
-/* === FIELDS === */
-.fields {
-  background-color: var(--panna);
+/* Social icons */
+.footer-social-mobile {
+  text-align: center;
+  margin-top: 1.8rem;
 }
 
-/* === BLOG PREVIEW === */
-.blog-preview {
-  background-color: var(--panna);
-}
-.blog-preview p {
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.6;
+.footer-social-mobile a {
+  color: var(--panna);
+  font-size: 1.4rem;
+  margin: 0 10px;
+  transition: opacity 0.2s ease;
 }
 
-/* === CONTACT FORM (pagina Chi sono) === */
-.contact form .form-control {
-  width: 100%; /* prende tutta la larghezza del form */
-  padding: 0.9rem 1.2rem; /* un po’ più grande, elegante */
-  font-size: 0.9rem; /* testo interno più piccolo */
-  color: #555; /* testo più chiaro */
-  border-radius: 10px; /* più morbido */
-  border: 1px solid #ccc; /* linea tenue e elegante */
+.footer-social-mobile a:hover {
+  opacity: 0.8;
+}
+
+/* GRID PROGETTI (pagina progettazione) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+/* STILE FORM CONTATTI */
+.contact form label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  padding: 0.75rem 0; /* più spazio sopra e sotto */
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 0.9rem 1.2rem; /* maggiore spazio interno */
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
-/* Cambiare anche il placeholder per renderlo più chiaro */
-.contact form .form-control::placeholder {
-  color: #888;
-  opacity: 1; /* importante per farlo vedere bene */
+.contact form textarea {
+  min-height: 150px;
+  resize: vertical;
 }
 
-/* Hover/focus più pulito */
-.contact form .form-control:focus {
+/* placeholder più piccolo */
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  font-size: 0.9rem; /* dimensione più piccola */
+  color: #888; /* colore leggermente più chiaro */
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 0.15rem rgba(0, 122, 120, 0.2);
+  box-shadow: 0 0 0 0.15rem rgba(0,122,120,0.2);
 }
 
-/* === RESPONSIVE === */
+
+/* MEDIA QUERIES */
 @media (max-width: 992px) {
-  .about {
-    text-align: center;
-  }
-  .about .about-img {
-    margin-top: 2rem;
-  }
-  .skills h2,
-  .fields h2,
-  .blog-preview h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 576px) {
-  .skills h2,
-  .fields h2,
-  .blog-preview h2 {
-    font-size: 20px;
-  }
-  .about .intro {
-    font-size: 1.1rem;
-  }
-  .skill-icon {
-    width: 48px;
-    height: 48px;
-    padding: 4px; /* evita bordi che “tagliano” icone con molto bianco interno */
-    object-fit: contain;
-  }
-}
-/* === MEDIA QUERIES === */
-@media (max-width: 992px) {
-  section {
-    padding: 3.5rem 0;
-  }
-  .navbar {
-    padding: 1rem 1.5rem;
-  }
-  .area-card, .project-card {
-    height: 300px;
-  }
-  .area-card h3, .project-card h3 {
-    font-size: 1.4rem;
-  }
-  .btn, .navbar .btn {
-    min-width: auto;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-  }
-  .projects-scroll {
-    gap: 1.2rem;
-    padding: 1rem;
-  }
-}
-@media (max-width: 576px) {
-  body {
-    font-size: 0.95rem;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .area-card, .project-card {
-    height: 240px;
-    border-radius: 12px;
-  }
-  .area-card h3, .project-card h3 {
-    font-size: 1.2rem;
-  }
-  .projects-scroll {
-    gap: 1rem;
-    padding: 0.5rem 1rem;
-  }
-  .btn {
-    border-radius: 6px;
-  }
-  .footer {
-    text-align: center;
-  }
-  .footer h5 {
-    margin-top: 1rem;
-  }
+  section { padding: 3.5rem 0; }
+  .navbar { padding: 1rem 1.5rem; }
+  .area-card, .project-card { height: 300px; }
+  .area-card h3, .project-card h3 { font-size: 1.4rem; }
+  .btn { min-width: auto; padding: 0.6rem 1.2rem; font-size: 0.9rem; }
 }
 
-/*# sourceMappingURL=main.css.map */
+@media (max-width: 576px) {
+  body { font-size: 0.95rem; }
+  .hero h1 { font-size: 1.8rem; }
+  .area-card, .project-card { height: 240px; }
+  .area-card h3, .project-card h3 { font-size: 1.2rem; }
+  .btn { border-radius: 6px; }
+}

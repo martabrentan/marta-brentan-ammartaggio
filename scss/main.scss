@@ -30,13 +30,11 @@ section {
   padding: 5rem 0;
 }
 
-/* Niente sottolineatura MAI */
 a {
   color: inherit;
   text-decoration: none !important;
 }
 
-/* Hover generale → nessuna sottolineatura, nessuna linea */
 a:hover,
 a:focus {
   color: var(--primary);

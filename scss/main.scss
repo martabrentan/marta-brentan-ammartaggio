@@ -43,16 +43,6 @@ font-size: clamp(1rem, 2vw, 1.7rem);
 }
 
 
-
-
-body {
-background-color: var(--panna);
-color: var(--text);
-font-family: var(--font-primary);
-line-height: 1.6;
-}
-
-
 a {
 color: inherit;
 text-decoration: none;
@@ -106,6 +96,14 @@ color: var(--text);
   }
   .cta-buttons .btn { width: 100%; }
 }
+
+/* Progetti centrati per pagina Progettazione */
+.projects-centered {
+  overflow-x: visible !important; /* niente scroll */
+  justify-content: center;        /* centratura card */
+  gap: 2rem;                      /* distanza pulita */
+}
+
 
 /* AREA CARDS */
 .area-card {

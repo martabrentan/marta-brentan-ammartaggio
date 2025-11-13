@@ -249,7 +249,23 @@ a:focus {
   &.progetto9 { background-image: url("../assets/img/progetto-prototipo-mobile.png"); }
 }
 
+/* PROJECT CARDS — OVERRIDE SIZE */
+.project-card {
+  flex: 0 0 300px;     /* un po' più piccole su desktop */
+  height: 260px;       /* IMPORTANTISSIMO: override della .card-base */
+}
 
+/* MOBILE */
+@media (max-width: 576px) {
+  .project-card {
+    flex: 0 0 220px;   /* larghezza mobile */
+    height: 180px !important;  /* override definitivo */
+  }
+
+  .project-card h3 {
+    font-size: 1rem !important;
+  }
+}
 /* 
    FOOTER
  */

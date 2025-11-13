@@ -8,10 +8,6 @@
 }
 
 /* GLOBAL */
-* {
-  box-sizing: border-box;
-}
-
 body {
   background-color: var(--panna);
   color: var(--text);
@@ -20,80 +16,61 @@ body {
   margin: 0;
 }
 
-section {
-  padding: 5rem 0;
-}
-
-/* LINK */
 a {
   color: inherit;
-  text-decoration: none !important;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
-a:hover,
-a:focus {
+a:hover {
   color: var(--primary);
-  text-decoration: none !important;
-  box-shadow: none !important;
 }
 
-/* =========================
-   TIPOGRAFIA UNIFICATA
-   ========================= */
+/* TIPOGRAFIA FLUIDA */
 
-/* Titolo principale (H1) */
+/* Valori target convertiti:
+   30pt ≈ 40px ≈ 2.5rem
+   20pt ≈ 27px ≈ 1.7rem
+   15pt ≈ 20px ≈ 1.25rem
+   14pt ≈ 18px ≈ 1.125rem
+*/
+
 h1 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--text);
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 3.2vw, 1.7rem);
+  line-height: 1.3;
+  color: var(--text);
+}
+
+h3 {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 2.6rem;
-  color: var(--text);
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-}
-
-/* Titolo sezione (H2) */
-h2 {
-  font-family: var(--font-secondary);
-  font-weight: 600;
-  font-size: 2rem;
-  color: var(--text);
-  margin-bottom: 2rem;
-  line-height: 1.3;
-}
-
-/* Sottotitoli con accento verde (Fraunces verde come nella pagina Chi sono) */
-.subtitle-accent {
-  font-family: var(--font-secondary);
-  font-weight: 600;
+  font-size: clamp(1rem, 2.8vw, 1.25rem);
   color: var(--primary);
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
 }
 
-/* Titoli di sezione con classe dedicata (per compatibilità con vecchi markup) */
-.section-title {
-  font-family: var(--font-secondary);
-  font-weight: 600;
-  font-size: 2rem;
-  color: var(--text);
-  margin-bottom: 2rem;
+p {
+  font-size: clamp(0.9rem, 2.5vw, 1.125rem);
 }
 
-/* NAVBAR */
+/* NAVBAR */ */
 .navbar {
-  background-color: var(--panna) !important;
-  padding: 1.2rem 3rem;
+  background-color: var(--panna);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.navbar .navbar-brand img {
-  height: 36px;
 }
 
 .navbar .nav-link {
   color: var(--text);
-  margin: 0 0.5rem;
-  transition: color 0.2s ease;
+  transition: 0.2s;
 }
 
 .navbar .nav-link:hover,
@@ -102,71 +79,31 @@ h2 {
   color: var(--primary);
 }
 
-.navbar .nav-link i {
-  font-size: 1.1rem;
-  color: var(--primary);
-  vertical-align: middle;
-}
-
-/* BREADCRUMB */
-.breadcrumb .current {
-  color: var(--primary);
-  font-weight: 500;
-}
-
 /* HERO */
-.hero {
-  text-align: center;
-}
-
 .hero h1 {
   font-family: var(--font-secondary);
-  font-weight: 700;
-  color: var(--text);
 }
 
-.hero p {
-  font-size: 1.05rem;
-}
-
-/* CTA Bio – mobile version */
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+/* CTA BUTTONS */
+.cta-buttons .btn {
+  border-radius: 10px;
 }
 
 @media (max-width: 576px) {
   .cta-buttons {
     flex-direction: column;
-    align-items: stretch;
-    padding: 0 1.5rem;
-    gap: 1.2rem;
+    gap: 1rem;
   }
-
-  .cta-buttons .btn {
-    width: 100%;
-    padding: 0.85rem 1rem;
-    border-radius: 10px;
-    font-size: 1rem;
-  }
-
-  .cta-buttons .btn-outline-primary {
-    border-width: 1px;
-  }
+  .cta-buttons .btn { width: 100%; }
 }
 
-/* BOTTONI */
+/* BUTTONS */
 .btn {
   font-family: var(--font-primary);
   font-weight: 500;
-  font-size: 0.95rem;
-  border-radius: 8px;
-  padding: 0.7rem 1.6rem;
-  min-width: 180px;
-  text-align: center;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border-radius: 10px;
+  padding: 0.75rem 1.6rem;
+  transition: 0.3s;
 }
 
 .btn-primary {
@@ -181,9 +118,8 @@ h2 {
 }
 
 .btn-outline-primary {
-  border: 1px solid var(--primary);
+  border-color: var(--primary);
   color: var(--primary);
-  background-color: transparent;
 }
 
 .btn-outline-primary:hover {
@@ -192,241 +128,202 @@ h2 {
   transform: scale(1.03);
 }
 
-/* CARD BASE */
-.card-base {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  height: 420px;
-  color: var(--panna);
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  transition: 0.35s ease;
+
+/* PROJECT CARDS */
+.projects-scroll .card {
+max-width: 300px; /* leggermente più grandi */
+flex: 0 0 auto;
+border-radius: 14px;
+padding: 1.4rem;
+scroll-snap-align: center;
+transition: transform 0.3s ease; /* per hover */: start;
 }
 
-.card-base h3 {
-  z-index: 2;
-  font-family: var(--font-secondary);
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: var(--panna);
-  transition: color 0.3s ease;
+
+.projects-scroll img {
+width: 100%;
+aspect-ratio: 4 / 3; /* proporzione più naturale e compatta */
+object-fit: cover;
+border-radius: 12px;
 }
 
-.card-base .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  z-index: 1;
-  transition: background 0.3s ease;
+
+/* SELECTED PROJECTS */
+.projects-scroll {
+display: flex;
+gap: 0.8rem; /* più vicine */
+padding-bottom: 1rem;
+overflow-x: auto;
+scroll-snap-type: x proximity; /* snap morbido */ /* scroll più fluido */
 }
 
-.card-base:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+
+.projects-scroll .card {
+max-width: 260px;
+flex: 0 0 auto;
+border-radius: 14px;
+padding: 1rem;
+scroll-snap-align: start;
 }
 
-.card-base:hover h3 {
-  color: var(--primary);
+
+.projects-scroll img {
+width: 100%;
+aspect-ratio: 4 / 3;
+object-fit: cover;
+border-radius: 12px;
 }
 
-.card-base:hover .overlay {
-  background: rgba(255,255,255,0.25);
+
+.projects-scroll .card:hover {
+transform: scale(1.05); /* ingrandimento leggero al passaggio */
 }
 
-/* AREA CARD */
+/* SOFTWARE SKILLS */
+.skills-grid img {
+width: 55px; /* più piccoli */
+height: 55px;
+object-fit: contain;
+padding: 4px;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+transition: transform 0.3s ease, opacity 0.3s ease;
+opacity: 0.9;
+}
+
+
+.skills-grid img:hover {
+transform: scale(1.1);
+opacity: 1;
+}
+
+
+@media (max-width: 576px) {
+.skills-grid img {
+width: 45px;
+height: 45px;
+}
+} 
+
+/* AREA CARDS */
 .area-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  height: 420px;
-  color: var(--panna);
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  transition: 0.35s ease;
+position: relative;
+border-radius: 18px;
+aspect-ratio: 16/12; 
+color: var(--panna);
+background-size: cover;
+background-position: center;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.3s;
 }
+
+
+.area-card::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.35);
+z-index: 1;
+transition: 0.3s;
+}
+
+
+.area-card h3 {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 2;
+color: var(--panna);
+text-align: center;
+margin: 0;
+font-size: clamp(1.2rem, 3.5vw, 1.6rem); 
+transition: color 0.3s ease;
+}
+
+
+.area-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+
+.area-card:hover h3 {
+color: var(--primary);
+}
+
+
+.area-card:hover::before {
+background: rgba(255,255,255,0.25);
+}
+
 
 .area-card.editorial { background-image: url("../assets/img/sfondo-editorial.png"); }
 .area-card.voice { background-image: url("../assets/img/sfondo-voice.png"); }
 .area-card.design { background-image: url("../assets/img/sfondo-design.png"); }
 .area-card.progettazione { background-image: url("../assets/img/sfondo-progettazione.png"); }
 
-/* PORTFOLIO */
+
+@media (max-width: 576px) {
+.area-card { aspect-ratio: 4/3; }
+.area-card h3 { font-size: 1.3rem; }
+}
+
+/* DARK SECTION */
 .bg-dark-portfolio {
   background-color: var(--text);
   color: var(--panna);
 }
 
-.bg-dark-portfolio h2,
-.bg-dark-portfolio p {
-  color: var(--panna);
+/* FORM CONTATTI */
+.contact form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  padding: 1.2rem 0; /* più spazio nel label */
 }
 
-/* PROJECT SCROLL */
-.projects-scroll img {
+.contact form input,
+.contact form textarea {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 1rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* stakeholder / placeholder più piccolo */
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  font-size: 0.85rem;
+  color: #777;
 }
 
 /* FOOTER */
-.footer {
-  background-color: var(--text);
-  color: var(--panna);
-}
-
 .footer a {
   color: var(--panna);
+  transition: 0.2s;
 }
 
 .footer a:hover {
   color: var(--primary-2);
 }
 
-.footer h5 {
-  font-family: var(--font-secondary);
-  margin-bottom: 1rem;
-}
-
-.footer-mobile {
-  padding-top: 1rem;
-}
-
-.footer-accordion {
-  border-bottom: 1px solid rgba(255,255,255,0.25);
-}
-
 .accordion-btn {
-  width: 100%;
   background: none;
   border: none;
   color: var(--panna);
+  width: 100%;
   padding: 0.9rem 0;
-  font-family: var(--font-primary);
-  font-size: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.accordion-btn .arrow {
-  transition: transform 0.25s ease;
-  font-size: 1rem;
-}
+.accordion-btn .arrow { transition: 0.25s; }
 
-/* freccia che ruota quando aperto */
-.accordion-btn[aria-expanded="true"] .arrow {
-  transform: rotate(180deg);
-}
-
-/* Lista interna */
-.footer-accordion ul {
-  list-style: none;
-  margin: 0;
-  padding: 0.3rem 0 1rem 0.8rem;
-}
-
-.footer-accordion ul li {
-  margin: 0.35rem 0;
-}
-
-.footer-accordion ul li a {
-  color: var(--panna);
-  font-size: 0.9rem;
-  opacity: 0.85;
-}
-
-.footer-accordion ul li a:hover {
-  opacity: 1;
-  color: var(--primary-2);
-}
-
-/* Social icons */
-.footer-social-mobile {
-  text-align: center;
-  margin-top: 1.8rem;
-}
-
-.footer-social-mobile a {
-  color: var(--panna);
-  font-size: 1.4rem;
-  margin: 0 10px;
-  transition: opacity 0.2s ease;
-}
-
-.footer-social-mobile a:hover {
-  opacity: 0.8;
-}
-
-/* GRID PROGETTI (pagina progettazione) */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  justify-content: center;
-  gap: 1.5rem;
-  max-width: 950px;
-  margin: 0 auto;
-  padding-top: 1rem;
-}
-
-/* STILE FORM CONTATTI */
-.contact form label {
-  display: block;
-  margin-bottom: 0.75rem;
-  font-weight: 500;
-  padding: 0.75rem 0; /* più spazio sopra e sotto */
-}
-
-.contact form input,
-.contact form textarea {
-  width: 100%;
-  padding: 0.9rem 1.2rem; /* maggiore spazio interno */
-  font-size: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  box-sizing: border-box;
-}
-
-.contact form textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-/* placeholder più piccolo */
-.contact form input::placeholder,
-.contact form textarea::placeholder {
-  font-size: 0.9rem; /* dimensione più piccola */
-  color: #888; /* colore leggermente più chiaro */
-}
-
-.contact form input:focus,
-.contact form textarea:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 0.15rem rgba(0,122,120,0.2);
-}
-
-
-/* MEDIA QUERIES */
-@media (max-width: 992px) {
-  section { padding: 3.5rem 0; }
-  .navbar { padding: 1rem 1.5rem; }
-  .area-card, .project-card { height: 300px; }
-  .area-card h3, .project-card h3 { font-size: 1.4rem; }
-  .btn { min-width: auto; padding: 0.6rem 1.2rem; font-size: 0.9rem; }
-}
-
-@media (max-width: 576px) {
-  body { font-size: 0.95rem; }
-  .hero h1 { font-size: 1.8rem; }
-  .area-card, .project-card { height: 240px; }
-  .area-card h3, .project-card h3 { font-size: 1.2rem; }
-  .btn { border-radius: 6px; }
-}
+.accordion-btn[aria-expanded="true"] .arrow { transform: rotate(180deg); }

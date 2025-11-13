@@ -1,45 +1,36 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marta Brentan – Ammartaggio</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/LOGO.svg" />
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
   <link rel="stylesheet" href="css/main.css" />
 </head>
-
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg py-3">
+  <nav class="navbar navbar-expand-lg bg-white py-3">
     <div class="container">
-
-      <!-- LOGO -->
       <a class="navbar-brand" href="index.html">
         <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
       </a>
 
-      <!-- BURGER -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- MENU -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-
+          
+          <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
           <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -69,9 +60,9 @@
 
         </ul>
       </div>
-
     </div>
   </nav>
+
 
   <!-- HERO -->
   <section class="hero text-center py-5">
@@ -81,38 +72,39 @@
     </div>
   </section>
 
+
   <!-- AREAS -->
-<section class="areas py-5">
-  <div class="container text-center">
-    <div class="row g-4">
+  <section class="areas py-5">
+    <div class="container text-center">
+      <div class="row g-4">
 
-      <div class="col-md-3">
-        <a href="editorial.html" class="area-card editorial">
-          <h3>Editorial</h3>
-        </a>
+        <div class="col-md-3">
+          <a href="editorial.html" class="area-card editorial d-block">
+            <h3>Editorial</h3>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="voice.html" class="area-card voice d-block">
+            <h3>Voice</h3>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="design.html" class="area-card design d-block">
+            <h3>Design</h3>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="progettazione.html" class="area-card progettazione d-block">
+            <h3>Progettazione</h3>
+          </a>
+        </div>
+
       </div>
-
-      <div class="col-md-3">
-        <a href="voice.html" class="area-card voice">
-          <h3>Voice</h3>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a href="design.html" class="area-card design">
-          <h3>Design</h3>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a href="progettazione.html" class="area-card progettazione">
-          <h3>Progettazione</h3>
-        </a>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- CHI SONO -->
@@ -125,114 +117,94 @@
         Lavoro tra editoria e design, dove contenuto e forma si incontrano,
         con l’obiettivo di rendere accessibili e curati i modi in cui comunichiamo (anche) cultura.
       </p>
-<div class="cta-buttons">
-    <a href="assets/docs/Portfolio Marta Brentan.pdf" class="btn btn-primary" target="_blank">
-        Scarica Portfolio
-    </a> 
-    
-        <a href="chi-sono.html" class="btn btn-outline-primary">
-        Scopri di più su di me
-    </a>
-   
-</div>
+
+      <div class="cta-buttons d-flex justify-content-center gap-3 mt-4">
+        <a href="assets/docs/Portfolio Marta Brentan.pdf" class="btn btn-primary" target="_blank">Scarica Portfolio</a>
+        <a href="chi-sono.html" class="btn btn-outline-primary">Scopri di più su di me</a>
+      </div>
 
     </div>
   </section>
+
 
   <!-- PROJECTS -->
 <section class="projects py-5">
   <div class="container-fluid px-4">
     <h2 class="text-center mb-4">Selected Projects</h2>
 
-    <div class="projects-scroll d-flex gap-4 overflow-auto pb-4">
-      
-      <div class="col-lg-5 flex-shrink-0">
-        <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-          <img src="assets/img/sfondo includo.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Includo">
-          <h5 class="fw-bold">IncluDO Brand Guidelines</h5>
-          <p class="small mb-2">Logo, Tipo, Icone, Color palette, Social</p>
-          <p class="small text-muted">start2impact</p>
-          <a href="assets/docs/Progetto Grafica UX UI.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-        </div>
+    <div class="projects-scroll d-flex overflow-auto">
+
+      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
+        <img src="assets/img/sfondo prototipi mobile.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Prototipi mobile">
+        <h5 class="fw-bold">Prototipi Mobile</h5>
+        <p class="small mb-2">Griglia, Tipo, Controlli, User Flow, Icone...</p>
+        <p class="small text-muted">start2impact</p>
+        <a href="assets/docs/Progetto User interface Mobile.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
       </div>
 
-       <div class="col-lg-5 flex-shrink-0">
-        <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-          <img src="assets/img/sfondo legalescuola.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Legale Scuola">
-          <h5 class="fw-bold">Legale Scuola Brand Guidelines</h5>
-          <p class="small mb-2">Logo, Tipo, Icone, Color palette, Social</p>
-          <p class="small text-muted">start2impact</p>
-          <a href="assets/docs/Progetto Grafica UX UI.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-        </div>
+      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
+        <img src="assets/img/sfondo prototipi desktop.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Prototipi desktop">
+        <h5 class="fw-bold">Prototipi Desktop</h5>
+        <p class="small mb-2">Griglia, Tipo, Controlli, User Flow, Icone...</p>
+        <p class="small text-muted">start2impact</p>
+        <a href="assets/docs/Progetto User Interface Desktop.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
       </div>
 
-      <div class="col-lg-5 flex-shrink-0">
-        <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-          <img src="assets/img/sfondo copywriting.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Copywriting Pomelia">
-          <h5 class="fw-bold">Copywriting Hotel Pomelia</h5>
-          <p class="small mb-2">Naming, Tone of voice, UX writing</p>
-          <p class="small text-muted">start2impact</p>
-          <a href="assets/docs/Progetto Copywriting.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-        </div>
+      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
+        <img src="assets/img/sfondo wireframe.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Wireframe">
+        <h5 class="fw-bold">Wireframe</h5>
+        <p class="small mb-2">Wireframe mid-fidelity, in scala di grigi</p>
+        <p class="small text-muted">start2impact</p>
+        <a href="assets/docs/Progetto Wireframe.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
       </div>
 
-      <div class="col-lg-5 flex-shrink-0">
-        <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-          <img src="assets/img/sfondo wireframe.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Wireframe mobile">
-          <h5 class="fw-bold">Wireframe Mobile e Desktop</h5>
-          <p class="small mb-2">Wireframe mid-fidelity, in scala di grigi</p>
-          <p class="small text-muted">start2impact</p>
-          <a href="assets/docs/Progetto Wireframe.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-        </div>
+      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
+        <img src="assets/img/sfondo accessibilità.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Accessibilità">
+        <h5 class="fw-bold">Accessibilità</h5>
+        <p class="small mb-2">User persona, User journey, Pain points e opportunità</p>
+        <p class="small text-muted">start2impact</p>
+        <a href="assets/docs/Progetto Accessibilità.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
       </div>
 
-     <div class="col-lg-5 flex-shrink-0">
-        <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-          <img src="assets/img/sfondo prototipi desktop.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Prototipi desktop">
-          <h5 class="fw-bold">Prototipi Desktop</h5>
-          <p class="small mb-2">Griglia, Tipo, Controlli, User Flow, Icone...</p>
-          <p class="small text-muted">start2impact</p>
-          <a href="assets/docs/Progetto User Interface Desktop.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-        </div>
+      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
+        <img src="assets/img/sfondo discovery.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Discovery">
+        <h5 class="fw-bold">Discovery</h5>
+        <p class="small mb-2">Analisi as is, AI, analisi competitors e target</p>
+        <p class="small text-muted">start2impact</p>
+        <a href="assets/docs/Progetto Discovery.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
       </div>
 
-       <div class="col-lg-5 flex-shrink-0">
-        <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-          <img src="assets/img/sfondo prototipi mobile.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Prototipi mobile">
-          <h5 class="fw-bold">Prototipi Mobile</h5>
-          <p class="small mb-2">Griglia, Tipo, Controlli, User Flow, Icone...</p>
-          <p class="small text-muted">start2impact</p>
-          <a href="assets/docs/Progetto User interface Mobile.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-        </div>
+      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
+        <img src="assets/img/sfondo includo.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Includo">
+        <h5 class="fw-bold">Includo Brand Guidelines</h5>
+        <p class="small mb-2">Logo, Tipo, Icone, Color palette, Social</p>
+        <p class="small text-muted">start2impact</p>
+        <a href="assets/docs/Progetto Grafica UX UI.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
       </div>
 
-      <div class="col-lg-5 flex-shrink-0">
-        <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-          <img src="assets/img/sfondo accessibilità.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Accessibilità">
-          <h5 class="fw-bold">Accessibilità</h5>
-          <p class="small mb-2">User persona, User journey, Pain points e oppor...</p>
-          <p class="small text-muted">start2impact</p>
-          <a href="assets/docs/Progetto Accessibilità.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-        </div>
+      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
+        <img src="assets/img/sfondo legalescuola.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Legale Scuola">
+        <h5 class="fw-bold">Legale Scuola Brand Guidelines</h5>
+        <p class="small mb-2">Logo, Tipo, Icone, Color palette, Social</p>
+        <p class="small text-muted">start2impact</p>
+        <a href="assets/docs/Progetto Legalescuola.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
       </div>
 
-      <div class="col-lg-5 flex-shrink-0">
-        <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-          <img src="assets/img/sfondo discovery.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Discovery">
-          <h5 class="fw-bold">Discovery</h5>
-          <p class="small mb-2">Analisi as is, AI, analisi competitors e target</p>
-          <p class="small text-muted">start2impact</p>
-          <a href="assets/docs/Progetto Discovey.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-        </div>
+      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
+        <img src="assets/img/sfondo copywriting.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Copywriting Hotel Pomelia">
+        <h5 class="fw-bold">Copywriting Hotel Pomelia</h5>
+        <p class="small mb-2">Target, TOV, Principi di persuasione, UVP, CTA</p>
+        <p class="small text-muted">start2impact</p>
+        <a href="assets/docs/Progetto Copywriting.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
       </div>
+
     </div>
   </div>
 </section>
 
 
-
   <!-- FOOTER -->
-  <footer class="footer py-5 mt-5">
+  <footer class="footer py-5 mt-5 bg-dark text-white">
     <div class="container">
 
       <div class="row g-4 d-none d-lg-flex">
@@ -279,7 +251,6 @@
 
       </div>
 
-      <!-- MOBILE -->
       <div class="footer-mobile d-lg-none">
 
         <div class="footer-accordion">
@@ -332,7 +303,6 @@
           <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
           <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
         </div>
-
       </div>
 
       <hr class="my-4" />
@@ -340,8 +310,6 @@
 
     </div>
   </footer>
-
- 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

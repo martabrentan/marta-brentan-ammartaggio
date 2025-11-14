@@ -180,6 +180,57 @@ color: var(--text);
   color: var(--primary);
 }
 
+/* 
+   AREA CARD + PROJECT CARD 
+ */
+.card-base {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  height: 420px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: var(--panna);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  h3 {
+    z-index: 2;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+
+    h3 { color: var(--primary); }
+    .overlay { background: rgba(255,255,255,0.25); }
+  }
+}
+
+.area-card {
+  @extend .card-base;
+}
+
+.project-card {
+  @extend .card-base;
+  flex: 0 0 340px;
+}
+
 /* BACKGROUND IMAGES */
 .area-card.editorial { background-image: url("../assets/img/sfondo-editorial.png"); }
 .area-card.voice { background-image: url("../assets/img/sfondo-voice.png"); }

@@ -103,30 +103,37 @@ color: var(--text);
   }
   .cta-buttons .btn { width: 100%; }
 }
-/* Uniforma le immagini dei 3 progetti */
-.projects-centered img {
-  width: 100%;
-  aspect-ratio: 4 / 3;  /* tutte con la stessa proporzione */
-  object-fit: cover;    /* crop elegante */
+
+/* Versione piccola per i 3 progetti nella pagina Progettazione */
+.projects-small .card {
+  width: 220px;
+  flex: 0 0 220px !important;
+  border-radius: 18px;
+  text-align: left;
+  min-height: auto !important;   /* annulla il tuo min-height */
+}
+
+.projects-small img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 12px;
 }
 
-/* Forza una stessa altezza per tutte le card */
-.projects-centered .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 380px; /* regola a gusto */
+/* Centrate */
+.projects-centered {
+  overflow-x: visible !important;
+  justify-content: center;
+  gap: 2rem;
 }
 
-/* Mobile */
+/* Mobile 2 per riga */
 @media (max-width: 576px) {
-  .projects-centered .card {
-    flex: 0 0 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
-    min-height: 300px;
+  .projects-small .card {
+    width: 45%;
+    flex: 0 0 45% !important;
   }
 }
+
 
 /* AREA CARDS */
 .area-card {

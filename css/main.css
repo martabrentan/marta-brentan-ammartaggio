@@ -138,54 +138,71 @@ p {
 
 
 /* PROJECT CARDS */
-.projects-scroll .card {
-max-width: 300px; /* leggermente più grandi */
-flex: 0 0 auto;
-border-radius: 14px;
-padding: 1.4rem;
-scroll-snap-align: center;
-transition: transform 0.3s ease; /* per hover */: start;
-}
-
-
-.projects-scroll img {
-width: 100%;
-aspect-ratio: 4 / 3; /* proporzione più naturale e compatta */
-object-fit: cover;
-border-radius: 12px;
-}
-
-
-/* SELECTED PROJECTS */
 .projects-scroll {
-display: flex;
-gap: 0.8rem; /* più vicine */
-padding-bottom: 1rem;
-overflow-x: auto;
-scroll-snap-type: x proximity; /* snap morbido */ /* scroll più fluido */
+  display: flex;
+  gap: 0.8rem;                
+  padding-bottom: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity; 
+  scroll-behavior: smooth;       
 }
-
 
 .projects-scroll .card {
-max-width: 260px;
-flex: 0 0 auto;
-border-radius: 14px;
-padding: 1rem;
-scroll-snap-align: start;
+  max-width: 260px;         
+  flex: 0 0 auto;
+  border-radius: 14px;
+  padding: 1rem;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+  background: #fff;
 }
-
 
 .projects-scroll img {
-width: 100%;
-aspect-ratio: 4 / 3;
-object-fit: cover;
-border-radius: 12px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
 }
-
 
 .projects-scroll .card:hover {
-transform: scale(1.05); /* ingrandimento leggero al passaggio */
+  transform: scale(1.05); 
 }
+
+
+/* SELECTED PROJECTS - PAGINA PROGETTAZIONE */
+.projects-centered {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  overflow: visible !important;
+}
+
+.projects-centered .card {
+  width: 220px;
+  flex: 0 0 220px;
+  border-radius: 18px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.projects-centered img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* MOBILE: due card per riga */
+@media (max-width: 576px) {
+  .projects-centered .card {
+    width: 45%;
+    flex: 0 0 45%;
+  }
+}
+
+
 
 /* SOFTWARE SKILLS */
 .skills-grid img {

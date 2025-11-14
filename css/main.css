@@ -62,7 +62,7 @@ p {
   font-size: clamp(0.9rem, 2.5vw, 1.125rem);
 }
 
-/* NAVBAR */ */
+/* NAVBAR */
 .navbar {
   background-color: var(--panna);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -71,13 +71,21 @@ p {
 .navbar .nav-link {
   color: var(--text);
   transition: 0.2s;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
+
+.navbar-nav {
+  gap: 0.5rem;
+}
+
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus,
 .navbar .nav-link.active {
   color: var(--primary);
 }
+
 
 /* HERO */
 .hero h1 {

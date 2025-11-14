@@ -70,7 +70,14 @@ color: var(--text);
 .navbar .nav-link {
   color: var(--text);
   transition: 0.2s;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
+
+.navbar-nav {
+  gap: 0.5rem;
+}
+
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus,
@@ -96,14 +103,30 @@ color: var(--text);
   }
   .cta-buttons .btn { width: 100%; }
 }
-
-/* Progetti centrati per pagina Progettazione */
-.projects-centered {
-  overflow-x: visible !important; /* niente scroll */
-  justify-content: center;        /* centratura card */
-  gap: 2rem;                      /* distanza pulita */
+/* Uniforma le immagini dei 3 progetti */
+.projects-centered img {
+  width: 100%;
+  aspect-ratio: 4 / 3;  /* tutte con la stessa proporzione */
+  object-fit: cover;    /* crop elegante */
+  border-radius: 12px;
 }
 
+/* Forza una stessa altezza per tutte le card */
+.projects-centered .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px; /* regola a gusto */
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .projects-centered .card {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    min-height: 300px;
+  }
+}
 
 /* AREA CARDS */
 .area-card {
@@ -194,3 +217,40 @@ color: var(--text);
 .accordion-btn .arrow { transition: 0.25s; }
 
 .accordion-btn[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+
+/* SCROLL UP MOBILE */
+.scrollup-mobile {
+  position: fixed;
+  bottom: 90px; /* sopra il footer mobile */
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scrollup-mobile img {
+  width: 70%;
+  height: auto;
+}
+
+.scrollup-mobile.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Solo smartphone */
+@media (min-width: 992px) {
+  .scrollup-mobile {
+    display: none !important;
+  }
+}

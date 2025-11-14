@@ -25,36 +25,30 @@ a:hover {
   color: var(--primary);
 }
 
-/* 
-   NAVBAR 
- */
+//* NAVBAR */
 .navbar {
-  background-color: var(--panna) !important;
-  padding: 1.2rem 3rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-
-  .navbar-brand img {
-    height: 36px;
-  }
-
-  .nav-link {
-    color: var(--text);
-    margin: 0 0.5rem;
-    transition: color 0.2s ease;
-
-    &:hover,
-    &:focus,
-    &.active {
-      color: var(--primary);
-    }
-
-    i {
-      font-size: 1.1rem;
-      color: var(--primary);
-      vertical-align: middle;
-    }
-  }
+  background-color: var(--panna);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
+
+.navbar .nav-link {
+  color: var(--text);
+  transition: 0.2s;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.navbar-nav {
+  gap: 0.5rem;
+}
+
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+  color: var(--primary);
+}
+
 
 /* 
    PAGINA CHI SONO

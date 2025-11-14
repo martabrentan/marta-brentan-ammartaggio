@@ -12,6 +12,27 @@
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+
 <body>
 
   <!-- NAVBAR -->
@@ -124,6 +145,12 @@
       <a href="https://www.ammartaggio.com" target="_blank" class="btn btn-primary mt-3 px-4">Leggi il mio Blog</a>
     </div>
   </section>
+
+
+<!-- SCROLL UP MOBILE -->
+<a href="#" class="scrollup-mobile d-lg-none">
+  <img src="assets/icons/scroll up.png" alt="Torna su">
+</a>
 
 
   <!-- FOOTER -->

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<!-- HERO con stile delle altre pagine -->
+<!-- HERO articolo -->
 <section class="hero text-center py-5">
   <div class="container">
     <h1 class="display-4 fw-bold mb-3">{{ page.title }}</h1>
@@ -25,17 +25,15 @@ layout: default
       style="max-height: 450px; object-fit: cover; width: 100%;">
     {% endif %}
 
-    <div class="post-content fs-5" style="line-height: 1.75;">
+    <div class="post-content fs-5 text-justify" style="line-height: 1.75;">
       {{ content }}
     </div>
 
-    <!-- PULSANTE TORNA AL BLOG -->
     <div class="mt-5">
-      <a href="{{ '/blog.html' | relative_url }}" class="btn btn-outline-primary px-4">
+      <a href="{{ '/blog.html' | relative_url }}" class="btn-green">
         ← Torna al blog
       </a>
     </div>
 
   </div>
 </section>
-

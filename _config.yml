@@ -1,7 +1,13 @@
-title: Ammartaggio
+title: "Marta Brentan – Ammartaggio"
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-paginate: 6
+
+# Abilita pagine dinamiche e blog
+collections:
+  posts:
+    output: true
+
+paginate: 9
 paginate_path: "/blog/page:num"
+
+plugins:
+  - jekyll-paginate

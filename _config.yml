@@ -3,3 +3,5 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+paginate: 6
+paginate_path: "/blog/page:num"

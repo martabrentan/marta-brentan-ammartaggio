@@ -3,13 +3,92 @@ layout: default
 title: Blog
 ---
 
-<h1>Blog</h1>
+<!-- HERO -->
+<section class="hero text-center py-5">
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-3">Blog</h1>
+    <p class="lead">Libri, cultura, pensieri e parole da portare con sé.</p>
+  </div>
+</section>
 
-<ul class="post-list">
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <span class="post-date">{{ post.date | date: "%d/%m/%Y" }}</span>
-    </li>
-  {% endfor %}
-</ul>
+<!-- BLOG GRID -->
+<section class="py-5">
+  <div class="container">
+
+    <div class="row g-4">
+
+      {% for post in paginator.posts %}
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-3 bg-light h-100">
+
+          <img src="{{ post.image }}" 
+               class="img-fluid rounded-3 mb-3" 
+               alt="{{ post.title }}">
+
+          <h5 class="fw-bold">{{ post.title }}</h5>
+
+          <p class="small text-muted mb-2">
+            {{ post.date | date: "%d %B %Y" }}
+          </p>
+
+          <p class="small text-muted">
+            {{ post.category }}
+          </p>
+
+          <a href="{{ post.url }}" 
+             class="btn btn-primary btn-sm px-3 mt-auto">
+             Leggi l’articolo
+          </a>
+
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <!-- PAGINAZIONE -->
+    {% if paginator.total_pages > 1 %}
+    <nav aria-label="Blog pagination">
+      <ul class="pagination justify-content-center mt-5">
+
+        <!-- Prev -->
+        {% if paginator.previous_page %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.previous_page_path }}">
+            «
+          </a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">«</span>
+        </li>
+        {% endif %}
+
+        <!-- Page numbers -->
+        {% for page in (1..paginator.total_pages) %}
+        <li class="page-item {% if page == paginator.page %}active{% endif %}">
+          <a class="page-link" href="{{ paginator.paginate_path | replace:':num', page }}">
+            {{ page }}
+          </a>
+        </li>
+        {% endfor %}
+
+        <!-- Next -->
+        {% if paginator.next_page %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.next_page_path }}">
+            »
+          </a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">»</span>
+        </li>
+        {% endif %}
+
+      </ul>
+    </nav>
+    {% endif %}
+
+  </div>
+</section>

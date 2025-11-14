@@ -2,6 +2,9 @@
 layout: post
 title: "Il gioco delle ultime volte, Margherita Oggero, Einaudi, 2021"
 date: 2022-05-04
+image: /assets/img/librireginadegliachei.png
+category: ammartaggio
+
 ---
 
 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -20,6 +21,8 @@
 </head>
 
 
+<body>
+  
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const scrollBtn = document.querySelector('.scrollup-mobile');
@@ -39,8 +42,6 @@
   });
 </script>
 
-
-<body>
 
   <!-- NAVBAR identica all’index -->
   <nav class="navbar navbar-expand-lg bg-panna py-3">
@@ -137,25 +138,38 @@
 
 
 
-  <!-- ARTICOLI -->
-    <!-- LISTA ARTICOLI -->
-  <section class="blog-list py-5">
-    <div class="container">
-      <div class="row g-4">
-        
-        <!-- Singolo articolo -->
-        <div class="col-md-6 col-lg-4">
-          <div class="blog-card">
-            <img src="assets/img/articolo1.jpg" alt="Copertina articolo" class="img-fluid rounded mb-3">
-            <h3 class="fw-semibold">Titolo dell’articolo</h3>
-            <p class="small text-muted">12 marzo 2025</p>
-            <p>Breve anteprima del testo dell’articolo, giusto qualche riga per incuriosire il lettore...</p>
-            <a href="articolo1.html" class="btn btn-outline-primary">Leggi tutto</a>
-          </div>
+ <!-- ARTICOLI DINAMICI -->
+<section class="blog-list py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      {% for post in site.posts %}
+      <div class="col-md-6 col-lg-4">
+        <div class="blog-card">
+          
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="Copertina articolo" class="img-fluid rounded mb-3">
+          {% endif %}
+
+          <h3 class="fw-semibold">{{ post.title }}</h3>
+          <p class="small text-muted">
+            {{ post.date | date: "%d %B %Y" }}
+          </p>
+
+          <p>
+            {{ post.excerpt | strip_html | truncate: 140 }}
+          </p>
+
+          <a href="{{ post.url }}" class="btn btn-outline-primary">Leggi tutto</a>
+
         </div>
+      </div>
+      {% endfor %}
 
     </div>
-  </section>
+  </div>
+</section>
+
 
 
 <!-- SCROLL UP MOBILE -->

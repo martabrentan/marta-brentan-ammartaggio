@@ -1,0 +1,7 @@
+title: "Ammartaggio"
+description: "Blog di Marta Brentan — editoria, design e scrittura"
+baseurl: "www.ammartaggio.com"
+url:"https://www.ammartaggio.com"
+theme: minima
+author: "Marta Brentan"
+permalink: /blog/:title/

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi sono – Marta Brentan</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/LOGO.svg" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS principale -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+
+<body>
+
+  <!-- NAVBAR identica all’index -->
+  <nav class="navbar navbar-expand-lg bg-panna py-3">
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="chi-sono.html">Chi sono</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="progetti.html">Progetti</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contatti.html">Contatti</a>
+          </li>
+
+          <!-- DESKTOP buttons -->
+          <li class="nav-item d-none d-lg-block ms-lg-3">
+            <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+              Scarica Portfolio
+            </a>
+          </li>
+
+          <li class="nav-item d-none d-lg-block ms-2">
+            <a class="btn btn-outline-primary" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+              Scarica CV
+            </a>
+          </li>
+
+          <!-- MOBILE icons -->
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i> Portfolio
+            </a>
+          </li>
+
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i> CV
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- TITRE -->
+  <section class="py-5 text-center">
+    <h1 class="fw-bold">Curriculum Vitae</h1>
+  </section>
+
+  <!-- MAIN CV CONTENT -->
+  <section class="container py-3">
+    <div class="row">
+
+      <!-- LEFT COLUMN – FORMAZIONE -->
+      <div class="col-md-6">
+        <h3 class="mb-4">FORMAZIONE</h3>
+
+        <div class="mb-4">
+          <h6>Master UX/UI Design</h6>
+          <p class="small">2024 – in corso</p>
+          <p class="small">Competenze: Graphic Design, GUI, Copywriting, Accessibilità, HTML, CSS, Wireframe</p>
+          <a href="https://www.start2impact.it" target="_blank" class="small">start2impact</a>
+        </div>
+
+        <div class="mb-4">
+          <h6>Social Media Marketing</h6>
+          <p class="small">2022</p>
+          <p class="small">Competenze: SEO, WordPress, Social Media Marketing</p>
+          <span class="small">Synthesis Learning</span>
+        </div>
+
+        <div class="mb-4">
+          <h6>Diventare Editor</h6>
+          <p class="small">2024</p>
+          <p class="small">Docenti: Anita Pietra, Giulia Romano Zorgno, Cristiano
+Guerri, Theo Collier.
+</p>
+          <span class="small">Feltrinelli Education </span>
+        </div>
+
+        <div class="mb-4">
+          <h6>Laurea in Culture e Letterature del Mondo Moderno</h6>
+          <p class="small">2018–2021</p>
+          <p class="small">Tesi: Gobetti e Prezzolini editori</p>
+          <span class="small">Università degli Studi di Torino</span>
+        </div>
+
+        <!-- SOFTWARE SKILLS -->
+        <h6 class="mt-5">Software Skills</h6>
+        <div class="d-flex flex-wrap gap-2 mt-2">
+          <img src="assets/icons/Adobe_Illustrator.png" width="32">
+          <img src="assets/icons/Adobe_InDesign.png" width="32">
+          <img src="assets/icons/Adobe_XD.png" width="32">
+          <img src="assets/icons/canva.png" width="32">
+          <img src="assets/icons/Figma.png" width="32">
+          <img src="assets/icons/wordpress.png" width="32">
+          <img src="assets/icons/visual code.png" width="32">
+        </div>
+
+        <!-- CONTATTI -->
+        <h6 class="mt-5">Mi trovi qui </h6>
+        <p class="small mb-1"><i class="bi bi-geo-alt me-2"></i>Torino</p>
+        <h6 class="mt-4">Seguimi su</h6>
+        <div class="d-flex gap-3 mt-2">
+          <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance fs-4"></i></a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN – ESPERIENZA -->
+      <div class="col-md-6">
+        <h3 class="mb-4">ESPERIENZA</h3>
+
+        <div class="mb-4">
+          <h6>Collaboratrice di redazione</h6>
+          <p class="small">Euroedizioni<br>Gennaio 2023 – Presente</p>
+          <p class="small">Curo l’attività di promozione dei prodotti (riviste e manuali) e delle
+iniziative di formazione (webinar e corsi in presenza) attraverso social
+e siti web (WordPress e Joomla); correggo e impagino riviste e libri
+(InDesign); aggiorno il sito e scrivo articoli per la casa editrice Euroedizioni
+e il portale Giustoscuola.it
+        </div>
+
+        <div class="mb-4">
+          <h6>Editor e web editor</h6>
+          <p class="small">Argonauta Edizioni<br>Gennaio 2022 – Presente</p>
+          <p class="small">Ho costruito e diffuso l’immagine della casa editrice e libreria Argonauta
+Edizioni tramite social e sito web. Collaboro nell’editing, nella correzione di
+bozze e nell’impaginazione di alcuni dei loro libri. 
+        </div>
+
+        <div class="mb-4">
+          <h6>Copywriter</h6>
+          <p class="small">Skuola.net<br>Settembre 2022 – Febbraio 2023</p>
+          <p class="small">Ho scritto e corretto appunti scolastici di materia umanistica sulla
+piattaforma Skuola.net.
+        </div>
+
+        <div class="mb-4">
+          <h6>Coordinatrice eventi</h6>
+          <p class="small">Salone del Libro di Torino<br>Maggio 2022</p>
+          <p class="small">All’interno dello staff del Salone del Libro di Torino 2022, ho svolto
+mansioni di coordinamento dei ragazzi “felpini” e allestimento delle sale.
+        </div>
+
+        <div class="mb-4">
+          <h6>Editor esterna</h6>
+          <p class="small">Bookabook<br>Aprile 2022 – Gennaio 2023</p>
+          <p class="small">Ho collaborato nell’editing, nella correzione di bozze e nell‘impaginazione
+di alcuni libri della casa editrice Bookabook. 
+        </div>
+
+        <div class="mb-4">
+          <h6>Correttrice di bozze</h6>
+          <p class="small">Robin Edizioni<br>Giugno – Luglio 2020</p>
+          <p class="small">Ho svolto lo stage curricolare come correttrice di bozze per la casa
+editrice Robin Edizioni. 
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact text-center py-5">
+    <div class="container">
+
+      <h2 class="fw-bold mb-4">Hai un progetto, un testo o un’idea? Parliamone.</h2><br>
+
+      <form action="#" method="post" class="mx-auto" style="max-width: 600px;">
+
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Nome" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Cognome" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email" required>
+        </div>
+
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Messaggio"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Invia</button>
+
+      </form>
+
+       </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SCROLL UP MOBILE -->
+<a href="#" class="scrollup-mobile d-lg-none">
+  <img src="assets/icons/scroll up.png" alt="Torna su">
+</a>
+
+ 
+  <!-- FOOTER -->
+  <footer class="footer py-5 mt-5 bg-dark text-white">
+    <div class="container">
+
+      <div class="row g-4 d-none d-lg-flex">
+
+        <div class="col-md-3">
+          <h5>Su di me</h5>
+          <ul class="list-unstyled">
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Progetti</h5>
+          <ul class="list-unstyled">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="voice.html">Voice</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="progettazione.html">Progettazione</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Contatti</h5>
+          <ul class="list-unstyled">
+            <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
+            <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
+            <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+            <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
+            <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Aiuto</h5>
+          <ul class="list-unstyled">
+            <li><a href="policy.html">Cookies Policy</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="policy.html">Termini e condizioni</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-mobile d-lg-none">
+
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+          <div id="f1" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="chi-sono.html">Chi sono</a></li>
+              <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+          <div id="f2" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="editorial.html">Editorial</a></li>
+              <li><a href="voice.html">Voice</a></li>
+              <li><a href="design.html">Design</a></li>
+              <li><a href="progettazione.html">Progettazione</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+          <div id="f3" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+              <li><a href="tel:+393470547503">Telefono</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-accordion">
+          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+          <div id="f4" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="policy.html">Cookies Policy</a></li>
+              <li><a href="policy.html">Privacy Policy</a></li>
+              <li><a href="policy.html">Termini e condizioni</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social-mobile text-center mt-4">
+          <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
+          <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+      <p class="text-center small">© 2025 Marta Brentan – Tutti i diritti riservati</p>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

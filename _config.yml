@@ -1,10 +1,5 @@
-title: "Ammartaggio"
-description: "Blog di Marta Brentan — editoria, design e scrittura"
-baseurl: ""
-url: "https://ammartaggio.com"
-
+title: Ammartaggio
 markdown: kramdown
 theme: minima
-
-author: "Marta Brentan"
-permalink: /blog/:title/
+plugins:
+  - jekyll-feed

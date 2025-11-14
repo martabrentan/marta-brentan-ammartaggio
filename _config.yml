@@ -1,7 +1,10 @@
 title: "Ammartaggio"
 description: "Blog di Marta Brentan — editoria, design e scrittura"
-baseurl: "www.ammartaggio.com"
-url:"https://www.ammartaggio.com"
+baseurl: ""
+url: "https://ammartaggio.com"
+
+markdown: kramdown
 theme: minima
+
 author: "Marta Brentan"
 permalink: /blog/:title/

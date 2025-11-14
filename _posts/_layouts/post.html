@@ -2,37 +2,24 @@
 layout: default
 ---
 
-<!-- HERO articolo -->
 <section class="py-5">
   <div class="container d-flex justify-content-center">
-    <div class="post-content fs-5">
+
+    <article class="post-content">
+
+      <h1 class="fw-bold mb-4">{{ page.title }}</h1>
+
+      <p class="text-muted mb-4">
+        {{ page.date | date: "%d %B %Y" }}
+      </p>
+
       {{ content }}
-    </div>
-  </div>
-</section>
+      
+      <div class="mt-5">
+        <a href="/blog.html" class="btn btn-green">← Torna al Blog</a>
+      </div>
 
-
-<!-- CONTENUTO ARTICOLO -->
-<section class="py-5">
-  <div class="container">
-
-    {% if page.image %}
-    <img 
-      src="{{ page.image | relative_url }}" 
-      alt="{{ page.title }}" 
-      class="img-fluid rounded-4 mb-4 shadow-sm"
-      style="max-height: 450px; object-fit: cover; width: 100%;">
-    {% endif %}
-
-    <div class="post-content fs-5 text-justify" style="line-height: 1.75;">
-      {{ content }}
-    </div>
-
-    <div class="mt-5">
-      <a href="{{ '/blog.html' | relative_url }}" class="btn-green">
-        ← Torna al blog
-      </a>
-    </div>
+    </article>
 
   </div>
 </section>

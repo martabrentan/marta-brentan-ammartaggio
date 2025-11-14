@@ -231,41 +231,6 @@ height: 45px;
 }
 } 
 
-/* --- Stile articoli --- */
-
-.post-content {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-}
-
-.post-content p {
-  margin-bottom: 1.3rem;
-  line-height: 1.8;
-  text-align: justify;
-}
-
-/* Bottoni verdi */
-.btn-green {
-  background-color: #0A8A6A !important;
-  color: white !important;
-  border: none !important;
-  border-radius: 6px;
-  padding: 8px 20px;
-  font-weight: 500;
-}
-
-.btn-green:hover {
-  background-color: #066c54 !important;
-  color: white !important;
-}
-
-
-
-.btn-green:hover {
-  background-color: #066c54 !important;
-  color: white !important;
-}
 
 /* AREA CARDS */
 .area-card {
@@ -426,3 +391,29 @@ background: rgba(255,255,255,0.25);
   }
 }
 
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+}
+
+.post-content p {
+  margin-bottom: 1.4rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Bottone verde come i tuoi */
+.btn-green {
+  background-color: #0A8A6A !important;
+  border: none !important;
+  color: white !important;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.btn-green:hover {
+  background-color: #066c54 !important;
+  color: white !important;
+}

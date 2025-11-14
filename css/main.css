@@ -336,3 +336,40 @@ background: rgba(255,255,255,0.25);
 
 .accordion-btn[aria-expanded="true"] .arrow { transform: rotate(180deg); }
 
+
+/* SCROLL UP MOBILE */
+.scrollup-mobile {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 42px;   /* cerchio piccolo */
+  height: 42px;  /* cerchio piccolo */
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* niente padding, l’icona si centra da sola */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scrollup-mobile img {
+  width: 55%;   /* dimensione tipica icona */
+  height: auto;
+}
+
+.scrollup-mobile.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 992px) {
+  .scrollup-mobile {
+    display: none !important;
+  }
+}
+

@@ -209,70 +209,72 @@ height: 45px;
   flex: 0 0 340px;
 }
 
-/* 
-   FOOTER (identico all’index)
- */
-.footer {
+/* DARK SECTION */
+.bg-dark-portfolio {
   background-color: var(--text);
   color: var(--panna);
-
-  h5 {
-    font-family: var(--font-secondary);
-    margin-bottom: 1rem;
-  }
-
-  a {
-    color: var(--panna);
-
-    &:hover {
-      color: var(--primary-2);
-
-      i { color: var(--primary-2); }
-    }
-  }
 }
 
-/* FOOTER MOBILE DROPDOWN */
-.footer-mobile {
-  margin-top: 1.5rem;
+.bg-dark-portfolio h2 {
+  color: var(--panna);
 }
 
-.footer-accordion {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding: 0.5rem 0;
+/* FOOTER */
+.footer a {
+  color: var(--panna);
+  transition: 0.2s;
+}
+
+.footer a:hover {
+  color: var(--primary-2);
 }
 
 .accordion-btn {
-  width: 100%;
   background: none;
   border: none;
   color: var(--panna);
-  font-family: var(--font-secondary);
-  font-size: 1.1rem;
-  padding: 0.6rem 0;
-  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 0;
 }
 
-.footer-social-mobile a {
-  font-size: 1.5rem;
-  color: var(--panna);
-  margin: 0 12px;
+.accordion-btn .arrow { transition: 0.25s; }
 
-  &:hover { color: var(--primary-2); }
+.accordion-btn[aria-expanded="true"] .arrow { transform: rotate(180deg); }
+
+/* SCROLL UP MOBILE */
+.scrollup-mobile {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 42px;   /* cerchio piccolo */
+  height: 42px;  /* cerchio piccolo */
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* niente padding, l’icona si centra da sola */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* 
-   RESPONSIVE
- */
-@media (max-width: 992px) {
-  .about .about-img { margin-top: 2rem; }
-  .section-title { font-size: 32px; }
-  .area-card, .project-card { height: 300px; }
+.scrollup-mobile img {
+  width: 55%;   /* dimensione tipica icona */
+  height: auto;
 }
 
-@media (max-width: 576px) {
-  .about .intro { font-size: 1.1rem; }
-  .section-title { font-size: 22px; }
-  .area-card, .project-card { height: 240px; border-radius: 12px; }
-  body { font-size: 0.95rem; }
+.scrollup-mobile.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 992px) {
+  .scrollup-mobile {
+    display: none !important;
+  }
 }

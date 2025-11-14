@@ -2,19 +2,40 @@
 layout: default
 ---
 
-<section class="py-5 blog-article-header text-center">
+<!-- HERO con stile delle altre pagine -->
+<section class="hero text-center py-5">
   <div class="container">
-    <h1 class="fw-bold mb-3">{{ page.title }}</h1>
-    <p class="text-muted">{{ page.date | date: "%d %B %Y" }}</p>
+    <h1 class="display-4 fw-bold mb-3">{{ page.title }}</h1>
+    <p class="text-muted">
+      {{ page.date | date: "%d %B %Y" }}
+      {% if page.category %} • {{ page.category }}{% endif %}
+    </p>
+  </div>
+</section>
+
+<!-- CONTENUTO ARTICOLO -->
+<section class="py-5">
+  <div class="container">
 
     {% if page.image %}
-      <img src="{{ page.image }}" class="img-fluid rounded-4 mt-4 mb-5" alt="{{ page.title }}">
+    <img 
+      src="{{ page.image | relative_url }}" 
+      alt="{{ page.title }}" 
+      class="img-fluid rounded-4 mb-4 shadow-sm"
+      style="max-height: 450px; object-fit: cover; width: 100%;">
     {% endif %}
+
+    <div class="post-content fs-5" style="line-height: 1.75;">
+      {{ content }}
+    </div>
+
+    <!-- PULSANTE TORNA AL BLOG -->
+    <div class="mt-5">
+      <a href="{{ '/blog.html' | relative_url }}" class="btn btn-outline-primary px-4">
+        ← Torna al blog
+      </a>
+    </div>
+
   </div>
 </section>
 
-<section class="py-4">
-  <div class="container article-content">
-    {{ content }}
-  </div>
-</section>

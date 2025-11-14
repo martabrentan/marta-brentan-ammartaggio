@@ -221,16 +221,16 @@ color: var(--text);
 /* SCROLL UP MOBILE */
 .scrollup-mobile {
   position: fixed;
-  bottom: 90px; /* sopra il footer mobile */
+  bottom: 90px;
   right: 20px;
-  width: 30px;
-  height: 30px;
+  width: 42px;   /* cerchio piccolo */
+  height: 42px;  /* cerchio piccolo */
   background-color: var(--primary);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0; /* niente padding, l’icona si centra da sola */
   box-shadow: 0 4px 14px rgba(0,0,0,0.15);
   z-index: 9999;
   opacity: 0;
@@ -239,7 +239,7 @@ color: var(--text);
 }
 
 .scrollup-mobile img {
-  width: 70%;
+  width: 55%;   /* dimensione tipica icona */
   height: auto;
 }
 
@@ -248,9 +248,9 @@ color: var(--text);
   visibility: visible;
 }
 
-/* Solo smartphone */
 @media (min-width: 992px) {
   .scrollup-mobile {
     display: none !important;
   }
 }
+

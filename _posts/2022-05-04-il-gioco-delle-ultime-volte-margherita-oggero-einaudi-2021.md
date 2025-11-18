@@ -2,7 +2,10 @@
 layout: post
 title: "Il gioco delle ultime volte, Margherita Oggero, Einaudi, 2021"
 date: 2022-05-04
+category: voce
+image: /assets/img/tuafoto.jpg
 ---
+
 
 
 Quando ho sfogliato le ultime pagine, dell’ultimo romanzo della Oggero, Il gioco delle ultime volte, dell’ultimo capitolo Domenica, era lunedì, l’ultimo di febbraio. Da lì ho capito almeno due cose: che non sarebbe stata l’ultima volta che avrei letto le sue parole - consapevolezza che acquisisco ogni qual volta finisco un suo libro - ma che sarebbe stata l’ultima volta che avrei letto le sue sinossi.

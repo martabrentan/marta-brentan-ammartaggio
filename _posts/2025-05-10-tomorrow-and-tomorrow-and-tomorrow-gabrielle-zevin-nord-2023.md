@@ -2,15 +2,13 @@
 layout: post
 title: "Tomorrow, and tomorrow, and tomorrow, Gabrielle Zevin, Nord, 2022"
 date: 2025-05-10
+image: /assets/img/tomorrow.jpg
+category: libri
 ---
 
 
+
 Alla veneranda età di 26 anni ho approcciato per la prima volta agli audiolibri come antidoto contro la noia di camminare per andare al lavoro.&nbsp;Non sono il tipo che cammina per sport né per piacere. Cammino per necessità.&nbsp;
-
-
-
-
-
 
 
 Sono riuscita a scampare alle camminate in mezzo ai campi - luoghi dai quali sono nata e cresciuta - non so neanche io come, ma da quando vivo a Torino camminare mi è subito parsa l’unica soluzione possibile.&nbsp;

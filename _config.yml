@@ -1,7 +1,6 @@
 title: "Marta Brentan – Ammartaggio"
 markdown: kramdown
 
-# Abilita pagine dinamiche e blog
 collections:
   posts:
     output: true

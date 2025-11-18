@@ -12,24 +12,6 @@
 <link rel="stylesheet" href="scss/main.css">
 </head>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
 
 <body>
 
@@ -48,7 +30,7 @@
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
-          <li class="nav-item"><a class="nav-link active" href="progetti.html">Progetti</a></li>
+          <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
         </ul>
@@ -64,15 +46,13 @@
 
         <div class="col-lg-7 mb-4 mb-lg-0">
           <h1 class="fw-bold mb-4">Editorial</h1>
-
-          <h2 class="intro">Intreccio editoria, cultura e scrittura con digitale, grafica e design.</h2>
-
-           <p class="breadcrumb small mb-4">
-        <a href="editorial.html">Home</a>  › <span class="current">Editorial</span>
+ <p class="breadcrumb small mb-4">
+        <a href="index.html">Home</a>  › <span class="current">Editorial</span>
       </p>
+          <h2 class="intro">Intreccio editoria, cultura e scrittura con digitale, grafica e design.</h2>
           <p>
       Quando ho iniziato a impaginare, ho scoperto che un buon libro non è solo fatto di un insieme di battute su un foglio Word.
-      Ho capito, insomma, che per creare un libro dalla A alla Z, non avrei dovuto soltanto leggerlo e correggerlo.
+      Ho c apito, insomma, che per creare un libro dalla A alla Z, non avrei dovuto soltanto leggerlo e correggerlo.
     </p>
 
     <p>
@@ -141,6 +121,26 @@
   <img src="assets/icons/scroll up.png" alt="Torna su">
 </a>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    constscrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  
+</script>
+
   <!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">
     <div class="container">
@@ -150,9 +150,9 @@
         <div class="col-md-3">
           <h5>Su di me</h5>
           <ul class="list-unstyled">
-              <li><a href="assets/docs/CV Marta Brentan.pdf">Chi sono</a></li>
+               <li><a href="chi-sono.html">Chi sono</a></li>
             <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-            <li><a href="cv.html">CV</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>

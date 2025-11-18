@@ -13,26 +13,6 @@
 </head>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
-
-
 <body>
 
   <!-- NAVBAR -->
@@ -72,7 +52,7 @@
           <h1 class="fw-bold mb-4">Voice</h1>
   
           <p class="breadcrumb small mb-4">
-        <a href="voice.html">Home</a>  › <span class="current">Voice</span>
+        <a href="index.html">Home</a> › <span class="current">Voice</span>
       </p>
           <h2 class="intro">Testi, articoli, copy e contenuti per web e social che uniscono chiarezza, tono e creatività.</h2>
           <p>
@@ -136,7 +116,7 @@
   <!-- BLOG PROMO -->
   <section class="voice-blog bg-light py-5 mt-4">
     <div class="container text-center">
-      <h2 class="fw-bold mb-3" style="color text;">Ammartaggio: il mio Blog</h2>
+      <h4 class="fw-bold mb-3" style="color text;">Ammartaggio: il mio Blog</h4>
       <p class="small mb-4 text-muted">
         Mi impegno a non giudicare mai un libro dalla sua copertina, specie quando è bellissima.
       </p>
@@ -160,6 +140,25 @@
   <img src="assets/icons/scroll up.png" alt="Torna su">
 </a>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
 
   <!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">
@@ -172,7 +171,7 @@
           <ul class="list-unstyled">
             <li><a href="chi-sono.html">Chi sono</a></li>
             <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-            <li><a href="cv.html">CV</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
@@ -202,8 +201,7 @@
           <h5>Aiuto</h5>
           <ul class="list-unstyled">
             <li><a href="policy.html">Cookies Policy</a></li>
-            <li><a href="policy.html">Privacy Policy</a></li>
-            <li><a href="policy.html">Termini e condizioni</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
           </ul>
         </div>
 
@@ -215,9 +213,9 @@
           <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
           <div id="f1" class="collapse">
             <ul class="list-unstyled ps-3">
-  <li><a href="assets/docs/CV Marta Brentan.pdf">Chi sono</a></li>
+                <li><a href="chi-sono.html">Chi sono</a></li>
                 <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-              <li><a href="cv.html">CV</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
               <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>
@@ -249,7 +247,7 @@
           <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
           <div id="f4" class="collapse">
             <ul class="list-unstyled ps-3">
-              <li><a href="policy.html"> Policy</a></li>
+              <li><a href="policy.html"> Policy </a></li>
               <li><a href="contatti.html"> Scrivimi </a></li>
             </ul>
           </div>

@@ -12,27 +12,6 @@
 <link rel="stylesheet" href="scss/main.css">
 </head>
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
-
-
 <body>
 
   <!-- NAVBAR -->
@@ -77,22 +56,21 @@
     </div>
   </nav>
 
-
-  <!-- INTRO -->
-  <section class="progettazione-intro py-5">
+<!-- INTRO -->
+  <section class="about py-5">
     <div class="container">
-      <h1 class="fw-bold mb-3">Progettazione</h1>
+      <div class="row align-items-left">
 
-      <p class="breadcrumb small mb-4">
-        <a href="progettazione.html">Home</a> › <span class="current">Progettazione</span>
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <h1 class="fw-bold mb-4">Progettazione</h1>
+  
+          <p class="breadcrumb small mb-4">
+        <a href="index.html">Home</a> › <span class="current">Progettazione</span>
       </p>
 
-      <h2 class="intro-subtitle mb-4">
-        Progetti di ricerca, wireframe e prototipazione per creare esperienze digitali accessibili e 
-        funzionali.
-      </h2>
-
-      <p>
+          <h2 class="intro">Progetti di ricerca, wireframe e prototipazione per creare esperienze digitali accessibili e 
+        funzionali.</h2>
+ <p>
         Progettare un sito <strong> accessibile e usabile </strong> significa garantire contenuti ottimizzati per 
         diversi dispositivi (desktop e mobile), una <strong> scala tipografica coerente e standardizzata </strong>, 
         dimensioni corrette degli <strong> elementi UI </strong> per garantire una navigazione intuitiva e molto altro. 
@@ -102,23 +80,17 @@
         più precisa l’aspetto visivo e l’esperienza utente che un sito potrebbe garantire. Per creare i Wireframe e i Prototipi 
         mi sono affidata a <strong> Figma </strong>.
       </p>
-       <div class="cta-buttons d-flex justify-content-center gap-3 mt-4">
-        <a href="https://www.figma.com/design/12Mr3elloynFCBbUkay9rL/Prototipi-Mobile-Ecodream-Design?m=auto&t=XqG8UhkNMD09Sqso-6" class="btn btn-outline-primary">Prototipi Figma </a>
+        </div>
       </div>
-   <div class="cta-buttons d-flex justify-content-center gap-3 mt-4">
-        <a href="https://www.figma.com/design/mHi6uX0NluGNFx7V5ZNLGq/Wireframe-Ecodream-Design?m=auto&t=XqG8UhkNMD09Sqso-6" class="btn btn-outline-primary">Wireframe Figma </a>
-      </div>
-
     </div>
   </section>
+
 
   <!-- PROJECTS -->
 <section class="projects py-5">
   <div class="container-fluid px-4">
-    <h2 class="text-center mb-4">Selected Projects</h2>
-
+   <h2 class="section-title text-center">Selected projects</h2>
 <div class="projects-centered d-flex">
-
 
       <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
         <img src="assets/img/sfondo prototipi mobile.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Prototipi mobile">
@@ -154,6 +126,26 @@
 </a>
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+
   <!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">
     <div class="container">
@@ -163,10 +155,10 @@
         <div class="col-md-3">
           <h5>Su di me</h5>
           <ul class="list-unstyled">
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-           <li><a href="cv.html">CV</a></li>
-            <li><a href="blog.html">Blog</a></li>
+             <li><a href="chi-sono.html">Chi sono</a></li>
+                <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+              <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
 
@@ -194,9 +186,8 @@
         <div class="col-md-3">
           <h5>Aiuto</h5>
           <ul class="list-unstyled">
-            <li><a href="policy.html">Cookies Policy</a></li>
-            <li><a href="policy.html">Privacy Policy</a></li>
-            <li><a href="policy.html">Termini e condizioni</a></li>
+            <li><a href="policy.html"> Policy </a></li>
+            <li><a href="contatti.html"> Scrivimi </a></li>
           </ul>
         </div>
 
@@ -210,7 +201,7 @@
             <ul class="list-unstyled ps-3">
               <li><a href="chi-sono.html">Chi sono</a></li>
               <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-              <li><a href="cv.html">CV</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
               <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>

@@ -15,25 +15,6 @@
 <link rel="stylesheet" href="scss/main.css">
 </head>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
-
 
 <body>
 
@@ -51,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           
-          <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
           <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -88,7 +69,7 @@
   <!-- HERO -->
   <section class="hero text-center py-5">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-3">Informativa legale</h1>
+      <h1>Informativa legale</h1>
       <p class="lead">Privacy policy, cookies policy, termini e condizioni</p>
     </div>
   </section>
@@ -149,6 +130,24 @@ Puoi modificare o revocare il consenso in qualsiasi momento dalle impostazioni d
   <img src="assets/icons/scroll up.png" alt="Torna su">
 </a>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
 
   <!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">
@@ -204,9 +203,9 @@ Puoi modificare o revocare il consenso in qualsiasi momento dalle impostazioni d
           <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
           <div id="f1" class="collapse">
             <ul class="list-unstyled ps-3">
-              <li><a href="chi-sono.html">Chi sono</a></li>
-              <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-              <li><a href="cv.html">CV</a></li>
+               <li><a href="chi-sono.html">Chi sono</a></li>
+                <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
               <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>

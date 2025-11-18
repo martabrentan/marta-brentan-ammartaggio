@@ -54,21 +54,21 @@ body {
    TIPOGRAFIA
 ========================================= */
 h1 {
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
  font-size: clamp(1.8rem, 3vw, 3rem);
    color: var(--text);
 }
 
 h2 {
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   font-size: clamp(1.6rem, 4vw, 3.3rem);
-  color: var(--text);
+  color: var(--primary);
 }
 
 h3 {
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   font-size: clamp(1.4rem, 3.5vw, 2.875rem);
-  color: var(--primary);
+  color: var(--text);
 }
 
 p {
@@ -101,42 +101,6 @@ p {
   line-height: 1.2;
   margin-bottom: 2rem;
 }
-
-
-/* =========================================
-   PAGE INTRO 
-========================================= */
-
-.page-intro {
-  max-width: 820px;
-  margin: 0 auto;
-  padding: 4rem 1rem;
-  text-align: left;
-
-  h1 {
-    font-family: var(--font-primary);
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    color: var(--text);
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-family: var(--font-secondary);
-    font-size: clamp(1.3rem, 3vw, 1.9rem);
-    font-weight: 600;
-    color: var(--primary);   /* verde */
-    margin-bottom: 1.5rem;
-  }
-
-  p {
-    font-family: var(--font-primary);
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--text);
-    margin-bottom: 1.2rem;
-  }
-}
-
 
 /* =========================================
    NAVBAR
@@ -173,8 +137,6 @@ p {
 .navbar .nav-link.active {
   color: var(--primary);
 }
-
-/
 .navbar-nav {
   gap: 1.2rem;
 }
@@ -190,8 +152,6 @@ p {
   }
 }
 
-
-
 /* =========================================
    HERO
 ========================================= */
@@ -201,7 +161,7 @@ p {
 }
 
 /* =========================================
-   CHI SONO
+   PAGINA CHI SONO
 ========================================= */
 .about {
   background-color: var(--panna);
@@ -230,44 +190,11 @@ p {
   }
 
   .about-img {
-    max-width: 300px;
+    max-width: 500px;
     border-radius: 50%;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   }
 }
-
-/* =========================================
-   INTRO
-========================================= */
-.page-intro {
-  background-color: var(--panna);
-  color: var(--text);
-
-  h1 {
-    font-family: var(--font-primary);
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-family: var(--font-secondary);
-    font-weight: 600;
-    font-size: 1.6rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-    max-width: 700px;
-  }
-
-  p {
-    font-family: var(--font-primary);
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    max-width: 700px;
-  }
-}
-
-
 
 /* =========================================
    PROJECTS GRID
@@ -348,10 +275,23 @@ p {
   padding: .55rem 1.2rem;
 }
 
-
 .project-card {
   @extend .card-base;
   flex: 0 0 340px;
+}
+
+/* =========================================
+   3 PROJECTS CENTERED
+========================================= */
+.projects-centered {
+  display: flex;
+  justify-content: center;      
+  gap: 2rem;                     
+  flex-wrap: wrap;               
+}
+
+.projects-centered .card {
+  width: 300px;                 
 }
 
 /* =========================================
@@ -462,8 +402,6 @@ p {
     font-size: 1.3rem;
   }
 }
-
-
 
 /* =========================================
    SOFTWARE SKILLS

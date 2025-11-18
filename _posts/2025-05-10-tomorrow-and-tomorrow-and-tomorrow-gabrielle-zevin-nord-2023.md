@@ -2,8 +2,6 @@
 layout: post
 title: "Tomorrow, and tomorrow, and tomorrow, Gabrielle Zevin, Nord, 2022"
 date: 2025-05-10
-image: /assets/img/tomorrow.jpg
-category: libri
 ---
 
 

@@ -3,24 +3,53 @@ layout: default
 title: Blog
 ---
 
-<h1>Blog</h1>
-<p>Non giudico mai un libro dalla sua copertina, specie quando è bellissima.</p>
+<!-- HERO / INTRO BLOG -->
+<section class="blog-hero text-center py-5">
+  <div class="container">
+    <h1 class="fw-bold mb-3">Blog</h1>
+    <h2 class="section-subtitle mb-3">
+      Racconti, cultura, editoria, vita e altre meraviglie terrestri.
+    </h2>
+    <p class="lead text-muted" style="max-width: 720px; margin: 0 auto;">
+      Non giudico mai un libro dalla sua copertina, specie quando è bellissima. 
+      Qui raccolgo tutto ciò che scrivo: pensieri, recensioni, viaggi fra parole.
+    </p>
+  </div>
+</section>
 
-<div class="blog-list">
-  {% for post in site.posts %}
-    <article class="blog-item">
+<!-- LISTA ARTICOLI -->
+<section class="blog-list-section py-5">
+  <div class="container">
+    
+    <div class="row g-4">
 
-      {% if post.image %}
-        <img src="{{ post.image }}" alt="{{ post.title }}">
-      {% endif %}
+      {% for post in site.posts %}
+      <div class="col-md-6 col-lg-4">
+        <article class="blog-card p-3 rounded-4 shadow-sm h-100">
 
-      <h2>{{ post.title }}</h2>
+          {% if post.image %}
+          <img src="{{ post.image }}" class="blog-thumb rounded-3 mb-3" alt="{{ post.title }}">
+          {% endif %}
 
-      <p class="date">{{ post.date | date: "%d %B %Y" }}</p>
-      <p class="category">{{ post.category }}</p>
+          <h3 class="blog-title fw-bold mb-2" style="font-size: 1.25rem;">
+            {{ post.title }}
+          </h3>
 
-      <a href="{{ post.url }}" class="btn btn-primary">Leggi l’articolo</a>
+          <p class="text-muted small mb-2">
+            {{ post.date | date: "%d %B %Y" }}
+          </p>
 
-    </article>
-  {% endfor %}
-</div>
+          <p class="blog-excerpt small text-muted mb-3">
+            {{ post.excerpt | strip_html | truncate: 130 }}
+          </p>
+
+          <a href="{{ post.url }}" class="btn btn-primary btn-sm">Leggi di più</a>
+
+        </article>
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>

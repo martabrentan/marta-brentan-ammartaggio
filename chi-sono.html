@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marta Brentan – Ammartaggio</title>
+  <title>Chi sono – Marta Brentan</title>
 
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/LOGO.svg" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="scss/main.css">
 </head>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -37,9 +41,10 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-white py-3">
+  <!-- NAVBAR identica all’index -->
+  <nav class="navbar navbar-expand-lg bg-panna py-3">
     <div class="container">
+
       <a class="navbar-brand" href="index.html">
         <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
       </a>
@@ -50,31 +55,49 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          
-          <li class="nav-item"><a class="nav-link " href="home.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
-          <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="chi-sono.html">Chi sono</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="progetti.html">Progetti</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contatti.html">Contatti</a>
+          </li>
 
           <!-- DESKTOP buttons -->
           <li class="nav-item d-none d-lg-block ms-lg-3">
-            <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Scarica Portfolio</a>
+            <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+              Scarica Portfolio
+            </a>
           </li>
 
           <li class="nav-item d-none d-lg-block ms-2">
-            <a class="btn btn-outline-primary" href="assets/docs/CV Marta Brentan.pdf" target="_blank">Scarica CV</a>
+            <a class="btn btn-outline-primary" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+              Scarica CV
+            </a>
           </li>
 
           <!-- MOBILE icons -->
           <li class="nav-item d-lg-none">
-            <a class="nav-link" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+            <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="nav-link">
               <i class="bi bi-download me-2"></i> Portfolio
             </a>
           </li>
 
           <li class="nav-item d-lg-none">
-            <a class="nav-link" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+            <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" class="nav-link">
               <i class="bi bi-download me-2"></i> CV
             </a>
           </li>
@@ -84,17 +107,42 @@
     </div>
   </nav>
 
-
-  <!-- HERO -->
-  <section class="hero text-center py-5">
+  <!-- INTRO -->
+  <section class="about py-5">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-3">Marta Brentan</h1>
-      <p class="lead">Intreccio editoria, cultura e scrittura con digitale, grafica e design.</p>
+      <div class="row align-items-left">
+
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <h1 class="fw-bold mb-4">Chi sono</h1>
+
+          <h2 class="intro">Intreccio editoria, cultura e scrittura con digitale, grafica e design.</h2>
+
+          <p>
+            Ciao, sono <strong>Marta Brentan</strong>, Editor e Junior UX/UI Designer.
+            Ho aperto <strong>Ammartaggio</strong> come spazio in cui unisco editoria, scrittura, design e progettazione.
+          </p>
+
+          <p>
+            Classe ’98, nata in provincia per poi sognare di abbandonarla e presto rimpiangerla.
+            Ho due <strong>virgolette</strong> sui polsi, fatte quando ancora non sapevo che avrei occupato gran parte della mia vita a sostituirle con i caporali.
+          </p>
+
+          <p>
+            Oggi lavoro tra <strong>editoria e design</strong>, dove contenuto e forma si incontrano,
+            con l’obiettivo di rendere <strong>accessibili e curati i modi in cui comunichiamo (anche) cultura</strong>.
+          </p>
+        </div>
+
+        <div class="col-lg-5 text-left">
+          <img src="assets/img/foto portfolio.jpg" alt="Ritratto Marta Brentan" class="img-fluid rounded-circle shadow-sm about-img">
+        </div>
+
+      </div>
     </div>
   </section>
 
 
-  <!-- AREAS -->
+    <!-- AREAS -->
   <section class="areas py-5">
     <div class="container text-center">
       <div class="row g-4">
@@ -127,98 +175,62 @@
     </div>
   </section>
 
+  <!-- BLOG PROMO -->
+<section class="voice-blog bg-light py-5 mt-4">
+  <div class="container text-center">
+    
+    <h4 class="fw-bold mb-3">Ammartaggio: il mio Blog</h4>
 
-  <!-- CHI SONO -->
-  <section class="bio text-center py-5 bg-dark-portfolio">
+    <p class="small mb-4 text-muted">
+      Mi impegno a non giudicare mai un libro dalla sua copertina, specie quando è bellissima.
+    </p>
+
+    <p>
+      Se vuoi anche tu atterrare sulla superficie del pianeta Marta, segui il mio Ammartaggio.  
+      Marta è l’ultimo dei pianeti di tipo terrestre – e cerca il più possibile di rimanere tale –, 
+      chiamato pianeta rosso per via del suo colore caratteristico causato dalla sua scarsa melanina.  
+      Marta prende il nome dell’omonima divinità cristiana – la sorella di Maria – e il suo 
+      simbolo astrologico "II" rappresenta la sua capacità di adattarsi alle situazioni ostili 
+      (non senza fatica e lamentele).
+    </p>
+
+    <a href="https://www.ammartaggio.com" target="_blank" class="btn btn-primary mt-3 px-4">
+      Leggi il mio Blog
+    </a>
+
+  </div>
+</section>
+
+  <!-- CONTACT -->
+  <section class="contact text-center py-5">
     <div class="container">
-      <h2 class="mb-4">Chi sono</h2>
 
-      <p>
-        Ciao, sono <strong>Marta Brentan</strong>, Editor e Junior UX/UI Designer.
-        Lavoro tra editoria e design, dove contenuto e forma si incontrano,
-        con l’obiettivo di rendere accessibili e curati i modi in cui comunichiamo (anche) cultura.
-      </p>
+      <h4 class="fw-bold mb-4">Hai un progetto, un testo o un’idea? Parliamone.</h4><br>
 
-         <div class="cta-buttons d-flex justify-content-center gap-3 mt-4">
-        <a href="chi-sono.html" class="btn btn-primary">Scopri di più su di me</a>
+      <form action="#" method="post" class="mx-auto" style="max-width: 600px;">
+
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Nome" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Cognome" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email" required>
+        </div>
+
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Messaggio"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Invia</button>
+
+      </form>
+
+       </div>
       </div>
-
-
-    </div>
-  </section>
-
-
-  <!-- PROJECTS -->
-<section class="projects py-5">
-  <div class="container-fluid px-4">
-    <h2 class="text-center mb-4">Selected Projects</h2>
-
-    <div class="projects-scroll d-flex overflow-auto">
-
-      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-        <img src="assets/img/sfondo prototipi mobile.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Prototipi mobile">
-        <h5 class="fw-bold">Prototipi Mobile</h5>
-        <p class="small mb-2">Griglia, Tipo, Controlli, User Flow, Icone...</p>
-        <p class="small text-muted">start2impact</p>
-        <a href="assets/docs/Progetto User interface Mobile.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-      </div>
-
-      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-        <img src="assets/img/sfondo prototipi desktop.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Prototipi desktop">
-        <h5 class="fw-bold">Prototipi Desktop</h5>
-        <p class="small mb-2">Griglia, Tipo, Controlli, User Flow, Icone...</p>
-        <p class="small text-muted">start2impact</p>
-        <a href="assets/docs/Progetto User Interface Desktop.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-      </div>
-
-      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-        <img src="assets/img/sfondo wireframe.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Wireframe">
-        <h5 class="fw-bold">Wireframe</h5>
-        <p class="small mb-2">Wireframe mid-fidelity, in scala di grigi</p>
-        <p class="small text-muted">start2impact</p>
-        <a href="assets/docs/Progetto Wireframe.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-      </div>
-
-      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-        <img src="assets/img/sfondo accessibilità.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Accessibilità">
-        <h5 class="fw-bold">Accessibilità</h5>
-        <p class="small mb-2">User persona, User journey, Pain points e opportunità</p>
-        <p class="small text-muted">start2impact</p>
-        <a href="assets/docs/Progetto Accessibilità.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-      </div>
-
-      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-        <img src="assets/img/sfondo discovery.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Discovery">
-        <h5 class="fw-bold">Discovery</h5>
-        <p class="small mb-2">Analisi as is, AI, analisi competitors e target</p>
-        <p class="small text-muted">start2impact</p>
-        <a href="assets/docs/Progetto Discovey.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-      </div>
-
-      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-        <img src="assets/img/sfondo includo.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Includo">
-        <h5 class="fw-bold">Includo Brand Guidelines</h5>
-        <p class="small mb-2">Logo, Tipo, Icone, Color palette, Social</p>
-        <p class="small text-muted">start2impact</p>
-        <a href="assets/docs/Progetto Grafica UX UI.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-      </div>
-
-      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-        <img src="assets/img/sfondo legalescuola.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Legale Scuola">
-        <h5 class="fw-bold">Legale Scuola Brand Guidelines</h5>
-        <p class="small mb-2">Logo, Tipo, Icone, Color palette, Social</p>
-        <p class="small text-muted">studio</p>
-        <a href="assets/docs/Progetto Legalescuola.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-      </div>
-
-      <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-        <img src="assets/img/sfondo copywriting.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Copywriting Hotel Pomelia">
-        <h5 class="fw-bold">Copywriting Hotel Pomelia</h5>
-        <p class="small mb-2">Target, TOV, Principi di persuasione, UVP, CTA</p>
-        <p class="small text-muted">start2impact</p>
-        <a href="assets/docs/Progetto Copywriting.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
-      </div>
-
     </div>
   </div>
 </section>
@@ -229,7 +241,7 @@
   <img src="assets/icons/scroll up.png" alt="Torna su">
 </a>
 
-
+ 
   <!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">
     <div class="container">
@@ -241,7 +253,7 @@
           <ul class="list-unstyled">
             <li><a href="chi-sono.html">Chi sono</a></li>
             <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-           <li><a href="cv.html">CV</a></li>
+            <li><a href="cv.html">CV</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
@@ -270,8 +282,9 @@
         <div class="col-md-3">
           <h5>Aiuto</h5>
           <ul class="list-unstyled">
+            <li><a href="policy.html">Cookies Policy</a></li>
             <li><a href="policy.html">Privacy Policy</a></li>
-            <li><a href="contatti.html">Mandami un messaggio</a></li>
+            <li><a href="policy.html">Termini e condizioni</a></li>
           </ul>
         </div>
 

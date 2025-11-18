@@ -2,24 +2,35 @@
 layout: default
 ---
 
-<section class="py-5">
-  <div class="container d-flex justify-content-center">
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
 
-    <article class="post-content">
+<body>
 
-      <h1 class="fw-bold mb-4">{{ page.title }}</h1>
+  {% include header.html %}
 
+  <main class="container py-5 post-content">
+
+    <h1 class="mb-4">{{ page.title }}</h1>
+
+    {% if page.date %}
       <p class="text-muted mb-4">
         {{ page.date | date: "%d %B %Y" }}
       </p>
+    {% endif %}
 
-      {{ content }}
-      
-      <div class="mt-5">
-        <a href="/blog.html" class="btn btn-green">← Torna al Blog</a>
-      </div>
+    {{ content }}
 
-    </article>
+    <a href="/blog" class="btn btn-primary mt-5">← Torna al blog</a>
 
-  </div>
-</section>
+  </main>
+
+  {% include footer.html %}
+  
+</body>
+</html>

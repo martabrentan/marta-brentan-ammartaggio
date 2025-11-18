@@ -185,11 +185,9 @@ p {
   margin-bottom: 1rem;
 }
 
-.project-card .card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.2rem;
+.project-card .card-body p {
+  text-align: left;
+  align-self: flex-start;
 }
 
 .project-card h5 {
@@ -212,9 +210,6 @@ p {
   padding: 0.55rem 1.2rem;
 }
 
-/* =========================================
-   SELECTED PROJECTS 
-========================================= */
 .projects-scroll {
   display: flex;
   gap: 1.5rem;
@@ -454,30 +449,51 @@ p {
     gap: 1rem;
   }
 }
-/* =========================================
-   CONTACT FORM
-========================================= */
-.contact form .form-control {
+.contact-form {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--panna);
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.4rem;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  padding: 0.9rem 1.2rem;
-  font-size: 0.9rem;
-  color: #555;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  background: white;
+  font-size: 1rem;
+  color: var(--text);
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact form .form-control::-moz-placeholder {
-  color: #888;
-}
-
-.contact form .form-control::placeholder {
-  color: #888;
-}
-
-.contact form .form-control:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 0.15rem rgba(0, 122, 120, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.18); /* verde tenue */
+}
+
+.contact-form button {
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 /* =========================================

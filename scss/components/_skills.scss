@@ -1,0 +1,23 @@
+.skills-grid img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  padding: 4px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .skills-grid img {
+    width: 45px;
+    height: 45px;
+  }
+}

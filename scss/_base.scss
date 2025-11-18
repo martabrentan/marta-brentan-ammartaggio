@@ -1,0 +1,42 @@
+/* LINK */
+a, a *, a:hover, a:focus, a:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+a:hover { color: var(--primary); }
+
+/* GLOBAL */
+body {
+  background-color: var(--panna);
+  color: var(--text);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+}
+
+/* TIPOGRAFIA */
+h1 {
+  font-family: var(--font-secondary);
+  font-size: clamp(2rem, 5vw, 4.125rem);
+  color: var(--text);
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-size: clamp(1.6rem, 4vw, 3.3rem);
+  color: var(--text);
+}
+
+h3 {
+  font-family: var(--font-secondary);
+  font-size: clamp(1.4rem, 3.5vw, 2.875rem);
+  color: var(--primary);
+}
+
+p { font-size: clamp(1rem, 2vw, 1.7rem); }
+
+.section-title {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  color: var(--text);
+}

@@ -1,0 +1,110 @@
+/* PROJECT CARDS — progettazione */
+.projects-small .card {
+  width: 220px;
+  flex: 0 0 220px !important;
+  border-radius: 18px;
+  text-align: left;
+  min-height: auto !important;
+}
+
+.projects-small img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* AREA CARDS */
+.area-card {
+  position: relative;
+  border-radius: 18px;
+  aspect-ratio: 16/10;
+  color: var(--panna);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.area-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.area-card h3 {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-secondary);
+  color: var(--panna);
+  transition: 0.3s;
+}
+
+.area-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.area-card:hover::before { background: rgba(255,255,255,0.25); }
+.area-card:hover h3 { color: var(--primary); }
+
+/* SFONDI */
+.area-card.editorial { background-image: url("../assets/img/sfondo-editorial.png"); }
+.area-card.voice { background-image: url("../assets/img/sfondo-voice.png"); }
+.area-card.design { background-image: url("../assets/img/sfondo-design.png"); }
+.area-card.progettazione { background-image: url("../assets/img/sfondo-progettazione.png"); }
+
+@media (max-width: 576px) {
+  .area-card { aspect-ratio: 4/3; }
+  .area-card h3 { font-size: 1.3rem; }
+}
+
+/* CARD BASE */
+.card-base {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  height: 420px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: var(--panna);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+  h3 {
+    z-index: 2;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+
+    h3 { color: var(--primary); }
+    .overlay { background: rgba(255,255,255,0.25); }
+  }
+}
+
+.project-card {
+  @extend .card-base;
+  flex: 0 0 340px;
+}

@@ -1,0 +1,21 @@
+.footer a {
+  color: var(--panna);
+  transition: 0.2s;
+}
+
+.footer a:hover { color: var(--primary-2); }
+
+.accordion-btn {
+  background: none;
+  border: none;
+  color: var(--panna);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+}
+
+.accordion-btn .arrow { transition: 0.25s; }
+.accordion-btn[aria-expanded="true"] .arrow {
+  transform: rotate(180deg);
+}

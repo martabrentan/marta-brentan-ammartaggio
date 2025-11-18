@@ -160,68 +160,57 @@ p {
   color: var(--text);
 }
 
-/* =========================================
-   PAGINA CHI SONO
-========================================= */
-.about {
-  background-color: var(--panna);
-  color: var(--text);
-  text-align: left;
-
-  h1 {
-    font-family: var(--font-primary);
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-
-  .intro {
-    font-family: var(--font-secondary);
-    font-weight: 600;
-    color: var(--primary);
-    font-size: 1.35rem;
-    margin-bottom: 2rem;
-  }
-
-  p {
-    font-family: var(--font-primary);
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
-
-  .about-img {
-    max-width: 500px;
-    border-radius: 50%;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  }
-}
-
-/* =========================================
-   PROJECTS GRID
-========================================= */
-.projects-small .card {
-  width: 220px;
-  flex: 0 0 220px !important;
-  border-radius: 18px;
-  text-align: left;
-  min-height: auto !important;
-}
-
-.projects-small img {
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.projects-centered {
-  overflow-x: visible !important;
-  justify-content: center;
-  gap: 2rem;
-}
 
 /* =========================================
    SELECTED PROJECTS 
 ========================================= */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 260px;
+  min-width: 260px;
+  height: 420px;
+  padding: 1rem;
+  border-radius: 18px;
+  background-color: var(--panna);
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.project-card .card-body p {
+  text-align: left;
+  align-self: flex-start;
+}
+
+
+.project-card h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+
+.project-card p {
+  font-size: .85rem;
+  margin-bottom: .3rem;
+}
+
+.project-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+  border-radius: 8px;
+  padding: .55rem 1.2rem;
+}
 
 .projects-scroll {
   display: flex;
@@ -229,70 +218,60 @@ p {
   padding-bottom: 1rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-}
-
-.projects-scroll .card {
-  width: 260px;       
-  min-width: 260px;
-  height: 420px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 18px;
-  background-color: var(--panna);
-  scroll-snap-align: start;
-}
-
-.projects-scroll .card img {
-  height: 160px;       
-  width: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.projects-scroll .card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.projects-scroll h5 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: .4rem;
-}
-
-.projects-scroll p {
-  font-size: .85rem;
-  margin-bottom: .3rem;
-}
-
-.projects-scroll .btn {
-  margin-top: auto;    
-  align-self: flex-start;
-  border-radius: 8px;
-  padding: .55rem 1.2rem;
-}
-
-.project-card {
-  @extend .card-base;
-  flex: 0 0 340px;
+  scroll-padding: 1rem;
 }
 
 /* =========================================
-   3 PROJECTS CENTERED
+   3 SELECTED PROJECTS 
 ========================================= */
+
 .projects-centered {
   display: flex;
-  justify-content: center;      
-  gap: 2rem;                     
-  flex-wrap: wrap;               
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.projects-centered .card {
-  width: 300px;                 
+.projects-centered .project-card {
+  width: 300px;
+  min-width: 300px;
+  height: auto;
 }
+
+/* CARD VERSIONE GRANDE PER PAGINE SINGOLE */
+.big-card {
+  width: 100%;
+  max-width: 500px;
+  min-width: auto;
+  height: auto;
+  padding: 2rem;
+
+  img {
+    height: 220px;
+    border-radius: 14px;
+  }
+
+  h5 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 576px) {
+  .project-card {
+    width: 240px;
+    min-width: 240px;
+    height: auto;
+  }
+}
+
 
 /* =========================================
    AREA CARDS
@@ -309,8 +288,6 @@ p {
   color: var(--panna);
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-
-  /* elimina height fissa */
   height: auto;
   aspect-ratio: 4 / 3;
 
@@ -351,7 +328,6 @@ p {
   }
 }
 
-/* Estensioni */
 .area-card {
   @extend .card-base;
 }
@@ -404,6 +380,41 @@ p {
   }
 }
 
+/* =========================================
+   PAGINA CHI SONO
+========================================= */
+.about {
+  background-color: var(--panna);
+  color: var(--text);
+  text-align: left;
+
+  h1 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .intro {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1.35rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-family: var(--font-primary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .about-img {
+    max-width: 500px;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+}
 
 /* =========================================
    SOFTWARE SKILLS

@@ -13,6 +13,88 @@
 </head>
 
 
+<body>
+
+ <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+            
+      <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+<li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+<li class="nav-item d-none d-lg-block ms-lg-3">
+  <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+    Scarica Portfolio
+  </a>
+</li>
+
+<li class="nav-item d-none d-lg-block ms-2">
+  <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+    Scarica CV
+  </a>
+</li>
+
+          <!-- MOBILE -->
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i>Portfolio
+            </a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i>CV
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTACT FORM -->
+  
+  </section><h2 class="section-title mb-4 text-center">
+    <br>
+  Hai un progetto, un testo o un’idea? Parliamone.
+</h2>
+
+  <form action="https://formspree.io/f/manvqedl" method="POST" class="contact-form">
+  
+  <div class="form-group">
+    <label for="name">Nome</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Messaggio</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Invia</button>
+</form>
+
+
+<!-- SCROLL UP MOBILE -->
+<a href="#" class="scrollup-mobile d-lg-none">
+  <img src="assets/icons/scroll up.png" alt="Torna su">
+</a>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const scrollBtn = document.querySelector('.scrollup-mobile');
@@ -31,89 +113,6 @@
     });
   });
 </script>
-
-
-<body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-panna py-3">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
-          <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contatti.html">Contatti</a></li>
-
-          <li class="nav-item d-none d-lg-block ms-lg-3">
-            <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Scarica Portfolio</a>
-          </li>
-          <li class="nav-item d-none d-lg-block ms-2">
-            <a class="btn btn-outline-primary" href="assets/docs/CV Marta Brentan.pdf" target="_blank">Scarica CV</a>
-          </li>
-
-          <!-- MOBILE -->
-          <li class="nav-item d-lg-none">
-            <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="nav-link">
-              <i class="bi bi-download me-2"></i>Portfolio
-            </a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" class="nav-link">
-              <i class="bi bi-download me-2"></i>CV
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  
-  <!-- CONTACT -->
-  <section class="contact text-center py-5">
-    <div class="container">
-
-      <h1 class="fw-bold mb-4">Hai un progetto, un testo o un’idea? <br> Parliamone.</h1> <br>
-
-      <form action="#" method="post" class="mx-auto" style="max-width: 600px;">
-
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Nome" required>
-        </div>
-
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Cognome" required>
-        </div>
-
-        <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Email" required>
-        </div>
-
-        <div class="mb-3">
-          <textarea class="form-control" rows="4" placeholder="Messaggio"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary w-100">Invia</button>
-
-      </form>
-
-    </div>
-  </section>
-
-
-<!-- SCROLL UP MOBILE -->
-<a href="#" class="scrollup-mobile d-lg-none">
-  <img src="assets/icons/scroll up.png" alt="Torna su">
-</a>
 
 
   <!-- FOOTER -->
@@ -170,9 +169,9 @@
           <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
           <div id="f1" class="collapse">
             <ul class="list-unstyled ps-3">
-                <li><a href="assets/docs/CV Marta Brentan.pdf">Chi sono</a></li>
-              <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-              <li><a href="cv.html">CV</a></li>
+             <li><a href="chi-sono.html">Chi sono</a></li>
+                <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
               <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>
@@ -205,7 +204,7 @@
           <div id="f4" class="collapse">
             <ul class="list-unstyled ps-3">
               <li><a href="policy.html"> Policy</a></li>
-              <li><a href="contatti.html">Scrivimi</a></li>
+              <li><a href="contatti.html"> Scrivimi </a></li>
               
             </ul>
           </div>

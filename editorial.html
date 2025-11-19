@@ -12,29 +12,12 @@
 <link rel="stylesheet" href="scss/main.css">
 </head>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
 
 <body>
 
+ 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-panna py-3">
+  <nav class="navbar navbar-expand-lg bg-white py-3">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
@@ -46,33 +29,55 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
-          <li class="nav-item"><a class="nav-link active" href="progetti.html">Progetti</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+            
+      <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+<li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+<li class="nav-item d-none d-lg-block ms-lg-3">
+  <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+    Scarica Portfolio
+  </a>
+</li>
+
+<li class="nav-item d-none d-lg-block ms-2">
+  <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+    Scarica CV
+  </a>
+</li>
+
+          <!-- MOBILE -->
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i>Portfolio
+            </a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i>CV
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  
+
+
    <!-- INTRO -->
-  <section class="about py-5">
-    <div class="container">
-      <div class="row align-items-left">
-
-        <div class="col-lg-7 mb-4 mb-lg-0">
-          <h1 class="fw-bold mb-4">Editorial</h1>
-
-          <h2 class="intro">Intreccio editoria, cultura e scrittura con digitale, grafica e design.</h2>
-
-           <p class="breadcrumb small mb-4">
-        <a href="editorial.html">Home</a>  › <span class="current">Editorial</span>
-      </p>
-          <p>
+  <section class="page-intro py-5">
+  <div class="container">
+    <div class="row">
+        <h1 class="fw-bold mb-4">Editorial</h1>
+         <p class="breadcrumb small mb-4">
+        <a href="index.html">Home</a> › <span class="current">Editorial</span>
+        <h2 class="intro">
+          Intreccio editoria, cultura e scrittura con digitale, grafica e design.
+        </h2>
+        <p>
       Quando ho iniziato a impaginare, ho scoperto che un buon libro non è solo fatto di un insieme di battute su un foglio Word.
-      Ho capito, insomma, che per creare un libro dalla A alla Z, non avrei dovuto soltanto leggerlo e correggerlo.
+      Ho c apito, insomma, che per creare un libro dalla A alla Z, non avrei dovuto soltanto leggerlo e correggerlo.
     </p>
 
     <p>
@@ -141,6 +146,26 @@
   <img src="assets/icons/scroll up.png" alt="Torna su">
 </a>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    constscrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  
+</script>
+
   <!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">
     <div class="container">
@@ -150,9 +175,9 @@
         <div class="col-md-3">
           <h5>Su di me</h5>
           <ul class="list-unstyled">
-              <li><a href="assets/docs/CV Marta Brentan.pdf">Chi sono</a></li>
+               <li><a href="chi-sono.html">Chi sono</a></li>
             <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-            <li><a href="cv.html">CV</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
@@ -197,7 +222,7 @@
             <ul class="list-unstyled ps-3">
               <li><a href="chi-sono.html">Chi sono</a></li>
               <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-              <li><a href="cv.html">CV</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
               <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>
@@ -229,9 +254,9 @@
           <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
           <div id="f4" class="collapse">
             <ul class="list-unstyled ps-3">
-              <li><a href="policy.html">Cookies Policy</a></li>
-              <li><a href="policy.html">Privacy Policy</a></li>
-              <li><a href="policy.html">Termini e condizioni</a></li>
+              <li><a href="policy.html"> Policy</a></li>
+              <li><a href="contatti.html"> Scrivimi </a></li>
+              
             </ul>
           </div>
         </div>

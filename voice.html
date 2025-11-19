@@ -13,49 +13,50 @@
 </head>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
-
-
 <body>
 
+
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-panna py-3">
+  <nav class="navbar navbar-expand-lg bg-white py-3">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
-          <li class="nav-item"><a class="nav-link active" href="progetti.html">Progetti</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
-          <li class="nav-item d-none d-lg-block ms-lg-3">
-            <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Scarica Portfolio</a>
+            
+      <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+<li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+<li class="nav-item d-none d-lg-block ms-lg-3">
+  <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+    Scarica Portfolio
+  </a>
+</li>
+
+<li class="nav-item d-none d-lg-block ms-2">
+  <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+    Scarica CV
+  </a>
+</li>
+
+          <!-- MOBILE -->
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i>Portfolio
+            </a>
           </li>
-          <li class="nav-item d-none d-lg-block ms-2">
-            <a class="btn btn-outline-primary" href="assets/docs/CV Marta Brentan.pdf" target="_blank">Scarica CV</a>
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i>CV
+            </a>
           </li>
         </ul>
       </div>
@@ -63,19 +64,20 @@
   </nav>
 
 
-  <!-- INTRO -->
-    <section class="about py-5">
-    <div class="container">
-      <div class="row align-items-left">
 
-        <div class="col-lg-7 mb-4 mb-lg-0">
-          <h1 class="fw-bold mb-4">Voice</h1>
-  
+  <!-- INTRO -->
+   <section class="page-intro py-5">
+  <div class="container">
+    <div class="row">
+        <h1 class="fw-bold mb-4">Voice</h1>
           <p class="breadcrumb small mb-4">
-        <a href="voice.html">Home</a>  › <span class="current">Voice</span>
-      </p>
-          <h2 class="intro">Testi, articoli, copy e contenuti per web e social che uniscono chiarezza, tono e creatività.</h2>
-          <p>
+        <a href="index.html">Home</a> › <span class="current">Voice</span>
+        <h2 class="intro">
+          Testi, articoli, copy e contenuti per web e social che uniscono chiarezza, 
+          tono e creatività.
+        </h2>
+        <p>
+      
         Da quando ho messo piede in questo mondo, una <strong> incontrollabile empatia nei confronti delle altre persone </strong> mi ha inseguito 
         come un’ombra. Finché ha riguardato i miei conoscenti, i miei amici e i miei famigliari, è andata ancora bene. 
         Poi ha iniziato a prendere il dominio anche sulle vite degli sconosciuti, facendomi vivere davvero poco serenamente. 
@@ -89,54 +91,61 @@
     </div>
   </section>
 
-
- 
-
-  <!-- PROJECT SECTION -->
   <section class="voice-project py-5">
-    <div class="container">
-      <div class="row align-items-start gy-4">
-        <div class="col-lg-7">
-          <h2 class="fw-bold mb-4">Copywriting per Hotel Pomelia</h2>
-          <p>
-            Sono nata e cresciuta in campagna, più precisamente nella campagna carmagnolese, in provincia di Torino.
-            Ancora più precisamente in una casa rossa costruita dalle mani di mio nonno muratore.
-            <strong>Credo fortemente nel potere delle radici e della natura</strong>,
-            perché credo nella cura che solo entrambe, e insieme, ti possono dare.
-          </p>
-<br>
+  <div class="container">
+    <div class="row align-items-start gy-4">
 
-          <p>Per il mio progetto di copywriting ho scelto un hotel sito in Sicilia, <strong> Hotel Pomelia </strong>. 
-        I figli dei fondatori non volevano rinunciare alla tradizione alberghiera di famiglia, ma non volevano nemmeno fare a meno all’innovazione necessaria per ridurre l’impatto sull’ambiente.  </p>
-<br>
-          <p>
-            Ho scritto un blog post che invogliasse i clienti attenti al <strong> turismo lento a valutare l’idea </strong> di passare
-            le vacanze in Hotel Pomelia perché comprendo profondamenteciò che significa voler dare voce alla propria realtà 
-            ecurarla affinché questa possa diventare una realtà abitabile e sostenibile per la propria famiglia e per le altre persone. 
-            Ho quindi analizzato il <strong> target di riferimento </strong>, il <strong> tone of voice </strong> da utilizzare per la promozione della struttura sui vari 
-            canali social e sito web, quali <strong> principi di persuasione </strong> utilizzare nell’articolo e quale potesse essere <strong> l'UVP</strong> dell’hotel da 
-            rendere al meglio.
-          </p>
-        </div>
+      <!-- PROGETTO COPY -->
+      <div class="col-lg-7">
+        <h2 class="fw-bold mb-4">Copywriting per Hotel Pomelia</h2>
 
-        <div class="col-lg-5">
-          <div class="card border-0 shadow-sm rounded-4 p-3 bg-light">
-            <img src="assets/img/sfondo copywriting.png" class="img-fluid rounded-3 mb-3" alt="Mockup progetto Hotel Pomelia">
-            <h5 class="fw-bold">Copywriting</h5>
-            <p class="small mb-2">Target, TOV, Principi di persuasione, UVP, CTA</p>
-            <p class="small text-muted">start2impact</p>
-            <a href="assets/docs/Progetto Copywriting.pdf" class="btn btn-primary btn-sm px-3">Scarica</a>
+        <p>
+          Sono nata e cresciuta in campagna, più precisamente nella campagna carmagnolese, in provincia di Torino.
+          Ancora più precisamente in una casa rossa costruita dalle mani di mio nonno muratore.
+          <strong>Credo fortemente nel potere delle radici e della natura</strong>,
+          perché credo nella cura che solo entrambe, e insieme, ti possono dare.
+        </p>
+
+        <br>
+
+        <p>
+          Per il mio progetto di copywriting ho scelto un hotel sito in Sicilia, <strong>Hotel Pomelia</strong>. 
+          I figli dei fondatori non volevano rinunciare alla tradizione alberghiera di famiglia, ma non volevano nemmeno fare a meno all’innovazione necessaria per ridurre l’impatto sull’ambiente.
+        </p>
+
+        <br>
+
+        <p>
+          Ho scritto un blog post che invogliasse i clienti attenti al <strong>turismo lento</strong> a valutare l’idea di passare
+          le vacanze in Hotel Pomelia perché comprendo profondamente ciò che significa voler dare voce alla propria realtà 
+          e curarla affinché questa possa diventare una realtà abitabile e sostenibile per la propria famiglia e per le altre persone. 
+          Ho quindi analizzato il <strong>target</strong>, il <strong>tone of voice</strong>, i <strong>principi di persuasione</strong> utili e l’<strong>UVP</strong> da rendere al meglio.
+        </p>
+      </div>
+
+      <!-- CARD PROGETTO COPY -->
+      <div class="col-lg-5 mx-auto">
+        <div class="project-card big-card">
+          <img src="assets/img/sfondo copywriting.png" alt="Mockup progetto Hotel Pomelia">
+          <div class="card-body">
+            <h5>Copywriting</h5>
+            <p>Target, TOV, Principi di persuasione, UVP, CTA</p>
+            <p class="text-muted small">start2impact</p>
+            <a href="assets/docs/Progetto Copywriting.pdf" class="btn btn-primary">Scarica</a>
           </div>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
 
   <!-- BLOG PROMO -->
   <section class="voice-blog bg-light py-5 mt-4">
     <div class="container text-center">
-      <h2 class="fw-bold mb-3" style="color text;">Ammartaggio: il mio Blog</h2>
+      <h4 class="fw-bold mb-3" style="color text;">Ammartaggio: il mio Blog</h>
       <p class="small mb-4 text-muted">
         Mi impegno a non giudicare mai un libro dalla sua copertina, specie quando è bellissima.
       </p>
@@ -160,6 +169,25 @@
   <img src="assets/icons/scroll up.png" alt="Torna su">
 </a>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
 
   <!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">
@@ -172,7 +200,7 @@
           <ul class="list-unstyled">
             <li><a href="chi-sono.html">Chi sono</a></li>
             <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-            <li><a href="cv.html">CV</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
@@ -202,8 +230,7 @@
           <h5>Aiuto</h5>
           <ul class="list-unstyled">
             <li><a href="policy.html">Cookies Policy</a></li>
-            <li><a href="policy.html">Privacy Policy</a></li>
-            <li><a href="policy.html">Termini e condizioni</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
           </ul>
         </div>
 
@@ -215,9 +242,9 @@
           <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
           <div id="f1" class="collapse">
             <ul class="list-unstyled ps-3">
-  <li><a href="assets/docs/CV Marta Brentan.pdf">Chi sono</a></li>
+                <li><a href="chi-sono.html">Chi sono</a></li>
                 <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-              <li><a href="cv.html">CV</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
               <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>
@@ -249,7 +276,7 @@
           <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
           <div id="f4" class="collapse">
             <ul class="list-unstyled ps-3">
-              <li><a href="policy.html"> Policy</a></li>
+              <li><a href="policy.html"> Policy </a></li>
               <li><a href="contatti.html"> Scrivimi </a></li>
             </ul>
           </div>

@@ -5,12 +5,8 @@ date: 2025-05-10
 ---
 
 
+
 Alla veneranda età di 26 anni ho approcciato per la prima volta agli audiolibri come antidoto contro la noia di camminare per andare al lavoro.&nbsp;Non sono il tipo che cammina per sport né per piacere. Cammino per necessità.&nbsp;
-
-
-
-
-
 
 
 Sono riuscita a scampare alle camminate in mezzo ai campi - luoghi dai quali sono nata e cresciuta - non so neanche io come, ma da quando vivo a Torino camminare mi è subito parsa l’unica soluzione possibile.&nbsp;

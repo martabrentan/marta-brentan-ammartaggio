@@ -12,7 +12,156 @@
 <link rel="stylesheet" href="scss/main.css">
 </head>
 
+<body>
 
+ <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+            
+      <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+<li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+<li class="nav-item d-none d-lg-block ms-lg-3">
+  <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+    Scarica Portfolio
+  </a>
+</li>
+
+<li class="nav-item d-none d-lg-block ms-2">
+  <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+    Scarica CV
+  </a>
+</li>
+
+          <!-- MOBILE -->
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i>Portfolio
+            </a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" class="nav-link">
+              <i class="bi bi-download me-2"></i>CV
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+
+<!-- INTRO -->
+  <section class="page-intro py-5">
+  <div class="container">
+    <div class="row">
+        <h1 class="fw-bold mb-4">Progettazione</h1>
+         <p class="breadcrumb small mb-4">
+        <a href="index.html">Home</a> › <span class="current">Progettazione</span>
+        <h2 class="intro">
+          Progetti di ricerca, wireframe e prototipazione per creare esperienze digitali accessibili e 
+        funzionali.
+        </h2>
+        <p>
+        Progettare un sito <strong> accessibile e usabile </strong> significa garantire contenuti ottimizzati per 
+        diversi dispositivi (desktop e mobile), una <strong> scala tipografica coerente e standardizzata </strong>, 
+        dimensioni corrette degli <strong> elementi UI </strong> per garantire una navigazione intuitiva e molto altro. 
+        In questi progetti ho analizzato le pagine del sito web Ecodream Design per costruirne di nuove 
+        e migliorare <stron> l’esperienza utente e l’usabilità </stron>. Dopo aver costruito i <strong> Wireframe </strong>, 
+        li ho “animati” trasformandoli in <strong> Prototipi </strong> interattivi che possano rappresentare in maniera 
+        più precisa l’aspetto visivo e l’esperienza utente che un sito potrebbe garantire. Per creare i Wireframe e i Prototipi 
+        mi sono affidata a <strong> Figma </strong>.
+      </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 SELECTED PROJECT -->
+<section class="fields py-5 text-center">
+
+  <h2 class="section-title">Selected projects</h2>
+
+  <div class="projects-centered">
+
+    <div class="project-card">
+      <img src="assets/img/sfondo wireframe.png" alt="Wireframe">
+      <div class="card-body">
+        <h5>Wireframe</h5>
+        <p>Wireframe mid-fidelity, in scala di grigi</p>
+        <p class="text-muted small">start2impact</p>
+      </div>
+      <a href="assets/docs/Progetto Wireframe.pdf" class="btn btn-primary">Scarica</a>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/img/sfondo prototipi desktop.png" alt="Prototipi Desktop">
+      <div class="card-body">
+        <h5>Prototipi Desktop</h5>
+        <p>Griglia, Tipo, Controlli, User Flow, Icone...</p>
+        <p class="text-muted small">start2impact</p>
+      </div>
+      <a href="assets/docs/Progetto User Interface Desktop.pdf" class="btn btn-primary">Scarica</a>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/img/sfondo prototipi mobile.png" alt="Prototipi mobile">
+      <div class="card-body">
+        <h5>Prototipi mobile</h5>
+        <p>Griglia, Tipo, Controlli, User Flow, Icone...</p>
+        <p class="text-muted small">start2impact</p>
+      </div>
+      <a href="assets/docs/Progetto User interface Mobile.pdf" class="btn btn-primary">Scarica</a>
+    </div>
+  </div>
+</section>
+
+
+ <!-- SCROLL UP MOBILE -->
+<a href="#" class="scrollup-mobile d-lg-none">
+  <img src="assets/icons/scroll up.png" alt="Torna su">
+</a>
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 7b890a8d437a374bbd1ecc5192c6b200ebbaa729
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7b890a8d437a374bbd1ecc5192c6b200ebbaa729
+ 
 <body>
 
   <!-- NAVBAR -->
@@ -132,26 +281,7 @@
   <img src="assets/icons/scroll up.png" alt="Torna su">
 </a>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
-
-  <!-- FOOTER -->
+<!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">
     <div class="container">
 
@@ -160,10 +290,10 @@
         <div class="col-md-3">
           <h5>Su di me</h5>
           <ul class="list-unstyled">
-            <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-           <li><a href="cv.html">CV</a></li>
-            <li><a href="blog.html">Blog</a></li>
+             <li><a href="chi-sono.html">Chi sono</a></li>
+                <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+              <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
 
@@ -191,9 +321,8 @@
         <div class="col-md-3">
           <h5>Aiuto</h5>
           <ul class="list-unstyled">
-            <li><a href="policy.html">Cookies Policy</a></li>
-            <li><a href="policy.html">Privacy Policy</a></li>
-            <li><a href="policy.html">Termini e condizioni</a></li>
+            <li><a href="policy.html"> Policy </a></li>
+            <li><a href="contatti.html"> Scrivimi </a></li>
           </ul>
         </div>
 
@@ -207,7 +336,7 @@
             <ul class="list-unstyled ps-3">
               <li><a href="chi-sono.html">Chi sono</a></li>
               <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-              <li><a href="cv.html">CV</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
               <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>
@@ -240,7 +369,7 @@
           <div id="f4" class="collapse">
             <ul class="list-unstyled ps-3">
               <li><a href="policy.html"> Policy</a></li>
-              <li><a href="contatti.html">Scrivimi</a></li>
+              <li><a href="contatti.html"> Scrivimi </a></li>
             </ul>
           </div>
         </div>

@@ -15,24 +15,6 @@
 <link rel="stylesheet" href="scss/main.css">
 </head>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
 
 
 <body>
@@ -116,7 +98,7 @@ analizzare statisticamente il traffico del sito.
 
 <p>
 <strong> Diritti dell'utente: </strong>
-Puoi in qualsiasi momento richiedere l’accesso, la rettifica o la cancellazione dei tuoi dati, scrivendo a martbrenan@yahoo.com
+Puoi in qualsiasi momento richiedere l’accesso, la rettifica o la cancellazione dei tuoi dati, scrivendo a martbrentan@yahoo.com
 </p>
 <br>
 
@@ -149,6 +131,24 @@ Puoi modificare o revocare il consenso in qualsiasi momento dalle impostazioni d
   <img src="assets/icons/scroll up.png" alt="Torna su">
 </a>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
 
   <!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">

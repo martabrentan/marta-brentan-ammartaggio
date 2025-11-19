@@ -13,26 +13,6 @@
 </head>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
-
-
 <body>
 
   <!-- NAVBAR -->
@@ -116,7 +96,6 @@
 <section class="projects py-5">
   <div class="container-fluid px-4">
     <h2 class="text-center mb-4">Selected Projects</h2>
-
 <div class="projects-centered d-flex">
 
 
@@ -153,6 +132,24 @@
   <img src="assets/icons/scroll up.png" alt="Torna su">
 </a>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.querySelector('.scrollup-mobile');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
 
   <!-- FOOTER -->
   <footer class="footer py-5 mt-5 bg-dark text-white">

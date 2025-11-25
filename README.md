@@ -6,7 +6,7 @@ Pubblicato tramite **GitHub Pages**.
 
 ## Obiettivo del progetto
 Creare un portfolio semplice, accessibile, responsive e coerente con la mia identità professionale.  
-Il sito raccoglie progetti di **UX/UI Design**, **Design**, **Editorial** e altre aree creative.
+Il sito raccoglie progetti di **UX/UI Design**, **Design**, **Editorial**, **Copywriting** e altre aree creative.
 
 ## Tecnologie utilizzate
 - HTML5  
@@ -17,7 +17,7 @@ Il sito raccoglie progetti di **UX/UI Design**, **Design**, **Editorial** e altr
 ## Struttura del repository
 - `/assets/img` – immagini ottimizzate per il web  
 - `/assets/icons` – icone e favicon  
-- `/assets/docs` – portfolio e CV  
+- `/assets/docs` – portfolio, CV e vari progetti
 - `/assets/scss` – fogli di stile sorgente  
 - `/css` – foglio di stile compilato  
 - `/pages` – singole pagine del sito

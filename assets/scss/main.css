@@ -353,19 +353,19 @@ p {
 }
 /* Sfondi */
 .area-card.editorial {
-  background-image: url("../img/sfondo-editorial.png");
+  background-image: url("../img/sfondo-editorial.webp");
 }
 
 .area-card.voice {
-  background-image: url("../img/sfondo-voice.png");
+  background-image: url("../img/sfondo-voice.webp");
 }
 
 .area-card.design {
-  background-image: url("../img/sfondo-design.png");
+  background-image: url("../img/sfondo-design.webp");
 }
 
 .area-card.progettazione {
-  background-image: url("../img/sfondo-progettazione.png");
+  background-image: url("../img/sfondo-progettazione.webp");
 }
 
 /* Mobile */

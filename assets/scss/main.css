@@ -377,34 +377,52 @@ p {
     font-size: 1.4rem;
   }
 }
-/* GALLERIA A PAGINE */
-.editorial-scroll {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding: 1rem 0;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+/* Masonry style tipo undesign.it */
+.editorial-masonry {
+  column-count: 3; /* numero di colonne */
+  column-gap: 2rem; /* spazio tra colonne */
+  padding: 2rem 0;
 }
 
-.editorial-scroll::-webkit-scrollbar {
-  display: none;
+.editorial-masonry img {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+  border-radius: 0; /* niente arrotondamenti */
+  background: #f4f4f4; /* come undesign: placeholder neutro */
+  break-inside: avoid; /* impedisce tagli brutti */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.editorial-img {
-  flex: 0 0 auto;
-  width: 300px;
-  height: auto;
-  scroll-snap-align: center;
-  object-fit: contain;
-  border-radius: 0;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
-  background: white;
+.editorial-masonry img:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
 }
 
+/* Tablet */
+@media (max-width: 992px) {
+  .editorial-masonry {
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+}
+/* Mobile */
 @media (max-width: 576px) {
-  .editorial-img {
-    width: 90vw;
+  .editorial-masonry {
+    column-count: 1;
+    column-gap: 1rem;
+  }
+  .editorial-masonry img {
+    margin-bottom: 1.5rem;
+  }
+}
+/* Mobile */
+@media (max-width: 576px) {
+  .editorial-slide {
+    height: 65vh;
+  }
+  .editorial-scroll {
+    gap: 2rem;
   }
 }
 /* PAGINA CHI SONO */

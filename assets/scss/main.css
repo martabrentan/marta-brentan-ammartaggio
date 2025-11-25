@@ -377,6 +377,36 @@ p {
     font-size: 1.4rem;
   }
 }
+/* GALLERIA A PAGINE */
+.editorial-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.editorial-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.editorial-img {
+  flex: 0 0 auto;
+  width: 300px;
+  height: auto;
+  scroll-snap-align: center;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  background: white;
+}
+
+@media (max-width: 576px) {
+  .editorial-img {
+    width: 90vw;
+  }
+}
 /* PAGINA CHI SONO */
 .about {
   background-color: var(--panna);

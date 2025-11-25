@@ -407,10 +407,10 @@ p {
   }
 }
 
-/* Masonry style tipo undesign.it */
+/* GALLERIA */
 .editorial-masonry {
-  column-count: 3;              /* numero di colonne */
-  column-gap: 2rem;             /* spazio tra colonne */
+  column-count: 3;              
+  column-gap: 2rem;           
   padding: 2rem 0;
 }
 
@@ -418,9 +418,9 @@ p {
   width: 100%;
   display: block;
   margin-bottom: 2rem;
-  border-radius: 0;             /* niente arrotondamenti */
-  background: #f4f4f4;          /* come undesign: placeholder neutro */
-  break-inside: avoid;          /* impedisce tagli brutti */
+  border-radius: 0;           
+  background: #f4f4f4;          
+  break-inside: avoid;         
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 

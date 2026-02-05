@@ -250,6 +250,32 @@ p {
     font-size: 0.95rem;
   }
 }
+.pdf-download {
+  position: relative;
+  display: inline-block;
+}
+
+.pdf-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.pdf-download:hover .pdf-overlay {
+  opacity: 1;
+}
+
 
 /* SINGLE PROJECT — BIG CARD */
 
@@ -429,6 +455,7 @@ p {
   opacity: 0.95;
 }
 
+
 /* Tablet */
 @media (max-width: 992px) {
   .editorial-masonry {
@@ -436,6 +463,131 @@ p {
     column-gap: 1.5rem;
   }
 }
+
+/* GALLERIA */
+.editorial-masonry {
+  column-count: 3;
+  column-gap: 2rem;
+  padding: 2rem 0;
+}
+
+.preview-item {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 2rem;
+}
+
+.editorial-img {
+  width: 100%;
+  display: block;
+  background: #f4f4f4;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* hover base */
+.preview-item:hover .editorial-img {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+/* ANTEPRIMA */
+.preview-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: var(--preview);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.preview-item:hover::after {
+  opacity: 1;
+}
+
+/* -------------------- GALLERY PREVIEW E ZOOM -------------------- */
+
+/* wrapper per immagini normali con anteprima */
+.preview-item {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 2rem;
+}
+
+/* effetto zoom leggero sull’immagine */
+.preview-item .editorial-img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.preview-item:hover .editorial-img {
+  transform: scale(1.05);
+  opacity: 0.95;
+  z-index: 1; /* sopra le altre immagini della colonna */
+}
+
+/* overlay leggerissimo solo per dare “focus” */
+.preview-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--preview);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.05); /* quasi trasparente */
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.preview-item:hover::after {
+  opacity: 0.05;
+}
+
+/* -------------------- PDF DOWNLOAD OVERLAY -------------------- */
+
+.pdf-download {
+  position: relative;
+  display: inline-block;
+  break-inside: avoid;
+}
+
+.pdf-download img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.pdf-download:hover img {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.pdf-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.pdf-download:hover .pdf-overlay {
+  opacity: 1;
+}
+
 
 /* Mobile */
 @media (max-width: 576px) {

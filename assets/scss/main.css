@@ -174,8 +174,7 @@ p {
 .project-card img {
   width: 100%;
   height: 160px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1rem;
 }
@@ -249,8 +248,7 @@ p {
 .big-card img {
   width: 100%;
   height: 240px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 14px;
 }
 
@@ -381,10 +379,8 @@ p {
 }
 /* GALLERIA */
 .editorial-masonry {
-  -moz-column-count: 3;
-       column-count: 3;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-count: 3;
+  column-gap: 2rem;
   padding: 2rem 0;
 }
 
@@ -394,8 +390,7 @@ p {
   margin-bottom: 2rem;
   border-radius: 0;
   background: #f4f4f4;
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
+  break-inside: avoid;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -407,19 +402,15 @@ p {
 /* Tablet */
 @media (max-width: 992px) {
   .editorial-masonry {
-    -moz-column-count: 2;
-         column-count: 2;
-    -moz-column-gap: 1.5rem;
-         column-gap: 1.5rem;
+    column-count: 2;
+    column-gap: 1.5rem;
   }
 }
 /* Mobile */
 @media (max-width: 576px) {
   .editorial-masonry {
-    -moz-column-count: 1;
-         column-count: 1;
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-count: 1;
+    column-gap: 1rem;
   }
   .editorial-masonry img {
     margin-bottom: 1.5rem;
@@ -468,8 +459,7 @@ p {
 .skills-grid img {
   width: 55px;
   height: 55px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   padding: 4px;
   background-color: #fff;
   border-radius: 10px;
@@ -659,8 +649,7 @@ p {
 .blog-thumb {
   width: 100%;
   height: 170px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blog-excerpt {
@@ -680,8 +669,7 @@ p {
   width: 100%;
   height: auto;
   max-height: 380px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .post-content {
@@ -738,8 +726,7 @@ p {
 .blog-thumb {
   width: 260px;
   height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blog-text h3 {

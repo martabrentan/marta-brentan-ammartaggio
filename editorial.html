@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/scss/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
 
 
@@ -100,76 +101,197 @@
 
 
 <!-- GALLERY -->
-
- <section class="editorial-gallery">
-  <div class="editorial-masonry">
-
-    <div class="preview-item" style="--preview:url('assets/img/Free_Trifold_Flyer_Mockup_2.webp')">
-      <img src="assets/img/Free_Trifold_Flyer_Mockup_2.webp" class="editorial-img" alt="locandina libreria" loading="lazy">
-    </div>
-
-    <div class="preview-item" style="--preview:url('assets/img/Free_Trifold_Flyer_Mockup_3.webp')">
-      <img src="assets/img/Free_Trifold_Flyer_Mockup_3.webp" class="editorial-img" alt="retro locandina libreria" loading="lazy">
-    </div>
-
-    <div class="preview-item" style="--preview:url('assets/img/Free_Trifold_Flyer_Mockup_4.webp')">
-      <img src="assets/img/Free_Trifold_Flyer_Mockup_4.webp" class="editorial-img" alt="locandina evento" loading="lazy">
-    </div>
-
-    <div class="preview-item" style="--preview:url('assets/img/Free_Trifold_Flyer_Mockup_5.webp')">
-      <img src="assets/img/Free_Trifold_Flyer_Mockup_5.webp" class="editorial-img" alt="retro locandina evento" loading="lazy">
-    </div>
-  <div class="preview-item" style="--preview:url('assets/img/Free_Trifold_Flyer_Mockup_5.webp')">
-      <img src="assets/img/brochure-infosistemi.webp" class="editorial-img" alt="brochure" loading="lazy">
-    </div> 
-
- <a 
-  href="assets/docs/catalogo-argo-2026pdf"
-  download="catalogo.pdf"
-  class="pdf-download"
-  aria-label="Scarica il catalogo in PDF"
->
-  <img 
-    src="assets/img/copertina-catalogo-argo-2026.webp"
-    class="editorial-img"
-    alt="Anteprima di catalogo – disponibile il download in PDF"
-    loading="lazy"
-  >
-
-  <span class="pdf-overlay">Scarica PDF</span>
-</a>
-
-  <div class="preview-item" style="--preview:url('assets/img/Free_Trifold_Flyer_Mockup_5.webp')">
-      <img src="assets/img/brochure-slide.webp" class="editorial-img" alt="brochure" loading="lazy">
-    </div> 
-
- <div class="preview-item" style="--preview:url('assets/img/tre-poster.webp')">
-      <img src="assets/img/millennials.webp" class="editorial-img" alt="1 poster parete" loading="lazy">
-    </div>
-       <div class="preview-item" style="--preview:url('assets/img/tre-poster.webp')">
-      <img src="assets/img/tokyo.webp" class="editorial-img" alt="poster raffigurante tokyo" loading="lazy">
-    </div>
-
-      <div class="preview-item" style="--preview:url('assets/img/Free_Trifold_Flyer_Mockup_5.webp')">
-      <img src="assets/img/3-riviste.webp" class="editorial-img" alt="riviste" loading="lazy">
-    </div>
-
-    <div class="preview-item" style="--preview:url('assets/img/tre-poster.webp')">
-      <img src="assets/img/poster-parete.webp" class="editorial-img" alt="poster parete" loading="lazy">
-    </div>
-    <div class="preview-item" style="--preview:url('assets/img/tre-poster.webp')">
-      <img src="assets/img/tre-poster.webp" class="editorial-img" alt="poster" loading="lazy">
-    </div>
- <div class="preview-item" style="--preview:url('assets/img/tre-poster.webp')">
-      <img src="assets/img/libri regina degli achei.webp" class="editorial-img" alt="libri" loading="lazy">
-    </div>
-
-<div class="preview-item" style="--preview:url('assets/img/tre-poster.webp')">
-      <img src="assets/img/Festival.webp" class="editorial-img" alt="poster festival" loading="lazy">
-    </div>
+ 
+<section class="eg-section">
+  <div class="eg-header">
+    <p class="eg-subtitle">Progetti editoriali</p>
+    <h2 class="section-title">Carta, pixel, inchiostro</h2>
+  </div>
+ 
+  <div class="eg-track-wrap">
+    <div class="eg-track" id="egTrack">
+ 
+      <div class="eg-card" style="position:relative;">
+  <a class="glightbox"
+     href="assets/img/copertina-catalogo-argo-2026.webp"
+     data-gallery="editorial"
+     data-title="Catalogo Argonauta Edizioni 2026"
+     style="display:block;">
+    <img src="assets/img/copertina-catalogo-argo-2026.webp" alt="Catalogo Argo 2026" loading="lazy">
+  </a>
+  <div class="eg-overlay" style="opacity:1; pointer-events:none;">
+    <p class="eg-tag">Catalogo</p>
+    <p class="eg-name">Catalogo Argonauta Edizioni 2026</p>
+    <a href="assets/docs/catalogo-argo-2026pdf"
+       download="catalogo-argo-2026.pdf"
+       class="eg-desc"
+       style="display:flex;align-items:center;gap:6px;pointer-events:auto;color:rgba(255,255,255,0.72);text-decoration:none;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Scarica PDF
+    </a>
+  </div>
+</div>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/libri regina degli achei.webp"
+         data-gallery="editorial"
+         data-title="Regina degli Achei">
+        <img src="assets/img/libri regina degli achei.webp" alt="Libri Regina degli Achei" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Book design</p>
+          <p class="eg-name">Regina degli Achei</p>
+          <p class="eg-desc">Progetto di copertina e impaginazione per romanzo storico.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/3-riviste.webp"
+         data-gallery="editorial"
+         data-title="Layout riviste">
+        <img src="assets/img/3-riviste.webp" alt="Riviste" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Editorial design</p>
+          <p class="eg-name">Layout riviste</p>
+          <p class="eg-desc">Impaginazione per periodici con griglia modulare a 12 colonne.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/millennials.webp"
+         data-gallery="editorial"
+         data-title="Millennials">
+        <img src="assets/img/millennials.webp" alt="Poster Millennials" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Poster</p>
+          <p class="eg-name">Millennials</p>
+          <p class="eg-desc">Poster editoriale su libri "millennials".</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/tokyo.webp"
+         data-gallery="editorial"
+         data-title="Tokyo">
+        <img src="assets/img/tokyo.webp" alt="Poster Tokyo" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Poster</p>
+          <p class="eg-name">Tokyo</p>
+          <p class="eg-desc">Poster editoriale su libri giapponesi.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/poster-parete.webp"
+         data-gallery="editorial"
+         data-title="Poster da parete">
+        <img src="assets/img/poster-parete.webp" alt="Poster parete" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Poster</p>
+          <p class="eg-name">Poster da parete</p>
+          <p class="eg-desc">Poster editoriale per libreria.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/tre-poster.webp"
+         data-gallery="editorial"
+         data-title="Serie poster">
+        <img src="assets/img/tre-poster.webp" alt="Tre poster" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Poster</p>
+          <p class="eg-name">Poster da parete</p>
+          <p class="eg-desc">Poster editoriale per libreria.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/cube mockup.webp"
+         data-gallery="editorial"
+         data-title="Rollup">
+        <img src="assets/img/cube mockup.webp" alt="Rollup" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Roll Up</p>
+          <p class="eg-name">Roll Up per fiera</p>
+          <p class="eg-desc">Roll Up pubblicitario per evento fiera.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/Festival.webp"
+         data-gallery="editorial"
+         data-title="Festival">
+        <img src="assets/img/Festival.webp" alt="Poster Festival" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Event design</p>
+          <p class="eg-name">Festival</p>
+          <p class="eg-desc">Visual identity e comunicazione per festival culturale.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/Free_Trifold_Flyer_Mockup_3.webp"
+         data-gallery="editorial"
+         data-title="Brochure evento in libreria">
+        <img src="assets/img/Free_Trifold_Flyer_Mockup_3.webp" alt="Retro locandina libreria" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Brochure</p>
+          <p class="eg-name">Brochure evento in libreria</p>
+          <p class="eg-desc">Brochure per evento lettura per bambini in libreria.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/brochure-infosistemi.webp"
+         data-gallery="editorial"
+         data-title="Brochure Infosistemi">
+        <img src="assets/img/brochure-infosistemi.webp" alt="Brochure Infosistemi" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Brochure</p>
+          <p class="eg-name">Brochure Infosistemi</p>
+          <p class="eg-desc">Materiale corporate con impaginazione modulare e palette istituzionale.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/flyer giusto.webp"
+         data-gallery="editorial"
+         data-title="Brochure evento fiera">
+        <img src="assets/img/flyer giusto.webp" alt="Locandina evento" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Brochure</p>
+          <p class="eg-name">Brochure evento fiera</p>
+          <p class="eg-desc">Comunicazione visiva per presentazione Salone del libro di Torino 2026.</p>
+        </div>
+      </a>
+ 
+      <a class="eg-card glightbox"
+         href="assets/img/flyer fare.webp"
+         data-gallery="editorial"
+         data-title="Brochure evento fiera">
+        <img src="assets/img/flyer fare.webp" alt="Brochure evento fiera" loading="lazy">
+        <div class="eg-overlay">
+          <p class="eg-tag">Brochure</p>
+          <p class="eg-name">Brochure evento fiera</p>
+          <p class="eg-desc">Comunicazione visiva per presentazione Salone del libro di Torino 2026.</p>
+        </div>
+      </a>
  
     </div>
+  </div>
+ 
+  <div class="eg-nav">
+    <button class="eg-btn" id="egPrev" aria-label="Precedente">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="eg-dots" id="egDots"></div>
+    <button class="eg-btn" id="egNext" aria-label="Successivo">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+ 
 </section>
+ 
+
 
 <!-- SCROLL UP MOBILE -->
 <a href="#" class="scrollup-mobile d-lg-none">
@@ -305,6 +427,56 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  (function () {
+    var track  = document.getElementById('egTrack');
+    var dotsEl = document.getElementById('egDots');
+    if (!track) return;
+ 
+    var cards   = track.querySelectorAll('.eg-card');
+    var GAP     = 24;
+    var VISIBLE = window.innerWidth < 768 ? 1 : 2;
+    var total   = cards.length;
+    var maxStep = total - VISIBLE;
+    var current = 0;
+ 
+    function cardWidth() {
+      return cards[0].getBoundingClientRect().width + GAP;
+    }
+ 
+    var dots = [];
+    for (var i = 0; i <= maxStep; i++) {
+      (function(idx) {
+        var d = document.createElement('div');
+        d.className = 'eg-dot' + (idx === 0 ? ' active' : '');
+        d.addEventListener('click', function() { goTo(idx); });
+        dotsEl.appendChild(d);
+        dots.push(d);
+      })(i);
+    }
+ 
+    function goTo(n) {
+      current = Math.max(0, Math.min(n, maxStep));
+      track.style.transform = 'translateX(-' + (current * cardWidth()) + 'px)';
+      dots.forEach(function(d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+ 
+    document.getElementById('egPrev').addEventListener('click', function() { goTo(current - 1); });
+    document.getElementById('egNext').addEventListener('click', function() { goTo(current + 1); });
+ 
+    var startX = 0;
+    track.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', function(e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+    }, { passive: true });
+  })();
+</script>
 
 </body>
 </html>

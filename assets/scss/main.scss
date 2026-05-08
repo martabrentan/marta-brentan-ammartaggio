@@ -557,7 +557,75 @@ p {
     display: none;
   }
 }
+/* ── MOBILE SCROLL ACTIVATION ── */
+/* Si attiva solo sotto 768px — desktop mantiene hover */
 
+@media (max-width: 768px) {
+
+  .hl-item {
+    align-items: center;
+    min-height: 72px;
+    cursor: pointer;
+  }
+
+  .hl-item-left {
+    flex: 1;
+  }
+
+  .hl-num {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .hl-title {
+    display: block;
+    transition: color 0.3s ease;
+  }
+
+  .hl-tag,
+  .hl-download {
+    display: block;
+    margin-top: 3px;
+    transition: color 0.3s;
+  }
+
+  /* miniatura a destra — nascosta di default */
+  .hl-mob-img {
+    width: 80px;
+    height: 64px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    opacity: 0;
+    transform: scale(0.9) translateX(8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+
+  .hl-mob-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* stato attivo — voce visibile nel viewport */
+  .hl-item.mob-active .hl-title {
+    color: #007A78;
+  }
+
+  .hl-item.mob-active .hl-tag,
+  .hl-item.mob-active .hl-download {
+    color: #007A78;
+    opacity: 0.7;
+  }
+
+  .hl-item.mob-active .hl-mob-img {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+
+}
 /* PAGINA CHI SONO */
 .about {
   background-color: var(--panna);
@@ -591,7 +659,90 @@ p {
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   }
 }
+/* LIGHTBOX */
+.hl-lightbox {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
 
+.hl-lightbox.open {
+  background: rgba(0, 0, 0, 0.88);
+  pointer-events: auto;
+}
+
+.hl-lightbox-img {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: zoom-in;
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hl-lightbox.open .hl-lightbox-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hl-lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  line-height: 1;
+  background: none;
+  border: none;
+}
+
+.hl-lightbox-close:hover {
+  opacity: 1;
+}
+
+.hl-lightbox-info {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+}
+
+.hl-lightbox.open .hl-lightbox-info {
+  opacity: 1;
+}
+
+.hl-lightbox-info-tag {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin: 0 0 4px;
+}
+
+.hl-lightbox-info-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
 /* SOFTWARE SKILLS */
 .skills-grid img {
   width: 55px;

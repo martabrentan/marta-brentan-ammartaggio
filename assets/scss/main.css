@@ -498,6 +498,119 @@ p {
 .hl-img-cursor.visible {
   opacity: 1;
 }
+
+/* download label per catalogo */
+.hl-download {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.hl-item:hover .hl-download {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .hl-title {
+    font-size: 1.1rem;
+  }
+  .hl-img-cursor {
+    display: none;
+  }
+}
+/* ── MOBILE SCROLL ACTIVATION ── */
+/* Si attiva solo sotto 768px — desktop mantiene hover */
+@media (max-width: 768px) {
+  .hl-item {
+    align-items: center;
+    min-height: 72px;
+    cursor: pointer;
+  }
+  .hl-item-left {
+    flex: 1;
+  }
+  .hl-num {
+    display: block;
+    margin-bottom: 2px;
+  }
+  .hl-title {
+    display: block;
+    transition: color 0.3s ease;
+  }
+  .hl-tag,
+  .hl-download {
+    display: block;
+    margin-top: 3px;
+    transition: color 0.3s;
+  }
+  /* miniatura a destra — nascosta di default */
+  .hl-mob-img {
+    width: 80px;
+    height: 64px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    opacity: 0;
+    transform: scale(0.9) translateX(8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .hl-mob-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* stato attivo — voce visibile nel viewport */
+  .hl-item.mob-active .hl-title {
+    color: #007A78;
+  }
+  .hl-item.mob-active .hl-tag,
+  .hl-item.mob-active .hl-download {
+    color: #007A78;
+    opacity: 0.7;
+  }
+  .hl-item.mob-active .hl-mob-img {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+/* PAGINA CHI SONO */
+.about {
+  background-color: var(--panna);
+  color: var(--text);
+  text-align: left;
+}
+.about h1 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about .intro {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.35rem;
+  margin-bottom: 2rem;
+}
+.about p {
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.about .about-img {
+  max-width: 350px;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
 /* LIGHTBOX */
 .hl-lightbox {
   position: fixed !important;
@@ -577,65 +690,10 @@ p {
 }
 
 .hl-lightbox-info-title {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
-}
-
-/* download label per catalogo */
-.hl-download {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #aaa;
-  transition: color 0.2s;
-  text-decoration: none;
-}
-
-.hl-item:hover .hl-download {
-  color: #555;
-}
-
-@media (max-width: 768px) {
-  .hl-title {
-    font-size: 1.1rem;
-  }
-  .hl-img-cursor {
-    display: none;
-  }
-}
-/* PAGINA CHI SONO */
-.about {
-  background-color: var(--panna);
-  color: var(--text);
-  text-align: left;
-}
-.about h1 {
-  font-family: var(--font-primary);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.about .intro {
-  font-family: var(--font-secondary);
-  font-weight: 600;
-  color: var(--primary);
-  font-size: 1.35rem;
-  margin-bottom: 2rem;
-}
-.about p {
-  font-family: var(--font-primary);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-.about .about-img {
-  max-width: 350px;
-  border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* SOFTWARE SKILLS */

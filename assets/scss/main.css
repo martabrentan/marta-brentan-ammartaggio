@@ -174,7 +174,8 @@ p {
 .project-card img {
   width: 100%;
   height: 160px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1rem;
 }
@@ -272,7 +273,8 @@ p {
 .big-card img {
   width: 100%;
   height: 240px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 14px;
 }
 
@@ -401,6 +403,7 @@ p {
     font-size: 1.4rem;
   }
 }
+<<<<<<< HEAD
 /* ── HOVER LIST GALLERY ── */
 .hl-section {
   padding: 4rem 0 6rem;
@@ -413,6 +416,26 @@ p {
   padding: 0 0 1rem;
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 0;
+=======
+/* GALLERIA */
+.editorial-masonry {
+  -moz-column-count: 3;
+       column-count: 3;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  padding: 2rem 0;
+}
+
+.editorial-masonry img {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+  border-radius: 0;
+  background: #f4f4f4;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+>>>>>>> 19b08a8 (foto profilo)
 }
 
 .hl-header-label {
@@ -422,6 +445,7 @@ p {
   color: #999;
 }
 
+<<<<<<< HEAD
 .hl-item {
   display: flex;
   align-items: baseline;
@@ -438,6 +462,31 @@ p {
   padding-left: 0.5rem;
   color: inherit;
   text-decoration: none;
+=======
+/* Tablet */
+@media (max-width: 992px) {
+  .editorial-masonry {
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+}
+/* GALLERIA */
+.editorial-masonry {
+  -moz-column-count: 3;
+       column-count: 3;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  padding: 2rem 0;
+}
+
+.preview-item {
+  position: relative;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 2rem;
+>>>>>>> 19b08a8 (foto profilo)
 }
 
 .hl-item-left {
@@ -499,8 +548,72 @@ p {
   opacity: 1;
 }
 
+<<<<<<< HEAD
 /* download label per catalogo */
 .hl-download {
+=======
+/* -------------------- GALLERY PREVIEW E ZOOM -------------------- */
+/* wrapper per immagini normali con anteprima */
+.preview-item {
+  position: relative;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 2rem;
+}
+
+/* effetto zoom leggero sull’immagine */
+.preview-item .editorial-img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.preview-item:hover .editorial-img {
+  transform: scale(1.05);
+  opacity: 0.95;
+  z-index: 1; /* sopra le altre immagini della colonna */
+}
+
+/* overlay leggerissimo solo per dare “focus” */
+.preview-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--preview);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.05); /* quasi trasparente */
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.preview-item:hover::after {
+  opacity: 0.05;
+}
+
+/* -------------------- PDF DOWNLOAD OVERLAY -------------------- */
+.pdf-download {
+  position: relative;
+  display: inline-block;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+}
+
+.pdf-download img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.pdf-download:hover img {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.pdf-overlay {
+  position: absolute;
+  inset: 0;
+>>>>>>> 19b08a8 (foto profilo)
   display: flex;
   align-items: center;
   gap: 6px;
@@ -516,9 +629,19 @@ p {
   color: #555;
 }
 
+<<<<<<< HEAD
 @media (max-width: 768px) {
   .hl-title {
     font-size: 1.1rem;
+=======
+/* Mobile */
+@media (max-width: 576px) {
+  .editorial-masonry {
+    -moz-column-count: 1;
+         column-count: 1;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+>>>>>>> 19b08a8 (foto profilo)
   }
   .hl-img-cursor {
     display: none;
@@ -606,9 +729,10 @@ p {
   margin-bottom: 1rem;
 }
 .about .about-img {
-  max-width: 350px;
-  border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 340px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* LIGHTBOX */
@@ -700,7 +824,8 @@ p {
 .skills-grid img {
   width: 55px;
   height: 55px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   padding: 4px;
   background-color: #fff;
   border-radius: 10px;
@@ -890,7 +1015,8 @@ p {
 .blog-thumb {
   width: 100%;
   height: 170px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .blog-excerpt {
@@ -910,7 +1036,8 @@ p {
   width: 100%;
   height: auto;
   max-height: 380px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .post-content {
@@ -967,7 +1094,8 @@ p {
 .blog-thumb {
   width: 260px;
   height: 180px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .blog-text h3 {

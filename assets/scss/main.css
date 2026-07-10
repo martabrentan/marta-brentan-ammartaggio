@@ -795,6 +795,12 @@ p {
   line-height: 1.7;
 }
 
+.blog-promo {
+  background-color: rgb(235, 241.38, 238.44);
+  border-top: 1px solid rgba(0, 122, 120, 0.08);
+  border-bottom: 1px solid rgba(0, 122, 120, 0.08);
+}
+
 .section-title {
   font-family: "Epilogue", sans-serif;
   font-weight: 600;

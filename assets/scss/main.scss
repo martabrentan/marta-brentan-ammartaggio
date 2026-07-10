@@ -1336,7 +1336,11 @@ p {
   }
 }
 
-
+.blog-promo {
+  background-color: mix($color-primary, $color-panna, 6%);
+  border-top: 1px solid rgba($color-primary, .08);
+  border-bottom: 1px solid rgba($color-primary, .08);
+}
 
 .section-title {
 

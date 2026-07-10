@@ -174,8 +174,7 @@ p {
 .project-card img {
   width: 100%;
   height: 160px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1rem;
 }
@@ -197,7 +196,64 @@ p {
   border-radius: 8px;
   padding: 0.55rem 1.2rem;
 }
+/*
+   PROJECTS GRID
+*/
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.project-item {
+  display: block;
+  color: inherit;
+  transition: transform .3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-6px);
+}
+
+.project-item img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.project-item h3 {
+  margin-top: 1rem;
+  font-family: var(--font-secondary);
+  font-size: 1.45rem;
+  color: var(--text);
+}
+
+.project-item p {
+  color: #666;
+  margin: .4rem 0 0;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-item h3 {
+    font-size: 1.25rem;
+  }
+}
 /* MOBILE RESPONSIVE */
 @media (max-width: 576px) {
   .projects-scroll {
@@ -273,8 +329,7 @@ p {
 .big-card img {
   width: 100%;
   height: 240px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 14px;
 }
 
@@ -493,8 +548,7 @@ p {
 .hl-img-cursor img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 
@@ -567,8 +621,7 @@ p {
   .hl-mob-img img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     display: block;
   }
   /* stato attivo — voce visibile nel viewport */
@@ -612,8 +665,7 @@ p {
 .about .about-img {
   width: 340px;
   height: 340px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* LIGHTBOX */
@@ -640,8 +692,7 @@ p {
 .hl-lightbox-img {
   max-width: 92vw;
   max-height: 90vh;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 4px;
   cursor: zoom-in;
   opacity: 0;
@@ -706,8 +757,7 @@ p {
 .skills-grid img {
   width: 55px;
   height: 55px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   padding: 4px;
   background-color: #fff;
   border-radius: 10px;
@@ -732,7 +782,91 @@ p {
     gap: 1rem;
   }
 }
+/* =====================================
+   PROJECT SHOWCASE
+===================================== */
+
+.projects-showcase {
+
+    .project-preview {
+
+        display: block;
+        color: var(--text);
+        text-decoration: none;
+
+        img{
+            width:100%;
+            aspect-ratio:16/10;
+            object-fit:cover;
+            border-radius:20px;
+
+            transition:.35s;
+        }
+
+        h3{
+            margin-top:18px;
+            margin-bottom:6px;
+
+            font-family:var(--font-secondary);
+            font-size:1.6rem;
+            color:var(--text);
+
+            transition:.3s;
+        }
+
+        span{
+            color:#777;
+            font-size:.95rem;
+        }
+
+        &:hover{
+
+            img{
+                transform:translateY(-8px);
+                box-shadow:0 18px 40px rgba(0,0,0,.12);
+            }
+
+            h3{
+                color:var(--primary);
+            }
+
+        }
+
+    }
+
+}
+@media (max-width:768px){
+
+.projects-showcase{
+
+    .project-preview{
+
+        img{
+            aspect-ratio:4/3;
+        }
+
+        h3{
+            font-size:1.35rem;
+        }
+
+    }
+
+}
+
+}
+
+/* ===========================
+   CONTACT CTA
+=========================== */
+
+.contact-cta{
+    background: #f2efea;
+    margin-top: 5rem;
+    padding: 6rem 0;
+}
+
 /* CONTACT FORM */
+
 .contact-form {
   max-width: 550px;
   margin: 0 auto;
@@ -770,7 +904,7 @@ p {
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.18);
+  box-shadow: 0 0 0 3px rgba(0, 122, 120, 0.18);
 }
 
 .contact-form button {
@@ -779,7 +913,6 @@ p {
   font-size: 1rem;
   font-weight: 600;
 }
-
 /* SEZIONE DARK */
 .bg-dark-portfolio {
   background-color: var(--text);
@@ -897,8 +1030,7 @@ p {
 .blog-thumb {
   width: 100%;
   height: 170px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blog-excerpt {
@@ -918,8 +1050,7 @@ p {
   width: 100%;
   height: auto;
   max-height: 380px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .post-content {
@@ -976,8 +1107,7 @@ p {
 .blog-thumb {
   width: 260px;
   height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blog-text h3 {

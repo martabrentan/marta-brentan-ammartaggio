@@ -142,6 +142,13 @@ p {
   line-height: 1.7;
 }
 
+.breadcrumb {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
 /* ==========================================================
    PROJECTS
 ========================================================== */

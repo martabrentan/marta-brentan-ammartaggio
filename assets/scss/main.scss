@@ -382,6 +382,80 @@ p {
     }
   }
 }
+/* ==========================================================
+   WORKS INDEX — card grandi stile case study
+========================================================== */
+
+.works-label {
+  font-family: $font-primary;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-grey;
+  margin-bottom: 2.5rem;
+}
+
+.works-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.works-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.works-item-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+  background: $color-light-grey;
+}
+
+.works-item-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.works-item:hover .works-item-media img {
+  transform: scale(1.03);
+}
+
+.works-item-caption {
+  margin-top: 1.4rem;
+
+  h3 {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 0 0.4rem 0;
+    color: $color-text;
+  }
+
+  span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-grey;
+  }
+}
+
+@media (max-width: 576px) {
+  .works-item-caption h3 {
+    font-size: 1.3rem;
+  }
+}
 
  /* ==========================================================
    AREA CARDS
@@ -1075,14 +1149,13 @@ p {
   }
 }
 
-
-
-
-
 /* ==========================================================
-   CONTACT FORM
+   CONTACT SECTION
 ========================================================== */
 
+.contact-cta {
+  background-color: darken($color-panna, 4%);
+}
 
 .contact-form {
 
@@ -1092,7 +1165,7 @@ p {
 
   padding:2rem;
 
-  background:$color-panna;
+  background:$color-white;
 
   border-radius:20px;
 
@@ -1166,10 +1239,6 @@ p {
     font-weight:600;
   }
 }
-
-
-
-
 
 /* ==========================================================
    DARK SECTION + FOOTER

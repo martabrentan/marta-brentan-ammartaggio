@@ -925,11 +925,6 @@ p {
   line-height: 1.5;
 }
 
-/* SINGLE POST */
-.post-layout {
-  max-width: 760px;
-}
-
 .post-header h1 {
   font-family: "Fraunces", serif;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -942,21 +937,25 @@ p {
   object-fit: cover;
 }
 
-.post-content {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: #333333;
+.post-content p {
+  max-width: 750px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
 }
-.post-content h2,
-.post-content h3 {
+
+h2,
+h3 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
-.post-content p {
+
+p {
   margin-bottom: 1.2rem;
 }
-.post-content blockquote {
+
+blockquote {
   margin: 2rem 0;
   padding: 1.2rem 1.5rem;
   border-left: 4px solid #007A78;

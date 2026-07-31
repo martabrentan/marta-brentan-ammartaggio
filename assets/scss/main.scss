@@ -1508,13 +1508,6 @@ p {
 
 
 
-/* SINGLE POST */
-
-
-.post-layout {
-
-  max-width:760px;
-}
 
 
 
@@ -1543,17 +1536,12 @@ p {
 }
 
 
-
-.post-content {
-
-  font-size:1.05rem;
-
-  line-height:1.75;
-
-  color:$color-text;
-
-
-
+.post-content p {
+  max-width: 750px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
   h2,
   h3 {
 
@@ -1585,7 +1573,7 @@ p {
 
     border-radius:12px;
   }
-}
+
 
 
 

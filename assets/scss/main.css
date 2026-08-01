@@ -218,8 +218,8 @@ p {
 }
 
 .project-card {
-  width: 100%;
-  min-width: 0;
+  flex: 0 0 clamp(320px, 28vw, 420px);
+  width: clamp(320px, 28vw, 420px);
   padding: 1.4rem;
   border-radius: 20px;
   background: #FAF9F6;

@@ -2,53 +2,913 @@
 <html lang="it">
 
 <head>
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+
+  <!-- =========================================================
+       COOKIEBOT
+  ========================================================== -->
+
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
     data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
     data-blockingmode="auto"
-    type="text/javascript"></script>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>UX UI Case Study Aesthetics 4.0 – Marta Brentan</title>
-
-  <meta name="description"
-    content="Case study UX/UI Design: progettazione di due siti web per Aesthetics 4.0 ed Estetica 4.0. Ricerca UX, architettura informativa, UI Design e sviluppo WordPress Elementor Pro.">
-
-  <meta name="keywords"
-    content="Aesthetics 4.0, Estetica 4.0, UX Design, UI Design, WordPress, Elementor Pro, Marta Brentan">
-
-  <meta name="author" content="Marta Brentan">
-
-  <meta property="og:title" content="UX UI Case Study Aesthetics 4.0 – Marta Brentan">
-
-  <meta property="og:description"
-    content="Progettazione UX/UI di due siti web complementari dedicati al settore beauty professionale.">
-
-  <meta property="og:type" content="website">
-
-  <meta property="og:url"
-    content="https://martabrentan.github.io/marta-brentan-ammartaggio/aesthetics.html">
-
-  <meta property="og:image"
-    content="https://martabrentan.github.io/marta-brentan-ammartaggio/assets/img/sfondo-progetto-estetica.webp">
-
-  <meta property="og:image:alt" content="Cover progetto Aesthetics 4.0">
-
-  <link rel="icon" href="assets/img/LOGO.png" type="image/x-icon">
+    type="text/javascript">
+  </script>
 
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet" />
+  <!-- =========================================================
+       META
+  ========================================================== -->
 
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Aesthetics 4.0 — UX/UI Case Study | Marta Brentan
+  </title>
+
+
+  <meta
+    name="description"
+    content="Case study UX/UI Design: progettazione e sviluppo di due siti web complementari per Aesthetics 4.0 ed Estetica 4.0."
+  >
+
+
+  <meta
+    name="keywords"
+    content="Aesthetics 4.0, Estetica 4.0, UX Design, UI Design, WordPress, Elementor Pro, Marta Brentan"
+  >
+
+
+  <meta
+    name="author"
+    content="Marta Brentan"
+  >
+
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:title"
+    content="Aesthetics 4.0 — UX/UI Case Study | Marta Brentan"
+  >
+
+
+  <meta
+    property="og:description"
+    content="Progettazione UX/UI di due siti web complementari dedicati al settore beauty professionale."
+  >
+
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+
+  <meta
+    property="og:url"
+    content="https://ammartaggio.com/aesthetics.html"
+  >
+
+
+  <meta
+    property="og:image"
+    content="https://ammartaggio.com/assets/img/sfondo-progetto-estetica.webp"
+  >
+
+
+  <meta
+    property="og:image:alt"
+    content="Cover progetto Aesthetics 4.0"
+  >
+
+
+  <!-- FAVICON -->
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap"
-    rel="stylesheet" />
+    rel="icon"
+    href="assets/img/LOGO.png"
+    type="image/x-icon"
+  >
 
-  <link rel="stylesheet" href="assets/scss/main.css">
+
+  <!-- =========================================================
+       BOOTSTRAP
+  ========================================================== -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+
+  <!-- BOOTSTRAP ICONS -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  >
+
+
+  <!-- GOOGLE FONTS -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- MAIN CSS -->
+
+  <link
+    rel="stylesheet"
+    href="assets/scss/main.css"
+  >
+
+
+  <!-- =========================================================
+       AESTHETICS CASE STUDY — PAGE SPECIFIC CSS
+  ========================================================== -->
+
+  <style>
+
+    /* =========================================================
+       CASE STUDY
+    ========================================================== */
+
+    .case-study {
+      overflow: hidden;
+      background: #FAF9F6;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================== */
+
+    .case-hero {
+      padding: 5.5rem 0 5rem;
+    }
+
+
+    .case-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .85rem;
+      color: #777777;
+      margin-bottom: 3rem;
+      transition: .25s ease;
+    }
+
+
+    .case-back-link:hover {
+      color: #007A78;
+    }
+
+
+    .case-eyebrow {
+      font-family: "Epilogue", sans-serif;
+      font-size: .72rem;
+      font-weight: 400;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #999999;
+      margin: 0 0 1.2rem;
+    }
+
+
+    /* =========================================================
+       HERO TITLE — stessa scala dell'h1 globale del sito
+    ========================================================== */
+
+    .case-hero-title {
+      font-family: "Epilogue", sans-serif;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      font-weight: 700;
+      color: #333333;
+      margin: 0;
+    }
+
+
+    /* =========================================================
+       HERO INTRO — PHONES + COPY
+    ========================================================== */
+
+    .case-hero-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 3.5rem;
+    }
+
+
+    /* PHONES */
+
+    .case-hero-phones {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      align-items: end;
+    }
+
+
+    .case-hero-phone {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+
+    .case-hero-phone img {
+      width: 100%;
+      max-width: 290px;
+      height: auto;
+      display: block;
+    }
+
+
+    /* HERO COPY */
+
+    .case-hero-copy {
+      padding-top: .2rem;
+    }
+
+
+    .case-hero-lead {
+      font-family: "Epilogue", sans-serif;
+      font-size: clamp(1.35rem, 2.2vw, 2rem);
+      line-height: 1.25;
+      color: #333333;
+      margin: 0 0 1.7rem;
+      max-width: 680px;
+    }
+
+
+    .case-hero-description {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555555;
+      max-width: 650px;
+      margin: 0 0 1.7rem;
+    }
+
+
+    .case-text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      color: #333333;
+      font-size: .9rem;
+      font-weight: 600;
+      border-bottom: 1px solid #333333;
+      padding-bottom: .3rem;
+      transition: .25s ease;
+    }
+
+
+    .case-text-link:hover {
+      color: #007A78;
+      border-color: #007A78;
+    }
+
+
+    /* =========================================================
+       GENERIC SECTION
+    ========================================================== */
+
+    .case-section {
+      padding: 6rem 0;
+    }
+
+
+    .case-section-light {
+      background: #FAF9F6;
+    }
+
+
+    .case-section-soft {
+      background: #F2F1ED;
+    }
+
+
+    .case-section-dark {
+      background: #333333;
+      color: #FAF9F6;
+    }
+
+
+    /* =========================================================
+       EDITORIAL SECTION LAYOUT
+    ========================================================== */
+
+    .case-section-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 4rem;
+      align-items: start;
+    }
+
+
+    .case-section-heading {
+      margin: 0;
+    }
+
+
+    .case-section-heading-top {
+      display: flex;
+      align-items: baseline;
+      gap: 1.3rem;
+      margin-bottom: 1.1rem;
+    }
+
+
+    .case-section-number {
+      font-size: .78rem;
+      font-weight: 400;
+      letter-spacing: .08em;
+      color: #999999;
+      flex-shrink: 0;
+    }
+
+
+    .case-section-title {
+      font-family: "Fraunces", serif;
+      font-size: clamp(2.4rem, 4.5vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: -.045em;
+      font-weight: 600;
+      color: #007A78;
+      margin: 0;
+      max-width: 850px;
+    }
+
+
+    .case-section-dark .case-section-number,
+    .case-section-dark .case-eyebrow {
+      color: rgba(255,255,255,.45);
+    }
+
+
+    .case-section-dark .case-section-title {
+      color: #FAF9F6;
+    }
+
+
+    .case-section-copy {
+      padding-top: 0;
+    }
+
+
+    /* =========================================================
+       TEXT
+    ========================================================== */
+
+    .case-large-text {
+      font-family: "Epilogue", sans-serif;
+      font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+      line-height: 1.4;
+      color: #333333;
+      margin: 0;
+      max-width: 650px;
+    }
+
+
+    .case-section-dark .case-large-text {
+      color: #FAF9F6;
+    }
+
+
+    .case-body-text {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555555;
+      margin: 0 0 1.4rem;
+      max-width: 680px;
+    }
+
+
+    .case-section-dark .case-body-text {
+      color: rgba(255,255,255,.72);
+    }
+
+
+    .case-body-text strong {
+      color: #333333;
+    }
+
+
+    .case-section-dark .case-body-text strong {
+      color: #FAF9F6;
+    }
+
+
+    /* =========================================================
+       PROJECT META
+    ========================================================== */
+
+    .case-meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid #DCDAD5;
+      border-bottom: 1px solid #DCDAD5;
+      margin-top: 5rem;
+    }
+
+
+    .case-meta-item {
+      padding: 1.7rem 1.3rem 1.7rem 0;
+    }
+
+
+    .case-meta-label {
+      display: block;
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #999999;
+      margin-bottom: .5rem;
+    }
+
+
+    .case-meta-value {
+      display: block;
+      font-size: .9rem;
+      font-weight: 400;
+      color: #333333;
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       CHALLENGE
+    ========================================================== */
+
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+
+
+    .challenge-card {
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 3rem;
+      min-height: 350px;
+    }
+
+
+    .challenge-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 400;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      margin-bottom: 1.8rem;
+    }
+
+
+    .challenge-title {
+      font-family: "Fraunces", serif;
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      line-height: .98;
+      color: #FAF9F6;
+      margin: 0 0 1.6rem;
+      font-weight: 600;
+    }
+
+
+    .challenge-text {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,.7);
+      max-width: 520px;
+      margin: 0;
+    }
+
+
+    /* =========================================================
+       COMPUTER MOCKUPS
+    ========================================================== */
+
+    .case-computer-grid {
+      width: min(1050px, 88%);
+      margin: 4rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+
+    .case-computer {
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+
+    .case-computer img {
+      width: 100%;
+      display: block;
+    }
+
+
+    /* =========================================================
+       PRODUCT DESIGN
+    ========================================================== */
+
+    .case-product-visual {
+      width: min(950px, 88%);
+      margin: 4rem auto 0;
+      padding: 1.5rem;
+      border-radius: 20px;
+      background: #FFFFFF;
+    }
+
+
+    .case-product-visual img {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       LIST
+    ========================================================== */
+
+    .case-list {
+      margin: 1.5rem 0 0;
+      padding-left: 1.2rem;
+      max-width: 680px;
+    }
+
+
+    .case-list li {
+      margin-bottom: .6rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #555555;
+    }
+
+
+    /* =========================================================
+       PROCESS
+    ========================================================== */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid #DCDAD5;
+      margin-top: 4.5rem;
+    }
+
+
+    .process-item {
+      padding: 2.2rem 2rem 2.2rem 0;
+      border-bottom: 1px solid #DCDAD5;
+    }
+
+
+    .process-item:nth-child(even) {
+      padding-left: 2rem;
+      border-left: 1px solid #DCDAD5;
+    }
+
+
+    .process-number {
+      display: block;
+      font-size: .72rem;
+      color: #999999;
+      margin-bottom: .8rem;
+    }
+
+
+    .process-title {
+      font-family: "Epilogue", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #333333;
+      margin: 0 0 .6rem;
+    }
+
+
+    .process-text {
+      font-size: .95rem;
+      line-height: 1.7;
+      color: #666666;
+      margin: 0;
+      max-width: 600px;
+    }
+
+
+    /* =========================================================
+       NOTE
+    ========================================================== */
+
+    .case-note {
+      border-top: 1px solid #DCDAD5;
+      margin-top: 2.5rem !important;
+      padding-top: 1rem;
+      font-size: .82rem !important;
+      color: #999999 !important;
+      line-height: 1.6 !important;
+    }
+
+
+    /* =========================================================
+       FINAL RESULT
+    ========================================================== */
+
+    .case-result {
+      background: #333333;
+      color: #FAF9F6;
+    }
+
+
+    .case-result .case-eyebrow,
+    .case-result .case-section-number {
+      color: rgba(255,255,255,.45);
+    }
+
+
+    .case-result .case-section-title {
+      color: #FAF9F6;
+    }
+
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 4rem;
+    }
+
+
+    .result-card {
+      min-height: 280px;
+      padding: 2.3rem;
+      background: #FAF9F6;
+      color: #333333;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform .3s ease;
+    }
+
+
+    .result-card:hover {
+      transform: translateY(-5px);
+      color: #333333;
+    }
+
+
+    .result-card-label {
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #999999;
+    }
+
+
+    .result-card-content {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+
+    .result-card-title {
+      font-family: "Fraunces", serif;
+      font-size: clamp(2.2rem, 3vw, 3.4rem);
+      line-height: .9;
+      color: #333333;
+      margin: 0;
+      font-weight: 600;
+    }
+
+
+    .result-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #007A78;
+      color: #FAF9F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform .3s ease;
+    }
+
+
+    .result-card:hover .result-card-icon {
+      transform: rotate(45deg);
+    }
+
+
+    /* =========================================================
+       MORE PROJECTS
+    ========================================================== */
+
+    .more-projects {
+      padding: 6rem 0;
+    }
+
+
+    .more-projects-title {
+      font-family: "Fraunces", serif;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      line-height: .95;
+      color: #007A78;
+      margin-bottom: 3.5rem;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE — TABLET
+    ========================================================== */
+
+    @media (max-width: 991px) {
+
+      .case-hero {
+        padding-top: 4.5rem;
+        padding-bottom: 4rem;
+      }
+
+
+      .case-section-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+
+      .case-meta {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .challenge-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .process-item:nth-child(even) {
+        padding-left: 0;
+        border-left: none;
+      }
+
+
+      .case-computer-grid {
+        width: 92%;
+      }
+
+    }
+
+
+    /* =========================================================
+       RESPONSIVE — MOBILE
+    ========================================================== */
+
+    @media (max-width: 768px) {
+
+      .case-hero-intro {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+
+      .case-hero-phones {
+        max-width: 460px;
+        margin: 0 auto;
+      }
+
+
+      .case-hero-phone img {
+        max-width: 210px;
+      }
+
+
+      .case-computer-grid {
+        width: 94%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+    }
+
+
+    @media (max-width: 576px) {
+
+      .case-hero {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+      }
+
+
+      .case-hero-title {
+        font-size: 1.8rem;
+      }
+
+
+      .case-hero-lead {
+        font-size: 1.35rem;
+      }
+
+
+      .case-hero-phones {
+        max-width: 400px;
+      }
+
+
+      .case-hero-phone img {
+        max-width: 180px;
+      }
+
+
+      .case-section {
+        padding: 4rem 0;
+      }
+
+
+      .case-section-layout {
+        gap: 2.5rem;
+      }
+
+
+      .case-section-heading-top {
+        gap: 1rem;
+      }
+
+
+      .case-section-title {
+        font-size: clamp(2.2rem, 9vw, 3.2rem);
+      }
+
+
+      .case-meta {
+        grid-template-columns: 1fr;
+        margin-top: 4rem;
+      }
+
+
+      .case-meta-item {
+        padding: 1.4rem 0;
+        border-bottom: 1px solid #DCDAD5;
+      }
+
+
+      .challenge-card {
+        padding: 2.2rem;
+        min-height: auto;
+      }
+
+
+      .case-product-visual {
+        width: 94%;
+        padding: 1rem;
+        border-radius: 15px;
+      }
+
+
+      .process-item {
+        padding: 1.8rem 0;
+      }
+
+
+      .result-card {
+        min-height: 250px;
+        padding: 2rem;
+      }
+
+
+      .more-projects {
+        padding: 5rem 0;
+      }
+
+    }
+
+  </style>
 
 </head>
 
@@ -56,856 +916,1444 @@
 <body>
 
 
-<!-- NAVBAR -->
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
 
-<nav class="navbar navbar-expand-lg bg-white py-3">
+<nav class="navbar navbar-expand-lg py-3">
 
-<div class="container">
-
-<a class="navbar-brand" href="index.html">
-<img src="assets/img/LOGO.png"
-alt="Logo Marta Brentan"
-height="36">
-</a>
+  <div class="container">
 
 
-<button class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#navbarNav">
+    <a
+      class="navbar-brand"
+      href="index.html"
+      aria-label="Homepage Marta Brentan"
+    >
 
-<span class="navbar-toggler-icon"></span>
+      <img
+        src="assets/img/LOGO.png"
+        alt="Logo Marta Brentan"
+        height="36"
+      >
 
-</button>
-
-
-<div class="collapse navbar-collapse" id="navbarNav">
-
-<ul class="navbar-nav ms-auto align-items-lg-center">
-
-
-<li class="nav-item">
-<a class="nav-link" href="chi-sono.html">
-Chi sono
-</a>
-</li>
+    </a>
 
 
-<li class="nav-item">
-<a class="nav-link" href="progetti.html">
-Progetti
-</a>
-</li>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Apri navigazione"
+    >
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
 
 
-<li class="nav-item">
-<a class="nav-link" href="blog.html">
-Blog
-</a>
-</li>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav"
+    >
+
+      <ul class="navbar-nav ms-auto align-items-lg-center">
 
 
-<li class="nav-item">
-<a class="nav-link" href="contatti.html">
-Contatti
-</a>
-</li>
+        <li class="nav-item">
+
+          <a
+            class="nav-link"
+            href="chi-sono.html"
+          >
+            Chi sono
+          </a>
+
+        </li>
 
 
-<li class="nav-item d-none d-lg-block ms-lg-3">
+        <li class="nav-item">
 
-<a class="btn btn-primary"
-href="assets/docs/Portfolio Marta Brentan.pdf"
-target="_blank">
+          <a
+            class="nav-link"
+            href="progetti.html"
+          >
+            Progetti
+          </a>
 
-Scarica Portfolio
-
-</a>
-
-</li>
-
-
-<li class="nav-item d-none d-lg-block ms-2">
-
-<a class="btn custom-outline"
-href="assets/docs/CV Marta Brentan.pdf"
-target="_blank">
-
-Scarica CV
-
-</a>
-
-</li>
+        </li>
 
 
+        <li class="nav-item">
 
-<li class="nav-item d-lg-none">
+          <a
+            class="nav-link"
+            href="blog.html"
+          >
+            Blog
+          </a>
 
-<a href="assets/docs/Portfolio Marta Brentan.pdf"
-target="_blank"
-class="nav-link">
-
-<i class="bi bi-download me-2"></i>
-Portfolio
-
-</a>
-
-</li>
+        </li>
 
 
-<li class="nav-item d-lg-none">
+        <li class="nav-item">
 
-<a href="assets/docs/CV Marta Brentan.pdf"
-target="_blank"
-class="nav-link">
+          <a
+            class="nav-link"
+            href="contatti.html"
+          >
+            Contatti
+          </a>
 
-<i class="bi bi-download me-2"></i>
-CV
-
-</a>
-
-</li>
+        </li>
 
 
-</ul>
+        <li class="nav-item d-none d-lg-block ms-lg-3">
 
-</div>
+          <a
+            class="btn btn-primary"
+            href="assets/docs/Portfolio Marta Brentan.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Scarica Portfolio
+          </a>
 
-</div>
+        </li>
+
+
+        <li class="nav-item d-none d-lg-block ms-2">
+
+          <a
+            class="btn custom-outline"
+            href="assets/docs/CV Marta Brentan.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Scarica CV
+          </a>
+
+        </li>
+
+
+        <li class="nav-item d-lg-none">
+
+          <a
+            href="assets/docs/Portfolio Marta Brentan.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-link"
+          >
+
+            <i class="bi bi-download me-2"></i>
+
+            Portfolio
+
+          </a>
+
+        </li>
+
+
+        <li class="nav-item d-lg-none">
+
+          <a
+            href="assets/docs/CV Marta Brentan.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-link"
+          >
+
+            <i class="bi bi-download me-2"></i>
+
+            CV
+
+          </a>
+
+        </li>
+
+
+      </ul>
+
+    </div>
+
+  </div>
 
 </nav>
 
 
 
-<!-- INTRO -->
+<!-- =========================================================
+     CASE STUDY
+========================================================= -->
 
-<section class="page-intro py-5">
-
-<div class="container">
-
-
-<h1 class="fw-bold mb-4">
-UX UI Case Study e Visual Identity
-</h1>
+<main class="case-study">
 
 
-<p class="breadcrumb small mb-4">
+  <!-- =======================================================
+       HERO
+  ======================================================= -->
 
-<a href="index.html">
-Home
-</a>
+  <section class="case-hero">
 
-›
-
-<a href="progettazione.html">
-Progettazione
-</a>
-
-›
-
-<span class="current">
-Aesthetics 4.0
-</span>
-
-</p>
+    <div class="container">
 
 
-<h2 class="intro">
+      <a
+        href="progettazione.html"
+        class="case-back-link"
+      >
 
-Progettazione di due siti web complementari per il settore beauty professionale.
+        <i class="bi bi-arrow-left"></i>
 
-</h2>
+        Progettazione
 
-
-</div>
-
-</section>
+      </a>
 
 
+      <p class="case-eyebrow">
+        UX/UI DESIGN · DIGITAL EXPERIENCE · 2026
+      </p>
 
-<!-- COVER -->
- <div class="container mt-4">
-      <div class="row g-4">
-        <div class="col-md-6">
-          <img src="assets/img/iphon TOV.png" alt="Prototipi mobile estetica" class="img-fluid rounded-4" loading="lazy">
+
+      <h1 class="case-hero-title">
+
+        Aesthetics ed Estetica 4.0
+
+      </h1>
+
+
+      <div class="case-hero-intro">
+
+
+        <!-- CELLULARI -->
+
+        <div class="case-hero-phones">
+
+
+          <div class="case-hero-phone">
+
+            <img
+              src="assets/img/iphon TOV.png"
+              alt="Prototipo mobile Estetica 4.0"
+              loading="eager"
+            >
+
+          </div>
+
+
+          <div class="case-hero-phone">
+
+            <img
+              src="assets/img/iphone aesthetics 4.0.png"
+              alt="Prototipo mobile Aesthetics 4.0"
+              loading="eager"
+            >
+
+          </div>
+
+
         </div>
-        <div class="col-md-6">
-          <img src="assets/img/iphone aesthetics 4.0.png" alt="Prototipi mobile aesthetics" class="img-fluid rounded-4" loading="lazy">
+
+
+        <!-- COPY -->
+
+        <div class="case-hero-copy">
+
+
+          <p class="case-hero-lead">
+
+            Due esperienze digitali complementari
+            per il settore beauty professionale.
+
+          </p>
+
+
+          <p class="case-hero-description">
+
+            Ho progettato e sviluppato due siti web con obiettivi,
+            contenuti e pubblici differenti, costruendo un ecosistema
+            digitale coerente ma capace di parlare a clienti finali
+            e professionisti del settore.
+
+          </p>
+
+
+          <a
+            href="assets/docs/Progetto Aesthetics 4.0 di Marta Brentan.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="case-text-link"
+          >
+
+            Scarica il progetto completo
+
+            <i class="bi bi-arrow-up-right"></i>
+
+          </a>
+
+
         </div>
+
+
       </div>
+
     </div>
+
   </section>
 
 
 
+  <!-- =======================================================
+       01 — THE PROJECT
+  ======================================================= -->
 
-<!-- OVERVIEW -->
+  <section class="case-section case-section-light">
 
+    <div class="container">
 
-<section class="page-intro py-5">
 
+      <div class="case-section-layout">
 
-<div class="container">
 
+        <!-- TESTO -->
 
-<div class="row">
+        <div class="case-section-copy">
 
 
-<h2 class="text-uppercase small text-muted mb-3">
-Overview
-</h2>
+          <p class="case-large-text">
 
+            Aesthetics 4.0 ed Estetica 4.0 nascono per rispondere
+            a esigenze differenti all'interno dello stesso settore.
 
+          </p>
 
-<p>
 
-Un ecosistema digitale composto da due siti web complementari,
-progettati per rispondere a obiettivi, contenuti e pubblici differenti:
-<strong>Aesthetics 4.0</strong>, dedicato al centro estetico e ai clienti finali,
-ed <strong>Estetica 4.0</strong>, piattaforma professionale rivolta a estetiste,
-farmacie e operatori del settore medical beauty.
+          <p class="case-body-text mt-4">
 
-</p>
+            <strong>Aesthetics 4.0</strong> è dedicato al centro estetico
+            e ai clienti finali, con un'esperienza orientata alla fiducia,
+            alla scoperta dei trattamenti e alla conversione.
 
+          </p>
 
 
-<p>
+          <p class="case-body-text">
 
-Il progetto nasce dalla necessità di costruire una presenza digitale più chiara,
-coerente e funzionale, capace di valorizzare due realtà con esigenze differenti.
-Per <strong>Aesthetics 4.0</strong> l'obiettivo era creare un'esperienza orientata
-alla fiducia e alla conversione, comunicando trattamenti, pacchetti e servizi
-attraverso una navigazione semplice e immediata.
+            <strong>Estetica 4.0</strong> è invece una piattaforma B2B
+            dedicata a estetiste, farmacie e operatori del settore
+            medical beauty, con una grande quantità di prodotti,
+            macchinari e contenuti professionali.
 
-</p>
+          </p>
 
 
+          <p class="case-body-text">
 
-<p>
+            Entrambi i siti sono stati progettati e sviluppati in
+            <strong>WordPress con Elementor Pro</strong>, utilizzando
+            componenti modulari, Global Fonts, Global Colors
+            e layout responsive.
 
-Per <strong>Estetica 4.0</strong> il focus era invece organizzare un grande numero
-di contenuti legati a prodotti cosmetici, macchinari professionali e formazione,
-creando una struttura informativa scalabile e pensata per un pubblico B2B.
+          </p>
 
-Entrambi i siti sono stati progettati e sviluppati in
-<strong>WordPress con Elementor Pro</strong>, utilizzando componenti modulari,
-Global Fonts, Global Colors e layout responsive.
 
-</p>
+        </div>
 
 
-</div>
+        <!-- TITOLO -->
 
+        <div class="case-section-heading">
 
 
-<div class="row g-3 mt-2">
+          <div class="case-section-heading-top">
 
-<div class="col-3">
+            <span class="case-section-number">
+              01
+            </span>
 
-<p class="text-muted small mb-1">
-Ambito
-</p>
 
-<p class="fw-semibold">
-UX/UI Design
-</p>
+            <p class="case-eyebrow">
+              THE PROJECT
+            </p>
 
+          </div>
 
-<p class="text-muted small mb-1">
-Anno
-</p>
 
-<p class="fw-semibold">
-2026
-</p>
+          <h2 class="case-section-title">
 
+            Due siti, due pubblici,
+            un unico ecosistema digitale.
 
-</div>
+          </h2>
 
-</div>
 
+        </div>
 
 
-<div class="text-start mt-3">
+      </div>
 
 
-<a href="assets/docs/Progetto Aesthetics 4.0 di Marta Brentan.pdf"
+      <!-- META -->
 
-target="_blank"
+      <div class="case-meta">
 
-class="btn btn-primary">
 
-Scarica il progetto completo
+        <div class="case-meta-item">
 
-</a>
+          <span class="case-meta-label">
+            Ambito
+          </span>
 
+          <span class="case-meta-value">
+            UX/UI Design
+          </span>
 
-</div>
+        </div>
 
 
-</div>
+        <div class="case-meta-item">
 
+          <span class="case-meta-label">
+            Anno
+          </span>
 
-</section>
-<!-- APPROFONDISCI IL PROGETTO -->
+          <span class="case-meta-value">
+            2026
+          </span>
 
-<section class="post-content py-5">
+        </div>
 
-<div class="container">
 
+        <div class="case-meta-item">
 
-<h2 class="text-uppercase small text-muted mb-3">
-Approfondisci il progetto
-</h2>
+          <span class="case-meta-label">
+            Ruolo
+          </span>
 
+          <span class="case-meta-value">
+            UX/UI Designer · Web Designer
+          </span>
 
-<ul class="list-unstyled">
+        </div>
 
 
-<li class="mb-2">
+        <div class="case-meta-item">
 
-<a href="https://aesthetics40.it/"
-target="_blank"
-rel="noopener noreferrer">
+          <span class="case-meta-label">
+            Tools
+          </span>
 
-<i class="bi bi-globe me-2"></i>
-Aesthetics 4.0
+          <span class="case-meta-value">
+            WordPress · Elementor Pro · CSS · JavaScript
+          </span>
 
-</a>
+        </div>
 
-</li>
 
+      </div>
 
-<li class="mb-2">
+    </div>
 
-<a href="https://estetica40.pro/"
-target="_blank"
-rel="noopener noreferrer">
+  </section>
 
-<i class="bi bi-globe me-2"></i>
-Estetica 4.0
 
-</a>
 
-</li>
+  <!-- =======================================================
+       02 — THE CHALLENGE
+  ======================================================= -->
 
+  <section class="case-section case-section-dark">
 
-</ul>
+    <div class="container">
 
-</div>
 
-</section>
+      <div class="case-section-layout">
 
 
+        <!-- TITOLO -->
 
+        <div class="case-section-heading">
 
-<!-- PROBLEMS NEEDS SOLUTIONS -->
 
-<section class="page-intro py-5">
+          <div class="case-section-heading-top">
 
+            <span class="case-section-number">
+              02
+            </span>
 
-<div class="container">
 
+            <p class="case-eyebrow">
+              THE CHALLENGE
+            </p>
 
-<div class="row">
+          </div>
 
 
-<h2 class="text-uppercase small text-muted mb-3">
-1. Problems - Needs - Solutions
-</h2>
+          <h2 class="case-section-title">
 
+            Quando due realtà
+            hanno bisogni diversi.
 
+          </h2>
 
-<p>
 
+        </div>
 
-<strong>PROBLEMS</strong><br>
 
+        <!-- TESTO -->
 
-Le due realtà non disponevano di un ecosistema digitale strutturato
-e presentavano esigenze profondamente differenti.
+        <div class="case-section-copy">
 
-<strong>Aesthetics 4.0</strong> non aveva una presenza online capace
-di valorizzare trattamenti, pacchetti e filosofia del centro estetico,
-rendendo complesso comunicare professionalità, competenze e possibilità
-di contatto immediato.
 
-<strong>Estetica 4.0</strong> necessitava invece di organizzare numerosi
-contenuti relativi a prodotti cosmetici, macchinari e formazione professionale,
-evitando percorsi di navigazione complessi per estetiste, farmacie e operatori
-del settore medical beauty.
+          <p class="case-large-text">
 
-Dal punto di vista UX mancava inoltre una distinzione chiara tra comunicazione
-B2C e B2B, con il rischio di creare contenuti poco pertinenti per i diversi
-pubblici di riferimento.
+            Dal punto di vista UX mancava una distinzione chiara
+            tra comunicazione B2C e B2B, con il rischio di creare
+            contenuti poco pertinenti per i diversi pubblici
+            di riferimento.
 
+          </p>
 
-<br><br>
 
+          <p class="case-body-text mt-4">
 
-<strong>NEEDS</strong><br>
+            Il progetto richiedeva quindi la creazione di
+            due esperienze digitali autonome ma collegate
+            da un'identità comune.
 
+          </p>
 
-Il progetto richiedeva la creazione di due esperienze digitali autonome
-ma collegate da un'identità comune.
 
-Per <strong>Aesthetics 4.0</strong> era necessario progettare un'esperienza
-orientata alla fiducia, con una gerarchia visiva chiara, informazioni immediate
-sui trattamenti e strumenti di contatto rapidi, ottimizzati anche per mobile.
+          <p class="case-body-text">
 
-Per <strong>Estetica 4.0</strong> era invece fondamentale creare una struttura
-informativa solida e facilmente aggiornabile, capace di presentare prodotti,
-macchinari e percorsi formativi senza trasformare il sito in un semplice
-e-commerce.
+            Per <strong>Aesthetics 4.0</strong> era necessario progettare
+            un'esperienza orientata alla fiducia, con una gerarchia
+            visiva chiara, informazioni immediate sui trattamenti
+            e strumenti di contatto rapidi, ottimizzati anche per mobile.
 
+          </p>
 
-<br><br>
 
+          <p class="case-body-text">
 
-<strong>SOLUTIONS</strong><br>
+            Per <strong>Estetica 4.0</strong> era invece fondamentale
+            creare una struttura informativa solida e facilmente
+            aggiornabile, capace di presentare prodotti, macchinari
+            e percorsi formativi senza trasformare il sito
+            in un semplice e-commerce.
 
+          </p>
 
-Ho progettato due sitemap differenti ma complementari, costruendo percorsi
-di navigazione specifici per clienti finali e professionisti.
 
-Per <strong>Aesthetics 4.0</strong> ho sviluppato un'architettura orientata
-alla conversione, con sezioni dedicate a trattamenti, pacchetti e contatti,
-integrando call to action strategiche e collegamenti diretti a WhatsApp.
+        </div>
 
-Per <strong>Estetica 4.0</strong> ho organizzato i contenuti attraverso un
-sistema modulare basato su card prodotto, schede informative e presentazione
-dei macchinari professionali.
 
-L'intero ecosistema è stato sviluppato in
-<strong>WordPress con Elementor Pro</strong>, utilizzando componenti riutilizzabili,
-CSS personalizzato e layout responsive per garantire coerenza su desktop,
-tablet e mobile.
+      </div>
 
 
-</p>
+      <!-- CHALLENGE CARDS -->
 
+      <div class="challenge-grid">
 
-</div>
 
+        <article class="challenge-card">
 
 
-<div class="container mt-4">
+          <span class="challenge-tag">
+            B2C
+          </span>
 
 
-<div class="row g-4">
+          <h3 class="challenge-title">
+            Aesthetics 4.0
+          </h3>
 
 
-<div class="col-md-6">
+          <p class="challenge-text">
 
+            Il centro estetico aveva bisogno di una presenza digitale
+            capace di comunicare professionalità, trattamenti,
+            pacchetti e filosofia del centro in modo immediato,
+            costruendo fiducia e facilitando il contatto.
 
-<img src="assets/img/mockup estetica 4.0.png"
+          </p>
 
-alt="Mockup desktop Estetica 4.0"
 
-class="img-fluid rounded-4"
+        </article>
 
-loading="lazy">
 
+        <article class="challenge-card">
 
-</div>
 
+          <span class="challenge-tag">
+            B2B
+          </span>
 
 
-<div class="col-md-6">
+          <h3 class="challenge-title">
+            Estetica 4.0
+          </h3>
 
 
-<img src="assets/img/mockup aesthetics 4.0.png"
+          <p class="challenge-text">
 
-alt="Mockup desktop Aesthetics 4.0"
+            La piattaforma professionale doveva invece organizzare
+            una grande quantità di prodotti, macchinari e contenuti
+            formativi senza trasformarsi in un semplice e-commerce.
 
-class="img-fluid rounded-4"
+          </p>
 
-loading="lazy">
 
+        </article>
 
-</div>
 
+      </div>
 
-</div>
+    </div>
 
+  </section>
 
-</div>
 
 
-</div>
+  <!-- =======================================================
+       03 — THE STRATEGY
+  ======================================================= -->
 
+  <section class="case-section case-section-light">
 
-</section>
+    <div class="container">
 
 
+      <div class="case-section-layout">
 
 
+        <!-- TITOLO -->
 
-<!-- PRODUCT DESIGN -->
+        <div class="case-section-heading">
 
 
-<section class="page-intro py-5">
+          <div class="case-section-heading-top">
 
+            <span class="case-section-number">
+              03
+            </span>
 
-<div class="container">
 
+            <p class="case-eyebrow">
+              THE STRATEGY
+            </p>
 
-<div class="row">
+          </div>
 
 
-<h2 class="text-uppercase small text-muted mb-3">
-2. Product Design
-</h2>
+          <h2 class="case-section-title">
 
+            Due esperienze autonome,
+            una stessa direzione.
 
+          </h2>
 
-<p>
 
+        </div>
 
-Oltre alla progettazione delle pagine istituzionali,
-il progetto ha incluso lo sviluppo di un sistema di presentazione
-per prodotti cosmetici e macchinari professionali dedicato al sito
-<strong>Estetica 4.0</strong>.
 
+        <!-- TESTO -->
 
-L'obiettivo non era creare un e-commerce tradizionale, ma progettare
-un'esperienza di consultazione capace di supportare il processo decisionale
-di un pubblico professionale composto da estetiste, farmacie e operatori
-del settore medical beauty.
+        <div class="case-section-copy">
 
 
-Per garantire uniformità e facilità di lettura è stato progettato un sistema
-di card modulari composto da:
+          <p class="case-large-text">
 
+            La soluzione è stata progettare due architetture
+            informative differenti, costruite intorno ai bisogni
+            dei rispettivi utenti.
 
-<br><br>
+          </p>
 
 
-- immagine prodotto ad alta leggibilità;
+          <p class="case-body-text mt-4">
 
-<br>
-- nome del prodotto o macchinario;
+            Per <strong>Aesthetics 4.0</strong> ho sviluppato
+            un'architettura orientata alla conversione, con sezioni
+            dedicate a trattamenti, pacchetti e contatti,
+            call to action strategiche e collegamenti diretti a WhatsApp.
 
-<br>
-- descrizione sintetica delle caratteristiche;
+          </p>
 
-<br>
-- categoria o area di utilizzo;
 
-<br>
-- call to action per richiedere informazioni.
+          <p class="case-body-text">
 
+            Per <strong>Estetica 4.0</strong> ho invece organizzato
+            i contenuti attraverso un sistema modulare basato su
+            categorie, card prodotto, schede informative e sezioni
+            dedicate ai macchinari professionali.
 
-<br><br>
+          </p>
 
 
-La scelta di non inserire prezzi è stata strategica:
-l'interfaccia è stata progettata per valorizzare il prodotto,
-generare contatti qualificati e accompagnare il professionista
-nella scelta della soluzione più adatta.
+          <p class="case-body-text">
 
+            L'intero ecosistema è stato sviluppato in
+            <strong>WordPress con Elementor Pro</strong>, utilizzando
+            componenti riutilizzabili, CSS personalizzato
+            e layout responsive per garantire coerenza
+            su desktop, tablet e mobile.
 
-</p>
+          </p>
 
 
-</div>
+        </div>
 
 
+      </div>
 
-<div class="container mt-4">
 
+      <!-- COMPUTER MOCKUPS -->
 
-<div class="row g-4 justify-content-center">
+      <div class="case-computer-grid">
 
 
-<div class="col-md-6">
+        <div class="case-computer">
 
+          <img
+            src="assets/img/mockup estetica 4.0.png"
+            alt="Mockup desktop Estetica 4.0"
+            loading="lazy"
+          >
 
-<img src="assets/img/composizione_prodotti_elevia-1.png"
+        </div>
 
-alt="Product design prodotti Estetica 4.0"
 
-class="img-fluid rounded-4"
+        <div class="case-computer">
 
-loading="lazy">
+          <img
+            src="assets/img/mockup aesthetics 4.0.png"
+            alt="Mockup desktop Aesthetics 4.0"
+            loading="lazy"
+          >
 
+        </div>
 
-</div>
 
+      </div>
 
-</div>
+    </div>
 
+  </section>
 
-</div>
 
 
-</div>
+  <!-- =======================================================
+       04 — PRODUCT DESIGN
+  ======================================================= -->
 
+  <section class="case-section case-section-soft">
 
-</section>
+    <div class="container">
 
 
+      <div class="case-section-layout">
 
 
+        <!-- TITOLO -->
 
-<!-- VISUAL IDENTITY -->
+        <div class="case-section-heading">
 
 
-<section class="page-intro py-5">
+          <div class="case-section-heading-top">
 
+            <span class="case-section-number">
+              04
+            </span>
 
-<div class="container">
 
+            <p class="case-eyebrow">
+              PRODUCT DESIGN
+            </p>
 
-<div class="row">
+          </div>
 
 
-<h2 class="text-uppercase small text-muted mb-3">
-3. Visual Identity
-</h2>
+          <h2 class="case-section-title">
 
+            Un sistema modulare
+            per prodotti e macchinari.
 
+          </h2>
 
-<p>
 
+        </div>
 
-Mi sono occupata dell'intero processo di progettazione e sviluppo
-dei due siti web, dalla definizione della struttura informativa
-fino all'implementazione in WordPress.
 
+        <!-- TESTO -->
 
-Nello specifico ho curato:
+        <div class="case-section-copy">
 
 
-<br><br>
+          <p class="case-large-text">
 
-- ricerca e analisi preliminare;
+            L'obiettivo non era creare un e-commerce tradizionale,
+            ma progettare un'esperienza di consultazione capace
+            di supportare il processo decisionale di un pubblico
+            professionale.
 
-<br>
-- architettura dell'informazione e sitemap;
+          </p>
 
-<br>
-- progettazione UI;
 
-<br>
-- scelta palette colori e tipografia;
+          <p class="case-body-text mt-4">
 
-<br>
-- organizzazione dei contenuti e copywriting;
+            Ho progettato un sistema di card modulari composto da:
+            immagine prodotto ad alta leggibilità, nome del prodotto
+            o macchinario, descrizione sintetica delle caratteristiche,
+            categoria o area di utilizzo e call to action
+            per richiedere informazioni.
 
-<br>
-- sviluppo responsive con Elementor Pro;
+          </p>
 
-<br>
-- personalizzazioni CSS e JavaScript;
 
-<br>
-- ottimizzazione dell'esperienza utente.
+          <p class="case-body-text">
 
+            La scelta di non inserire prezzi è stata strategica:
+            l'interfaccia è stata progettata per valorizzare il prodotto,
+            generare contatti qualificati e accompagnare il professionista
+            nella scelta della soluzione più adatta.
 
-<br><br>
+          </p>
 
 
-<strong>Nota:</strong>
-i loghi dei due brand erano già stati realizzati
-prima del mio coinvolgimento nel progetto.
+        </div>
 
 
-</p>
+      </div>
 
 
-</div>
+      <!-- PRODUCT VISUAL -->
 
+      <div class="case-product-visual">
 
-</div>
 
+        <img
+          src="assets/img/composizione_prodotti_elevia-1.png"
+          alt="Product design prodotti Estetica 4.0"
+          loading="lazy"
+        >
 
-</section>
-<!-- MORE TO EXPLORE -->
 
-<section class="py-5 text-center">
+      </div>
 
-<div class="container">
+    </div>
 
+  </section>
 
-<h2 class="section-title">
-Altri progetti
-</h2>
 
 
+  <!-- =======================================================
+       05 — VISUAL SYSTEM
+  ======================================================= -->
 
-<div class="d-flex justify-content-center gap-4 flex-wrap">
+  <section class="case-section case-section-light">
 
+    <div class="container">
 
-<a href="ecodream.html" class="project-card">
 
+      <div class="case-section-layout">
 
-<img src="assets/img/sfondo-discovery.webp"
-alt="Mockup progetto Ecodream"
-loading="lazy">
 
+        <!-- TITOLO -->
 
-<div class="project-content">
+        <div class="case-section-heading">
 
-<h5>
-Redesign Ecodream
-</h5>
 
-<p>
-Redesign completo del sito web Ecodream Design
-</p>
+          <div class="case-section-heading-top">
 
-<p class="text-muted small">
-start2impact
-</p>
+            <span class="case-section-number">
+              05
+            </span>
 
-</div>
 
+            <p class="case-eyebrow">
+              VISUAL SYSTEM
+            </p>
 
-</a>
+          </div>
 
 
+          <h2 class="case-section-title">
 
+            Una direzione visiva comune
+            per due esperienze differenti.
 
-<a href="limes.html" class="project-card">
+          </h2>
 
 
-<img src="assets/img/sfondo-progetto-finale.webp"
-alt="Mockup progetto Limes"
-loading="lazy">
+        </div>
 
 
-<div class="project-content">
+        <!-- TESTO -->
 
-<h5>
-Redesign Limes
-</h5>
+        <div class="case-section-copy">
 
-<p>
-Redesign completo del sito web Limes
-</p>
 
-<p class="text-muted small">
-start2impact
-</p>
+          <p class="case-large-text">
 
-</div>
+            Mi sono occupata dell'intero processo di progettazione
+            e sviluppo dei due siti web, dalla definizione
+            della struttura informativa fino all'implementazione
+            in WordPress.
 
+          </p>
 
-</a>
 
+          <p class="case-body-text mt-4">
 
+            Nello specifico ho curato:
 
-</div>
+          </p>
 
 
-</div>
+          <ul class="case-list">
 
 
-</section>
+            <li>
+              ricerca e analisi preliminare;
+            </li>
 
 
+            <li>
+              architettura dell'informazione e sitemap;
+            </li>
 
 
+            <li>
+              progettazione UI;
+            </li>
 
-<!-- CONTACT -->
 
-<section class="contact-cta py-5">
+            <li>
+              scelta palette colori e tipografia;
+            </li>
 
 
-<div class="container">
+            <li>
+              organizzazione dei contenuti e copywriting;
+            </li>
 
 
-<h2 class="section-title text-center mb-5">
+            <li>
+              sviluppo responsive con Elementor Pro;
+            </li>
 
-Hai un progetto, un testo o un'idea? Parliamone.
 
-</h2>
+            <li>
+              personalizzazioni CSS e JavaScript;
+            </li>
 
 
+            <li>
+              ottimizzazione dell'esperienza utente.
+            </li>
 
-<form action="https://formspree.io/f/manvqedl"
-method="POST"
-class="contact-form">
 
+          </ul>
 
 
-<div class="form-group">
+          <p class="case-body-text case-note">
 
-<label for="name">
-Nome
-</label>
+            <strong>Nota:</strong>
+            i loghi dei due brand erano già stati realizzati
+            prima del mio coinvolgimento nel progetto.
 
-<input type="text"
-id="name"
-name="name"
-required>
+          </p>
 
-</div>
 
+        </div>
 
 
-<div class="form-group">
+      </div>
 
-<label for="email">
-Email
-</label>
 
-<input type="email"
-id="email"
-name="email"
-required>
+      <!-- PROCESS -->
 
-</div>
+      <div class="process-grid">
 
 
+        <div class="process-item">
 
-<div class="form-group">
 
-<label for="message">
-Messaggio
-</label>
+          <span class="process-number">
+            01
+          </span>
 
-<textarea id="message"
-name="message"
-rows="5"
-required></textarea>
 
-</div>
+          <h3 class="process-title">
+            Ricerca e analisi
+          </h3>
 
 
+          <p class="process-text">
 
-<button type="submit"
-class="btn btn-primary">
+            Analisi preliminare di contenuti, pubblici,
+            obiettivi e bisogni del progetto.
 
-Invia
+          </p>
 
-</button>
 
+        </div>
 
 
-</form>
+        <div class="process-item">
 
 
-</div>
+          <span class="process-number">
+            02
+          </span>
 
 
-</section>
+          <h3 class="process-title">
+            Information Architecture
+          </h3>
 
 
+          <p class="process-text">
 
+            Organizzazione dei contenuti e progettazione
+            delle sitemap dei due ecosistemi digitali.
 
+          </p>
 
-<!-- SCROLL UP MOBILE -->
 
+        </div>
 
-<a href="#"
-class="scrollup-mobile d-lg-none">
 
+        <div class="process-item">
 
-<img src="assets/icons/scroll up.png"
-alt="Torna su">
 
+          <span class="process-number">
+            03
+          </span>
+
+
+          <h3 class="process-title">
+            UI Design
+          </h3>
+
+
+          <p class="process-text">
+
+            Definizione della gerarchia visiva, componenti,
+            tipografia, colori e responsive design.
+
+          </p>
+
+
+        </div>
+
+
+        <div class="process-item">
+
+
+          <span class="process-number">
+            04
+          </span>
+
+
+          <h3 class="process-title">
+            Development
+          </h3>
+
+
+          <p class="process-text">
+
+            Implementazione in WordPress con Elementor Pro,
+            CSS personalizzato e JavaScript.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       06 — FROM DESIGN TO WEBSITE
+  ======================================================= -->
+
+  <section class="case-section case-result">
+
+    <div class="container">
+
+
+      <div class="case-section-layout">
+
+
+        <!-- TITOLO -->
+
+        <div class="case-section-heading">
+
+
+          <div class="case-section-heading-top">
+
+            <span class="case-section-number">
+              06
+            </span>
+
+
+            <p class="case-eyebrow">
+              FROM DESIGN TO WEBSITE
+            </p>
+
+          </div>
+
+
+          <h2 class="case-section-title">
+
+            Dal progetto
+            al prodotto digitale.
+
+          </h2>
+
+
+        </div>
+
+
+        <!-- TESTO -->
+
+        <div class="case-section-copy">
+
+
+          <p class="case-large-text">
+
+            Il progetto è stato portato dalla fase
+            di progettazione fino alla pubblicazione
+            dei due siti web.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+      <!-- RESULT -->
+
+      <div class="result-grid">
+
+
+        <a
+          href="https://aesthetics40.it/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="result-card"
+        >
+
+
+          <span class="result-card-label">
+            B2C · Centro estetico
+          </span>
+
+
+          <div class="result-card-content">
+
+
+            <h3 class="result-card-title">
+
+              Aesthetics<br>
+              4.0
+
+            </h3>
+
+
+            <span class="result-card-icon">
+
+              <i class="bi bi-arrow-up-right"></i>
+
+            </span>
+
+
+          </div>
+
+
+        </a>
+
+
+        <a
+          href="https://estetica40.pro/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="result-card"
+        >
+
+
+          <span class="result-card-label">
+            B2B · Beauty professionale
+          </span>
+
+
+          <div class="result-card-content">
+
+
+            <h3 class="result-card-title">
+
+              Estetica<br>
+              4.0
+
+            </h3>
+
+
+            <span class="result-card-icon">
+
+              <i class="bi bi-arrow-up-right"></i>
+
+            </span>
+
+
+          </div>
+
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       MORE TO EXPLORE
+  ======================================================= -->
+
+  <section class="py-5 text-center">
+
+
+    <div class="container">
+
+
+      <h2 class="section-title">
+        Altri progetti
+      </h2>
+
+
+      <div class="d-flex justify-content-center gap-4 flex-wrap">
+
+
+        <a
+          href="aesthetics.html"
+          class="project-card"
+        >
+
+
+          <img
+            src="assets/img/sfondo-progetto-estetica.webp"
+            alt="Mockup progetto Estetica 4.0"
+            loading="lazy"
+          >
+
+
+          <div class="project-content">
+
+
+            <h5>
+              UX UI Case study e Visual identity
+            </h5>
+
+
+            <p>
+              Progettazione di due siti web
+            </p>
+
+
+            <p class="text-muted small">
+              personale
+            </p>
+
+
+          </div>
+
+
+        </a>
+
+
+        <a
+          href="limes.html"
+          class="project-card"
+        >
+
+
+          <img
+            src="assets/img/sfondo-progetto-finale.webp"
+            alt="Mockup progetto Limes"
+            loading="lazy"
+          >
+
+
+          <div class="project-content">
+
+
+            <h5>
+              Redesign Limes
+            </h5>
+
+
+            <p>
+              Redesign completo del sito web Limes
+            </p>
+
+
+            <p class="text-muted small">
+              start2impact
+            </p>
+
+
+          </div>
+
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =======================================================
+       CONTACT
+  ======================================================= -->
+
+  <section class="contact-cta py-5">
+
+
+    <div class="container">
+
+
+      <h2 class="section-title text-center mb-5">
+
+        Hai un progetto, un testo o un'idea?
+        Parliamone.
+
+      </h2>
+
+
+      <form
+        action="https://formspree.io/f/manvqedl"
+        method="POST"
+        class="contact-form"
+      >
+
+
+        <div class="form-group">
+
+
+          <label for="name">
+            Nome
+          </label>
+
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          >
+
+
+        </div>
+
+
+        <div class="form-group">
+
+
+          <label for="email">
+            Email
+          </label>
+
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
+
+
+        </div>
+
+
+        <div class="form-group">
+
+
+          <label for="message">
+            Messaggio
+          </label>
+
+
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+          ></textarea>
+
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn-primary"
+        >
+
+          Invia
+
+        </button>
+
+
+      </form>
+
+
+    </div>
+
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     SCROLL UP MOBILE
+========================================================= -->
+
+<a
+  href="#"
+  class="scrollup-mobile d-lg-none"
+  aria-label="Torna su"
+>
+
+  <img
+    src="assets/icons/scroll up.png"
+    alt=""
+  >
 
 </a>
 
@@ -915,537 +2363,660 @@ alt="Torna su">
 
 document.addEventListener("DOMContentLoaded", function () {
 
-
-const scrollBtn = document.querySelector('.scrollup-mobile');
-
-
-window.addEventListener('scroll', () => {
+  const scrollBtn =
+    document.querySelector(".scrollup-mobile");
 
 
-if (window.scrollY > 200) {
-
-scrollBtn.classList.add('show');
-
-} else {
-
-scrollBtn.classList.remove('show');
-
-}
+  if (!scrollBtn) return;
 
 
-});
+  window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 200) {
+
+      scrollBtn.classList.add("show");
+
+    } else {
+
+      scrollBtn.classList.remove("show");
+
+    }
+
+  });
 
 
+  scrollBtn.addEventListener("click", function (e) {
 
-scrollBtn.addEventListener('click', (e) => {
-
-
-e.preventDefault();
+    e.preventDefault();
 
 
-window.scrollTo({
+    window.scrollTo({
 
-top:0,
+      top: 0,
+      behavior: "smooth"
 
-behavior:'smooth'
+    });
 
-});
-
-
-});
-
+  });
 
 });
-
 
 </script>
 
 
 
-
-
-<!-- FOOTER -->
-
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer class="footer py-5 bg-dark text-white">
 
 
-<div class="container">
+  <div class="container">
 
 
-<div class="row g-4 d-none d-lg-flex">
+    <!-- DESKTOP -->
 
+    <div class="row g-4 d-none d-lg-flex">
 
 
-<div class="col-md-3">
+      <!-- SU DI ME -->
 
+      <div class="col-md-3">
 
-<h5>
-Su di me
-</h5>
 
+        <h5>
+          Su di me
+        </h5>
 
-<ul class="list-unstyled">
 
+        <ul class="list-unstyled">
 
-<li>
-<a href="chi-sono.html">
-Chi sono
-</a>
-</li>
 
+          <li>
 
-<li>
-<a href="assets/docs/Portfolio Marta Brentan.pdf"
-target="_blank">
-Portfolio
-</a>
-</li>
+            <a href="chi-sono.html">
+              Chi sono
+            </a>
 
+          </li>
 
-<li>
-<a href="assets/docs/CV Marta Brentan.pdf"
-target="_blank">
-CV
-</a>
-</li>
 
+          <li>
 
-<li>
-<a href="blog.html">
-Blog
-</a>
-</li>
+            <a
+              href="assets/docs/Portfolio Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Portfolio
+            </a>
 
+          </li>
 
-</ul>
 
+          <li>
 
-</div>
+            <a
+              href="assets/docs/CV Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CV
+            </a>
 
+          </li>
 
 
+          <li>
 
-<div class="col-md-3">
+            <a href="blog.html">
+              Blog
+            </a>
 
+          </li>
 
-<h5>
-Progetti
-</h5>
 
+        </ul>
 
-<ul class="list-unstyled">
 
+      </div>
 
-<li>
-<a href="editorial.html">
-Editorial
-</a>
-</li>
 
 
-<li>
-<a href="voice.html">
-Voice
-</a>
-</li>
+      <!-- PROGETTI -->
 
+      <div class="col-md-3">
 
-<li>
-<a href="design.html">
-Design
-</a>
-</li>
 
+        <h5>
+          Progetti
+        </h5>
 
-<li>
-<a href="progettazione.html">
-Progettazione
-</a>
-</li>
 
+        <ul class="list-unstyled">
 
-</ul>
 
+          <li>
 
-</div>
+            <a href="editorial.html">
+              Editorial
+            </a>
 
+          </li>
 
 
+          <li>
 
+            <a href="voice.html">
+              Voice
+            </a>
 
-<div class="col-md-3">
+          </li>
 
 
-<h5>
-Contatti
-</h5>
+          <li>
 
+            <a href="design.html">
+              Design
+            </a>
 
-<ul class="list-unstyled">
+          </li>
 
 
-<li>
-<a href="mailto:martabrentan@yahoo.com">
+          <li>
 
-<i class="bi bi-envelope me-2"></i>
+            <a href="progettazione.html">
+              Progettazione
+            </a>
 
-Email
+          </li>
 
-</a>
-</li>
 
+        </ul>
 
-<li>
-<a href="tel:+393470547503">
 
-<i class="bi bi-telephone me-2"></i>
+      </div>
 
-Telefono
 
-</a>
-</li>
 
+      <!-- CONTATTI -->
 
-<li>
-<a href="https://www.instagram.com/martabrentan"
-target="_blank">
+      <div class="col-md-3">
 
-<i class="bi bi-instagram me-2"></i>
 
-Instagram
+        <h5>
+          Contatti
+        </h5>
 
-</a>
-</li>
 
+        <ul class="list-unstyled">
 
-<li>
-<a href="https://www.behance.net/martabrentan"
-target="_blank">
 
-<i class="bi bi-behance me-2"></i>
+          <li>
 
-Behance
+            <a href="mailto:martabrentan@yahoo.com">
 
-</a>
-</li>
+              <i class="bi bi-envelope me-2"></i>
 
+              Email
 
-<li>
-<a href="https://www.linkedin.com/in/martabrentan"
-target="_blank">
+            </a>
 
-<i class="bi bi-linkedin me-2"></i>
+          </li>
 
-LinkedIn
 
-</a>
-</li>
+          <li>
 
+            <a href="tel:+393470547503">
 
-</ul>
+              <i class="bi bi-telephone me-2"></i>
 
+              Telefono
 
-</div>
+            </a>
 
+          </li>
 
 
+          <li>
 
-<div class="col-md-3">
+            <a
+              href="https://www.instagram.com/martabrentan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
 
+              <i class="bi bi-instagram me-2"></i>
 
-<h5>
-Aiuto
-</h5>
+              Instagram
 
+            </a>
 
-<ul class="list-unstyled">
+          </li>
 
 
-<li>
-<a href="policy.html">
-Policy
-</a>
-</li>
+          <li>
 
+            <a
+              href="https://www.behance.net/martabrentan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
 
-<li>
-<a href="contatti.html">
-Scrivimi
-</a>
-</li>
+              <i class="bi bi-behance me-2"></i>
 
+              Behance
 
-</ul>
+            </a>
 
+          </li>
 
-</div>
 
+          <li>
 
+            <a
+              href="https://www.linkedin.com/in/martabrentan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
 
-</div>
+              <i class="bi bi-linkedin me-2"></i>
 
+              LinkedIn
 
+            </a>
 
+          </li>
 
 
-<div class="footer-mobile d-lg-none">
+        </ul>
 
 
-<div class="footer-accordion">
+      </div>
 
-<button class="accordion-btn"
-data-bs-toggle="collapse"
-data-bs-target="#f1">
 
-Su di me
 
-</button>
+      <!-- AIUTO -->
 
+      <div class="col-md-3">
 
-<div id="f1"
-class="collapse">
 
-<ul class="list-unstyled ps-3">
+        <h5>
+          Aiuto
+        </h5>
 
-<li>
-<a href="chi-sono.html">
-Chi sono
-</a>
-</li>
 
+        <ul class="list-unstyled">
 
-<li>
-<a href="assets/docs/Portfolio Marta Brentan.pdf"
-target="_blank">
-Portfolio
-</a>
-</li>
 
+          <li>
 
-<li>
-<a href="assets/docs/CV Marta Brentan.pdf"
-target="_blank">
-CV
-</a>
-</li>
+            <a href="policy.html">
+              Policy
+            </a>
 
+          </li>
 
-<li>
-<a href="blog.html">
-Blog
-</a>
-</li>
 
-</ul>
+          <li>
 
-</div>
+            <a href="contatti.html">
+              Scrivimi
+            </a>
 
+          </li>
 
-</div>
 
+        </ul>
 
 
+      </div>
 
 
-<div class="footer-accordion">
+    </div>
 
-<button class="accordion-btn"
-data-bs-toggle="collapse"
-data-bs-target="#f2">
 
-Progetti
 
-</button>
+    <!-- MOBILE -->
 
+    <div class="footer-mobile d-lg-none">
 
-<div id="f2"
-class="collapse">
 
+      <!-- SU DI ME -->
 
-<ul class="list-unstyled ps-3">
+      <div class="footer-accordion">
 
-<li>
-<a href="editorial.html">
-Editorial
-</a>
-</li>
 
+        <button
+          class="accordion-btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#f1"
+          aria-expanded="false"
+          aria-controls="f1"
+        >
 
-<li>
-<a href="voice.html">
-Voice
-</a>
-</li>
+          Su di me
 
+        </button>
 
-<li>
-<a href="design.html">
-Design
-</a>
-</li>
 
+        <div
+          id="f1"
+          class="collapse"
+        >
 
-<li>
-<a href="progettazione.html">
-Progettazione
-</a>
-</li>
 
+          <ul class="list-unstyled ps-3">
 
-</ul>
 
+            <li>
 
-</div>
+              <a href="chi-sono.html">
+                Chi sono
+              </a>
 
+            </li>
 
-</div>
 
+            <li>
 
+              <a
+                href="assets/docs/Portfolio Marta Brentan.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Portfolio
+              </a>
 
+            </li>
 
-<div class="footer-accordion">
 
+            <li>
 
-<button class="accordion-btn"
-data-bs-toggle="collapse"
-data-bs-target="#f3">
+              <a
+                href="assets/docs/CV Marta Brentan.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CV
+              </a>
 
-Contatti
+            </li>
 
-</button>
 
+            <li>
 
-<div id="f3"
-class="collapse">
+              <a href="blog.html">
+                Blog
+              </a>
 
+            </li>
 
-<ul class="list-unstyled ps-3">
 
+          </ul>
 
-<li>
-<a href="mailto:martabrentan@yahoo.com">
-Email
-</a>
-</li>
 
+        </div>
 
-<li>
-<a href="tel:+393470547503">
-Telefono
-</a>
-</li>
 
+      </div>
 
-</ul>
 
 
-</div>
+      <!-- PROGETTI -->
 
+      <div class="footer-accordion">
 
-</div>
 
+        <button
+          class="accordion-btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#f2"
+          aria-expanded="false"
+          aria-controls="f2"
+        >
 
+          Progetti
 
+        </button>
 
-<div class="footer-accordion">
 
+        <div
+          id="f2"
+          class="collapse"
+        >
 
-<button class="accordion-btn"
-data-bs-toggle="collapse"
-data-bs-target="#f4">
 
-Aiuto
+          <ul class="list-unstyled ps-3">
 
-</button>
 
+            <li>
 
-<div id="f4"
-class="collapse">
+              <a href="editorial.html">
+                Editorial
+              </a>
 
+            </li>
 
-<ul class="list-unstyled ps-3">
 
+            <li>
 
-<li>
-<a href="policy.html">
-Policy
-</a>
-</li>
+              <a href="voice.html">
+                Voice
+              </a>
 
+            </li>
 
-<li>
-<a href="contatti.html">
-Scrivimi
-</a>
-</li>
 
+            <li>
 
-</ul>
+              <a href="design.html">
+                Design
+              </a>
 
+            </li>
 
-</div>
 
+            <li>
 
-</div>
+              <a href="progettazione.html">
+                Progettazione
+              </a>
 
+            </li>
 
 
-<div class="footer-social-mobile text-center mt-4">
+          </ul>
 
 
-<a href="https://www.instagram.com/martabrentan"
-target="_blank">
+        </div>
 
-<i class="bi bi-instagram"></i>
 
-</a>
+      </div>
 
 
-<a href="https://www.behance.net/martabrentan"
-target="_blank">
 
-<i class="bi bi-behance"></i>
+      <!-- CONTATTI -->
 
-</a>
+      <div class="footer-accordion">
 
 
-<a href="https://www.linkedin.com/in/martabrentan"
-target="_blank">
+        <button
+          class="accordion-btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#f3"
+          aria-expanded="false"
+          aria-controls="f3"
+        >
 
-<i class="bi bi-linkedin"></i>
+          Contatti
 
-</a>
+        </button>
 
 
-</div>
+        <div
+          id="f3"
+          class="collapse"
+        >
 
 
-</div>
+          <ul class="list-unstyled ps-3">
 
 
+            <li>
 
+              <a href="mailto:martabrentan@yahoo.com">
+                Email
+              </a>
 
-<hr class="my-4">
+            </li>
 
 
-<p class="text-center small">
+            <li>
 
-© 2026 Marta Brentan – Tutti i diritti riservati
+              <a href="tel:+393470547503">
+                Telefono
+              </a>
 
-</p>
+            </li>
 
 
+          </ul>
 
-</div>
 
+        </div>
+
+
+      </div>
+
+
+
+      <!-- AIUTO -->
+
+      <div class="footer-accordion">
+
+
+        <button
+          class="accordion-btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#f4"
+          aria-expanded="false"
+          aria-controls="f4"
+        >
+
+          Aiuto
+
+        </button>
+
+
+        <div
+          id="f4"
+          class="collapse"
+        >
+
+
+          <ul class="list-unstyled ps-3">
+
+
+            <li>
+
+              <a href="policy.html">
+                Policy
+              </a>
+
+            </li>
+
+
+            <li>
+
+              <a href="contatti.html">
+                Scrivimi
+              </a>
+
+            </li>
+
+
+          </ul>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- SOCIAL -->
+
+      <div class="footer-social-mobile text-center mt-4">
+
+
+        <a
+          href="https://www.instagram.com/martabrentan"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+
+          <i class="bi bi-instagram"></i>
+
+        </a>
+
+
+        <a
+          href="https://www.behance.net/martabrentan"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Behance"
+        >
+
+          <i class="bi bi-behance"></i>
+
+        </a>
+
+
+        <a
+          href="https://www.linkedin.com/in/martabrentan"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+
+          <i class="bi bi-linkedin"></i>
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+    <hr class="my-4">
+
+
+    <p class="text-center small">
+
+      © 2026 Marta Brentan – Tutti i diritti riservati
+
+    </p>
+
+
+  </div>
 
 </footer>
 
 
 
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 
 </body>

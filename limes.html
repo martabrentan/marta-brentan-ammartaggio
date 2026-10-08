@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="it">
 
 <head>
 
+  <!-- COOKIEBOT -->
   <script
     id="Cookiebot"
     src="https://consent.cookiebot.com/uc.js"
@@ -15,62 +15,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Redesign Limes – Marta Brentan</title>
+  <title>Limes Redesign – Brand identity e UX/UI di una rivista di geopolitica | Marta Brentan</title>
 
   <meta
     name="description"
-    content="Case study: redesign completo del sito web di Limes, rivista italiana di geopolitica. Ricerca, wireframe, prototipazione e brand guidelines."
+    content="Case study Limes Redesign: nuovo logo, palette, tipografia, ricerca, wireframe, prototipi e user test per la rivista italiana di geopolitica."
   >
-
   <meta
     name="keywords"
-    content="Limes, redesign, UX, UI, geopolitica, brand guidelines, Marta Brentan"
+    content="Limes, redesign, brand identity, UX UI design, geopolitica, wireframe, prototipo, user test, start2impact, Marta Brentan"
   >
-
   <meta name="author" content="Marta Brentan">
 
-  <meta property="og:title" content="Redesign Limes – Marta Brentan">
-
+  <meta property="og:title" content="Limes Redesign – Brand identity e UX/UI di una rivista di geopolitica | Marta Brentan">
   <meta
     property="og:description"
-    content="Case study completo del redesign di Limes, rivista italiana di geopolitica."
+    content="Case study Limes Redesign: nuovo logo, palette, tipografia, ricerca, wireframe, prototipi e user test per la rivista italiana di geopolitica."
   >
-
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ammartaggio.com/limes.html">
+  <meta property="og:image" content="https://ammartaggio.com/assets/img/lm-logo-chiaro-scuro.webp">
+  
 
-  <meta
-    property="og:url"
-    content="https://martabrentan.github.io/marta-brentan-ammartaggio/limes.html"
-  >
-
-  <meta
-    property="og:image"
-    content="https://martabrentan.github.io/marta-brentan-ammartaggio/assets/img/sfondo-progetto-finale.webp"
-  >
-
-  <meta
-    property="og:image:alt"
-    content="Copertina progetto Limes"
-  >
-
-  <link
-    rel="icon"
-    href="assets/icons/LOGO-ico.ico"
-    type="image/x-icon"
-  >
+  <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
 
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
-
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
   />
-
   <link
-    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Epilogue:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -79,1458 +57,380 @@
 
   <style>
 
-    /* =========================================================
-       LIMES — CASE STUDY
-       CSS specifico pagina
-    ========================================================= */
-
-    .case-page {
-      background: #FAF9F6;
-      color: #333333;
+    .lm{--lm-bg:#F3F3F2;--lm-ink:#001621;--lm-orange:#FF4103;--lm-blue:#035AA7;--lm-gray:#67706C;
+      --lm-sans:"Neue Haas Grotesk Display Pro","Neue Haas Grotesk","Helvetica Neue","Inter",Arial,sans-serif;--lm-serif:"Cardo",serif;
+      overflow:hidden;color:var(--lm-ink);background:var(--lm-bg);font-family:var(--lm-sans)}
+    .lm h1,.lm h2,.lm h3,.lm h4,.lm h5{color:var(--lm-ink);font-family:var(--lm-sans);font-weight:600}
+    .lm p{font-size:1.1rem;max-width:none;margin-left:0;margin-right:0;line-height:1.7;font-family:var(--lm-serif)}
+    .lm .section-title{color:var(--lm-ink)}
+    .lm-section{padding:6rem 0}
+    .lm-dark{background:var(--lm-ink);color:#fff}
+    .lm-dark h2,.lm-dark h3,.lm-dark h4,.lm-dark .section-title{color:#fff}
+    .lm-white{background:#fff}
+    .lm-label{font-family:var(--lm-sans)!important;font-size:.78rem!important;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--lm-gray);margin-bottom:1rem!important}
+    .lm-dark .lm-label{color:#ff7a50}
+    .lm h2{font-size:clamp(2rem,3.8vw,3.2rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:1.25rem}
+    .lm-lead{font-size:1.3rem!important;max-width:660px!important}
+    .lm-hero{padding:4.5rem 0 5rem}
+    .lm-breadcrumb{font-family:var(--lm-sans);font-size:.85rem;color:var(--lm-gray);margin-bottom:3rem}
+    .lm-breadcrumb a{color:var(--lm-ink)}.lm-breadcrumb a:hover{color:var(--lm-orange)}
+    .lm-hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:center}
+    .lm-title{font-size:clamp(3.2rem,7vw,6rem)!important;font-weight:700!important;letter-spacing:-.04em;line-height:.95;margin-bottom:1.5rem}
+    .lm-title span{display:block;font-weight:300;font-family:var(--lm-serif);font-style:italic;letter-spacing:0}
+    .lm-meta{margin:2rem 0 0;font-family:var(--lm-sans)}.lm-meta div{margin-bottom:1rem}
+    .lm-meta dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lm-gray);font-weight:600}
+    .lm-meta dd{margin:0}
+    .lm-fig{margin:0}.lm-fig img{display:block;width:100%;height:auto}
+    .lm-fig figcaption{font-family:var(--lm-sans);font-size:.85rem;color:var(--lm-gray);margin-top:.7rem}
+    .lm-dark .lm-fig figcaption{color:#9fb0b8}
+    .lm-two{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+    .lm-two.mid{align-items:center}
+    .lm-stack{display:grid;gap:2.5rem;margin-top:3rem}
+    .lm-grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem}
+    .lm-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+    .lm .lm-quote{font-family:var(--lm-sans);font-size:clamp(1.6rem,3.2vw,2.6rem);line-height:1.2;font-weight:600;letter-spacing:-.02em;margin:0 0 2rem;max-width:880px}
+    .lm-quote span{color:var(--lm-orange)}
+    .lm-sw{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-top:2.5rem;font-family:var(--lm-sans);font-size:.8rem}
+    .lm-sw div{padding:4rem .9rem .8rem;color:#fff;line-height:1.4}
+    .lm-sw b{display:block;font-weight:600}
+    .lm-type{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem}
+    .lm-type .big{font-size:clamp(2.6rem,5vw,4.2rem);line-height:1.05;margin:.5rem 0 1rem}
+    .lm-type .a{font-family:var(--lm-sans);font-weight:700;letter-spacing:-.03em}
+    .lm-type .b{font-family:var(--lm-serif);font-style:italic}
+    .lm-type p{font-size:1rem}
+    .lm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
+    .lm-stat{border-top:2px solid var(--lm-orange);padding-top:1rem}
+    .lm-stat strong{display:block;font-family:var(--lm-sans);font-size:2.8rem;font-weight:600;line-height:1;letter-spacing:-.03em}
+    .lm-stat span{font-family:var(--lm-sans);font-size:.9rem;display:block;margin-top:.6rem;line-height:1.4;opacity:.85}
+    .lm-list{margin:1.5rem 0 0;padding:0;list-style:none;font-family:var(--lm-serif);font-size:1.1rem}
+    .lm-list li{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.18)}
+    .lm-list li b{font-family:var(--lm-sans);font-weight:600}
+    .lm-persona{font-family:var(--lm-sans);font-size:.95rem}
+    .lm-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;border:1.5px solid currentColor;font-family:var(--lm-sans);font-size:.9rem;font-weight:500;text-decoration:none;transition:.2s;margin:.5rem .6rem 0 0}
+    .lm-btn:hover{background:var(--lm-orange);border-color:var(--lm-orange);color:#fff!important}
+    .lm-dark .lm-btn{color:#fff}
+    .lm-btn-row{margin-top:2rem}
+    .lm-more{background:#fff}
+    .lm-more-list{display:flex;flex-wrap:wrap;justify-content:center;gap:1.75rem}
+    @media(max-width:991px){
+      .lm-section{padding:4.5rem 0}
+      .lm-hero-grid,.lm-two,.lm-type{grid-template-columns:1fr;gap:2.5rem}
+      .lm-grid3{grid-template-columns:1fr}.lm-stats{grid-template-columns:repeat(2,1fr)}
+      .lm-sw{grid-template-columns:repeat(2,1fr)}
     }
-
-
-    /* HERO -------------------------------------------------- */
-
-    .case-hero {
-      padding: 5.5rem 0 5rem;
+    @media(max-width:576px){
+      .lm-section{padding:3.5rem 0}.lm-hero{padding-top:3rem}.lm-grid2,.lm-stats{grid-template-columns:1fr}
     }
-
-    .case-breadcrumb {
-      font-size: .78rem;
-      letter-spacing: .03em;
-      margin-bottom: 2rem;
-      color: #999999;
-    }
-
-    .case-breadcrumb a {
-      color: #666666;
-      text-decoration: none;
-    }
-
-    .case-breadcrumb a:hover {
-      color: #007A78;
-    }
-
-    .case-breadcrumb .current {
-      color: #999999;
-    }
-
-    .case-hero-title {
-      font-family: "Epilogue", sans-serif;
-      font-size: clamp(1.8rem, 3vw, 3rem);
-      line-height: 1.1;
-      letter-spacing: -.03em;
-      font-weight: 700;
-      color: #333333;
-      margin: 0;
-    }
-
-    .case-hero-intro {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 4rem;
-      align-items: start;
-      margin-top: 3.5rem;
-    }
-
-    .case-hero-cover {
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    .case-hero-cover img {
-      width: 100%;
-      max-width: 560px;
-      height: auto;
-      display: block;
-      border-radius: 20px;
-    }
-
-    .case-hero-copy {
-      max-width: 580px;
-    }
-
-    .case-hero-lead {
-      font-family: "Fraunces", serif;
-      font-size: clamp(1.9rem, 3.2vw, 3.1rem);
-      line-height: 1.08;
-      letter-spacing: -.035em;
-      color: #007A78;
-      margin: 0 0 1.5rem;
-    }
-
-    .case-hero-description {
-      font-size: 1rem;
-      line-height: 1.8;
-      margin: 0 0 1.5rem;
-      max-width: 580px;
-    }
-
-    .case-text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      color: #333333;
-      text-decoration: none;
-      font-size: .9rem;
-      font-weight: 600;
-      border-bottom: 1px solid #333333;
-      padding-bottom: .25rem;
-    }
-
-    .case-text-link:hover {
-      color: #007A78;
-      border-color: #007A78;
-    }
-
-
-    /* SECTIONS -------------------------------------------------- */
-
-    .case-section {
-      padding: 6rem 0;
-    }
-
-    .case-section + .case-section {
-      border-top: 1px solid rgba(51, 51, 51, .08);
-    }
-
-    .case-section-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .case-section-heading {
-      max-width: 650px;
-    }
-
-    .case-section-heading-top {
-      display: flex;
-      align-items: baseline;
-      gap: 1.3rem;
-      margin-bottom: 1.1rem;
-    }
-
-    .case-section-number {
-      font-size: .78rem;
-      font-weight: 400;
-      letter-spacing: .08em;
-      color: #999999;
-      flex-shrink: 0;
-    }
-
-    .case-section-eyebrow {
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: #999999;
-      margin: 0;
-    }
-
-    .case-section-title {
-      font-family: "Fraunces", serif;
-      font-size: clamp(2.4rem, 4.5vw, 4.4rem);
-      line-height: 1;
-      letter-spacing: -.045em;
-      font-weight: 600;
-      color: #007A78;
-      margin: 0;
-      max-width: 850px;
-    }
-
-    .case-section-copy {
-      font-size: 1rem;
-      line-height: 1.8;
-      max-width: 650px;
-    }
-
-    .case-section-copy p {
-      margin-bottom: 1.4rem;
-    }
-
-    .case-section-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-
-    /* META -------------------------------------------------- */
-
-    .case-meta {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(51, 51, 51, .12);
-    }
-
-    .case-meta-label {
-      display: block;
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: #999999;
-      margin-bottom: .35rem;
-    }
-
-    .case-meta-value {
-      margin: 0;
-      font-size: .95rem;
-      font-weight: 600;
-    }
-
-
-    /* CHALLENGE CARDS ------------------------------------- */
-
-    .case-card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
-      margin-top: 4rem;
-    }
-
-    .case-card {
-      padding: 2.25rem;
-      background: #FFFFFF;
-      border-radius: 20px;
-    }
-
-    .case-card-number {
-      display: block;
-      font-size: .72rem;
-      letter-spacing: .08em;
-      color: #999999;
-      margin-bottom: 1rem;
-    }
-
-    .case-card h3 {
-      font-family: "Epilogue", sans-serif;
-      font-size: 1.1rem;
-      line-height: 1.3;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #333333;
-    }
-
-    .case-card p {
-      font-size: .93rem;
-      line-height: 1.75;
-      margin: 0;
-    }
-
-    .case-card-dark {
-      background: #333333;
-      color: #FFFFFF;
-    }
-
-    .case-card-dark .case-card-number {
-      color: rgba(255,255,255,.5);
-    }
-
-    .case-card-dark h3,
-    .case-card-dark p {
-      color: #FFFFFF;
-    }
-
-
-    /* IMAGES -------------------------------------------------- */
-
-    .case-image-row {
-      width: min(1050px, 88%);
-      margin: 4rem auto 0;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
-    }
-
-    .case-image {
-      overflow: hidden;
-      border-radius: 18px;
-    }
-
-    .case-image img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-
-    /* SINGLE IMAGE ------------------------------------------- */
-
-    .case-single-image {
-      width: min(1000px, 88%);
-      margin: 4rem auto 0;
-      overflow: hidden;
-      border-radius: 20px;
-    }
-
-    .case-single-image img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-
-    /* RESOURCES ---------------------------------------------- */
-
-    .case-resources {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(51, 51, 51, .12);
-    }
-
-    .case-resources-title {
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: #999999;
-      margin-bottom: 1rem;
-    }
-
-    .case-resources-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .75rem 1.5rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .case-resources-list a {
-      display: inline-flex;
-      align-items: center;
-      gap: .45rem;
-      color: #333333;
-      text-decoration: none;
-      font-size: .9rem;
-    }
-
-    .case-resources-list a:hover {
-      color: #007A78;
-    }
-
-
-    /* BRAND GUIDELINES ---------------------------------------- */
-
-    .case-brand-grid {
-      width: min(1050px, 88%);
-      margin: 4rem auto 0;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
-    }
-
-    .case-brand-item {
-      overflow: hidden;
-      border-radius: 18px;
-      background: #FFFFFF;
-    }
-
-    .case-brand-item img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-
-    /* MORE PROJECTS ------------------------------------------- */
-
-    .case-more {
-      padding: 6rem 0;
-    }
-
-    .case-more-title {
-      font-family: "Fraunces", serif;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      color: #007A78;
-      letter-spacing: -.04em;
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-
-    .case-project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    .case-project-card {
-      display: block;
-      text-decoration: none;
-      color: #333333;
-      background: #FFFFFF;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .case-project-card img {
-      width: 100%;
-      display: block;
-      aspect-ratio: 1.35 / 1;
-      object-fit: cover;
-    }
-
-    .case-project-content {
-      padding: 1.5rem;
-    }
-
-    .case-project-content h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: .45rem;
-    }
-
-    .case-project-content p {
-      font-size: .9rem;
-      margin-bottom: .25rem;
-    }
-
-
-    /* RESPONSIVE ---------------------------------------------- */
-
-    @media (max-width: 991px) {
-
-      .case-hero {
-        padding-top: 4.5rem;
-        padding-bottom: 4rem;
-      }
-
-      .case-section {
-        padding: 5rem 0;
-      }
-
-      .case-hero-intro,
-      .case-section-layout {
-        gap: 3rem;
-      }
-
-      .case-section-title {
-        font-size: clamp(2.3rem, 6vw, 3.7rem);
-      }
-
-    }
-
-
-    @media (max-width: 768px) {
-
-      .case-hero {
-        padding-top: 4rem;
-        padding-bottom: 3.5rem;
-      }
-
-      .case-hero-intro {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .case-hero-cover img {
-        max-width: 520px;
-      }
-
-      .case-section-layout {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .case-section {
-        padding: 4.5rem 0;
-      }
-
-      .case-card-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .case-image-row,
-      .case-brand-grid {
-        width: min(100%, 700px);
-        grid-template-columns: 1fr;
-      }
-
-      .case-meta {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .case-project-grid {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-
-    @media (max-width: 576px) {
-
-      .case-hero {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-      }
-
-      .case-section {
-        padding: 4rem 0;
-      }
-
-      .case-section-title {
-        font-size: clamp(2rem, 11vw, 3rem);
-      }
-
-      .case-hero-lead {
-        font-size: clamp(1.8rem, 9vw, 2.5rem);
-      }
-
-      .case-meta {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
-      }
-
-      .case-card {
-        padding: 1.75rem;
-      }
-
-      .case-image-row,
-      .case-single-image,
-      .case-brand-grid {
-        width: 100%;
-      }
-
-      .case-hero-cover img {
-        border-radius: 16px;
-      }
-
-    }
-
   </style>
 
 </head>
 
 
-<body class="case-page">
+<body>
 
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-white py-3">
+<!-- NAVBAR -->
 
-    <div class="container">
+<nav class="navbar navbar-expand-lg py-3">
 
-      <a class="navbar-brand" href="index.html">
-        <img
-          src="assets/img/LOGO.png"
-          alt="Logo Marta Brentan"
-          height="36"
-        >
-      </a>
+  <div class="container">
 
+    <a class="navbar-brand" href="index.html" aria-label="Homepage Marta Brentan">
+      <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+    </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Apri navigazione"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarNav">
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
 
-        <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+        <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="chi-sono.html">Chi sono</a>
-          </li>
+        <li class="nav-item d-none d-lg-block ms-lg-3">
+          <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica Portfolio
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="progetti.html">Progetti</a>
-          </li>
+        <li class="nav-item d-none d-lg-block ms-2">
+          <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica CV
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
-          </li>
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>Portfolio
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="contatti.html">Contatti</a>
-          </li>
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>CV
+          </a>
+        </li>
 
-
-          <li class="nav-item d-none d-lg-block ms-lg-3">
-            <a
-              class="btn btn-primary"
-              href="assets/docs/Portfolio Marta Brentan.pdf"
-              target="_blank"
-            >
-              Scarica Portfolio
-            </a>
-          </li>
-
-
-          <li class="nav-item d-none d-lg-block ms-2">
-            <a
-              class="btn custom-outline"
-              href="assets/docs/CV Marta Brentan.pdf"
-              target="_blank"
-            >
-              Scarica CV
-            </a>
-          </li>
-
-
-          <li class="nav-item d-lg-none">
-            <a
-              href="assets/docs/Portfolio Marta Brentan.pdf"
-              target="_blank"
-              class="nav-link"
-            >
-              <i class="bi bi-download me-2"></i>
-              Portfolio
-            </a>
-          </li>
-
-
-          <li class="nav-item d-lg-none">
-            <a
-              href="assets/docs/CV Marta Brentan.pdf"
-              target="_blank"
-              class="nav-link"
-            >
-              <i class="bi bi-download me-2"></i>
-              CV
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
+      </ul>
 
     </div>
 
-  </nav>
+  </div>
 
+</nav>
 
+<main class="lm">
 
   <!-- HERO -->
-  <header class="case-hero">
-
+  <section class="lm-hero">
     <div class="container">
-
-      <div class="case-breadcrumb">
-
-        <a href="index.html">Home</a>
-        <span> › </span>
-
-        <a href="progettazione.html">Progettazione</a>
-        <span> › </span>
-
-        <span class="current">Limes</span>
-
-      </div>
-
-
-      <h1 class="case-hero-title">
-        Redesign Limes
-      </h1>
-
-
-      <div class="case-hero-intro">
-
-
-        <div class="case-hero-cover">
-
-          <img
-            src="assets/img/sfondo-progetto-finale.webp"
-            alt="Cover progetto Limes"
-            loading="eager"
-          >
-
+      <p class="lm-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Limes</span></p>
+      <div class="lm-hero-grid">
+        <div>
+          <h1 class="lm-title">Limes <span>Redesign</span></h1>
+          <p class="lm-lead">Una rivista italiana di geopolitica, anche online. Dalla brand identity al prototipo, passando per la ricerca.</p>
+          <dl class="lm-meta">
+            <div><dt>Ambito</dt><dd>Brand identity e UX/UI design di sito e app</dd></div>
+            <div><dt>Percorso</dt><dd>Brand identity · Discovery · Wireframe · Prototipo · User test</dd></div>
+            <div><dt>Strumenti</dt><dd>Figma, Google Form, Maze, WCAG 2.1</dd></div>
+          </dl>
         </div>
-
-
-        <div class="case-hero-copy">
-
-          <p class="case-hero-lead">
-            Una nuova esperienza digitale
-            per la geopolitica contemporanea.
-          </p>
-
-
-          <p class="case-hero-description">
-            Redesign completo del sito web di Limes, rivista italiana
-            di geopolitica. Il progetto interviene sull'architettura
-            dell'informazione, sull'esperienza di lettura, sulla
-            distinzione tra contenuti gratuiti e premium e sul sistema
-            visivo del brand.
-          </p>
-
-
-          <a
-            href="assets/docs/Progetto Finale UX UI di Marta Brentan.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="case-text-link"
-          >
-            Scarica il progetto completo
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-
-        </div>
-
+        <figure class="lm-fig"><img src="assets/img/lm-hero.webp" alt="Mockup del nuovo sito e della rivista Limes su laptop, tablet e smartphone" loading="lazy"></figure>
       </div>
-
     </div>
-
-  </header>
-
-
-
-  <!-- 01 — THE PROJECT -->
-  <section class="case-section">
-
-    <div class="container">
-
-      <div class="case-section-layout">
-
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-
-            <span class="case-section-number">01</span>
-
-            <span class="case-section-eyebrow">
-              THE PROJECT
-            </span>
-
-          </div>
-
-
-          <h2 class="case-section-title">
-            Ripensare il modo
-            di leggere Limes.
-          </h2>
-
-        </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            Limes è una rivista italiana di geopolitica facente parte
-            di GEDI. È stata fondata nel 1993 da Lucio Caracciolo,
-            che la dirige. La rivista esce ogni mese ed è disponibile
-            online, in edicola, in libreria, in ebook e su iPad.
-          </p>
-
-
-          <p>
-            La scelta di lavorare su Limes nasce anche da un interesse
-            personale: lavoro tra editoria e design, con l'obiettivo
-            di rendere accessibili e curati i modi in cui comunichiamo,
-            anche quando si tratta di cultura.
-          </p>
-
-
-          <p>
-            Durante il mio percorso personale ho imparato che chiunque
-            maneggi le parole per lavoro deve sporcarsi le mani con la
-            grafica e che la qualità di un contenuto non è indipendente
-            dalla qualità della sua interfaccia.
-          </p>
-
-
-          <p>
-            Limes rappresentava inoltre un caso interessante per la
-            presenza di un pubblico giovane che si avvicina alla
-            geopolitica attraverso la rivista, la sua app e la Scuola
-            di Limes, programma formativo nato nel 2021 e rivolto a
-            studenti universitari e under 35.
-          </p>
-
-
-          <div class="case-meta">
-
-            <div>
-
-              <span class="case-meta-label">
-                Ambito
-              </span>
-
-              <p class="case-meta-value">
-                UX/UI Design
-              </p>
-
-            </div>
-
-
-            <div>
-
-              <span class="case-meta-label">
-                Anno
-              </span>
-
-              <p class="case-meta-value">
-                2026
-              </p>
-
-            </div>
-
-
-            <div>
-
-              <span class="case-meta-label">
-                Tools
-              </span>
-
-              <p class="case-meta-value">
-                Figma · Adobe Creative Suite · Maze · Agent AI
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
   </section>
 
-
-
-  <!-- 02 — THE CHALLENGE -->
-  <section class="case-section">
-
+  <!-- PROGETTO -->
+  <section class="lm-section lm-dark">
     <div class="container">
-
-
-      <div class="case-section-layout">
-
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-
-            <span class="case-section-number">
-              02
-            </span>
-
-            <span class="case-section-eyebrow">
-              THE CHALLENGE
-            </span>
-
-          </div>
-
-
-          <h2 class="case-section-title">
-            Problems, bisogni
-            e soluzioni.
-          </h2>
-
-        </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            L'analisi del sito ha evidenziato problemi sia sul piano
-            della navigazione sia su quello dell'esperienza visiva
-            e della leggibilità dei contenuti.
-          </p>
-
-
-          <p>
-            L'obiettivo non era semplicemente aggiornare l'estetica
-            dell'interfaccia, ma costruire un sistema capace di
-            accompagnare l'utente dalla scoperta dei contenuti fino
-            alla lettura, rendendo più leggibile anche la distinzione
-            tra contenuti gratuiti e premium.
-          </p>
-
-        </div>
-
+      <p class="lm-label">Il progetto</p>
+      <p class="lm-quote">La qualità di un contenuto non è indipendente dalla <span>qualità della sua interfaccia.</span></p>
+      <div class="lm-two">
+        <p>Limes, fondata nel 1993 da Lucio Caracciolo, è una rivista di geopolitica del gruppo GEDI. Lavoro tra editoria e design, e credo che chiunque maneggi le parole per lavoro debba sporcarsi le mani con la grafica.</p>
+        <p>Limes ha contenuti di altissimo livello, ma il sito non li traduce: l’impianto grafico è datato, la navigazione poco chiara, la gerarchia debole. E c’è un pubblico giovane, quello della Scuola di Limes, che trova una piattaforma lontana dalle sue abitudini.</p>
       </div>
-
-
-      <div class="case-card-grid">
-
-
-        <article class="case-card case-card-dark">
-
-          <span class="case-card-number">
-            01 / PROBLEMS
-          </span>
-
-
-          <h3>
-            Una piattaforma difficile da orientare
-          </h3>
-
-
-          <p>
-            Il sito di Limes presentava una navigazione confusa,
-            con naming poco intuitivi e sovrapposti che rendevano
-            difficile orientarsi anche per lettori abituali.
-            Sul piano visivo, l'identità risultava poco coerente
-            con il posizionamento autorevole della rivista:
-            logo poco distintivo, tipografia poco leggibile e
-            gerarchia tra contenuti gratuiti e premium poco chiara.
-            Mancavano inoltre funzionalità come dark mode, zoom,
-            ricerca intelligente, lista preferiti e condivisione
-            dell'articolo.
-          </p>
-
-        </article>
-
-
-        <article class="case-card">
-
-          <span class="case-card-number">
-            02 / NEEDS
-          </span>
-
-
-          <h3>
-            Orientamento, leggibilità e continuità
-          </h3>
-
-
-          <p>
-            Gli utenti avevano bisogno di una navigazione chiara
-            e intuitiva, capace di guidarli anche alla prima visita.
-            Sul piano visivo era necessaria un'identità forte e
-            riconoscibile, capace di comunicare autorevolezza
-            senza rinunciare alla leggibilità. L'esperienza di
-            lettura doveva inoltre essere fluida su desktop e mobile,
-            con una distinzione chiara tra contenuti gratuiti e premium.
-          </p>
-
-        </article>
-
-
+      <div class="lm-two" style="margin-top:2rem">
+        <div><p class="lm-label">Mission</p><p>Offrire strumenti di lettura del mondo contemporaneo che vadano oltre la cronaca, per capire le logiche profonde di conflitti e alleanze.</p></div>
+        <div><p class="lm-label">Vision</p><p>Diffondere una cultura geopolitica in Italia e costruire una comunità di lettori capaci di interpretare il mondo con più consapevolezza.</p></div>
       </div>
-
-
-      <div class="case-card-grid">
-
-
-        <article class="case-card">
-
-          <span class="case-card-number">
-            03 / SOLUTIONS
-          </span>
-
-
-          <h3>
-            Un sistema digitale più coerente
-          </h3>
-
-
-          <p>
-            Ho ricostruito completamente la sitemap e aggiunto
-            nuove funzionalità. Il paywall è diventato soft inline,
-            accompagnando l'utente senza interrompere bruscamente
-            la lettura. Ho inoltre lavorato sulla gerarchia delle
-            informazioni, sui percorsi di navigazione e sugli
-            elementi che facilitano la lettura dei contenuti.
-          </p>
-
-        </article>
-
-
-        <article class="case-card case-card-dark">
-
-          <span class="case-card-number">
-            04 / VALIDATION
-          </span>
-
-
-          <h3>
-            Prototipi e user testing
-          </h3>
-
-
-          <p>
-            Le scelte progettuali sono state trasformate in
-            prototipi interattivi e validate attraverso user testing
-            su Maze, permettendo di verificare la comprensione
-            dell'interfaccia e individuare eventuali punti di attrito.
-          </p>
-
-        </article>
-
-
-      </div>
-
-
-
-
-
-        <div class="case-image">
-
-          <img
-            src="assets/img/Redesign limes-Photoroom.png"
-            alt="Mockup articolo redesign Limes"
-            loading="lazy"
-          >
-
-        </div>
-
-      </div>
-
     </div>
-
   </section>
 
-
-
-  <!-- 03 — THE STRATEGY -->
-  <section class="case-section">
-
+  <!-- LOGO -->
+  <section class="lm-section">
     <div class="container">
-
-
-      <div class="case-section-layout">
-
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-
-            <span class="case-section-number">
-              03
-            </span>
-
-            <span class="case-section-eyebrow">
-              THE STRATEGY
-            </span>
-
-          </div>
-
-
-          <h2 class="case-section-title">
-            Dalla struttura
-            all'esperienza.
-          </h2>
-
-        </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            Il redesign parte dall'architettura dell'informazione:
-            prima di intervenire sull'interfaccia ho lavorato sui
-            percorsi, sulla gerarchia dei contenuti e sulla relazione
-            tra articolo, categoria, archivio e contenuti premium.
-          </p>
-
-
-          <p>
-            Il nuovo sistema è stato pensato per mantenere la profondità
-            editoriale di Limes ma rendere più immediato il passaggio
-            tra scoperta, approfondimento e lettura.
-          </p>
-
-
-          <p>
-            L'obiettivo è costruire un'esperienza coerente tra desktop
-            e mobile, mantenendo riconoscibile il carattere editoriale
-            della rivista.
-          </p>
-
-
-          <div class="case-resources">
-
-            <p class="case-resources-title">
-              Approfondisci il progetto
-            </p>
-
-
-            <ul class="case-resources-list">
-
-              <li>
-
-                <a
-                  href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?node-id=0-1&amp;p=f"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-arrow-up-right"></i>
-                  Wireframe mid-fidelity
-                </a>
-
-              </li>
-
-
-              <li>
-
-                <a
-                  href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?node-id=2733-21498"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-arrow-up-right"></i>
-                  Prototipi Desktop
-                </a>
-
-              </li>
-
-
-              <li>
-
-                <a
-                  href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?node-id=2733-21498"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-arrow-up-right"></i>
-                  Prototipi Mobile
-                </a>
-
-              </li>
-
-
-              <li>
-
-                <a
-                  href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?node-id=2733-21498"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-arrow-up-right"></i>
-                  User test
-                </a>
-
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
+      <p class="lm-label">01 · Brand identity · Logo</p>
+      <h2>Il simbolo era già lì</h2>
+      <div class="lm-two">
+        <p class="lm-lead">Cercavo qualcosa già presente nel sistema visivo di Limes, ma mai elevato a simbolo. L’ho trovato nelle mappe parlanti di Laura Canali.</p>
+        <p>Le mappe usano da sempre un marker preciso: tre cerchi concentrici con un punto al centro, il bull’s-eye marker della cartografia. L’ho semplificato e l’ho messo al posto del puntino della i di Limes. Il logotipo è in Cardo, un serif umanistico pensato per la lettura lunga.</p>
       </div>
-
-
-      <div class="case-image-row">
-
-
-        <div class="case-image">
-
-          <img
-            src="assets/img/wireframe mockup carte mobile.png"
-            alt="Wireframe mobile Limes"
-            loading="lazy"
-          >
-
+      <div class="lm-stack">
+        <figure class="lm-fig"><img src="assets/img/lm-logo-chiaro-scuro.webp" alt="Il nuovo logo in versione grande, media e piccola, in positivo e in negativo" loading="lazy"></figure>
+        <div class="lm-grid2">
+          <figure class="lm-fig"><img src="assets/img/lm-logo-app.webp" alt="Il nuovo logo e il logo attuale come icona dell’app" loading="lazy"></figure>
+          <figure class="lm-fig"><img src="assets/img/lm-logo-rivista.webp" alt="Il nuovo logo e il logo attuale sulla copertina della rivista" loading="lazy"></figure>
         </div>
-
-
-        <div class="case-image">
-
-          <img
-            src="assets/img/mockup cartemobile.png"
-            alt="Prototipo mobile Limes"
-            loading="lazy"
-          >
-
-        </div>
-
-
       </div>
-
     </div>
-
   </section>
 
-
-
-  <!-- 04 — WIREFRAME & PROTOTYPING -->
-  <section class="case-section">
-
+  <!-- PALETTE E TIPOGRAFIA -->
+  <section class="lm-section lm-white">
     <div class="container">
-
-
-      <div class="case-section-layout">
-
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-
-            <span class="case-section-number">
-              04
-            </span>
-
-            <span class="case-section-eyebrow">
-              WIREFRAME & PROTOTYPING
-            </span>
-
-          </div>
-
-
-          <h2 class="case-section-title">
-            Testare prima
-            di definire.
-          </h2>
-
-        </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            Dopo aver costruito i wireframe mid-fidelity in scala
-            di grigi, li ho trasformati in prototipi interattivi
-            desktop e mobile, con particolare attenzione a griglia,
-            tipografia, controlli UI, user flow e iconografia.
-          </p>
-
-
-          <p>
-            Per creare wireframe e prototipi mi sono affidata a Figma,
-            utilizzando il prototipo come strumento per verificare
-            concretamente la qualità dell'esperienza prima della
-            definizione visiva finale.
-          </p>
-
-
-          <p>
-            L'interfaccia è stata poi sottoposta a user testing con
-            utenti reali, così da individuare criticità e validare
-            le principali scelte progettuali.
-          </p>
-
-        </div>
-
+      <p class="lm-label">02 · Palette</p>
+      <h2>Distinguere senza decorare</h2>
+      <p class="lm-lead">Bianco e nero definiscono lo spazio della lettura, il grigio gestisce la gerarchia. L’arancione, evoluzione di quello originale, è l’accento della rivista. Il blu persiano è solo della Scuola: segnala un ambiente diverso.</p>
+      <div class="lm-sw">
+        <div style="background:#F3F3F2;color:#001621;outline:1px solid #ddd;outline-offset:-1px"><b>Bianco</b>#F3F3F2 · sfondo</div>
+        <div style="background:#001621"><b>Nero</b>#001621 · testo</div>
+        <div style="background:#67706C"><b>Grigio</b>#67706C · secondario</div>
+        <div style="background:#FF4103"><b>Arancione</b>#FF4103 · rivista</div>
+        <div style="background:#035AA7"><b>Blu persiano</b>#035AA7 · scuola</div>
       </div>
+      <div class="lm-stack"><figure class="lm-fig"><img src="assets/img/lm-palette-uso.webp" alt="Esempio di articolo con la palette applicata" loading="lazy"></figure></div>
 
-
-      <div class="case-single-image">
-
-        <img
-          src="assets/img/mockup articolo.png"
-          alt="Prototipo articolo Limes"
-          loading="lazy"
-        >
-
+      <p class="lm-label" style="margin-top:5rem">03 · Tipografia</p>
+      <h2>Una coppia che non si sovrappone mai</h2>
+      <div class="lm-type">
+        <div><p class="lm-label">Neue Haas Grotesk · navigazione e titoli</p><p class="big a">Il mondo oggi</p><p>Discende dall’Helvetica, con proporzioni più raffinate e più leggibile a piccole dimensioni: autorevolezza senza pesantezza.</p></div>
+        <div><p class="lm-label">Cardo · logo e testi</p><p class="big b">Le conseguenze (in)attese</p><p>Un serif umanistico per la lettura accademica di lunga durata. Quando l’utente vede Haas sa che sta navigando, quando vede Cardo sa che sta leggendo.</p></div>
       </div>
-
     </div>
-
   </section>
 
-
-
-  <!-- 05 — BRAND GUIDELINES -->
-  <section class="case-section">
-
+  <!-- ICONE E SOCIAL -->
+  <section class="lm-section">
     <div class="container">
-
-
-      <div class="case-section-layout">
-
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-
-            <span class="case-section-number">
-              05
-            </span>
-
-            <span class="case-section-eyebrow">
-              BRAND GUIDELINES
-            </span>
-
-          </div>
-
-
-          <h2 class="case-section-title">
-            Un'identità visiva
-            costruita dal sistema.
-          </h2>
-
-        </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            Ho creato Brand Guidelines per Limes, ideando e sviluppando
-            un logo, una color palette e una scelta di font per la
-            comunicazione del brand, oltre a un icon pack coerente
-            con lo stile del magazine.
-          </p>
-
-
-          <p>
-            Il sistema comprende inoltre le grafiche social per
-            Instagram, Facebook e YouTube, con l'obiettivo di mantenere
-            continuità tra sito, contenuti editoriali e canali social.
-          </p>
-
-
-          <p>
-            Per ricostruire il logo ho cercato qualcosa che fosse già
-            presente nel sistema visivo di Limes, ma che non fosse mai
-            stato elevato a simbolo.
-          </p>
-
-
-          <p>
-            La risposta l'ho trovata nelle mappe parlanti di Laura
-            Canali: un marker cartografico preciso, formato da tre
-            cerchi concentrici con un punto centrale, quello che in
-            cartografia professionale viene definito
-            <em>bull's-eye marker</em> o <em>target symbol</em>.
-          </p>
-
-
-          <p>
-            Ho preso quel marker, l'ho semplificato e trasformato in
-            logo, sostituendo il puntino della "i" minuscola di Limes.
-          </p>
-
-        </div>
-
+      <p class="lm-label">04 · Icone</p>
+      <h2>Poche, chiare, tutte uguali</h2>
+      <div class="lm-stack">
+        <figure class="lm-fig"><img src="assets/img/lm-icone-1.webp" alt="Set di icone di interfaccia: cerca, mail, telefono, chiudi, utente, menu, lucchetto" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-icone-2.webp" alt="Icone per articoli: scarica, ascolta, condividi, luogo, tempo di lettura, salva" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-icone-3.webp" alt="Icone per contenuti extra: video, notifiche, podcast, documento, scuola" loading="lazy"></figure>
       </div>
-
-
-      <div class="case-brand-grid">
-
-
-        <div class="case-brand-item">
-
-          <img
-            src="assets/img/mockup logo nuovo.png"
-            alt="Nuovo logo Limes"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="case-brand-item">
-
-          <img
-            src="assets/img/PER COPERTINA RIVISTA 2.png"
-            alt="Sistema visivo Limes"
-            loading="lazy"
-          >
-
-        </div>
-
+      <p class="lm-label" style="margin-top:5rem">05 · Social</p>
+      <h2>Lo stesso sistema, fuori dal sito</h2>
+      <div class="lm-stack">
+        <figure class="lm-fig"><img src="assets/img/lm-social-instagram.webp" alt="Post e stories Instagram della rivista" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-social-youtube.webp" alt="Canale YouTube di Limes con la nuova identità" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-social-facebook.webp" alt="Pagina Facebook di Limes con la nuova identità" loading="lazy"></figure>
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- =======================================================
-       MORE TO EXPLORE
-  ======================================================= -->
-
-  <section class="py-5 text-center">
-
-
+  <!-- DISCOVERY -->
+  <section class="lm-section lm-dark">
     <div class="container">
+      <p class="lm-label">06 · Discovery</p>
+      <h2>Autorevole per chi c’era, chiaro per chi arriva</h2>
+      <p class="lm-lead">Due esigenze complementari: mantenere l’autorevolezza per il lettore storico e offrire un’esperienza digitale coinvolgente ai nuovi lettori.</p>
+      <div class="lm-two" style="margin-top:3rem">
+        <div>
+          <p class="lm-label">Analisi euristica e accessibilità</p>
+          <ul class="lm-list">
+            <li><b>Visibilità del sistema.</b> Paywall invisibile, pubblicità invasiva, navigazione doppia tra header e hamburger.</li>
+            <li><b>Coerenza visiva.</b> Palette incoerente, bottoni diversi, nessuna icona.</li>
+            <li><b>Gestione dell’utente.</b> Niente preferiti, tempo di lettura o dark mode; l’abbonamento porta fuori dal sito.</li>
+            <li><b>WCAG 2.1.</b> Contrasti sotto i minimi, tastiera incompleta, componenti muti per gli screen reader.</li>
+          </ul>
+        </div>
+        <div>
+          <p class="lm-label">Competitor</p>
+          <p>Limes si distingue per la profondità analitica e per la cartografia, quasi unica tra i competitor, ma senza mappe interattive. Il paywall è soft e non dichiarato in homepage. Mancano ricerca con filtri, dark mode, ascolto degli articoli, tempo di lettura e preferiti.</p>
+        </div>
+      </div>
+      <div class="lm-stats">
+        <div class="lm-stat"><strong>14</strong><span>rispondenti alla survey, 11 tra i 25 e i 35 anni</span></div>
+        <div class="lm-stat"><strong>14/14</strong><span>leggono da smartphone</span></div>
+        <div class="lm-stat"><strong>10/14</strong><span>vogliono un’indicazione chiara dei contenuti a pagamento</span></div>
+        <div class="lm-stat"><strong>12/14</strong><span>abbandonano per le troppe pubblicità</span></div>
+      </div>
+      <div class="lm-grid2">
+        <figure class="lm-fig"><img src="assets/img/lm-sitemap-attuale.webp" alt="La sitemap attuale del sito" loading="lazy"><figcaption>La sitemap attuale segue la logica della rivista cartacea</figcaption></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-sitemap-nuova.webp" alt="La nuova sitemap con header fisso e hamburger menu" loading="lazy"><figcaption>La nuova sitemap: header fisso, rubriche, carte, scuola, preferiti</figcaption></figure>
+      </div>
+      <div class="lm-stack"><figure class="lm-fig"><img src="assets/img/lm-personas.webp" alt="Le tre personas: il lettore storico, la professionista curiosa, lo studente" loading="lazy"><figcaption>Marco, il lettore storico · Giulia, la professionista curiosa · Diego, lo studente</figcaption></figure></div>
+    </div>
+  </section>
 
+  <!-- WIREFRAME -->
+  <section class="lm-section">
+    <div class="container">
+      <p class="lm-label">07 · Wireframing</p>
+      <h2>Prima la struttura</h2>
+      <p class="lm-lead">Homepage, chi siamo, articolo libero e a pagamento, rivista, scuola, mappe e carte: ogni pagina in desktop e mobile, poi il wireflow del percorso di abbonamento.</p>
+      <div class="lm-grid2">
+        <figure class="lm-fig"><img src="assets/img/lm-wire-home.webp" alt="Wireframe della homepage desktop e mobile" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-wire-articolo.webp" alt="Wireframe dell’articolo libero" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-wire-paywall.webp" alt="Wireframe dell’articolo con paywall" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-wire-scuola.webp" alt="Wireframe della pagina Scuola" loading="lazy"></figure>
+      </div>
+      <div class="lm-stack"><figure class="lm-fig"><img src="assets/img/lm-wireflow.webp" alt="Wireflow del percorso di abbonamento in mobile" loading="lazy"></figure></div>
+      <div class="lm-btn-row"><a class="lm-btn" href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?t=LRww6LLrKSBG5jfW-0" target="_blank" rel="noopener noreferrer">Wireframe su Figma <i class="bi bi-arrow-up-right"></i></a></div>
+    </div>
+  </section>
 
-      <h2 class="section-title">
-        Altri progetti
-      </h2>
+  <!-- UI KIT E PROTOTIPI -->
+  <section class="lm-section lm-white">
+    <div class="container">
+      <p class="lm-label">08 · Prototyping</p>
+      <h2>La chiarezza non è il contrario della profondità</h2>
+      <p class="lm-lead">Un UI kit con griglia, menu, bottoni, componenti, card e mappe interattive, e sei prototipi navigabili. Il paywall diventa esplicito ma non aggressivo; l’abbonamento resta dentro il sito.</p>
+      <div class="lm-grid2">
+        <figure class="lm-fig"><img src="assets/img/lm-uikit-menu.webp" alt="UI kit: griglia e menu" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-uikit-bottoni.webp" alt="UI kit: bottoni" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-uikit-card.webp" alt="UI kit: card di redazione e di prodotto" loading="lazy"></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-uikit-mappe.webp" alt="UI kit: mappe e carte con zoom" loading="lazy"></figure>
+      </div>
+      <div class="lm-grid3">
+        <figure class="lm-fig"><img src="assets/img/lm-proto-home.webp" alt="Prototipo della homepage" loading="lazy"><figcaption>Homepage</figcaption></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-proto-articolo.webp" alt="Prototipo dell’articolo libero" loading="lazy"><figcaption>Articolo libero</figcaption></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-proto-paywall.webp" alt="Prototipo dell’articolo con paywall" loading="lazy"><figcaption>Articolo con paywall</figcaption></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-proto-rivista.webp" alt="Prototipo della pagina Rivista" loading="lazy"><figcaption>Rivista</figcaption></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-proto-scuola.webp" alt="Prototipo della pagina Scuola" loading="lazy"><figcaption>Scuola</figcaption></figure>
+        <figure class="lm-fig"><img src="assets/img/lm-proto-mappe.webp" alt="Prototipo di mappe e carte" loading="lazy"><figcaption>Mappe e carte</figcaption></figure>
+      </div>
+      <div class="lm-btn-row"><a class="lm-btn" href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?t=LRww6LLrKSBG5jfW-0" target="_blank" rel="noopener noreferrer">UI kit e prototipi su Figma <i class="bi bi-arrow-up-right"></i></a></div>
+    </div>
+  </section>
 
+  <!-- USER TEST -->
+  <section class="lm-section lm-dark">
+    <div class="container">
+      <p class="lm-label">09 · User test</p>
+      <h2>Si capisce cosa è gratis?</h2>
+      <p class="lm-lead">Test remoto e senza moderatore su Maze, sul prototipo mobile: navigazione libera e due task. Sedici partecipanti, dodici in linea con i criteri.</p>
+      <div class="lm-stats">
+        <div class="lm-stat"><strong>74,3 s</strong><span>durata media dell’esplorazione libera</span></div>
+        <div class="lm-stat"><strong>75%</strong><span>trova l’articolo gratuito, ma con il 44,4% di misclick</span></div>
+        <div class="lm-stat"><strong>70%</strong><span>completa l’abbonamento, in 65,8 s</span></div>
+        <div class="lm-stat"><strong>3</strong><span>problemi ricorrenti emersi</span></div>
+      </div>
+      <div class="lm-two" style="margin-top:3rem">
+        <div>
+          <ul class="lm-list">
+            <li><b>Lucchetto non percepito.</b> Due utenti pensano che tutto il sito sia a pagamento.</li>
+            <li><b>Dopo l’abbonamento.</b> Non è chiaro se sia ricorrente e come disdire.</li>
+            <li><b>Notifiche.</b> Un utente chiede come sarà avvisato delle nuove uscite.</li>
+          </ul>
+        </div>
+        <div>
+          <p>Le modifiche non stravolgono l’architettura. L’icona del lucchetto è affiancata dall’etichetta «SOLO ABBONATI», il riepilogo ordine spiega ricorrenza e disdetta, e la conferma porta all’articolo che aveva motivato l’acquisto.</p>
+        </div>
+      </div>
+      <div class="lm-stack"><figure class="lm-fig"><img src="assets/img/lm-test-modifiche.webp" alt="Le schermate modificate dopo il test: etichetta Solo abbonati e riepilogo ordine" loading="lazy"></figure></div>
+     
+    </div>
+  </section>
 
-      <div class="d-flex justify-content-center gap-4 flex-wrap">
+  <!-- RIEPILOGO -->
+  <section class="lm-section">
+    <div class="container">
+      <p class="lm-label">Riepilogo</p>
+      <h2>Il design al servizio della geopolitica</h2>
+      <div class="lm-two">
+        <p>Limes produce analisi di altissimo livello, ma le consegnava in una piattaforma che non era all’altezza. Il sistema visivo è coerente, la navigazione semplificata, il checkout interno al sito, il paywall esplicito.</p>
+        <p>Nascono funzioni nuove: dark mode, salvataggio, condivisione, ascolto degli articoli e zoom sulle carte. Resta da sviluppare l’app, con un’esperienza distinta dal sito mobile ma coerente con esso.</p>
+      </div>
+      <div class="lm-btn-row">
+        <a class="lm-btn" href="assets/docs/Progetto Finale UX UI di Marta Brentan.pdf" download>Scarica il progetto (PDF) <i class="bi bi-download"></i></a>
+        <a class="lm-btn" href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?t=LRww6LLrKSBG5jfW-0" target="_blank" rel="noopener noreferrer">Il progetto su Figma <i class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
 
-
-        <a
-          href="aesthetics.html"
-          class="project-card"
-        >
-
-
-          <img
-            src="assets/img/sfondo-progetto-estetica.webp"
-            alt="Mockup progetto Estetica 4.0"
-            loading="lazy"
-          >
-
-
-          <div class="project-content">
-
-
-            <h5>
-              Progettazione di due siti web 
-            </h5>
-
-
-            <p>
-              Aesthetics ed Estetica 4.0: settore beauty
-            </p>
-
-
-            <p class="text-muted small">
-              personale
-            </p>
-
-
-          </div>
-
-
+  <!-- ALTRI PROGETTI -->
+  <section class="lm-section lm-more">
+    <div class="container text-center">
+      <h2 class="section-title mb-5">Altri progetti</h2>
+      <div class="lm-more-list">
+        <a href="ecodream.html" class="project-card">
+          <img src="assets/img/sfondo-discovery.webp" alt="Prototipo della homepage Ecodream" loading="lazy">
+          <div class="project-content"><h5>Ecodream Design</h5><p>Wireframe, test, UI e accessibilità</p><p class="text-muted small">start2impact</p></div>
         </a>
-
-
-        <a
-          href="ecodream.html"
-          class="project-card"
-        >
-
-
-          <img
-            src="assets/img/sfondo-discovery.webp"
-            alt="Mockup progetto Ecodream"
-            loading="lazy"
-          >
-
-
-          <div class="project-content">
-
-
-            <h5>
-              Redesign Ecodream
-            </h5>
-
-
-            <p>
-              UX/UI Redesign di Edocream: e-commerce sostenibile
-            </p>
-
-
-            <p class="text-muted small">
-              start2impact
-            </p>
-
-
-          </div>
-
-
+        <a href="includo.html" class="project-card">
+          <img src="assets/img/sfondo-includo.webp" alt="Mockup Includo Brand Guidelines" loading="lazy">
+          <div class="project-content"><h5>Includo Brand Guidelines</h5><p>Logo, palette, icone e social</p><p class="text-muted small">start2impact</p></div>
         </a>
-
-
       </div>
-
-
     </div>
-
-
   </section>
 
 
-  <!-- CONTACT -->
   <section class="contact-cta py-5">
 
     <div class="container">
@@ -1539,7 +439,6 @@
         Hai un progetto, un testo o un'idea? Parliamone.
       </h2>
 
-
       <form
         action="https://formspree.io/f/manvqedl"
         method="POST"
@@ -1547,59 +446,21 @@
       >
 
         <div class="form-group">
-
-          <label for="name">
-            Nome
-          </label>
-
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-          >
-
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
         </div>
-
 
         <div class="form-group">
-
-          <label for="email">
-            Email
-          </label>
-
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-          >
-
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
         </div>
-
 
         <div class="form-group">
-
-          <label for="message">
-            Messaggio
-          </label>
-
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-          ></textarea>
-
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
-
-        <button
-          type="submit"
-          class="btn btn-primary"
-        >
-          Invia
-        </button>
+        <button type="submit" class="btn btn-primary">Invia</button>
 
       </form>
 
@@ -1607,472 +468,155 @@
 
   </section>
 
+</main>
 
 
-  <!-- SCROLL UP MOBILE -->
-  <a
-    href="#"
-    class="scrollup-mobile d-lg-none"
-  >
 
-    <img
-      src="assets/icons/scroll up.png"
-      alt="Torna su"
-    >
+<!-- SCROLL UP MOBILE -->
 
-  </a>
+<a href="#" class="scrollup-mobile d-lg-none" aria-label="Torna su">
+  <img src="assets/icons/scroll up.png" alt="">
+</a>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
 
-  <script>
+    const scrollBtn = document.querySelector(".scrollup-mobile");
 
-    document.addEventListener("DOMContentLoaded", function () {
+    if (!scrollBtn) return;
 
-      const scrollBtn = document.querySelector('.scrollup-mobile');
-
-
-      window.addEventListener('scroll', () => {
-
-        if (window.scrollY > 200) {
-
-          scrollBtn.classList.add('show');
-
-        } else {
-
-          scrollBtn.classList.remove('show');
-
-        }
-
-      });
-
-
-      scrollBtn.addEventListener('click', (e) => {
-
-        e.preventDefault();
-
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-
-      });
-
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
     });
 
-  </script>
+    scrollBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
+  });
+</script>
 
 
-  <!-- FOOTER -->
-  <footer class="footer py-5 bg-dark text-white">
 
-    <div class="container">
+<!-- FOOTER -->
 
+<footer class="footer py-5 bg-dark text-white">
 
-      <div class="row g-4 d-none d-lg-flex">
+  <div class="container">
 
+    <div class="row g-4 d-none d-lg-flex">
 
-        <div class="col-md-3">
-
-          <h5>Su di me</h5>
-
-          <ul class="list-unstyled">
-
-            <li>
-              <a href="chi-sono.html">
-                Chi sono
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="assets/docs/Portfolio Marta Brentan.pdf"
-                target="_blank"
-              >
-                Portfolio
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="assets/docs/CV Marta Brentan.pdf"
-                target="_blank"
-              >
-                CV
-              </a>
-            </li>
-
-            <li>
-              <a href="blog.html">
-                Blog
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="col-md-3">
-
-          <h5>Progetti</h5>
-
-          <ul class="list-unstyled">
-
-            <li>
-              <a href="editorial.html">
-                Editorial
-              </a>
-            </li>
-
-            <li>
-              <a href="voice.html">
-                Voice
-              </a>
-            </li>
-
-            <li>
-              <a href="design.html">
-                Design
-              </a>
-            </li>
-
-            <li>
-              <a href="progettazione.html">
-                Progettazione
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="col-md-3">
-
-          <h5>Contatti</h5>
-
-          <ul class="list-unstyled">
-
-            <li>
-
-              <a href="mailto:martabrentan@yahoo.com">
-
-                <i class="bi bi-envelope me-2"></i>
-                Email
-
-              </a>
-
-            </li>
-
-
-            <li>
-
-              <a href="tel:+393470547503">
-
-                <i class="bi bi-telephone me-2"></i>
-                Telefono
-
-              </a>
-
-            </li>
-
-
-            <li>
-
-              <a
-                href="https://www.instagram.com/martabrentan"
-                target="_blank"
-              >
-
-                <i class="bi bi-instagram me-2"></i>
-                Instagram
-
-              </a>
-
-            </li>
-
-
-            <li>
-
-              <a
-                href="https://www.behance.net/martabrentan"
-                target="_blank"
-              >
-
-                <i class="bi bi-behance me-2"></i>
-                Behance
-
-              </a>
-
-            </li>
-
-
-            <li>
-
-              <a
-                href="https://www.linkedin.com/in/martabrentan"
-                target="_blank"
-              >
-
-                <i class="bi bi-linkedin me-2"></i>
-                LinkedIn
-
-              </a>
-
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="col-md-3">
-
-          <h5>Aiuto</h5>
-
-          <ul class="list-unstyled">
-
-            <li>
-              <a href="policy.html">
-                Policy
-              </a>
-            </li>
-
-            <li>
-              <a href="contatti.html">
-                Scrivimi
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
+      <div class="col-md-3">
+        <h5>Su di me</h5>
+        <ul class="list-unstyled">
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+          <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
       </div>
 
-
-
-      <!-- FOOTER MOBILE -->
-
-      <div class="footer-mobile d-lg-none">
-
-
-        <div class="footer-accordion">
-
-          <button
-            class="accordion-btn"
-            data-bs-toggle="collapse"
-            data-bs-target="#f1"
-          >
-            Su di me
-          </button>
-
-
-          <div id="f1" class="collapse">
-
-            <ul class="list-unstyled ps-3">
-
-              <li>
-                <a href="chi-sono.html">
-                  Chi sono
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="assets/docs/Portfolio Marta Brentan.pdf"
-                  target="_blank"
-                >
-                  Portfolio
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="assets/docs/CV Marta Brentan.pdf"
-                  target="_blank"
-                >
-                  CV
-                </a>
-              </li>
-
-              <li>
-                <a href="blog.html">
-                  Blog
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="footer-accordion">
-
-          <button
-            class="accordion-btn"
-            data-bs-toggle="collapse"
-            data-bs-target="#f2"
-          >
-            Progetti
-          </button>
-
-
-          <div id="f2" class="collapse">
-
-            <ul class="list-unstyled ps-3">
-
-              <li>
-                <a href="editorial.html">
-                  Editorial
-                </a>
-              </li>
-
-              <li>
-                <a href="voice.html">
-                  Voice
-                </a>
-              </li>
-
-              <li>
-                <a href="design.html">
-                  Design
-                </a>
-              </li>
-
-              <li>
-                <a href="progettazione.html">
-                  Progettazione
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="footer-accordion">
-
-          <button
-            class="accordion-btn"
-            data-bs-toggle="collapse"
-            data-bs-target="#f3"
-          >
-            Contatti
-          </button>
-
-
-          <div id="f3" class="collapse">
-
-            <ul class="list-unstyled ps-3">
-
-              <li>
-                <a href="mailto:martabrentan@yahoo.com">
-                  Email
-                </a>
-              </li>
-
-              <li>
-                <a href="tel:+393470547503">
-                  Telefono
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="footer-accordion">
-
-          <button
-            class="accordion-btn"
-            data-bs-toggle="collapse"
-            data-bs-target="#f4"
-          >
-            Aiuto
-          </button>
-
-
-          <div id="f4" class="collapse">
-
-            <ul class="list-unstyled ps-3">
-
-              <li>
-                <a href="policy.html">
-                  Policy
-                </a>
-              </li>
-
-              <li>
-                <a href="contatti.html">
-                  Scrivimi
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="footer-social-mobile text-center mt-4">
-
-          <a
-            href="https://www.instagram.com/martabrentan"
-            target="_blank"
-          >
-            <i class="bi bi-instagram"></i>
-          </a>
-
-          <a
-            href="https://www.behance.net/martabrentan"
-            target="_blank"
-          >
-            <i class="bi bi-behance"></i>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/martabrentan"
-            target="_blank"
-          >
-            <i class="bi bi-linkedin"></i>
-          </a>
-
-        </div>
-
+      <div class="col-md-3">
+        <h5>Progetti</h5>
+        <ul class="list-unstyled">
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="voice.html">Voice</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="progettazione.html">Progettazione</a></li>
+        </ul>
       </div>
 
+      <div class="col-md-3">
+        <h5>Contatti</h5>
+        <ul class="list-unstyled">
+          <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
+          <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
+          <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+          <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+        </ul>
+      </div>
 
-      <hr class="my-4" />
-
-
-      <p class="text-center small">
-        © 2026 Marta Brentan – Tutti i diritti riservati
-      </p>
+      <div class="col-md-3">
+        <h5>Aiuto</h5>
+        <ul class="list-unstyled">
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contatti.html">Scrivimi</a></li>
+        </ul>
+      </div>
 
     </div>
 
-  </footer>
+
+    <div class="footer-mobile d-lg-none">
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+        <div id="f1" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+        <div id="f2" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="voice.html">Voice</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="progettazione.html">Progettazione</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+        <div id="f3" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+            <li><a href="tel:+393470547503">Telefono</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+        <div id="f4" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-social-mobile text-center mt-4">
+        <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <p class="text-center small">© 2026 Marta Brentan – Tutti i diritti riservati</p>
+
+  </div>
+
+</footer>
 
 
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
-```

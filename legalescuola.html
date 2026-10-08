@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+  <!-- COOKIEBOT -->
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Legale Scuola – Brand guidelines e identità visiva | Marta Brentan</title>
+
+  <meta
+    name="description"
+    content="Case study Legale Scuola: logo, color palette, tipografia, social media e sito web per uno studio legale specializzato in diritto scolastico."
+  >
+  <meta
+    name="keywords"
+    content="Legale Scuola, brand identity, brand guidelines, logo design, social media design, sito web, Marta Brentan"
+  >
+  <meta name="author" content="Marta Brentan">
+
+  <meta property="og:title" content="Legale Scuola – Brand guidelines e identità visiva | Marta Brentan">
+  <meta
+    property="og:description"
+    content="Un'identità sobria per uno studio legale che difende i diritti nella scuola."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ammartaggio.com/legale-scuola.html">
+  <meta property="og:image" content="https://ammartaggio.com/assets/img/sfondo-legalescuola.webp">
+  <meta property="og:image:alt" content="Mockup delle brand guidelines Legale Scuola">
+
+  <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Epilogue:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/scss/main.css">
+
+
+  <style>
+
+    /* =========================================================
+       LEGALE SCUOLA — CASE STUDY
+       Palette del progetto (dalle guidelines):
+       verde #1BA38C · blu #1981E0 · grigio-blu #3A5B61
+       antracite #2A3436 · bianco
+       Font del progetto: Futura (titoli) e Bodoni (testi).
+       Jost e Bodoni Moda fanno da riserva se non sono installati.
+    ========================================================== */
+
+    .ls {
+      --ls-green: #1BA38C;
+      --ls-blue: #1981E0;
+      --ls-slate: #3A5B61;
+      --ls-dark: #2A3436;
+      --ls-cream: #FAF9F6;
+      --ls-sans: "Futura", "Jost", "Century Gothic", sans-serif;
+      --ls-serif: "Bodoni 72", "Bodoni MT", "Bodoni Moda", Didot, Georgia, serif;
+      overflow: hidden;
+      color: var(--ls-dark);
+    }
+
+    /* il p globale del sito è centrato con max-width: qui lo azzero */
+    .ls p {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+    }
+
+    .ls figure { margin: 0; }
+
+    /* il sito colora i titoli di verde: qui ogni titolo ha il suo colore */
+    .ls h1, .ls h2, .ls h3, .ls h4, .ls h5 { color: var(--ls-dark); }
+    .ls .ls-title { color: #fff; }
+    .ls .ls-end .ls-quote { color: #fff; }
+    .ls .section-title { color: var(--ls-dark); }
+
+    .ls-section { padding: 6rem 0; }
+
+    .ls-heading {
+      font-family: var(--ls-sans);
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -.02em;
+      font-weight: 700;
+      margin: 0 0 2.5rem;
+    }
+
+    .ls-text {
+      font-family: var(--ls-serif);
+      font-size: 1.3rem;
+      line-height: 1.5;
+      max-width: 34ch !important;
+      margin: 0;
+    }
+
+    .ls-caption {
+      font-family: var(--ls-serif);
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin: 1.25rem 0 0;
+      opacity: .75;
+    }
+
+    /* le immagini hanno sfondo bianco: sul crema il bianco sparisce */
+    .ls-blend { mix-blend-mode: multiply; }
+
+    .ls-img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+
+    /* ---------- hero ---------- */
+
+    .ls-hero {
+      background: var(--ls-green);
+      color: var(--ls-dark);
+      padding: 4.5rem 0 5.5rem;
+    }
+
+    .ls-breadcrumb {
+      font-size: .85rem;
+      color: rgba(42, 52, 54, .75);
+      margin-bottom: 3rem;
+    }
+
+    .ls-breadcrumb a { color: var(--ls-dark); }
+    .ls-breadcrumb a:hover { color: #fff; }
+
+    .ls-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .ls-title {
+      font-family: var(--ls-sans);
+      font-size: clamp(3.4rem, 8.5vw, 7.5rem);
+      line-height: .92;
+      letter-spacing: -.03em;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0 0 1.75rem;
+    }
+
+    .ls-lead {
+      font-family: var(--ls-serif);
+      font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+      line-height: 1.3;
+      max-width: 26ch !important;
+      margin: 0 0 2.5rem;
+    }
+
+    .ls-meta {
+      margin: 0;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(42, 52, 54, .35);
+      display: grid;
+      gap: 1.1rem;
+      max-width: 420px;
+    }
+
+    .ls-meta dt {
+      font-size: .85rem;
+      font-weight: 400;
+      color: rgba(42, 52, 54, .75);
+    }
+
+    .ls-meta dd {
+      margin: .15rem 0 0;
+      font-size: 1rem;
+    }
+
+    .ls-hero-logo {
+      width: min(560px, 100%);
+      height: auto;
+      display: block;
+      margin-left: auto;
+    }
+
+
+    /* ---------- mission e vision ---------- */
+
+    .ls-mv { background: var(--ls-cream); }
+
+    .ls-mv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4rem;
+    }
+
+    .ls-mv h2 {
+      font-family: var(--ls-sans);
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1;
+      margin: 0 0 1.25rem;
+    }
+
+    .ls-mv .ls-text { color: var(--ls-slate); }
+
+
+    /* ---------- logo ---------- */
+
+    .ls-logo { background: #fff; }
+
+    .ls-logo-full {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .ls-versions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .ls-version {
+      aspect-ratio: 16 / 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .ls-version img { width: min(360px, 90%); height: auto; }
+
+    .ls-version.dark { background: var(--ls-dark); }
+    .ls-version.light { background: var(--ls-cream); }
+
+
+    /* ---------- palette ---------- */
+
+    .ls-palette { background: var(--ls-cream); }
+
+    .ls-swatches {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ls-swatch-box {
+      display: block;
+      aspect-ratio: 1;
+      margin-bottom: 1rem;
+    }
+
+    .ls-swatch-white .ls-swatch-box { border: 1px solid #bbb; }
+
+    .ls-swatch b {
+      display: block;
+      font-family: var(--ls-sans);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .ls-palette .ls-text { margin-top: 3rem; max-width: 46ch !important; }
+
+
+    /* ---------- tipografia ---------- */
+
+    .ls-type { background: #fff; }
+
+    .ls-fonts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .ls-font-name {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 1;
+      margin: 0;
+    }
+
+    .ls-font-name.sans { font-family: var(--ls-sans); font-weight: 700; letter-spacing: -.03em; }
+    .ls-font-name.serif { font-family: var(--ls-serif); font-weight: 400; }
+
+    .ls-specimen { border-top: 1px solid #ddd; padding-top: 2.5rem; }
+
+    .ls-specimen h3 {
+      font-family: var(--ls-sans);
+      font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+    }
+
+    .ls-specimen .body {
+      font-family: var(--ls-serif);
+      font-size: 1.25rem;
+      line-height: 1.5;
+      max-width: 52ch !important;
+      margin: 0;
+    }
+
+
+    /* ---------- social e sito ---------- */
+
+    .ls-social { background: var(--ls-cream); }
+
+    .ls-social img { mix-blend-mode: multiply; }
+
+    .ls-site { background: #fff; }
+
+    .ls-site-fig { max-width: 1000px; margin: 0 auto; }
+
+
+    /* ---------- chiusura ---------- */
+
+    .ls-end {
+      background: var(--ls-dark);
+      color: #fff;
+    }
+
+    .ls-quote {
+      font-family: var(--ls-serif);
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1.08;
+      letter-spacing: -.01em;
+      font-style: italic;
+      max-width: 16ch !important;
+      margin: 0 0 2.5rem;
+    }
+
+    .ls-download {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      color: #fff;
+      font-size: .95rem;
+      font-weight: 600;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: .3rem;
+    }
+
+    .ls-download:hover,
+    .ls-download:focus-visible { color: var(--ls-green); }
+
+
+    /* ---------- altri progetti ---------- */
+
+    .ls-more { background: var(--ls-cream); }
+
+    .ls-more-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.75rem;
+    }
+
+
+    /* ---------- tablet e mobile ---------- */
+
+    @media (max-width: 991px) {
+
+      .ls-section { padding: 4.5rem 0; }
+
+      .ls-hero-grid,
+      .ls-mv-grid,
+      .ls-fonts,
+      .ls-versions {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .ls-hero-logo { width: min(340px, 80%); margin: 0; }
+
+      .ls-swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 576px) {
+
+      .ls-hero { padding-top: 3rem; }
+
+      .ls-section { padding: 3.5rem 0; }
+
+      .ls-swatches { gap: 1rem; }
+
+      .ls-versions { gap: 1rem; }
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg py-3">
+
+  <div class="container">
+
+    <a class="navbar-brand" href="index.html" aria-label="Homepage Marta Brentan">
+      <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Apri navigazione"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+        <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+        <li class="nav-item d-none d-lg-block ms-lg-3">
+          <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-none d-lg-block ms-2">
+          <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica CV
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>CV
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<main class="ls">
+
+
+  <!-- HERO -->
+
+  <section class="ls-hero">
+
+    <div class="container">
+
+      <p class="ls-breadcrumb">
+        <a href="index.html">Home</a> › <a href="design.html">Design</a> › <span>Legale Scuola</span>
+      </p>
+
+      <div class="ls-hero-grid">
+
+        <div>
+
+          <h1 class="ls-title">Legale Scuola</h1>
+
+          <p class="ls-lead">
+            Un'identità per uno studio legale che difende i diritti nella scuola.
+          </p>
+
+          <dl class="ls-meta">
+            <div>
+              <dt>Ambito</dt>
+              <dd>Brand identity, social media e sito web</dd>
+            </div>
+            <div>
+              <dt>Cliente</dt>
+              <dd>Studio legale di Torino, diritto scolastico</dd>
+            </div>
+            <div>
+              <dt>Strumenti</dt>
+              <dd>InDesign, Illustrator, Figma</dd>
+            </div>
+          </dl>
+
+        </div>
+
+        <figure>
+          <img
+            src="assets/img/ls-logo-bianco.webp"
+            alt="Logo Legale Scuola: le iniziali LS in un riquadro e il nome in Bodoni"
+            class="ls-hero-logo"
+            loading="eager"
+          >
+        </figure>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- MISSION E VISION -->
+
+  <section class="ls-section ls-mv">
+
+    <div class="container">
+
+      <div class="ls-mv-grid">
+
+        <div>
+          <h2>Mission</h2>
+          <p class="ls-text">
+            Consulenze personalizzate per affrontare ricorsi contro decisioni scolastiche o ministeriali.
+          </p>
+        </div>
+
+        <div>
+          <h2>Vision</h2>
+          <p class="ls-text">
+            Tutelare i diritti nella scuola, per un'educazione equa e inclusiva.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- LOGO -->
+
+  <section class="ls-section ls-logo">
+
+    <div class="container">
+
+      <h2 class="ls-heading">Un timbro come logo.</h2>
+
+    
+
+      <div class="ls-versions">
+
+        <figure class="ls-version dark">
+          <img src="assets/img/ls-logo-bianco.webp" alt="Logo Legale Scuola in bianco su fondo scuro" loading="lazy">
+        </figure>
+
+        <figure class="ls-version light">
+          <img src="assets/img/ls-logo-scuro.webp" alt="Logo Legale Scuola in scuro su fondo chiaro" loading="lazy">
+        </figure>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- COLOR PALETTE -->
+
+  <section class="ls-section ls-palette">
+
+    <div class="container">
+
+      <h2 class="ls-heading">Blu, grigio e verde.</h2>
+
+      <ul class="ls-swatches">
+
+        <li class="ls-swatch">
+          <span class="ls-swatch-box" style="background:#1BA38C"></span>
+          <b>#1BA38C</b>
+        </li>
+
+        <li class="ls-swatch">
+          <span class="ls-swatch-box" style="background:#1981E0"></span>
+          <b>#1981E0</b>
+        </li>
+
+        <li class="ls-swatch">
+          <span class="ls-swatch-box" style="background:#3A5B61"></span>
+          <b>#3A5B61</b>
+        </li>
+
+        <li class="ls-swatch">
+          <span class="ls-swatch-box" style="background:#2A3436"></span>
+          <b>#2A3436</b>
+        </li>
+
+        <li class="ls-swatch ls-swatch-white">
+          <span class="ls-swatch-box" style="background:#FFFFFF"></span>
+          <b>#FFFFFF</b>
+        </li>
+
+      </ul>
+
+      <p class="ls-text">
+        Giustizia, equilibrio, integrità e autorità. Il verde è la nota meno scontata: armonia e crescita.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- TIPOGRAFIA -->
+
+  <section class="ls-section ls-type">
+
+    <div class="container">
+
+      <div class="ls-fonts">
+
+        <div>
+          <p class="ls-font-name sans">Futura</p>
+          <p class="ls-caption">Bold, per i titoli.</p>
+        </div>
+
+        <div>
+          <p class="ls-font-name serif">Bodoni</p>
+          <p class="ls-caption">Per i testi.</p>
+        </div>
+
+      </div>
+
+      <div class="ls-specimen">
+        <h3>Concorsi pubblici e tutela del candidato</h3>
+        <p class="body">
+          Ogni caso è unico e il nostro impegno è trovare la soluzione più adatta alla situazione di ogni cliente.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SOCIAL -->
+
+  <section class="ls-section ls-social">
+
+    <div class="container">
+
+      <h2 class="ls-heading">Social media.</h2>
+
+      <figure>
+        <img
+          src="assets/img/ls-social.webp"
+          alt="Cinque post social di Legale Scuola su concorsi pubblici e tutela del candidato"
+          class="ls-img"
+          loading="lazy"
+        >
+      </figure>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SITO WEB -->
+
+  <section class="ls-section ls-site">
+
+    <div class="container">
+
+      <h2 class="ls-heading">Sito web.</h2>
+  
+            <div>
+              <dt>Cliccaci su per visitare legalescuola.it</dt>
+              
+            </div>
+      <figure class="ls-site-fig">
+        <img
+          src="assets/img/ls-sito.webp"
+          href="https://wwww.legalescuola.it"
+          alt="Sito web di Legale Scuola su laptop e smartphone"
+          class="ls-img"
+          loading="lazy"
+        >
+      </figure>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CHIUSURA -->
+
+  <section class="ls-section ls-end">
+
+    <div class="container">
+
+      <p class="ls-quote">Ricorso is the way.</p>
+
+      <a
+        href="assets/docs/Progetto Legalescuola.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ls-download"
+      >
+        Scarica le brand guidelines complete
+        <i class="bi bi-arrow-up-right"></i>
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ALTRI PROGETTI -->
+
+  <section class="ls-section ls-more">
+
+    <div class="container text-center">
+
+      <h2 class="section-title mb-5">Altri progetti</h2>
+
+      <div class="ls-more-list">
+
+        <a href="includo.html" class="project-card">
+          <img src="assets/img/sfondo-includo.webp" alt="Mockup Includo Brand Guidelines" loading="lazy">
+          <div class="project-content">
+            <h5>Includo Brand Guidelines</h5>
+            <p>Logo, palette, icone e social</p>
+            <p class="text-muted small">start2impact</p>
+          </div>
+        </a>
+
+        <a href="limes.html" class="project-card">
+          <img src="assets/img/sfondo-progetto-finale.webp" alt="Progetto finale UX UI: redesign Limes" loading="lazy">
+          <div class="project-content">
+            <h5>Redesign Limes</h5>
+            <p>UX/UI design, dalla ricerca al prototipo</p>
+            <p class="text-muted small">start2impact</p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CONTACT -->
+
+  <section class="contact-cta py-5">
+
+    <div class="container">
+
+      <h2 class="section-title text-center mb-5">
+        Hai un progetto, un testo o un'idea? Parliamone.
+      </h2>
+
+      <form
+        action="https://formspree.io/f/manvqedl"
+        method="POST"
+        class="contact-form"
+      >
+
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Invia</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<!-- SCROLL UP MOBILE -->
+
+<a href="#" class="scrollup-mobile d-lg-none" aria-label="Torna su">
+  <img src="assets/icons/scroll up.png" alt="">
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollBtn = document.querySelector(".scrollup-mobile");
+
+    if (!scrollBtn) return;
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+
+    scrollBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+  });
+</script>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer py-5 bg-dark text-white">
+
+  <div class="container">
+
+    <div class="row g-4 d-none d-lg-flex">
+
+      <div class="col-md-3">
+        <h5>Su di me</h5>
+        <ul class="list-unstyled">
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+          <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Progetti</h5>
+        <ul class="list-unstyled">
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="voice.html">Voice</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="progettazione.html">Progettazione</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Contatti</h5>
+        <ul class="list-unstyled">
+          <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
+          <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
+          <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+          <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Aiuto</h5>
+        <ul class="list-unstyled">
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contatti.html">Scrivimi</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="footer-mobile d-lg-none">
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+        <div id="f1" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+        <div id="f2" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="voice.html">Voice</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="progettazione.html">Progettazione</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+        <div id="f3" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+            <li><a href="tel:+393470547503">Telefono</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+        <div id="f4" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-social-mobile text-center mt-4">
+        <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <p class="text-center small">© 2026 Marta Brentan – Tutti i diritti riservati</p>
+
+  </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -333,6 +333,23 @@
 
     .ls-site-fig { max-width: 1000px; margin: 0 auto; }
 
+    .ls-site-link { display: block; color: var(--ls-dark); text-decoration: none; }
+
+    .ls-site-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin-top: 1.5rem;
+      font-weight: 600;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: .3rem;
+    }
+
+    .ls-site-link:hover .ls-site-cta,
+    .ls-site-link:focus-visible .ls-site-cta { color: var(--ls-green); }
+
+    .ls-site-link .ls-img { transition: transform .25s ease; }
+    .ls-site-link:hover .ls-img { transform: translateY(-4px); }
 
     /* ---------- chiusura ---------- */
 
@@ -664,14 +681,6 @@
 
       </div>
 
-      <div class="ls-specimen">
-        <h3>Concorsi pubblici e tutela del candidato</h3>
-        <p class="body">
-          Ogni caso è unico e il nostro impegno è trovare la soluzione più adatta alla situazione di ogni cliente.
-        </p>
-      </div>
-
-    </div>
 
   </section>
 
@@ -699,7 +708,6 @@
   </section>
 
 
-
   <!-- SITO WEB -->
 
   <section class="ls-section ls-site">
@@ -707,20 +715,25 @@
     <div class="container">
 
       <h2 class="ls-heading">Sito web.</h2>
-  
-            <div>
-              <dt>Cliccaci su per visitare legalescuola.it</dt>
-              
-            </div>
-      <figure class="ls-site-fig">
-        <img
-          src="assets/img/ls-sito.webp"
-          href="https://wwww.legalescuola.it"
-          alt="Sito web di Legale Scuola su laptop e smartphone"
-          class="ls-img"
-          loading="lazy"
-        >
-      </figure>
+
+      <a
+        href="https://www.legalescuola.it"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ls-site-link"
+      >
+        <figure class="ls-site-fig">
+          <img
+            src="assets/img/ls-sito.webp"
+            alt="Sito web di Legale Scuola su laptop e smartphone"
+            class="ls-img"
+            loading="lazy"
+          >
+        </figure>
+        <span class="ls-site-cta">
+          Visita legalescuola.it <i class="bi bi-arrow-up-right"></i>
+        </span>
+      </a>
 
     </div>
 

@@ -318,6 +318,40 @@
       align-items: center;
     }
 
+    /* ---------- YouTube ---------- */
+
+    .oz-yt-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .oz-yt-grid img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .oz-yt-desktop {
+      max-width: 780px;
+    }
+
+    @media (max-width: 991px) {
+      .oz-yt-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .oz-yt-mobile {
+        width: min(240px, 100%);
+        margin: 0 auto;
+      }
+
+      .oz-yt-desktop {
+        margin: 0 auto;
+      }
+    }
 
     /* ---------- risultato ---------- */
 
@@ -642,35 +676,32 @@
 
 
   <!-- STESSA VOCE, CANALI DIVERSI -->
+  <!-- YOUTUBE -->
 
   <section class="oz-section oz-channels">
 
     <div class="container">
 
-      <p class="oz-label">Stessa voce, canali diversi</p>
+      <h2 class="oz-heading">YouTube</h2>
 
-      <div class="oz-channels-grid">
+      <div class="oz-yt-grid">
 
-        <figure>
-          <div class="oz-crop oz-crop-phone">
-            <img
-              src="assets/img/Instagram-Post-Mockup-_1_.webp"
-              alt="Post Instagram per il lancio dell'app Orizon, nel deserto"
-              loading="lazy"
-            >
-          </div>
-          <figcaption class="oz-caption">Instagram: il lancio dell'app.</figcaption>
+        <figure class="oz-yt-mobile">
+          <img
+            src="assets/img/youtube.mobile.webp"
+            alt="Canale YouTube di Orizon su smartphone"
+            loading="lazy"
+          >
+          <figcaption class="oz-caption">YouTube mobile</figcaption>
         </figure>
 
-        <figure>
-          <div class="oz-crop oz-crop-video">
-            <img
-              src="assets/img/youtube.orizon.webp"
-              alt="Thumbnail YouTube: Patagonia, itinerario responsabile"
-              loading="lazy"
-            >
-          </div>
-          <figcaption class="oz-caption">YouTube: Patagonia, itinerario responsabile.</figcaption>
+        <figure class="oz-yt-desktop">
+          <img
+            src="assets/img/youtube.orizon.webp"
+            alt="Canale YouTube di Orizon su desktop: Patagonia, itinerario responsabile"
+            loading="lazy"
+          >
+          <figcaption class="oz-caption">YouTube desktop</figcaption>
         </figure>
 
       </div>
@@ -727,7 +758,7 @@
 
       <div class="oz-more-list">
 
-        <a href="legale-scuola.html" class="project-card">
+        <a href="legalescuola.html" class="project-card">
           <img src="assets/img/sfondo-legalescuola.webp" alt="Mockup Legale Scuola Brand Guidelines" loading="lazy">
           <div class="project-content">
             <h5>Legale Scuola Brand Guidelines</h5>

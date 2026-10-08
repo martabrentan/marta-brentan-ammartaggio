@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+  <!-- COOKIEBOT -->
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>IncluDO – Brand guidelines e identità visiva | Marta Brentan</title>
+
+  <meta
+    name="description"
+    content="Case study IncluDO: logo, color palette, tipografia, icone e social media per un ente che forma giovani migranti ai mestieri artigiani."
+  >
+  <meta
+    name="keywords"
+    content="IncluDO, brand identity, brand guidelines, logo design, social media design, UX UI, start2impact, Marta Brentan"
+  >
+  <meta name="author" content="Marta Brentan">
+
+  <meta property="og:title" content="IncluDO – Brand guidelines e identità visiva | Marta Brentan">
+  <meta
+    property="og:description"
+    content="Un logo che ricuce: ago e filo per un ente che insegna i mestieri di una volta."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ammartaggio.com/includo.html">
+  <meta property="og:image" content="https://ammartaggio.com/assets/img/sfondo-includo.webp">
+  <meta property="og:image:alt" content="Mockup delle brand guidelines IncluDO">
+
+  <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Epilogue:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/scss/main.css">
+
+
+  <style>
+
+    /* =========================================================
+       INCLUDO — CASE STUDY
+       Palette del progetto (dalle guidelines):
+       #40140A · #734E39 · #A28777 · #D9B18F · verde #3EC191
+       Font del progetto: Gill Sans (titoli) e Garamond (testi).
+       Cabin e EB Garamond fanno da riserva se non sono installati.
+    ========================================================== */
+
+    .ic {
+      --ic-brown: #40140A;
+      --ic-brown-2: #734E39;
+      --ic-taupe: #A28777;
+      --ic-sand: #D9B18F;
+      --ic-green: #3EC191;
+      --ic-cream: #FAF9F6;
+      --ic-sans: "Gill Sans", "Gill Sans MT", "Cabin", sans-serif;
+      --ic-serif: "Garamond", "EB Garamond", Georgia, serif;
+      overflow: hidden;
+      color: var(--ic-brown);
+    }
+
+    /* il p globale del sito è centrato con max-width: qui lo azzero */
+    .ic p {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+    }
+
+    .ic figure { margin: 0; }
+
+    .ic-section { padding: 6rem 0; }
+
+    .ic-heading {
+      font-family: var(--ic-sans);
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -.02em;
+      font-weight: 700;
+      margin: 0 0 2.5rem;
+    }
+
+    .ic-text {
+      font-family: var(--ic-serif);
+      font-size: 1.3rem;
+      line-height: 1.5;
+      max-width: 34ch !important;
+      margin: 0;
+    }
+
+    .ic-caption {
+      font-family: var(--ic-serif);
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin: 1.25rem 0 0;
+      opacity: .75;
+    }
+
+    /* le immagini hanno sfondo bianco: sul crema/sabbia il bianco sparisce */
+    .ic-blend { mix-blend-mode: multiply; }
+
+    .ic-img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+
+    /* ---------- hero ---------- */
+
+    /* il sito colora i titoli di verde: qui ogni titolo ha il suo colore */
+    .ic h1, .ic h2, .ic h3, .ic h4, .ic h5 { color: var(--ic-brown); }
+    .ic .ic-title { color: var(--ic-cream); }
+    .ic .ic-end .ic-quote { color: var(--ic-cream); }
+    .ic .section-title { color: var(--ic-brown); }
+
+    .ic-hero {
+      background: var(--ic-brown);
+      color: var(--ic-cream);
+      padding: 4.5rem 0 5.5rem;
+    }
+
+    .ic-breadcrumb {
+      font-size: .85rem;
+      color: rgba(250, 249, 246, .6);
+      margin-bottom: 3rem;
+    }
+
+    .ic-breadcrumb a { color: rgba(250, 249, 246, .85); }
+    .ic-breadcrumb a:hover { color: var(--ic-sand); }
+
+    .ic-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .ic-title {
+      font-family: var(--ic-sans);
+      font-size: clamp(4rem, 10vw, 9rem);
+      line-height: .9;
+      letter-spacing: -.04em;
+      font-weight: 700;
+      margin: 0 0 1.75rem;
+    }
+
+    .ic-lead {
+      font-family: var(--ic-serif);
+      font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+      line-height: 1.3;
+      max-width: 26ch !important;
+      margin: 0 0 2.5rem;
+    }
+
+    .ic-meta {
+      margin: 0;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(250, 249, 246, .25);
+      display: grid;
+      gap: 1.1rem;
+      max-width: 420px;
+    }
+
+    .ic-meta dt {
+      font-size: .85rem;
+      font-weight: 400;
+      color: rgba(250, 249, 246, .6);
+    }
+
+    .ic-meta dd {
+      margin: .15rem 0 0;
+      font-size: 1rem;
+    }
+
+    .ic-hero-logo {
+      width: min(380px, 80%);
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+
+    /* ---------- mission e vision ---------- */
+
+    .ic-mv { background: var(--ic-cream); }
+
+    .ic-mv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4rem;
+    }
+
+    .ic-mv h2 {
+      font-family: var(--ic-sans);
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1;
+      margin: 0 0 1.25rem;
+      color: var(--ic-brown);
+    }
+
+    .ic-mv .ic-text { color: var(--ic-brown-2); }
+
+
+    /* ---------- ago e filo ---------- */
+
+    .ic-idea { background: var(--ic-sand); }
+
+    .ic-equation {
+      font-family: var(--ic-sans);
+      font-size: clamp(1.3rem, 2.4vw, 2rem);
+      font-weight: 600;
+      margin: 0 0 3rem;
+    }
+
+    .ic-equation span { white-space: nowrap; }
+
+    .ic-idea-foot {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 3rem;
+      margin-top: 3rem;
+      align-items: start;
+    }
+
+
+    /* ---------- logo completo ---------- */
+
+    .ic-logo { background: var(--ic-cream); }
+
+    .ic-logo-full {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+
+
+    /* ---------- palette ---------- */
+
+    .ic-palette { background: #fff; }
+
+    .ic-swatches {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ic-swatch-dot {
+      display: block;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .ic-swatch-white .ic-swatch-dot { border: 1px solid #bbb; }
+
+    .ic-swatch b {
+      display: block;
+      font-family: var(--ic-sans);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .ic-swatch small {
+      display: block;
+      font-family: var(--ic-sans);
+      font-size: .85rem;
+      opacity: .65;
+      margin-top: .15rem;
+    }
+
+
+    /* ---------- tipografia ---------- */
+
+    .ic-type { background: var(--ic-cream); }
+
+    .ic-fonts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .ic-font-name {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 1;
+      margin: 0;
+    }
+
+    .ic-font-name.sans { font-family: var(--ic-sans); font-weight: 700; letter-spacing: -.03em; }
+    .ic-font-name.serif { font-family: var(--ic-serif); font-weight: 500; }
+
+    .ic-specimen {
+      background: #fff;
+      border-radius: 20px;
+      padding: clamp(1.75rem, 4vw, 3.5rem);
+    }
+
+    .ic-specimen h3 {
+      font-family: var(--ic-sans);
+      font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin: 0 0 .5rem;
+    }
+
+    .ic-specimen .sub {
+      font-family: var(--ic-sans);
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: var(--ic-brown-2);
+      margin: 0 0 1.25rem;
+    }
+
+    .ic-specimen .body {
+      font-family: var(--ic-serif);
+      font-size: 1.2rem;
+      line-height: 1.5;
+      max-width: 60ch !important;
+      margin: 0;
+    }
+
+
+    /* ---------- icone ---------- */
+
+    .ic-icons { background: #fff; }
+
+    .ic-trades {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .ic-icons-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+      gap: 3rem;
+      align-items: center;
+      margin-top: 5rem;
+    }
+
+    .ic-icons-row figure:first-child { max-width: 320px; margin: 0 auto; }
+
+
+    /* ---------- social ---------- */
+
+    .ic-social { background: var(--ic-cream); }
+
+    /* nessun riquadro: il bianco delle immagini si fonde con il crema */
+    .ic-card img { mix-blend-mode: multiply; }
+
+    .ic-card + .ic-card { margin-top: 3.5rem; }
+
+    .ic-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+      margin-top: 3.5rem;
+      align-items: start;
+    }
+
+    .ic-card-grid .ic-card { margin-top: 0; }
+
+    .ic-card + .ic-card-grid,
+    .ic-card-grid + .ic-card { margin-top: 3.5rem; }
+
+
+    /* ---------- chiusura ---------- */
+
+    .ic-end {
+      background: var(--ic-brown);
+      color: var(--ic-cream);
+    }
+
+    .ic-quote {
+      font-family: var(--ic-serif);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.12;
+      letter-spacing: -.01em;
+      font-style: italic;
+      max-width: 22ch !important;
+      margin: 0 0 2.5rem;
+    }
+
+    .ic-download {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      color: var(--ic-cream);
+      font-size: .95rem;
+      font-weight: 600;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: .3rem;
+    }
+
+    .ic-download:hover,
+    .ic-download:focus-visible { color: var(--ic-sand); }
+
+
+    /* ---------- altri progetti ---------- */
+
+    .ic-more { background: var(--ic-cream); }
+
+    .ic-more-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.75rem;
+    }
+
+
+    /* ---------- tablet e mobile ---------- */
+
+    @media (max-width: 991px) {
+
+      .ic-section { padding: 4.5rem 0; }
+
+      .ic-hero-grid,
+      .ic-mv-grid,
+      .ic-idea-foot,
+      .ic-fonts,
+      .ic-icons-row,
+      .ic-card-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .ic-hero-logo { width: min(260px, 60%); margin: 0; }
+
+      .ic-swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+      .ic-card-grid { gap: 3rem; }
+    }
+
+    @media (max-width: 576px) {
+
+      .ic-hero { padding-top: 3rem; }
+
+      .ic-section { padding: 3.5rem 0; }
+
+      .ic-swatches { gap: 1rem; }
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg py-3">
+
+  <div class="container">
+
+    <a class="navbar-brand" href="index.html" aria-label="Homepage Marta Brentan">
+      <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Apri navigazione"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+        <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+        <li class="nav-item d-none d-lg-block ms-lg-3">
+          <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-none d-lg-block ms-2">
+          <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica CV
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>CV
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<main class="ic">
+
+
+  <!-- HERO -->
+
+  <section class="ic-hero">
+
+    <div class="container">
+
+      <p class="ic-breadcrumb">
+        <a href="index.html">Home</a> › <a href="design.html">Design</a> › <span>IncluDO</span>
+      </p>
+
+      <div class="ic-hero-grid">
+
+        <div>
+
+          <h1 class="ic-title">IncluDO</h1>
+
+          <p class="ic-lead">
+            Il mestiere di includere: un'identità per chi insegna a fare e per chi ricomincia imparando.
+          </p>
+
+          <dl class="ic-meta">
+            <div>
+              <dt>Ambito</dt>
+              <dd>Brand identity e UX/UI design</dd>
+            </div>
+            <div>
+              <dt>Contesto</dt>
+              <dd>Progetto start2impact, dicembre 2024</dd>
+            </div>
+            <div>
+              <dt>Strumenti</dt>
+              <dd>Illustrator, InDesign</dd>
+            </div>
+          </dl>
+
+        </div>
+
+        <figure>
+          <img
+            src="assets/img/includo-logo-bianco.webp"
+            alt="Logo IncluDO: un ago che attraversa un anello di filo"
+            class="ic-hero-logo"
+            loading="eager"
+          >
+        </figure>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- MISSION E VISION -->
+
+  <section class="ic-section ic-mv">
+
+    <div class="container">
+
+      <div class="ic-mv-grid">
+
+        <div>
+          <h2>Mission</h2>
+          <p class="ic-text">
+            Formare migranti e persone svantaggiate ai mestieri centenari, per includerle nel mondo del lavoro.
+          </p>
+        </div>
+
+        <div>
+          <h2>Vision</h2>
+          <p class="ic-text">
+            Un punto di riferimento per i mestieri che stanno scomparendo, e per le botteghe che li tengono vivi.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- AGO E FILO -->
+
+  <section class="ic-section ic-idea">
+
+    <div class="container">
+
+      <h2 class="ic-heading">Ago e filo.</h2>
+
+      <p class="ic-equation">
+        <span>Manualità : ago</span> = <span>unione : filo</span>
+      </p>
+
+      <figure>
+        <img
+          src="assets/img/includo-logo-sviluppo.webp"
+          alt="Sviluppo del logo: la forma dell'ago più l'anello del filo danno il logo IncluDO"
+          class="ic-img ic-blend"
+          loading="lazy"
+        >
+      </figure>
+
+      <div class="ic-idea-foot">
+        <p class="ic-text">
+          Due forme tonde, sicure e armoniche, per dire una cosa sola: ricucire.
+        </p>
+        <p class="ic-text">
+          Ricucire società e tradizione, giovani e lavoro, botteghe di paese e negozi di città.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- LOGO COMPLETO -->
+
+  <section class="ic-section ic-logo">
+
+    <div class="container">
+
+      <figure class="ic-logo-full">
+        <img
+          src="assets/img/includo-logo-completo.webp"
+          alt="Logo, logotipo e payoff IncluDO: Il mestiere di includere"
+          class="ic-img ic-blend"
+          loading="lazy"
+        >
+      </figure>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- COLOR PALETTE -->
+
+  <section class="ic-section ic-palette">
+
+    <div class="container">
+
+      <h2 class="ic-heading">Terra e foglia.</h2>
+
+      <ul class="ic-swatches">
+
+        <li class="ic-swatch">
+          <span class="ic-swatch-dot" style="background:#40140A"></span>
+          <b>#40140A</b>
+          <small>R 64 · G 20 · B 10</small>
+        </li>
+
+        <li class="ic-swatch">
+          <span class="ic-swatch-dot" style="background:#734E39"></span>
+          <b>#734E39</b>
+          <small>R 115 · G 78 · B 57</small>
+        </li>
+
+        <li class="ic-swatch">
+          <span class="ic-swatch-dot" style="background:#A28777"></span>
+          <b>#A28777</b>
+          <small>R 162 · G 135 · B 119</small>
+        </li>
+
+        <li class="ic-swatch">
+          <span class="ic-swatch-dot" style="background:#D9B18F"></span>
+          <b>#D9B18F</b>
+          <small>R 217 · G 177 · B 143</small>
+        </li>
+
+        <li class="ic-swatch">
+          <span class="ic-swatch-dot" style="background:#3EC191"></span>
+          <b>#3EC191</b>
+          <small>R 62 · G 193 · B 145</small>
+        </li>
+
+        <li class="ic-swatch ic-swatch-white">
+          <span class="ic-swatch-dot" style="background:#FFFFFF"></span>
+          <b>#FFFFFF</b>
+          <small>R 255 · G 255 · B 255</small>
+        </li>
+
+      </ul>
+
+      <p class="ic-caption">Quattro toni di terra e legno per i colori principali, il verde per ciò che invita all'azione.</p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- TIPOGRAFIA -->
+
+  <section class="ic-section ic-type">
+
+    <div class="container">
+
+      <div class="ic-fonts">
+
+        <div>
+          <p class="ic-font-name sans">Gill Sans</p>
+          <p class="ic-caption">Per titoli e sottotitoli.</p>
+        </div>
+
+        <div>
+          <p class="ic-font-name serif">Garamond</p>
+          <p class="ic-caption">Per i testi.</p>
+        </div>
+
+      </div>
+
+      <div class="ic-specimen">
+        <h3>Fidati di uno del mestiere</h3>
+        <p class="sub">IncluDO, la comunità di artigiani del paese che aiuta i giovani a imparare i mestieri.</p>
+        <p class="body">
+          Che tu voglia fare il calzolaio, il sarto, il falegname o il panettiere, da noi troverai
+          il mestiere progettato su misura per te. Insieme impariamo un nuovo mestiere e aiutiamo le botteghe a crescere.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ICONE -->
+
+  <section class="ic-section ic-icons">
+
+    <div class="container">
+
+      <h2 class="ic-heading">Un'icona per ogni mestiere.</h2>
+
+      <figure class="ic-trades">
+        <img
+          src="assets/img/includo-icone-mestieri.webp"
+          alt="Icone dei sei mestieri: contadino, ceramista, falegname, calzolaio, panettiere e sarto"
+          class="ic-img"
+          loading="lazy"
+        >
+      </figure>
+
+
+    
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SOCIAL -->
+
+  <section class="ic-section ic-social">
+
+    <div class="container">
+
+      <h2 class="ic-heading">Stessa identità, ogni canale.</h2>
+
+      <figure class="ic-card">
+        <img
+          src="assets/img/includo-facebook-profilo.webp"
+          alt="Pagina Facebook di IncluDO su desktop, laptop e smartphone"
+          class="ic-img"
+          loading="lazy"
+        >
+        <figcaption class="ic-caption">Facebook: profilo e copertina.</figcaption>
+      </figure>
+
+      <div class="ic-card-grid">
+
+        <figure class="ic-card">
+          <img
+            src="assets/img/includo-facebook-post.webp"
+            alt="Tre post Facebook di IncluDO: prodotto, evento e prodotto"
+            class="ic-img"
+            loading="lazy"
+          >
+          <figcaption class="ic-caption">Facebook: i post.</figcaption>
+        </figure>
+
+        <figure class="ic-card">
+          <img
+            src="assets/img/includo-instagram-post.webp"
+            alt="Tre post Instagram di IncluDO: presentazione, servizio ed evento"
+            class="ic-img"
+            loading="lazy"
+          >
+          <figcaption class="ic-caption">Instagram: presentazione, servizio, evento.</figcaption>
+        </figure>
+
+      </div>
+
+      <figure class="ic-card">
+        <img
+          src="assets/img/includo-youtube.webp"
+          alt="Canale YouTube di IncluDO con copertina, anteprime dei video e mockup su laptop e smartphone"
+          class="ic-img"
+          loading="lazy"
+        >
+        <figcaption class="ic-caption">YouTube: copertina del canale e anteprime dei video.</figcaption>
+      </figure>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CHIUSURA -->
+
+  <section class="ic-section ic-end">
+
+    <div class="container">
+
+      <p class="ic-quote">
+        Ricucire il bisogno di imparare a fare con la volontà di insegnare a fare.
+      </p>
+
+      <a
+        href="assets/docs/Progetto Grafica UX UI.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ic-download"
+      >
+        Scarica le brand guidelines complete
+        <i class="bi bi-arrow-up-right"></i>
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ALTRI PROGETTI -->
+
+  <section class="ic-section ic-more">
+
+    <div class="container text-center">
+
+      <h2 class="section-title mb-5">Altri progetti</h2>
+
+      <div class="ic-more-list">
+
+        <a href="legalescuola.html" class="project-card">
+          <img src="assets/img/sfondo-legalescuola.webp" alt="Mockup Legale Scuola Brand Guidelines" loading="lazy">
+          <div class="project-content">
+            <h5>Legale Scuola Brand Guidelines</h5>
+            <p>Brand identity e social design</p>
+            <p class="text-muted small">studio</p>
+          </div>
+        </a>
+
+        <a href="limes.html" class="project-card">
+          <img src="assets/img/sfondo-progetto-finale.webp" alt="Progetto finale UX UI: redesign Limes" loading="lazy">
+          <div class="project-content">
+            <h5>Redesign Limes</h5>
+            <p>UX/UI design, dalla ricerca al prototipo</p>
+            <p class="text-muted small">start2impact</p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CONTACT -->
+
+  <section class="contact-cta py-5">
+
+    <div class="container">
+
+      <h2 class="section-title text-center mb-5">
+        Hai un progetto, un testo o un'idea? Parliamone.
+      </h2>
+
+      <form
+        action="https://formspree.io/f/manvqedl"
+        method="POST"
+        class="contact-form"
+      >
+
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Invia</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<!-- SCROLL UP MOBILE -->
+
+<a href="#" class="scrollup-mobile d-lg-none" aria-label="Torna su">
+  <img src="assets/icons/scroll up.png" alt="">
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollBtn = document.querySelector(".scrollup-mobile");
+
+    if (!scrollBtn) return;
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+
+    scrollBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+  });
+</script>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer py-5 bg-dark text-white">
+
+  <div class="container">
+
+    <div class="row g-4 d-none d-lg-flex">
+
+      <div class="col-md-3">
+        <h5>Su di me</h5>
+        <ul class="list-unstyled">
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+          <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Progetti</h5>
+        <ul class="list-unstyled">
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="voice.html">Voice</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="progettazione.html">Progettazione</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Contatti</h5>
+        <ul class="list-unstyled">
+          <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
+          <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
+          <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+          <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Aiuto</h5>
+        <ul class="list-unstyled">
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contatti.html">Scrivimi</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="footer-mobile d-lg-none">
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+        <div id="f1" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+        <div id="f2" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="voice.html">Voice</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="progettazione.html">Progettazione</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+        <div id="f3" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+            <li><a href="tel:+393470547503">Telefono</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+        <div id="f4" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-social-mobile text-center mt-4">
+        <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <p class="text-center small">© 2026 Marta Brentan – Tutti i diritti riservati</p>
+
+  </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

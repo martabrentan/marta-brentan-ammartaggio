@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+  <!-- COOKIEBOT -->
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ammartaggio.com – Sito web personale, dal logo al codice | Marta Brentan</title>
+
+  <meta
+    name="description"
+    content="Case study ammartaggio.com: logo, color palette, tipografia, wireframe, prototipi e codice HTML e CSS del mio sito web personale."
+  >
+  <meta
+    name="keywords"
+    content="ammartaggio, sito web personale, HTML, CSS, Bootstrap, Figma, GitHub, Marta Brentan"
+  >
+  <meta name="author" content="Marta Brentan">
+
+  <meta property="og:title" content="ammartaggio.com – Sito web personale, dal logo al codice | Marta Brentan">
+  <meta
+    property="og:description"
+    content="Dal logo al codice: come ho progettato e scritto a mano il mio sito personale."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ammartaggio.com/ammartaggio.html">
+  <meta property="og:image" content="https://ammartaggio.com/assets/img/am-hero.webp">
+  <meta property="og:image:alt" content="Il sito ammartaggio.com su laptop e smartphone">
+
+  <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Fraunces:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/scss/main.css">
+
+
+  <style>
+
+    /* =========================================================
+       AMMARTAGGIO — CASE STUDY
+       È il progetto del mio stesso sito: stessa palette
+       #FAF9F6 · #333333 · #007A78  e stessi font, Epilogue e Fraunces.
+    ========================================================== */
+
+    .am {
+      --am-cream: #FAF9F6;
+      --am-ink: #333333;
+      --am-teal: #007A78;
+      --am-teal-bg: #017B79;   /* il verde esatto degli screenshot */
+      --am-teal-light: #009B98;
+      --am-sans: "Epilogue", sans-serif;
+      --am-serif: "Fraunces", serif;
+      overflow: hidden;
+      color: var(--am-ink);
+    }
+
+    /* il p globale del sito è centrato con max-width: qui lo azzero */
+    .am p {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+    }
+
+    .am figure { margin: 0; }
+
+    .am-section { padding: 6rem 0; }
+
+    .am-heading {
+      font-family: var(--am-serif);
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -.035em;
+      font-weight: 600;
+      color: var(--am-teal);
+      margin: 0 0 2.5rem;
+    }
+
+    .am-text {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      max-width: 40ch !important;
+      margin: 0;
+    }
+
+    .am-caption {
+      font-size: .9rem;
+      line-height: 1.5;
+      margin: 1.25rem 0 0;
+      opacity: .7;
+    }
+
+    .am-img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* le immagini hanno sfondo crema: si fondono con la sezione */
+    .am-blend { mix-blend-mode: multiply; }
+
+    .am-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .95rem;
+      font-weight: 600;
+      color: inherit;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: .3rem;
+    }
+
+    .am-link:hover,
+    .am-link:focus-visible { color: var(--am-teal-light); }
+
+
+    /* ---------- hero ---------- */
+
+    .am-hero {
+      background: var(--am-cream);
+      padding: 4.5rem 0 5rem;
+    }
+
+    .am-breadcrumb {
+      font-size: .85rem;
+      color: #777;
+      margin-bottom: 3rem;
+    }
+
+    .am-breadcrumb a { color: #555; }
+    .am-breadcrumb a:hover { color: var(--am-teal); }
+
+    .am-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .am-title {
+      font-family: var(--am-serif);
+      font-size: clamp(3rem, 5.4vw, 5rem);
+      line-height: .95;
+      letter-spacing: -.04em;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--am-teal);
+      margin: 0 0 1.75rem;
+      padding-right: .2em;   /* il corsivo sporge a destra: senza, l'ultima lettera si taglia */
+      position: relative;
+      z-index: 1;
+    }
+
+    .am-lead {
+      font-size: clamp(1.25rem, 2vw, 1.7rem);
+      line-height: 1.35;
+      max-width: 26ch !important;
+      margin: 0 0 2.5rem;
+    }
+
+    .am-meta {
+      margin: 0;
+      padding-top: 1.75rem;
+      border-top: 1px solid #DCDAD5;
+      display: grid;
+      gap: 1.1rem;
+      max-width: 440px;
+    }
+
+    .am-meta dt {
+      font-size: .85rem;
+      font-weight: 400;
+      color: #777;
+    }
+
+    .am-meta dd {
+      margin: .15rem 0 0;
+      font-size: 1rem;
+    }
+
+    .am-meta a { color: var(--am-teal); border-bottom: 1px solid currentColor; }
+
+
+    /* ---------- intro ---------- */
+
+    .am-intro {
+      background: var(--am-ink);
+      color: var(--am-cream);
+    }
+
+    .am-intro h2 {
+      font-family: var(--am-serif);
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -.035em;
+      font-weight: 600;
+      color: var(--am-cream);
+      margin: 0 0 2rem;
+    }
+
+    .am-intro .am-text {
+      font-size: 1.3rem;
+      max-width: 36ch !important;
+      color: rgba(250, 249, 246, .85);
+    }
+
+
+    /* ---------- logo ---------- */
+
+    .am-logo { background: var(--am-cream); }
+
+    .am-logo-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .am-logo-img {
+      width: min(380px, 100%);
+      margin: 0 auto;
+    }
+
+
+    /* ---------- palette ---------- */
+
+    .am-palette { background: var(--am-cream); padding-top: 0; }
+
+    .am-palette-img { max-width: 1000px; margin: 0 auto; }
+
+
+    /* ---------- tipografia ---------- */
+
+    .am-type { background: #fff; }
+
+    .am-fonts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4rem;
+    }
+
+    .am-font-name {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 1;
+      letter-spacing: -.03em;
+      margin: 0 0 1.25rem;
+      color: var(--am-ink);
+    }
+
+    .am-font-name.sans { font-family: var(--am-sans); font-weight: 500; }
+    .am-font-name.serif { font-family: var(--am-serif); font-weight: 700; color: var(--am-teal); }
+
+    .am-fonts .am-text { max-width: 34ch !important; }
+
+
+    /* ---------- prototipi ---------- */
+
+    .am-proto {
+      background: var(--am-teal-bg);
+      color: var(--am-cream);
+      padding-bottom: 0;   /* la fascia di schermate chiude la sezione */
+    }
+
+    .am-proto .am-heading { color: var(--am-cream); }
+
+    .am-proto-banner { margin-top: 3rem; }
+
+    .am-proto-banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .am-proto-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .am-proto .am-link:hover,
+    .am-proto .am-link:focus-visible { color: #fff; opacity: .8; }
+
+
+    /* ---------- codice ---------- */
+
+    .am-code {
+      background: var(--am-ink);
+      color: var(--am-cream);
+    }
+
+    .am-code .am-heading { color: var(--am-cream); }
+
+    .am-code-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .am-code-fig { margin-top: 3rem; }
+
+    .am-code .am-link:hover,
+    .am-code .am-link:focus-visible { color: var(--am-teal-light); }
+
+
+    /* ---------- chiusura ---------- */
+
+    .am-end {
+      background: var(--am-cream);
+      text-align: center;
+    }
+
+    .am-end .am-heading { margin-bottom: 2rem; }
+
+    .am-end-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .am-end .am-link { color: var(--am-ink); }
+    .am-end .am-link:hover { color: var(--am-teal); }
+
+
+    /* ---------- altri progetti ---------- */
+
+    .am-more { background: #fff; }
+
+    .am-more-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.75rem;
+    }
+
+
+    /* ---------- tablet e mobile ---------- */
+
+    @media (max-width: 991px) {
+
+      .am-section { padding: 4.5rem 0; }
+
+      .am-hero-grid,
+      .am-logo-grid,
+      .am-fonts {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .am-proto-pair,
+      .am-code-pair {
+        grid-template-columns: 1fr;
+      }
+
+      .am-logo-img { margin: 0; width: min(260px, 70%); }
+    }
+
+    @media (max-width: 576px) {
+
+      .am-hero { padding-top: 3rem; }
+
+      .am-section { padding: 3.5rem 0; }
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg py-3">
+
+  <div class="container">
+
+    <a class="navbar-brand" href="index.html" aria-label="Homepage Marta Brentan">
+      <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Apri navigazione"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+        <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+        <li class="nav-item d-none d-lg-block ms-lg-3">
+          <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-none d-lg-block ms-2">
+          <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica CV
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>CV
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<main class="am">
+
+
+  <!-- HERO -->
+
+  <section class="am-hero">
+
+    <div class="container">
+
+      <p class="am-breadcrumb">
+        <a href="index.html">Home</a> › <a href="progetti.html">Progetti</a> › <span>ammartaggio</span>
+      </p>
+
+      <div class="am-hero-grid">
+
+        <div>
+
+          <h1 class="am-title">ammartaggio</h1>
+
+          <p class="am-lead">
+            Il mio sito personale, dal logo al codice.
+          </p>
+
+          <dl class="am-meta">
+            <div>
+              <dt>Ambito</dt>
+              <dd>Sito web personale: logo, UI kit, prototipi e codice</dd>
+            </div>
+            <div>
+              <dt>Strumenti</dt>
+              <dd>Figma, Visual Studio Code, HTML, CSS, Bootstrap, GitHub</dd>
+            </div>
+            <div>
+              <dt>Online</dt>
+              <dd><a href="https://ammartaggio.com" target="_blank" rel="noopener noreferrer">ammartaggio.com</a></dd>
+            </div>
+          </dl>
+
+        </div>
+
+        <figure>
+          <img
+            src="assets/img/am-hero.webp"
+            alt="Il sito ammartaggio.com su laptop e smartphone"
+            class="am-img"
+            loading="eager"
+          >
+        </figure>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- INTRO -->
+
+  <section class="am-section am-intro">
+
+    <div class="container">
+
+      <h2>Uno spazio tutto mio.</h2>
+
+      <p class="am-text">
+        Ho comprato il dominio per scrivere di libri. Oggi è un sito scritto a mano, senza più WordPress.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- LOGO -->
+
+  <section class="am-section am-logo">
+
+    <div class="container">
+
+      <div class="am-logo-grid">
+
+        <figure>
+          <img
+            src="assets/img/am-logo.webp"
+            alt="Logo ammartaggio: una virgoletta piena e una virgoletta scomposta in pixel colorati"
+            class="am-img am-logo-img"
+            loading="lazy"
+          >
+        </figure>
+
+        <div>
+
+          <h2 class="am-heading">Parola e pixel.</h2>
+
+          <p class="am-text">
+            La virgoletta piena è l'editoria. Quella scomposta in pixel è il digitale. Insieme raccontano come sto cambiando.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- COLOR PALETTE -->
+
+  <section class="am-section am-palette">
+
+    <div class="container">
+
+      <figure>
+        <img
+          src="assets/img/am-palette.webp"
+          alt="Palette: #FAF9F6 su una texture bianca, #333333 sui tasti di una macchina da scrivere, #007A78 su un'ombra d'inchiostro"
+          class="am-img am-palette-img"
+          loading="lazy"
+        >
+      </figure>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- TIPOGRAFIA -->
+
+  <section class="am-section am-type">
+
+    <div class="container">
+
+      <div class="am-fonts">
+
+        <div>
+          <p class="am-font-name sans">Epilogue</p>
+          <p class="am-text">Un omaggio a Futura, ma più caldo e più umano. Per i testi e l'interfaccia.</p>
+        </div>
+
+        <div>
+          <p class="am-font-name serif">Fraunces</p>
+          <p class="am-text">Un serif morbido, dal sapore novecentesco. Per i titoli.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- WIREFRAME E PROTOTIPI -->
+
+  <section class="am-section am-proto">
+
+    <div class="container">
+
+      <h2 class="am-heading">Dal wireframe al prototipo.</h2>
+
+      <p class="mt-5">
+        <a
+          href="https://www.figma.com/design/RiSBPX9BpTw0RTHmDGhD2B/Sito-web-personale---Marta-Brentan?node-id=2060-1091&t=rcpQuDogER3Vll61-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="am-link"
+        >
+          Guarda il progetto su Figma
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+      </p>
+
+    </div>
+
+    <figure class="am-proto-banner">
+      <img
+        src="assets/img/am-prototipi.webp"
+        alt="Le pagine del sito in versione mobile e desktop, dai wireframe ai prototipi"
+        loading="lazy"
+      >
+    </figure>
+
+  </section>
+
+
+
+  <!-- CODICE -->
+
+  <section class="am-section am-code">
+
+    <div class="container">
+
+      <h2 class="am-heading">Poi, il codice.</h2>
+
+      <p class="mt-5">
+        <a
+          href="https://github.com/martabrentan/marta-brentan-ammartaggio"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="am-link"
+        >
+          Guarda il progetto su GitHub
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+      </p>
+
+      <figure class="am-code-fig">
+        <img
+          src="assets/img/am-struttura.webp"
+          alt="Struttura del sito: le undici pagine html e la cartella assets con scss, docs, icons e img"
+          class="am-img"
+          loading="lazy"
+        >
+      </figure>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CHIUSURA -->
+
+  <section class="am-section am-end">
+
+    <div class="container">
+
+      <h2 class="am-heading">Buon ammartaggio!</h2>
+
+      <div class="am-end-links">
+
+        <a href="https://ammartaggio.com" target="_blank" rel="noopener noreferrer" class="am-link">
+          Visita il sito
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+        <a
+          href="assets/docs/Progetto_HTML_CSS_di_Marta_Brentan_myyvai.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="am-link"
+        >
+          Scarica il progetto completo
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ALTRI PROGETTI -->
+
+  <section class="am-section am-more">
+
+    <div class="container text-center">
+
+      <h2 class="section-title mb-5">Altri progetti</h2>
+
+      <div class="am-more-list">
+
+        <a href="includo.html" class="project-card">
+          <img src="assets/img/sfondo-includo.webp" alt="Mockup Includo Brand Guidelines" loading="lazy">
+          <div class="project-content">
+            <h5>Includo Brand Guidelines</h5>
+            <p>Logo, palette, icone e social</p>
+            <p class="text-muted small">start2impact</p>
+          </div>
+        </a>
+
+        <a href="legalescuola.html" class="project-card">
+          <img src="assets/img/sfondo-legalescuola.webp" alt="Mockup Legale Scuola Brand Guidelines" loading="lazy">
+          <div class="project-content">
+            <h5>Legale Scuola Brand Guidelines</h5>
+            <p>Brand identity e social design</p>
+            <p class="text-muted small">studio</p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CONTACT -->
+
+  <section class="contact-cta py-5">
+
+    <div class="container">
+
+      <h2 class="section-title text-center mb-5">
+        Hai un progetto, un testo o un'idea? Parliamone.
+      </h2>
+
+      <form
+        action="https://formspree.io/f/manvqedl"
+        method="POST"
+        class="contact-form"
+      >
+
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Invia</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<!-- SCROLL UP MOBILE -->
+
+<a href="#" class="scrollup-mobile d-lg-none" aria-label="Torna su">
+  <img src="assets/icons/scroll up.png" alt="">
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollBtn = document.querySelector(".scrollup-mobile");
+
+    if (!scrollBtn) return;
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+
+    scrollBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+  });
+</script>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer py-5 bg-dark text-white">
+
+  <div class="container">
+
+    <div class="row g-4 d-none d-lg-flex">
+
+      <div class="col-md-3">
+        <h5>Su di me</h5>
+        <ul class="list-unstyled">
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+          <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Progetti</h5>
+        <ul class="list-unstyled">
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="voice.html">Voice</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="progettazione.html">Progettazione</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Contatti</h5>
+        <ul class="list-unstyled">
+          <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
+          <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
+          <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+          <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Aiuto</h5>
+        <ul class="list-unstyled">
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contatti.html">Scrivimi</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="footer-mobile d-lg-none">
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+        <div id="f1" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+        <div id="f2" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="voice.html">Voice</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="progettazione.html">Progettazione</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+        <div id="f3" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+            <li><a href="tel:+393470547503">Telefono</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+        <div id="f4" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-social-mobile text-center mt-4">
+        <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <p class="text-center small">© 2026 Marta Brentan – Tutti i diritti riservati</p>
+
+  </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

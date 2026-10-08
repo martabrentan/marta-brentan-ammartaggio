@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+  <!-- COOKIEBOT -->
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Agenti AI per UX/UI Design – Un chatbot per Ecodream | Marta Brentan</title>
+
+  <meta
+    name="description"
+    content="Case study Agenti AI per UX/UI Design: analisi, definizione e progettazione di un assistente AI conversazionale per l’e-commerce Ecodream Design."
+  >
+  <meta
+    name="keywords"
+    content="agenti AI, chatbot, UX UI design, conversational design, Ecodream, Figma, start2impact, Marta Brentan"
+  >
+  <meta name="author" content="Marta Brentan">
+
+  <meta property="og:title" content="Agenti AI per UX/UI Design – Un chatbot per Ecodream | Marta Brentan">
+  <meta
+    property="og:description"
+    content="Case study Agenti AI per UX/UI Design: analisi, definizione e progettazione di un assistente AI conversazionale per l’e-commerce Ecodream Design."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ammartaggio.com/agenti-ai.html">
+  <meta property="og:image" content="https://ammartaggio.com/assets/img/ai-mascot.webp">
+  
+
+  <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Epilogue:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/scss/main.css">
+
+
+  <style>
+
+    .ai{--ai-green:#566B4F;--ai-lime:#A9BB3E;--ai-ink:#1E2B24;--ai-cream:#ECECE5;--ai-font:"Poppins",sans-serif;
+      overflow:hidden;color:var(--ai-ink);font-family:var(--ai-font);background:#fff}
+    .ai h1,.ai h2,.ai h3,.ai h4,.ai h5{color:var(--ai-ink);font-family:var(--ai-font)}
+    .ai p{font-size:1.05rem;max-width:none;margin-left:0;margin-right:0;line-height:1.75;font-family:var(--ai-font)}
+    .ai .section-title{color:var(--ai-ink)}
+    .ai-section{padding:6rem 0}
+    .ai-dark{background:var(--ai-ink);color:#fff}
+    .ai-dark h2,.ai-dark h3,.ai-dark h4,.ai-dark .section-title{color:#fff}
+    .ai-green{background:var(--ai-green);color:#fff}
+    .ai-green h2,.ai-green h3,.ai-green h4{color:#fff}
+    .ai-cream{background:var(--ai-cream)}
+    .ai-label{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ai-green);margin-bottom:1rem}
+    .ai-dark .ai-label,.ai-green .ai-label{color:var(--ai-lime)}
+    .ai-green .ai-label{color:#e3ecc0}
+    .ai h2{font-size:clamp(1.9rem,3.4vw,2.8rem);font-weight:600;margin-bottom:1.25rem;line-height:1.2}
+    .ai-lead{font-size:1.2rem!important;max-width:640px!important}
+    .ai-hero{background:var(--ai-cream);padding:4.5rem 0 4rem}
+    .ai-breadcrumb{font-size:.85rem;color:#666;margin-bottom:3rem}
+    .ai-breadcrumb a{color:#444}.ai-breadcrumb a:hover{color:var(--ai-green)}
+    .ai-hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:center}
+    .ai-title{font-size:clamp(2.8rem,5.6vw,4.8rem)!important;font-weight:600!important;line-height:1.05;letter-spacing:-.03em;margin-bottom:1.25rem}
+    .ai-title span{color:var(--ai-lime)!important}
+    .ai-meta{margin:2rem 0 0}.ai-meta div{margin-bottom:1rem}
+    .ai-meta dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ai-green);font-weight:600}
+    .ai-meta dd{margin:0}
+    .ai-mascot{margin:0;text-align:center}
+    .ai-mascot img{width:100%;max-width:360px;height:auto}
+    .ai-two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+    .ai-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+    .ai-chips span{border:1px solid rgba(255,255,255,.35);border-radius:50px;padding:.45rem 1rem;font-size:.9rem}
+    .ai-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+    .ai-card{background:rgba(255,255,255,.1);border-radius:14px;padding:1.75rem}
+    .ai-card .n{font-size:2.4rem;font-weight:300;line-height:1;color:var(--ai-lime);display:block;margin-bottom:.8rem}
+    .ai-card h3{font-size:1.05rem;font-weight:600;margin-bottom:.6rem}
+    .ai-card p{font-size:.95rem;margin:0 0 .75rem;opacity:.92}
+    .ai-card .opp{border-top:1px solid rgba(255,255,255,.25);padding-top:.8rem;margin-top:.8rem}
+    .ai-card .opp b{color:#e3ecc0;font-weight:600}
+    .ai-quote{font-size:clamp(1.5rem,3vw,2.3rem);font-weight:600;line-height:1.3;margin-top:2.5rem;color:#fff}
+    .ai-quote span{color:var(--ai-lime)}
+    .ai-screens{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem 2rem;margin-top:3rem}
+    .ai-screens figure{margin:0}
+    .ai-screens img,.ai-wide img{width:100%;height:auto;display:block}
+    .ai-screens figcaption,.ai-wide figcaption{font-size:.9rem;margin-top:.8rem;opacity:.8}
+    .ai-wide{margin:3rem 0 0}
+    .ai-tools{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+    .ai-tool{background:#fff;border-radius:14px;padding:1.4rem}
+    .ai-tool h3{font-size:1.05rem;font-weight:600;color:var(--ai-green)}
+    .ai-tool p{font-size:.9rem;margin:0}
+    .ai-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;border-radius:50px;border:1.5px solid currentColor;font-size:.9rem;font-weight:500;text-decoration:none;transition:.2s;margin-top:2rem}
+    .ai-btn:hover{background:var(--ai-green);border-color:var(--ai-green);color:#fff!important}
+    .ai-dark .ai-btn,.ai-green .ai-btn{color:#fff}
+    .ai-more{background:#fff}
+    .ai-more-list{display:flex;flex-wrap:wrap;justify-content:center;gap:1.75rem}
+    @media(max-width:991px){
+      .ai-section{padding:4.5rem 0}
+      .ai-hero-grid,.ai-two{grid-template-columns:1fr}
+      .ai-cards{grid-template-columns:1fr}
+      .ai-tools{grid-template-columns:repeat(2,1fr)}
+      .ai-mascot{order:-1}.ai-mascot img{max-width:240px}
+    }
+    @media(max-width:576px){
+      .ai-section{padding:3.5rem 0}.ai-hero{padding-top:3rem}
+      .ai-screens,.ai-tools{grid-template-columns:1fr}
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg py-3">
+
+  <div class="container">
+
+    <a class="navbar-brand" href="index.html" aria-label="Homepage Marta Brentan">
+      <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Apri navigazione"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+        <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+        <li class="nav-item d-none d-lg-block ms-lg-3">
+          <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-none d-lg-block ms-2">
+          <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica CV
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>CV
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<main class="ai">
+
+  <!-- HERO -->
+  <section class="ai-hero">
+    <div class="container">
+      <p class="ai-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Agenti AI per UX/UI</span></p>
+      <div class="ai-hero-grid">
+        <div>
+          <h1 class="ai-title">Agenti <span>AI</span> per UX/UI Design</h1>
+          <p class="ai-lead">Un chatbot intelligente al servizio dell'utente: un assistente per il sito di Ecodream Design.</p>
+          <dl class="ai-meta">
+            <div><dt>Ambito</dt><dd>Progettazione di un assistente AI conversazionale (mobile)</dd></div>
+            <div><dt>Strumenti</dt><dd>Figma, Manus, Dovetail, Lovable, ChatGPT</dd></div>
+          </dl>
+        </div>
+        <figure class="ai-mascot"><img src="assets/img/ai-mascot.webp" alt="La mascotte dell'assistente: un piccolo robot verde con una foglia in testa" loading="eager"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="ai-section ai-dark">
+    <div class="container">
+      <div class="ai-two">
+        <div>
+          <p class="ai-label">Il punto di partenza</p>
+          <h2>Analisi dell'e-commerce</h2>
+        </div>
+        <div>
+          <p>Ecodream Design vende borse e zaini da materiali di scarto. Dall'analisi con le euristiche di Nielsen e le WCAG 2.2, dai siti dei concorrenti e da un questionario a 22 persone è emerso un sito che lascia l'utente senza aiuto.</p>
+          <p>L'obiettivo: progettare un assistente AI per la versione mobile che sciolga i dubbi, senza fingere di risolvere ciò che va risolto con un redesign.</p>
+        </div>
+      </div>
+      <div class="ai-chips">
+        <span>Poca assistenza</span><span>Nessuna barra di ricerca</span><span>Mancanza di filtri</span><span>Nessuna recensione</span><span>Testi troppo lunghi</span><span>CTA incoerenti</span><span>Mancano le FAQ</span><span>Utente smarrito</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMI E OPPORTUNITA -->
+  <section class="ai-section ai-green">
+    <div class="container">
+      <p class="ai-label">Analisi</p>
+      <h2>Tre problemi, tre ruoli per il chatbot</h2>
+      <div class="ai-cards">
+        <div class="ai-card"><span class="n">01</span><h3>Manca assistenza e riprova sociale</h3><p>Niente FAQ, live chat o recensioni. Per il 50% delle persone intervistate è indispensabile.</p><div class="opp"><b>Un chatbot che supporta.</b> Risponde su spedizioni, resi e materiali in linguaggio naturale.</div></div>
+        <div class="ai-card"><span class="n">02</span><h3>Nessuna guida nella scelta</h3><p>Senza filtri e ricerca non si capiscono varianti, modelli e collezioni. Per il 63,6% è indispensabile.</p><div class="opp"><b>Un chatbot che consiglia.</b> «La cerchi per lavoro o per viaggio?»</div></div>
+        <div class="ai-card"><span class="n">03</span><h3>Testi lunghi: blog o e-commerce?</h3><p>Blocchi di testo pesanti e gerarchia debole: non è chiaro che si possa comprare.</p><div class="opp"><b>Un chatbot che guida.</b> Sintetizza, racconta il materiale e rimanda ai contenuti.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEFINIZIONE -->
+  <section class="ai-section ai-cream">
+    <div class="container">
+      <p class="ai-label">L'assistente</p>
+      <h2>Un consulente di prodotto</h2>
+      <div class="ai-two">
+        <p>Il suo ruolo principale è aiutare a scegliere con consapevolezza borse e zaini, in base alle esigenze di chi compra. In secondo piano risponde alle domande frequenti su spedizioni, resi, materiali e cura.</p>
+        <p>Il tono è chiaro, rassicurante e orientato alla sostenibilità: linguaggio semplice ma accurato, mai tecnico, mai promozionale.</p>
+      </div>
+      <p class="ai-quote" style="color:var(--ai-ink)">Non deve sembrare un venditore.<br><span style="color:var(--ai-green)">Deve essere un consulente.</span></p>
+    </div>
+  </section>
+
+  <!-- PROGETTAZIONE -->
+  <section class="ai-section">
+    <div class="container">
+      <p class="ai-label">Progettazione</p>
+      <h2>Dall'icona alla conversazione</h2>
+      <p class="ai-lead">Verde d'accento #A9BB3E, testo #444444, angoli da 3 px e un Roboto 14 pt leggibile da mobile. Contrasto verificato con le WCAG.</p>
+      <div class="ai-screens">
+        <figure><img src="assets/img/ai-entry.webp" alt="Schermata con l’icona dell’assistente e il micro messaggio" loading="lazy"><figcaption>Entry point: sempre visibile in basso a destra, con «Posso aiutarti?» dopo lo scroll</figcaption></figure>
+        <figure><img src="assets/img/ai-chat-vuota.webp" alt="Chat vuota con titolo, azioni rapide e barra di input" loading="lazy"><figcaption>La chat vuota: azioni rapide, input testuale e vocale</figcaption></figure>
+        <figure><img src="assets/img/ai-primo-messaggio.webp" alt="Primo messaggio dell’utente e indicatore di caricamento a foglia" loading="lazy"><figcaption>Il primo messaggio: lo spinner diventa una foglia</figcaption></figure>
+        <figure><img src="assets/img/ai-risposta.webp" alt="Risposta dell’assistente con opzioni e prodotti suggeriti" loading="lazy"><figcaption>La risposta: domande di approfondimento e prodotti dal catalogo</figcaption></figure>
+      </div>
+      <figure class="ai-wide"><img src="assets/img/ai-microflow.webp" alt="Micro-flow della conversazione in cinque schermate" loading="lazy"><figcaption>Il micro-flow, dal primo messaggio all'ultima risposta</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- USO DELL'AI -->
+  <section class="ai-section ai-cream">
+    <div class="container">
+      <p class="ai-label">Uso dell'AI</p>
+      <h2>Gli strumenti che ho usato</h2>
+      <p class="ai-lead">L'AI ha accelerato il lavoro, la progettazione l'ho fatta io su Figma.</p>
+      <div class="ai-tools">
+        <div class="ai-tool"><h3>Manus</h3><p>Analisi del sito con Similarweb e ricerca dei competitor.</p></div>
+        <div class="ai-tool"><h3>Dovetail</h3><p>Sintesi dell'usability test: trascrizioni, insight e pattern.</p></div>
+        <div class="ai-tool"><h3>Lovable</h3><p>Prime esplorazioni dei flussi, prima di consolidarli su Figma.</p></div>
+        <div class="ai-tool"><h3>ChatGPT</h3><p>Supporto trasversale per verificare coerenza e solidità delle scelte.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIEPILOGO -->
+  <section class="ai-section ai-dark">
+    <div class="container">
+      <div class="ai-two">
+        <div>
+          <p class="ai-label">Riepilogo</p>
+          <h2>Dalla chat tradizionale a un facilitatore</h2>
+          <a class="ai-btn" href="assets/docs/Progetto Agenti AI per Design - Marta Brentan.pdf" download>Scarica il progetto (PDF) <i class="bi bi-download"></i></a>
+        </div>
+        <div>
+          <p>Nel redesign del sito avevo previsto una chat di assistenza tradizionale. Il concept si è poi evoluto in un chatbot AI con il ruolo di consulente di prodotto.</p>
+          <p>Non sostituisce gli interventi strutturali: media tra contenuto e utente nei momenti di dubbio, e rende più chiaro lo scopo del sito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALTRI PROGETTI -->
+  <section class="ai-section ai-more">
+    <div class="container">
+      <h2 class="section-title mb-5">Altri progetti</h2>
+      <div class="ai-more-list">
+        <a href="ecodream.html" class="project-card">
+          <img src="assets/img/sfondo-discovery.webp" alt="Prototipo della homepage Ecodream" loading="lazy">
+          <div class="project-content"><h5>Ecodream Design</h5><p>Wireframe, test, UI e accessibilità</p><p class="text-muted small">start2impact</p></div>
+        </a>
+        <a href="ammartaggio.html" class="project-card">
+          <img src="assets/img/am-hero.webp" alt="Il sito ammartaggio.com" loading="lazy">
+          <div class="project-content"><h5>ammartaggio</h5><p>Il mio sito, dal logo al codice</p><p class="text-muted small">start2impact</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact-cta py-5">
+
+    <div class="container">
+
+      <h2 class="section-title text-center mb-5">
+        Hai un progetto, un testo o un'idea? Parliamone.
+      </h2>
+
+      <form
+        action="https://formspree.io/f/manvqedl"
+        method="POST"
+        class="contact-form"
+      >
+
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Invia</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<!-- SCROLL UP MOBILE -->
+
+<a href="#" class="scrollup-mobile d-lg-none" aria-label="Torna su">
+  <img src="assets/icons/scroll up.png" alt="">
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollBtn = document.querySelector(".scrollup-mobile");
+
+    if (!scrollBtn) return;
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+
+    scrollBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+  });
+</script>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer py-5 bg-dark text-white">
+
+  <div class="container">
+
+    <div class="row g-4 d-none d-lg-flex">
+
+      <div class="col-md-3">
+        <h5>Su di me</h5>
+        <ul class="list-unstyled">
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+          <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Progetti</h5>
+        <ul class="list-unstyled">
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="voice.html">Voice</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="progettazione.html">Progettazione</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Contatti</h5>
+        <ul class="list-unstyled">
+          <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
+          <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
+          <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+          <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Aiuto</h5>
+        <ul class="list-unstyled">
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contatti.html">Scrivimi</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="footer-mobile d-lg-none">
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+        <div id="f1" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+        <div id="f2" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="voice.html">Voice</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="progettazione.html">Progettazione</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+        <div id="f3" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+            <li><a href="tel:+393470547503">Telefono</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+        <div id="f4" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-social-mobile text-center mt-4">
+        <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <p class="text-center small">© 2026 Marta Brentan – Tutti i diritti riservati</p>
+
+  </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

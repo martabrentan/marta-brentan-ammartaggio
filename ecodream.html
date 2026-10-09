@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 
-  <script id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
-          data-blockingmode="auto"
-          type="text/javascript"></script>
+  <!-- COOKIEBOT -->
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Redesign Ecodream – Marta Brentan</title>
+  <title>Ecodream Design – Wireframe, user test, UI e accessibilità | Marta Brentan</title>
 
   <meta
     name="description"
-    content="Case study: redesign completo del sito web di Ecodream Design, brand indipendente di moda sostenibile. Ricerca, UX/UI, wireframe, prototipazione e chatbot AI."
+    content="Case study Ecodream Design: wireframe, user test, interfaccia desktop e mobile e accessibilità WCAG 2.2 per un e-commerce di borse da materiali di scarto."
   >
-
   <meta
     name="keywords"
-    content="Ecodream, redesign, UX, UI, e-commerce, moda sostenibile, chatbot AI, Marta Brentan"
+    content="Ecodream, UX UI design, wireframe, user test, accessibilità, WCAG, e-commerce, Figma, start2impact, Marta Brentan"
   >
-
   <meta name="author" content="Marta Brentan">
 
-  <meta property="og:title" content="Redesign Ecodream – Marta Brentan">
+  <meta property="og:title" content="Ecodream Design – Wireframe, user test, UI e accessibilità | Marta Brentan">
   <meta
     property="og:description"
-    content="Case study completo del redesign di Ecodream Design, brand indipendente di moda sostenibile."
+    content="Case study Ecodream Design: wireframe, user test, interfaccia desktop e mobile e accessibilità WCAG 2.2 per un e-commerce di borse da materiali di scarto."
   >
   <meta property="og:type" content="website">
-  <meta
-    property="og:url"
-    content="https://martabrentan.github.io/marta-brentan-ammartaggio/ecodream.html"
-  >
-  <meta
-    property="og:image"
-    content="https://martabrentan.github.io/marta-brentan-ammartaggio/assets/img/logo-ecodream.webp"
-  >
-  <meta property="og:image:alt" content="Cover progetto Ecodream">
+  <meta property="og:url" content="https://ammartaggio.com/ecodream.html">
+  <meta property="og:image" content="https://ammartaggio.com/assets/img/ec-ui-home.webp">
+  
 
   <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
 
@@ -47,14 +43,12 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
-
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
   />
-
   <link
-    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Epilogue:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -63,1343 +57,470 @@
 
   <style>
 
-    /* =========================================================
-       ECODREAM — CASE STUDY
-       CSS specifico pagina
-    ========================================================= */
-
-    .case-page {
-      background: #FAF9F6;
-      color: #333333;
-    }
-
-    /* HERO -------------------------------------------------- */
-
-    .case-hero {
-      padding: 5.5rem 0 5rem;
-    }
-
-    .case-breadcrumb {
-      font-size: .78rem;
-      letter-spacing: .03em;
-      margin-bottom: 2rem;
-      color: #999999;
-    }
-
-    .case-breadcrumb a {
-      color: #666666;
-      text-decoration: none;
-    }
-
-    .case-breadcrumb a:hover {
-      color: #007A78;
-    }
-
-    .case-breadcrumb .current {
-      color: #999999;
-    }
-
-    .case-hero-title {
-      font-family: "Epilogue", sans-serif;
-      font-size: clamp(1.8rem, 3vw, 3rem);
-      line-height: 1.1;
-      letter-spacing: -.03em;
-      font-weight: 700;
-      color: #333333;
-      margin: 0;
-    }
-
-    .case-hero-intro {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 4rem;
-      align-items: start;
-      margin-top: 3.5rem;
-    }
-
-    .case-hero-cover {
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    .case-hero-cover img {
-      width: 100%;
-      max-width: 560px;
-      height: auto;
-      display: block;
-      border-radius: 20px;
-    }
-
-    .case-hero-copy {
-      max-width: 580px;
-    }
-
-    .case-hero-lead {
-      font-family: "Fraunces", serif;
-      font-size: clamp(1.9rem, 3.2vw, 3.1rem);
-      line-height: 1.08;
-      letter-spacing: -.035em;
-      color: #007A78;
-      margin: 0 0 1.5rem;
-    }
-
-    .case-hero-description {
-      font-size: 1rem;
-      line-height: 1.8;
-      margin: 0 0 1.5rem;
-      max-width: 580px;
-    }
-
-    .case-text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      color: #333333;
-      text-decoration: none;
-      font-size: .9rem;
-      font-weight: 600;
-      border-bottom: 1px solid #333333;
-      padding-bottom: .25rem;
-    }
-
-    .case-text-link:hover {
-      color: #007A78;
-      border-color: #007A78;
-    }
-
-
-    /* SECTIONS -------------------------------------------------- */
-
-    .case-section {
-      padding: 6rem 0;
-    }
-
-    .case-section + .case-section {
-      border-top: 1px solid rgba(51, 51, 51, .08);
-    }
-
-    .case-section-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .case-section-heading {
-      max-width: 650px;
-    }
-
-    .case-section-heading-top {
-      display: flex;
-      align-items: baseline;
-      gap: 1.3rem;
-      margin-bottom: 1.1rem;
-    }
-
-    .case-section-number {
-      font-size: .78rem;
-      font-weight: 400;
-      letter-spacing: .08em;
-      color: #999999;
-      flex-shrink: 0;
-    }
-
-    .case-section-eyebrow {
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: #999999;
-      margin: 0;
-    }
-
-    .case-section-title {
-      font-family: "Fraunces", serif;
-      font-size: clamp(2.4rem, 4.5vw, 4.4rem);
-      line-height: 1;
-      letter-spacing: -.045em;
-      font-weight: 600;
-      color: #007A78;
-      margin: 0;
-      max-width: 850px;
-    }
-
-    .case-section-copy {
-      font-size: 1rem;
-      line-height: 1.8;
-      max-width: 650px;
-    }
-
-    .case-section-copy p {
-      margin-bottom: 1.4rem;
-    }
-
-    .case-section-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-
-    /* META -------------------------------------------------- */
-
-    .case-meta {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(51, 51, 51, .12);
-    }
-
-    .case-meta-label {
-      display: block;
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: #999999;
-      margin-bottom: .35rem;
-    }
-
-    .case-meta-value {
-      margin: 0;
-      font-size: .95rem;
-      font-weight: 600;
-    }
-
-
-    /* CARDS -------------------------------------------------- */
-
-    .case-card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
-      margin-top: 4rem;
-    }
-
-    .case-card {
-      padding: 2.25rem;
-      background: #FFFFFF;
-      border-radius: 20px;
-    }
-
-    .case-card-number {
-      display: block;
-      font-size: .72rem;
-      letter-spacing: .08em;
-      color: #999999;
-      margin-bottom: 1rem;
-    }
-
-    .case-card h3 {
-      font-family: "Epilogue", sans-serif;
-      font-size: 1.1rem;
-      line-height: 1.3;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #333333;
-    }
-
-    .case-card p {
-      font-size: .93rem;
-      line-height: 1.75;
-      margin: 0;
-    }
-
-    .case-card-dark {
-      background: #333333;
-      color: #FFFFFF;
-    }
-
-    .case-card-dark .case-card-number {
-      color: rgba(255,255,255,.5);
-    }
-
-    .case-card-dark h3,
-    .case-card-dark p {
-      color: #FFFFFF;
-    }
-
-
-    /* IMAGES -------------------------------------------------- */
-
-    .case-image-row {
-      width: min(1050px, 88%);
-      margin: 4rem auto 0;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
-    }
-
-    .case-image {
-      overflow: hidden;
-      border-radius: 18px;
-    }
-
-    .case-image img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-
-    /* SINGLE LARGE IMAGE ------------------------------------- */
-
-    .case-single-image {
-      width: min(1000px, 88%);
-      margin: 4rem auto 0;
-      overflow: hidden;
-      border-radius: 20px;
-    }
-
-    .case-single-image img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-
-    /* AI GRID -------------------------------------------------- */
-
-    .case-ai-grid {
-      width: min(1100px, 92%);
-      margin: 4rem auto 0;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.25rem;
-    }
-
-    .case-ai-item {
-      background: #FFFFFF;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .case-ai-item img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    .case-ai-content {
-      padding: 1.5rem;
-    }
-
-    .case-ai-label {
-      display: block;
-      font-size: .72rem;
-      letter-spacing: .08em;
-      color: #999999;
-      margin-bottom: .75rem;
-    }
-
-    .case-ai-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: .75rem;
-    }
-
-    .case-ai-text {
-      font-size: .9rem;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-
-    /* MATERIALS ---------------------------------------------- */
-
-    .case-resources {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(51, 51, 51, .12);
-    }
-
-    .case-resources-title {
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: #999999;
-      margin-bottom: 1rem;
-    }
-
-    .case-resources-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .75rem 1.5rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .case-resources-list a {
-      display: inline-flex;
-      align-items: center;
-      gap: .45rem;
-      color: #333333;
-      text-decoration: none;
-      font-size: .9rem;
-    }
-
-    .case-resources-list a:hover {
-      color: #007A78;
-    }
-
-
-    /* MORE PROJECTS ------------------------------------------- */
-
-    .case-more {
-      padding: 6rem 0;
-    }
-
-    .case-more-title {
-      font-family: "Fraunces", serif;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      color: #007A78;
-      letter-spacing: -.04em;
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-
-    .case-project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    .case-project-card {
-      display: block;
-      text-decoration: none;
-      color: #333333;
-      background: #FFFFFF;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .case-project-card img {
-      width: 100%;
-      display: block;
-      aspect-ratio: 1.35 / 1;
-      object-fit: cover;
-    }
-
-    .case-project-content {
-      padding: 1.5rem;
-    }
-
-    .case-project-content h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: .45rem;
-    }
-
-    .case-project-content p {
-      font-size: .9rem;
-      margin-bottom: .25rem;
-    }
-
-
-    /* RESPONSIVE ---------------------------------------------- */
-
-    @media (max-width: 991px) {
-
-      .case-hero {
-        padding-top: 4.5rem;
-        padding-bottom: 4rem;
-      }
-
-      .case-section {
-        padding: 5rem 0;
-      }
-
-      .case-hero-intro,
-      .case-section-layout {
-        gap: 3rem;
-      }
-
-      .case-section-title {
-        font-size: clamp(2.3rem, 6vw, 3.7rem);
-      }
-
-    }
-
-
-    @media (max-width: 768px) {
-
-      .case-hero {
-        padding-top: 4rem;
-        padding-bottom: 3.5rem;
-      }
-
-      .case-hero-intro {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .case-hero-cover img {
-        max-width: 520px;
-      }
-
-      .case-section-layout {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .case-section {
-        padding: 4.5rem 0;
-      }
-
-      .case-card-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .case-image-row {
-        width: min(100%, 700px);
-        grid-template-columns: 1fr;
-      }
-
-      .case-ai-grid {
-        width: min(100%, 700px);
-        grid-template-columns: 1fr;
-      }
-
-      .case-meta {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .case-project-grid {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-
-    @media (max-width: 576px) {
-
-      .case-hero {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-      }
-
-      .case-section {
-        padding: 4rem 0;
-      }
-
-      .case-section-title {
-        font-size: clamp(2rem, 11vw, 3rem);
-      }
-
-      .case-hero-lead {
-        font-size: clamp(1.8rem, 9vw, 2.5rem);
-      }
-
-      .case-meta {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
-      }
-
-      .case-card {
-        padding: 1.75rem;
-      }
-
-      .case-image-row,
-      .case-single-image,
-      .case-ai-grid {
-        width: 100%;
-      }
-
-      .case-hero-cover img {
-        border-radius: 16px;
-      }
-
-    }
-
+    .ec{--ec-green:#566B4F;--ec-sage:#A9BAA4;--ec-ink:#1E2B24;--ec-cream:#ECECE5;
+      --ec-font:"Poppins",sans-serif;overflow:hidden;color:var(--ec-ink);font-family:var(--ec-font);background:var(--ec-cream)}
+    .ec h1,.ec h2,.ec h3,.ec h4,.ec h5{color:var(--ec-ink);font-family:var(--ec-font)}
+    .ec p{font-size:1.05rem;max-width:none;margin-left:0;margin-right:0;line-height:1.75;font-family:var(--ec-font)}
+    .ec .section-title{color:var(--ec-ink)}
+    .ec-section{padding:6rem 0}
+    .ec-cream{background:#fff}
+    .ec-on-dark{background:var(--ec-ink);color:#fff}
+    .ec-on-dark h1,.ec-on-dark h2,.ec-on-dark h3,.ec-on-dark h4,.ec-on-dark h5,.ec-on-dark .section-title{color:#fff}
+    .ec-on-green{background:var(--ec-green);color:#fff}
+    .ec-on-green h2,.ec-on-green h3,.ec-on-green h4,.ec-on-green .section-title{color:#fff}
+    .ec-on-sage{background:var(--ec-sage)}
+    .ec-label{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ec-green);margin-bottom:1rem}
+    .ec-on-dark .ec-label,.ec-on-green .ec-label{color:var(--ec-sage)}
+    .ec-on-green .ec-label{color:#dbe5d7}
+    .ec h2{font-size:clamp(1.9rem,3.4vw,2.8rem);font-weight:600;margin-bottom:1.25rem;line-height:1.2}
+    .ec-lead{font-size:1.2rem!important;max-width:640px!important}
+    .ec-hero{padding:4.5rem 0 5rem}
+    .ec-breadcrumb{font-size:.85rem;color:#666;margin-bottom:3rem}
+    .ec-breadcrumb a{color:#444}.ec-breadcrumb a:hover{color:var(--ec-green)}
+    .ec-hero-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:3.5rem;align-items:center}
+    .ec-title{font-size:clamp(3rem,6vw,5.2rem)!important;font-weight:300!important;letter-spacing:-.03em;color:var(--ec-green)!important;line-height:1;margin-bottom:1.25rem}
+    .ec-meta{margin:2rem 0 0}
+    .ec-meta div{margin-bottom:1rem}
+    .ec-meta dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ec-green);font-weight:600}
+    .ec-meta dd{margin:0;font-size:1rem}
+    .ec-meta a{color:var(--ec-green);text-decoration:underline}
+    .ec-fig{margin:0}
+    .ec-fig img{width:100%;height:auto;display:block;border-radius:14px}
+    .ec-fig figcaption{font-size:.85rem;opacity:.75;margin-top:.75rem}
+    .ec-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+    .ec-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
+    .ec-card{border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:1.75rem}
+    .ec-card h3{font-size:1rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem}
+    .ec-card p{margin:0;opacity:.9}
+    .ec-palette{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+    .ec-sw{border-radius:14px;padding:5.5rem 1.1rem 1rem;font-size:.85rem;line-height:1.5;color:#fff}
+    .ec-sw b{display:block;font-weight:600}
+    .ec-sw.light{color:var(--ec-ink)}
+    .ec-sw.outline{outline:1px solid rgba(30,43,36,.2);outline-offset:-1px}
+    .ec-type{display:flex;align-items:baseline;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;font-family:var(--ec-font)}
+    .ec-type .big{font-size:5rem;font-weight:300;line-height:1;color:var(--ec-green)}
+    .ec-type span{font-size:1rem;opacity:.8}
+    .ec-stack{display:grid;gap:2.5rem;margin-top:3rem}
+    .ec-two{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+    .ec-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin:3rem 0}
+    .ec-stat{background:rgba(255,255,255,.1);border-radius:14px;padding:1.4rem 1.1rem}
+    .ec-stat strong{display:block;font-size:2.3rem;font-weight:300;line-height:1.1;color:#fff}
+    .ec-stat span{font-size:.85rem;line-height:1.4;display:block;margin-top:.5rem}
+    .ec-stat small{display:block;opacity:.8;font-size:.78rem;margin-top:.5rem}
+    .ec-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;border-radius:50px;border:1.5px solid currentColor;font-size:.9rem;font-weight:500;text-decoration:none;transition:.2s}
+    .ec-btn:hover{background:var(--ec-green);border-color:var(--ec-green);color:#fff!important}
+    .ec-on-dark .ec-btn,.ec-on-green .ec-btn{color:#fff}
+    .ec-on-dark .ec-btn:hover,.ec-on-green .ec-btn:hover{background:#fff;color:var(--ec-ink)!important;border-color:#fff}
+    .ec-btn-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+    .ec-down{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.5rem}
+    .ec-down a{display:block;background:#fff;border-radius:14px;padding:1.4rem 1.2rem;color:var(--ec-ink);text-decoration:none;font-weight:500;font-size:.95rem;transition:.2s}
+    .ec-down a:hover{transform:translateY(-3px);color:var(--ec-green)}
+    .ec-down i{display:block;font-size:1.6rem;color:var(--ec-green);margin-bottom:.6rem}
+    .ec-down small{display:block;font-weight:400;opacity:.65;margin-top:.2rem}
+    .ec-pers{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
+    .ec-pers div{text-align:left}
+    .ec-pers img{width:96px;height:96px;border-radius:50%;object-fit:cover;display:block;margin-bottom:1rem}
+    .ec-pers h3{font-size:1.1rem;margin:0 0 .3rem}
+    .ec-pers p{font-size:.9rem;margin:0;opacity:.85;line-height:1.5}
+    .ec-bars{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+    .ec-bar{border-top:2px solid var(--ec-green);padding-top:1rem}
+    .ec-bar strong{display:block;font-size:2.2rem;font-weight:300;line-height:1.1}
+    .ec-bar span{font-size:.88rem;line-height:1.45;display:block;margin-top:.5rem;opacity:.85}
+    .ec-apages{list-style:none;margin:2.5rem 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:.75rem}
+    .ec-apages li{background:rgba(255,255,255,.08);border-radius:12px;padding:1rem}
+    .ec-apages b{display:block;font-size:1rem;font-weight:600;color:#fff}
+    .ec-apages span{display:block;font-size:.8rem;line-height:1.4;margin-top:.35rem;color:var(--ec-sage)}
+    .ec-astats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+    .ec-astats div{background:var(--ec-sage);color:var(--ec-ink);border-radius:18px;padding:1.4rem 1.5rem}
+    .ec-astats div:nth-child(2){background:#E8947A}.ec-astats div:nth-child(3){background:#E6D8B5}.ec-astats div:nth-child(4){background:var(--ec-cream)}
+    .ec-astats strong{display:block;font-size:2.8rem;font-weight:600;line-height:1;color:var(--ec-ink)}
+    .ec-astats span{display:block;font-size:.9rem;margin-top:.5rem}
+    .ec-acards{display:grid;grid-template-columns:repeat(6,1fr);gap:.9rem;margin-top:1.5rem}
+    .ec-acard{--c:#A9BAA4;position:relative;background:var(--c);color:var(--ec-ink);border-radius:18px;padding:1.2rem 1rem 1rem;display:flex;flex-direction:column;min-width:0}
+    .ec-acard:nth-child(4n+1){--c:#E8947A}.ec-acard:nth-child(4n+2){--c:#E6D8B5}.ec-acard:nth-child(4n+3){--c:#A9BAA4}.ec-acard:nth-child(4n){--c:#ECECE5}
+    .ec-anum{font-size:2.4rem;font-weight:600;line-height:1;opacity:.28;margin-bottom:.4rem}
+    .ec .ec-acard h3{font-size:1.02rem;font-weight:600;line-height:1.2;margin:0 0 .9rem;color:var(--ec-ink)}
+    .ec-wcag{position:absolute;top:1rem;right:1rem;font-size:.62rem;letter-spacing:.04em;border:1px solid rgba(30,43,36,.45);border-radius:999px;padding:.15rem .5rem;color:var(--ec-ink)}
+    .ec .ec-acard p{font-size:.8rem;line-height:1.45;margin:0;color:var(--ec-ink)}
+    .ec-acard p b{display:block;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.25rem}
+    .ec-aprob{padding-bottom:.9rem;margin-bottom:.9rem!important;border-bottom:1.5px dashed rgba(30,43,36,.35);flex:1}
+    .ec-asol{background:var(--ec-ink);color:#fff!important;border-radius:12px;padding:.7rem .75rem}
+    .ec .ec-acard p.ec-asol{color:#fff}
+    .ec-asol b{color:var(--c)}
+    .ec-aprinc{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:1rem}
+    .ec-aprinc div{border-top:2px solid var(--ec-sage);padding-top:1rem}
+    .ec-aprinc b{display:block;font-size:1.1rem;font-weight:600;color:#fff}
+    .ec-aprinc span{display:block;font-size:.88rem;line-height:1.5;margin-top:.4rem;opacity:.9}
+    @media(max-width:991px){
+      .ec-apages{grid-template-columns:repeat(3,1fr)}.ec-acards{grid-template-columns:repeat(3,1fr)}.ec-astats{grid-template-columns:repeat(2,1fr)}.ec-aprinc{grid-template-columns:repeat(2,1fr)}
+      .ec-pers,.ec-bars{grid-template-columns:repeat(2,1fr)}
+      .ec-section{padding:4.5rem 0}
+      .ec-hero-grid,.ec-intro-grid,.ec-two{grid-template-columns:1fr}
+      .ec-stats{grid-template-columns:repeat(2,1fr)}
+      .ec-down{grid-template-columns:repeat(2,1fr)}
+      .ec-palette{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:576px){
+      .ec-section{padding:3.5rem 0}.ec-hero{padding-top:3rem}
+      .ec-cards{grid-template-columns:1fr}.ec-pers,.ec-bars{grid-template-columns:1fr}.ec-stats{grid-template-columns:1fr}.ec-down{grid-template-columns:1fr}.ec-apages,.ec-aprinc,.ec-acards{grid-template-columns:1fr 1fr}.ec-astats strong{font-size:2.2rem}
+      .ec-type .big{font-size:3.5rem}
+    }
+
+    /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
+    .more-projects { background: #fff; padding: 6rem 0; }
+    .more-projects .more-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+    @media (max-width: 991px) { .more-projects { padding: 4.5rem 0; } }
+    @media (max-width: 576px) { .more-projects { padding: 3.5rem 0; } }
   </style>
 
 </head>
 
 
-<body class="case-page">
+<body>
 
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-white py-3">
+<!-- NAVBAR -->
 
-    <div class="container">
+<nav class="navbar navbar-expand-lg py-3">
 
-      <a class="navbar-brand" href="index.html">
-        <img
-          src="assets/img/LOGO.png"
-          alt="Logo Marta Brentan"
-          height="36"
-        >
-      </a>
+  <div class="container">
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <a class="navbar-brand" href="index.html" aria-label="Homepage Marta Brentan">
+      <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+    </a>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Apri navigazione"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <ul class="navbar-nav ms-auto align-items-lg-center">
+    <div class="collapse navbar-collapse" id="navbarNav">
 
-          <li class="nav-item">
-            <a class="nav-link" href="chi-sono.html">Chi sono</a>
-          </li>
+      <ul class="navbar-nav ms-auto align-items-lg-center">
 
-          <li class="nav-item">
-            <a class="nav-link" href="progetti.html">Progetti</a>
-          </li>
+        <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+        <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
-          </li>
+        <li class="nav-item d-none d-lg-block ms-lg-3">
+          <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica Portfolio
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="contatti.html">Contatti</a>
-          </li>
+        <li class="nav-item d-none d-lg-block ms-2">
+          <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica CV
+          </a>
+        </li>
 
-          <li class="nav-item d-none d-lg-block ms-lg-3">
-            <a
-              class="btn btn-primary"
-              href="assets/docs/Portfolio Marta Brentan.pdf"
-              target="_blank"
-            >
-              Scarica Portfolio
-            </a>
-          </li>
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>Portfolio
+          </a>
+        </li>
 
-          <li class="nav-item d-none d-lg-block ms-2">
-            <a
-              class="btn custom-outline"
-              href="assets/docs/CV Marta Brentan.pdf"
-              target="_blank"
-            >
-              Scarica CV
-            </a>
-          </li>
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>CV
+          </a>
+        </li>
 
-          <li class="nav-item d-lg-none">
-            <a
-              href="assets/docs/Portfolio Marta Brentan.pdf"
-              target="_blank"
-              class="nav-link"
-            >
-              <i class="bi bi-download me-2"></i>Portfolio
-            </a>
-          </li>
+      </ul>
 
-          <li class="nav-item d-lg-none">
-            <a
-              href="assets/docs/CV Marta Brentan.pdf"
-              target="_blank"
-              class="nav-link"
-            >
-              <i class="bi bi-download me-2"></i>CV
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
     </div>
-  </nav>
 
+  </div>
 
+</nav>
+
+<main>
+<div class="ec">
 
   <!-- HERO -->
-  <header class="case-hero">
-
+  <section class="ec-hero">
     <div class="container">
-
-      <div class="case-breadcrumb">
-        <a href="index.html">Home</a>
-        <span> › </span>
-        <a href="progettazione.html">Progettazione</a>
-        <span> › </span>
-        <span class="current">Ecodream</span>
-      </div>
-
-      <h1 class="case-hero-title">
-        Redesign Ecodream
-      </h1>
-
-
-      <div class="case-hero-intro">
-
-        <div class="case-hero-cover">
-          <img
-            src="assets/img/logo-ecodream.webp"
-            alt="Cover progetto Ecodream"
-            loading="eager"
-          >
+      <p class="ec-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Ecodream Design</span></p>
+      <div class="ec-hero-grid">
+        <div>
+          <h1 class="ec-title">ecodream</h1>
+          <p class="ec-lead">Borse e zaini nati da materiali di scarto: ho ripensato il loro sito, dal wireframe al test con gli utenti.</p>
+          <dl class="ec-meta">
+            <div><dt>Ambito</dt><dd>UX/UI design di un e-commerce</dd></div>
+            <div><dt>Percorso</dt><dd>Discovery · Wireframe · User test · UI desktop e mobile · Accessibilità</dd></div>
+            <div><dt>Strumenti</dt><dd>Figma, Useberry, Google Form, Similarweb, WCAG 2.2</dd></div>
+          </dl>
         </div>
-
-
-        <div class="case-hero-copy">
-
-          <p class="case-hero-lead">
-            Un e-commerce più chiaro,
-            accessibile e vicino ai suoi utenti.
-          </p>
-
-          <p class="case-hero-description">
-            Redesign completo del sito web di Ecodream Design,
-            brand indipendente di moda sostenibile. Ho lavorato
-            sull'architettura dell'informazione, sulla navigazione,
-            sull'esperienza mobile e sulla progettazione di nuove
-            funzionalità per rendere l'e-commerce più semplice da
-            esplorare e acquistare.
-          </p>
-
-          <a
-            href="assets/docs/Progetto Discovey.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="case-text-link"
-          >
-            Scarica il progetto completo
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-
-        </div>
-
+        <figure class="ec-fig "><img src="assets/img/sfondo-discovery.webp" alt="Prototipo della homepage Ecodream su laptop e le sue sezioni" loading="lazy"></figure>
       </div>
-
     </div>
+  </section>
 
-  </header>
-
-
-
-  <!-- 01 — THE PROJECT -->
-  <section class="case-section">
-
+  <!-- IL CLIENTE -->
+  <section class="ec-section ec-on-dark">
     <div class="container">
-
-      <div class="case-section-layout">
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-            <span class="case-section-number">01</span>
-            <span class="case-section-eyebrow">THE PROJECT</span>
-          </div>
-
-          <h2 class="case-section-title">
-            Un brand sostenibile
-            da raccontare meglio.
-          </h2>
-
+      <div class="ec-intro-grid">
+        <div>
+          <p class="ec-label">Il cliente</p>
+          <h2>E-commerce sostenibile</h2>
         </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            Ecodream Design è un brand indipendente di moda sostenibile
-            con sede a Borgo San Lorenzo, nel Mugello. Produce borse,
-            zaini e accessori eco-friendly artigianali e Made in Italy,
-            utilizzando materiali di recupero e riciclati.
-          </p>
-
-          <p>
-            È presente nella Revolution Map di Fashion Revolution Italia
-            e ha aderito alla campagna WearMe30Times. La scelta di lavorare
-            su Ecodream nasce quindi dall'interesse per una comunicazione
-            capace di raccontare non solo il prodotto, ma anche i suoi
-            valori etici e il suo approccio al consumo consapevole.
-          </p>
-
-          <p>
-            Il progetto parte da una criticità precisa: un brand con una
-            storia d'impresa solida e prodotti coerenti con i valori
-            dichiarati, ma una presenza digitale che non riusciva a
-            tradurre tutto questo in un'esperienza altrettanto curata.
-          </p>
-
-          <div class="case-meta">
-
-            <div>
-              <span class="case-meta-label">Ambito</span>
-              <p class="case-meta-value">UX/UI Design</p>
-            </div>
-
-            <div>
-              <span class="case-meta-label">Anno</span>
-              <p class="case-meta-value">2025</p>
-            </div>
-
-            <div>
-              <span class="case-meta-label">Tools</span>
-              <p class="case-meta-value">
-                Figma · Adobe Creative Suite · Maze · Agent AI
-              </p>
-            </div>
-
-          </div>
-
+        <div>
+          <p>Ecodream Design vende borse, zaini e accessori fatti con materiali recuperati: pelle, PVC, tessuti. Il sito però non era all'altezza del progetto.</p>
+          <p>Ho analizzato la versione esistente con le 10 euristiche di Nielsen e con le WCAG 2.2, poi ho intervistato 22 persone: da lì sono nati quattro personas e un nuovo sito.</p>
         </div>
+      </div>
+      <div class="ec-cards">
+        <div class="ec-card"><h3>Mission</h3><p>Rendere accessibile a tutti un modo di consumare più consapevole, dando nuova vita ai materiali.</p></div>
+        <div class="ec-card"><h3>Vision</h3><p>Un mondo in cui il design rispetta le persone e l'ambiente, e la creatività nasce dal recupero.</p></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- DISCOVERY -->
+  <section class="ec-section ec-cream">
+    <div class="container">
+      <p class="ec-label">01 · Discovery</p>
+      <h2>Capire il sito, e chi lo usa</h2>
+      <p class="ec-lead">Analisi euristica con le 10 regole di Nielsen, competitor, ricerca sul target e una survey a 22 persone: da qui nascono quattro personas e i loro percorsi.</p>
+      <div class="ec-two" style="margin-top:3rem">
+        <p>Ecodream Design è un brand indipendente di moda sostenibile: borse, zaini e accessori da materiali di recupero, produzione artigianale e Made in Italy, con uno showroom a Borgo San Lorenzo, nel Mugello. Aderisce a slow fashion, upcycling e alla campagna WearMe30Times.</p>
+        <p>Rispetto ai competitor mancano barra di ricerca, lista preferiti, CTA accattivanti, filtri, recensioni, assistenza e pagamenti alternativi. Il punto di forza è la storia d’impresa e la descrizione dei materiali.</p>
+      </div>
+      <div class="ec-stack">
+      </div>
+      <div class="ec-bars">
+        <div class="ec-bar"><strong>76%</strong><span>dei visitatori usa il cellulare (Similarweb)</span></div>
+        <div class="ec-bar"><strong>72,7%</strong><span>compra borse dal cellulare e le vuole ordinate per modelli</span></div>
+        <div class="ec-bar"><strong>63,6%</strong><span>vuole filtri e ordinamento, che mancano</span></div>
+        <div class="ec-bar"><strong>54,5%</strong><span>trova un ostacolo i costi di spedizione</span></div>
+      </div>
+      <div class="ec-two" style="margin-top:3rem">
+        <figure class="ec-fig "><img src="assets/img/ec-disc-survey-funzioni.webp" alt="Funzioni più importanti in un e-commerce di borse secondo la survey" loading="lazy"></figure>
+        <figure class="ec-fig "><img src="assets/img/ec-disc-survey-filtri.webp" alt="Filtri più usati: prezzo, materiale, dimensioni e colori" loading="lazy"></figure>
       </div>
 
+      <p class="ec-label" style="margin-top:5rem">Personas</p>
+      <h2>Quattro persone, quattro modi di comprare</h2>
+      <div class="ec-pers">
+        <div><img src="assets/img/ec-disc-persona-sara.webp" alt="Sara" loading="lazy"><h3>Sara, 27</h3><p>Organizzatrice di eventi a Lugano. Ha un blog su cinema e sostenibilità.</p></div>
+        <div><img src="assets/img/ec-disc-persona-greta.webp" alt="Greta" loading="lazy"><h3>Greta, 20</h3><p>Studentessa di Filosofia a Milano. Cerca uno zaino prima di partire per la Cambogia.</p></div>
+        <div><img src="assets/img/ec-disc-persona-grazia.webp" alt="Grazia" loading="lazy"><h3>Grazia, 56</h3><p>Libraia a Firenze. Vorrebbe un regalo per la figlia e comprare con calma.</p></div>
+        <div><img src="assets/img/ec-disc-persona-maurizio.webp" alt="Maurizio" loading="lazy"><h3>Maurizio, 60</h3><p>Calzolaio a Venezia. Cerca materiali di recupero e pensa a diventare rivenditore.</p></div>
+      </div>
+     
+    
+      <div class="ec-btn-row">
+        <a class="ec-btn" href="assets/docs/Progetto Discovey.pdf" download>Scarica il progetto discovery (PDF) <i class="bi bi-download"></i></a>
+        <a class="ec-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf2krZNa1ierSdTgc0B-RWDuUKJurpDmdG3oRbkYccpGdKLVA/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">La survey su Google Form <i class="bi bi-arrow-up-right"></i></a>
+      </div>
     </div>
+  </section>
 
+  <!-- WIREFRAME -->
+  <section class="ec-section">
+    <div class="container">
+      <p class="ec-label">02 · Wireframe</p>
+      <h2>Prima la struttura</h2>
+      <p class="ec-lead">Dai pain points del sito esistente alla nuova sitemap, poi le pagine in mobile e desktop.</p>
+      <div class="ec-stack">
+        <figure class="ec-fig "><img src="assets/img/ec-sitemap.webp" alt="Nuova sitemap del sito Ecodream" loading="lazy"><figcaption>La nuova sitemap</figcaption></figure>
+      </div>
+      <div class="ec-btn-row">
+        <a class="ec-btn" href="assets/docs/Progetto Wireframe.pdf" download>Scarica il progetto wireframe (PDF) <i class="bi bi-download"></i></a>
+        <a class="ec-btn" href="https://www.figma.com/design/mHi6uX0NluGNFx7V5ZNLGq/Ecodream-Design?node-id=0-1&t=w5F66TKxjqrBKx8S-1" target="_blank" rel="noopener noreferrer">Wireframe desktop su Figma <i class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- USER TEST -->
+  <section class="ec-section ec-on-green">
+    <div class="container">
+      <p class="ec-label">03 · User test</p>
+      <h2>Cosa succede quando lo usano davvero</h2>
+      <p class="ec-lead">Test remoto e senza moderatore su Useberry, con 8 partecipanti reclutati su Facebook, Discord, Reddit e LinkedIn. Sette hanno concluso il test.</p>
+      <div class="ec-stats">
+        <div class="ec-stat"><strong>100%</strong><span>Esplorare il prototipo</span><small>20,4 s</small></div>
+        <div class="ec-stat"><strong>71%</strong><span>Scoprire chi c'è dietro il brand</span><small>17,8 s</small></div>
+        <div class="ec-stat"><strong>86%</strong><span>Trovare i materiali</span><small>8,8 s</small></div>
+        <div class="ec-stat"><strong>86%</strong><span>Card sorting del menu</span><small>2 min 4,8 s</small></div>
+        <div class="ec-stat"><strong>71%</strong><span>Comprare una borsa nera</span><small>1 min 4,8 s · 29% abbandona</small></div>
+      </div>
+      <div class="ec-two">
+        <figure class="ec-fig "><img src="assets/img/ec-test-acquisto.webp" alt="Risultati del task di acquisto: analisi e miglioramenti" loading="lazy"></figure>
+        <figure class="ec-fig "><img src="assets/img/ec-test-modifiche.webp" alt="Modifiche al prototipo dopo il test: filtri più visibili" loading="lazy"></figure>
+      </div>
+      <div class="ec-btn-row">
+        <a class="ec-btn" href="assets/docs/Progetto User test.pdf" download>Scarica il progetto user test (PDF) <i class="bi bi-download"></i></a>
+        <a class="ec-btn" href="https://app.useberry.com/sharing-results/dDgNSGkclPYfq4/?segmentID=30022375-da37-46d1-a394-a7ec64bf5498" target="_blank" rel="noopener noreferrer">Risultati su Useberry <i class="bi bi-arrow-up-right"></i></a>
+        <a class="ec-btn" href="https://www.figma.com/proto/hamLbmHcHFIUubK2rRo8lS/Ecodream-Design---Usability-test?node-id=2-1398&p=f&t=x3Q8C8VAnUVQFdiB-1&scaling=min-zoom" target="_blank" rel="noopener noreferrer">Prototipo del test <i class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- UI DESKTOP -->
+  <section class="ec-section">
+    <div class="container">
+      <p class="ec-label">04 · User interface desktop</p>
+      <h2>Una palette sobria che lascia parlare le foto dei materiali.</h2>
+      <p class="ec-lead">Color palette, tipografia, Griglia a 12 colonne, margini da 64 px, gutter da 16 px. </p>
+      <div class="ec-palette">
+        <div class="ec-sw" style="background:#566B4F"><b>Verde bosco</b>#566B4F · CTA</div>
+        <div class="ec-sw light" style="background:#A9BAA4"><b>Salvia</b>#A9BAA4 · accento</div>
+        <div class="ec-sw" style="background:#1E2B24"><b>Nero bosco</b>#1E2B24 · testi</div>
+        <div class="ec-sw light outline" style="background:#ECECE5"><b>Crema</b>#ECECE5 · sfondo</div>
+      </div>
+      <div class="ec-type"><span class="big">Poppins</span><span>Titoli, testi e bottoni con un solo font.</span></div>
+      <div class="ec-stack">
+      </div>
+      <div class="ec-btn-row">
+        <a class="ec-btn" href="assets/docs/Progetto_User_Interface_Desktop.pdf" download>Scarica la UI desktop (PDF) <i class="bi bi-download"></i></a>
+        <a class="ec-btn" href="https://www.figma.com/proto/xED9T0uSDE3zo5Y9g2nEQK/Prototipi-Desktop-Ecodream-Design?node-id=208-680&t=QLCDff5sMKCtIOix-1" target="_blank" rel="noopener noreferrer">Prototipo desktop <i class="bi bi-arrow-up-right"></i></a>
+        <a class="ec-btn" href="https://www.figma.com/design/xED9T0uSDE3zo5Y9g2nEQK/Prototipi-Ecodream-Design?node-id=0-1&p=f&t=nX6y9dUEYrl2aoxh-0" target="_blank" rel="noopener noreferrer">UI kit su Figma <i class="bi bi-arrow-up-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- UI MOBILE -->
+  <section class="ec-section ec-on-sage">
+    <div class="container">
+      <p class="ec-label" style="color:var(--ec-ink)">05 · User interface mobile</p>
+      <h2>Ecodream mobile</h2>
+      <p class="ec-lead">Stesso UI kit, ripensato per il pollice: filtri a scomparsa, schede prodotto verticali, menu essenziale.</p>
+      <figure class="ec-fig "><img src="assets/img/sfondo-wireframe.webp" alt="Prototipo mobile: homepage" loading="lazy"></figure>
+    </div>
   </section>
 
 
-
-  <!-- 02 — THE CHALLENGE -->
-  <section class="case-section">
-
+  <!-- ACCESSIBILITA -->
+  <section class="ec-section ec-on-dark">
     <div class="container">
-
-      <div class="case-section-layout">
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-            <span class="case-section-number">02</span>
-            <span class="case-section-eyebrow">THE CHALLENGE</span>
-          </div>
-
-          <h2 class="case-section-title">
-            Problems, bisogni
-            e opportunità.
-          </h2>
-
-        </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            L'analisi ha evidenziato una serie di problemi di usabilità
-            e accessibilità che rendevano l'esperienza di acquisto
-            dispersiva, soprattutto da mobile.
-          </p>
-
-          <p>
-            Il 76% dei visitatori accedeva al sito da cellulare e il target
-            principale — donne tra i 25 e i 50 anni con una sensibilità
-            verso la sostenibilità — si aspettava un'esperienza di acquisto
-            fluida, con filtri, recensioni e informazioni chiare su
-            spedizioni e resi.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="case-card-grid">
-
-        <article class="case-card case-card-dark">
-
-          <span class="case-card-number">01 / PROBLEMS</span>
-
-          <h3>
-            Un e-commerce difficile da esplorare
-          </h3>
-
-          <p>
-            Navigazione parzialmente in inglese nonostante la traduzione
-            selezionata in italiano, assenza di barra di ricerca e filtri,
-            gerarchia delle informazioni debole, lunghi blocchi di testo,
-            icone del carrello poco visibili, assenza di wishlist,
-            recensioni e FAQ. I prodotti outlet erano quasi nascosti,
-            l'account poco chiaro e i materiali difficili da trovare.
-          </p>
-
+      <p class="ec-label">06 · Accessibilità</p>
+      <h2>Un sito che si legge e si usa per tutti</h2>
+      <p class="ec-lead">Sei pagine del sito Ecodream, un controllo con le WCAG 2.2 e il Color contrast checker. Ecco cosa non funzionava e come lo sistemerei.</p>
+      <div class="ec-astats"><div><strong>6</strong><span>pagine analizzate</span></div><div><strong>12</strong><span>problemi ricorrenti</span></div><div><strong>4</strong><span>principi WCAG 2.2</span></div><div><strong>4,5:1</strong><span>contrasto minimo richiesto</span></div></div>
+      <ul class="ec-apages"><li><b>Home</b><span>Link e immagini non percepibili</span></li><li><b>About</b><span>Un muro di testo grigio</span></li><li><b>Contatti</b><span>Nessuna assistenza diretta</span></li><li><b>Materiali</b><span>Non si può comprare</span></li><li><b>Shop</b><span>Senza filtri né ricerca</span></li><li><b>Checkout</b><span>Modulo lungo, nessun riepilogo</span></li></ul>
+      <div class="ec-acards">
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 1.4.3</span>
+          <span class="ec-anum">01</span>
+          <h3>Contrasto</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Testo grigio su bianco, quasi illeggibile.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Almeno 4,5:1 di contrasto.</p>
         </article>
-
-
-        <article class="case-card">
-
-          <span class="case-card-number">02 / NEEDS</span>
-
-          <h3>
-            Un'esperienza più semplice e orientata all'acquisto
-          </h3>
-
-          <p>
-            L'analisi del target ha evidenziato come bisogni principali
-            uno shop ordinato per modelli con filtri e ordinamento
-            (72,7%), informazioni chiare su spedizioni, resi e cambi
-            (45,5%), recensioni, registrazione semplice, descrizioni
-            esaustive dei materiali e assistenza immediata tramite chat.
-            Per il rivenditore emergeva inoltre la necessità di acquistare
-            direttamente i materiali e trovare facilmente la CTA
-            "Diventa rivenditore".
-          </p>
-
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 2.4.4</span>
+          <span class="ec-anum">02</span>
+          <h3>Link invisibili</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Immagini cliccabili che non sembrano tali, link grigi in corsivo.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Colore e formato riconoscibili, nomi chiari.</p>
         </article>
-
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 1.1.1</span>
+          <span class="ec-anum">03</span>
+          <h3>Immagini mute</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Foto senza testo alternativo: per lo screen reader non esistono.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Testo ALT coerente, senza ripetizioni.</p>
+        </article>
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 3.1.2</span>
+          <span class="ec-anum">04</span>
+          <h3>Lingua mista</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Sito in italiano, titoli e link in inglese.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>«Traduzione» che traduce davvero.</p>
+        </article>
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 1.3.1</span>
+          <span class="ec-anum">05</span>
+          <h3>Muri di testo</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Un solo blocco, senza titoli né spazi bianchi.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>H1, H2, H3 in ordine e più aria.</p>
+        </article>
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 3.3.x</span>
+          <span class="ec-anum">06</span>
+          <h3>Moduli infiniti</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Lunghi, solo mouse, errori segnalati da un asterisco.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Più corti, da tastiera, errori spiegati.</p>
+        </article>
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 2.4.5</span>
+          <span class="ec-anum">07</span>
+          <h3>Shop senza bussola</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Oltre 50 prodotti senza filtri né ricerca.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Filtro, ordinamento e barra di ricerca.</p>
+        </article>
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 2.5.8</span>
+          <span class="ec-anum">08</span>
+          <h3>Target minuscoli</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Carrello e link piccoli e troppo vicini.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Icone grandi e ben distanziate.</p>
+        </article>
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 3.2.3</span>
+          <span class="ec-anum">09</span>
+          <h3>Pagine incoerenti</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Materiali non si comprano lì; niente breadcrumb.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Acquisto ovunque e breadcrumb.</p>
+        </article>
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 3.3.5</span>
+          <span class="ec-anum">10</span>
+          <h3>Contatti muti</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Nessuna mail generica, telefono o chat.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Mail, telefono e chat live.</p>
+        </article>
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 3.2.6</span>
+          <span class="ec-anum">11</span>
+          <h3>Checkout al buio</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Niente riepilogo ordine né info su spedizioni e resi.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Riepilogo e info a ogni passo.</p>
+        </article>
+        <article class="ec-acard">
+          <span class="ec-wcag">WCAG 1.4.4</span>
+          <span class="ec-anum">12</span>
+          <h3>Nomi poco chiari</h3>
+          <p class="ec-aprob"><b><i class="bi bi-x-circle-fill"></i> Problema</b>Nomi e codici prodotto vaghi, in colori deboli.</p>
+          <p class="ec-asol"><b><i class="bi bi-check-circle-fill"></i> Soluzione</b>Nomi descrittivi, più grandi e contrastati.</p>
+        </article>
       </div>
-
-
-      <div class="case-single-image">
-
-        <img
-          src="assets/img/Redesign ecodream-Photoroom.png"
-          alt="Analisi del sito originale Ecodream"
-          loading="lazy"
-        >
-
+      <p class="ec-label" style="margin-top:4.5rem">I quattro principi WCAG</p>
+      <div class="ec-aprinc"><div><b>Percepibile</b><span>Testo poco contrastato, link e immagini senza etichette o alternative.</span></div><div><b>Utilizzabile</b><span>Moduli non compilabili da tastiera, niente breadcrumb né indicatori di focus.</span></div><div><b>Comprensibile</b><span>Voci tecniche in lingua diversa, pagine che non fanno ciò che promettono.</span></div><div><b>Robusto</b><span>Chi usa tecnologie assistive non può cambiare colore, dimensione o formato.</span></div></div>
+      <div class="ec-btn-row">
+        <a class="ec-btn" href="assets/docs/Progetto_Accessibilita.pdf" download>Scarica il progetto accessibilità (PDF) <i class="bi bi-download"></i></a>
       </div>
-
     </div>
-
   </section>
-
-
-
-  <!-- 03 — THE STRATEGY -->
-  <section class="case-section">
-
-    <div class="container">
-
-      <div class="case-section-layout">
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-            <span class="case-section-number">03</span>
-            <span class="case-section-eyebrow">THE STRATEGY</span>
-          </div>
-
-          <h2 class="case-section-title">
-            Ripensare la struttura
-            prima dell'interfaccia.
-          </h2>
-
-        </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            Ho ricostruito completamente la sitemap e ridefinito
-            l'architettura dell'informazione per rendere più evidente
-            il percorso tra scoperta, scelta e acquisto.
-          </p>
-
-          <p>
-            Lo shop è stato ristrutturato introducendo filtri per modello,
-            materiale, prezzo, dimensione e colore. Ogni prodotto include
-            inoltre collegamenti interni a spedizioni, resi e metodi di
-            pagamento.
-          </p>
-
-          <p>
-            Sono state aggiunte Wishlist, recensioni, FAQ e una pagina
-            dedicata ai materiali, con la possibilità di acquistare
-            direttamente i prodotti destinati ai rivenditori. La CTA
-            "Diventa rivenditore" è stata resa più visibile e accessibile.
-          </p>
-
-          <div class="case-resources">
-
-            <p class="case-resources-title">
-              Approfondisci il progetto
-            </p>
-
-            <ul class="case-resources-list">
-
-              <li>
-                <a
-                  href="https://www.figma.com/design/mHi6uX0NluGNFx7V5ZNLGq/Ecodream-Design?node-id=0-1&t=6M9Vkwe7XZyxdm7S-1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-arrow-up-right"></i>
-                  Wireframe mid-fidelity
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://www.figma.com/design/12Mr3elloynFCBbUkay9rL/Prototipi-mobile-Ecodream-Design?node-id=0-1&p=f"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-arrow-up-right"></i>
-                  Prototipi Desktop
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://www.figma.com/design/12Mr3elloynFCBbUkay9rL/Prototipi-mobile-Ecodream-Design?node-id=0-1&p=f"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-arrow-up-right"></i>
-                  Prototipi Mobile
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="case-image-row">
-
-        <div class="case-image">
-          <img
-            src="assets/img/sfondo-prototipi-desktop.webp"
-            alt="Prototipi desktop Ecodream"
-            loading="lazy"
-          >
-        </div>
-
-        <div class="case-image">
-          <img
-            src="assets/img/mockup homepage.png"
-            alt="Wireframe shop Ecodream"
-            loading="lazy"
-          >
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- 04 — WIREFRAME + PROTOTYPING -->
-  <section class="case-section">
-
-    <div class="container">
-
-      <div class="case-section-layout">
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-            <span class="case-section-number">04</span>
-            <span class="case-section-eyebrow">WIREFRAME & PROTOTYPING</span>
-          </div>
-
-          <h2 class="case-section-title">
-            Dal wireframe
-            all'esperienza interattiva.
-          </h2>
-
-        </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            Dopo aver costruito i wireframe mid-fidelity in scala di grigi,
-            li ho trasformati in prototipi interattivi desktop e mobile,
-            lavorando sulla griglia, sulla tipografia, sui controlli UI,
-            sugli user flow e sull'iconografia.
-          </p>
-
-          <p>
-            Figma mi ha permesso di verificare rapidamente le soluzioni
-            progettuali e di testare l'interfaccia con utenti reali,
-            intervenendo sugli elementi che generavano maggiore attrito.
-          </p>
-
-        </div>
-
-      </div>
-
-
-        <div class="case-image">
-          <img
-            src="assets/img/sfondo-wireframe.webp"
-            alt="Prototipo Ecodream"
-            loading="lazy"
-          >
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- 05 — AI AGENTS -->
-  <section class="case-section">
-
-    <div class="container">
-
-      <div class="case-section-layout">
-
-        <div class="case-section-heading">
-
-          <div class="case-section-heading-top">
-            <span class="case-section-number">05</span>
-            <span class="case-section-eyebrow">AI AGENTS</span>
-          </div>
-
-          <h2 class="case-section-title">
-            Un assistente AI
-            per ridurre l'incertezza.
-          </h2>
-
-        </div>
-
-
-        <div class="case-section-copy">
-
-          <p>
-            Infine, ho progettato un assistente AI in grado di risolvere alcune
-            delle problematiche riscontrate dagli utenti durante la
-            navigazione del sito web mobile.
-          </p>
-
-          <p>
-            Un chatbot può diventare una scorciatoia cognitiva capace
-            di rispondere rapidamente a domande, accompagnare l'utente
-            nella scelta di un prodotto e sintetizzare informazioni
-            complesse.
-          </p>
-
-          <p>
-            Non tutte le criticità emerse, però, possono essere risolte
-            attraverso una soluzione conversazionale. Alcuni problemi
-            dipendono infatti da carenze strutturali dell'architettura
-            dell'informazione e dell'interfaccia e richiedono interventi
-            di redesign.
-          </p>
-
-          <div class="case-resources">
-
-            <p class="case-resources-title">
-              Approfondisci
-            </p>
-
-            <ul class="case-resources-list">
-
-              <li>
-                <a
-                  href="assets/docs/Progetto Agenti AI per Design - Marta Brentan.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="bi bi-arrow-up-right"></i>
-                  Chatbot Agente AI
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="case-ai-grid">
-
-        <article class="case-ai-item">
-
-          <img
-            src="assets/img/seconda schermata.png"
-            alt="Assistente AI Ecodream"
-            loading="lazy"
-          >
-
-          <div class="case-ai-content">
-
-            <span class="case-ai-label">
-              01 / RISPONDERE
-            </span>
-
-            <h3 class="case-ai-title">
-              Rispondere in modo naturale
-            </h3>
-
-            <p class="case-ai-text">
-              Il chatbot risponde a domande su spedizioni, resi,
-              materiali e informazioni utili all'acquisto.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="case-ai-item">
-
-          <img
-            src="assets/img/terza schermata.png"
-            alt="Chatbot che consiglia prodotti Ecodream"
-            loading="lazy"
-          >
-
-          <div class="case-ai-content">
-
-            <span class="case-ai-label">
-              02 / CONSIGLIARE
-            </span>
-
-            <h3 class="case-ai-title">
-              Guidare nella scelta
-            </h3>
-
-            <p class="case-ai-text">
-              Attraverso domande contestuali, l'assistente aiuta
-              l'utente a restringere la scelta in base alle sue esigenze.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="case-ai-item">
-
-          <img
-            src="assets/img/quinta schermata.png"
-            alt="Chatbot che guida l'utente Ecodream"
-            loading="lazy"
-          >
-
-          <div class="case-ai-content">
-
-            <span class="case-ai-label">
-              03 / GUIDARE
-            </span>
-
-            <h3 class="case-ai-title">
-              Ridurre il carico cognitivo
-            </h3>
-
-            <p class="case-ai-text">
-              L'AI sintetizza spiegazioni, racconta la storia dei materiali
-              e accompagna l'utente verso contenuti e approfondimenti.
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =======================================================
-       MORE TO EXPLORE
-  ======================================================= -->
-
-  <section class="py-5 text-center">
-
-
-    <div class="container">
-
-
-      <h2 class="section-title">
-        Altri progetti
-      </h2>
-
-
-      <div class="d-flex justify-content-center gap-4 flex-wrap">
-
-
-        <a
-          href="aesthetics.html"
-          class="project-card"
-        >
-
-
-          <img
-            src="assets/img/sfondo-progetto-estetica.webp"
-            alt="Mockup progetto Estetica 4.0"
-            loading="lazy"
-          >
-
-
-          <div class="project-content">
-
-
-            <h5>
-              Progettazione di due siti web
-            </h5>
-
-
-            <p>
-              Aesthetics ed Estetica 4.0: settore beauty
-            </p>
-
-
-            <p class="text-muted small">
-              personale
-            </p>
-
-
-          </div>
-
-
+ 
+  </div><!-- /ec -->
+
+  <!-- ALTRI PROGETTI -->
+  <section class="more-projects">
+    <div class="container text-center">
+      <h2 class="section-title mb-5">Altri progetti</h2>
+      <div class="more-list">
+        <a href="includo.html" class="project-card">
+          <img src="assets/img/sfondo-includo.webp" alt="Mockup Includo Brand Guidelines" loading="lazy">
+          <div class="project-content"><h5>Includo Brand Guidelines</h5><p>Logo, palette, icone e social</p><p class="text-muted small">start2impact</p></div>
         </a>
-
-
-        <a
-          href="limes.html"
-          class="project-card"
-        >
-
-
-          <img
-            src="assets/img/sfondo-progetto-finale.webp"
-            alt="Mockup progetto Limes"
-            loading="lazy"
-          >
-
-
-          <div class="project-content">
-
-
-            <h5>
-              Redesign Limes
-            </h5>
-
-
-            <p>
-              UX/UI Redesign di Limes: rivista italiana di geopolitica
-            </p>
-
-
-            <p class="text-muted small">
-              start2impact
-            </p>
-
-
-          </div>
-
-
+        <a href="ammartaggio.html" class="project-card">
+          <img src="assets/img/am-hero.webp" alt="Il sito ammartaggio.com" loading="lazy">
+          <div class="project-content"><h5>ammartaggio</h5><p>Il mio sito, dal logo al codice</p><p class="text-muted small">start2impact</p></div>
         </a>
-
-
       </div>
-
-
     </div>
-
-
   </section>
 
-  <!-- CONTACT -->
+
   <section class="contact-cta py-5">
 
     <div class="container">
@@ -1408,7 +529,6 @@
         Hai un progetto, un testo o un'idea? Parliamone.
       </h2>
 
-
       <form
         action="https://formspree.io/f/manvqedl"
         method="POST"
@@ -1416,59 +536,21 @@
       >
 
         <div class="form-group">
-
-          <label for="name">
-            Nome
-          </label>
-
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-          >
-
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
         </div>
-
 
         <div class="form-group">
-
-          <label for="email">
-            Email
-          </label>
-
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-          >
-
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
         </div>
-
 
         <div class="form-group">
-
-          <label for="message">
-            Messaggio
-          </label>
-
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-          ></textarea>
-
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
-
-        <button
-          type="submit"
-          class="btn btn-primary"
-        >
-          Invia
-        </button>
+        <button type="submit" class="btn btn-primary">Invia</button>
 
       </form>
 
@@ -1476,385 +558,155 @@
 
   </section>
 
+</main>
 
 
-  <!-- SCROLL UP MOBILE -->
-  <a
-    href="#"
-    class="scrollup-mobile d-lg-none"
-  >
-    <img
-      src="assets/icons/scroll up.png"
-      alt="Torna su"
-    >
-  </a>
 
+<!-- SCROLL UP MOBILE -->
 
-  <script>
+<a href="#" class="scrollup-mobile d-lg-none" aria-label="Torna su">
+  <img src="assets/icons/scroll up.png" alt="">
+</a>
 
-    document.addEventListener("DOMContentLoaded", function () {
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
 
-      const scrollBtn = document.querySelector('.scrollup-mobile');
+    const scrollBtn = document.querySelector(".scrollup-mobile");
 
-      window.addEventListener('scroll', () => {
+    if (!scrollBtn) return;
 
-        if (window.scrollY > 200) {
-          scrollBtn.classList.add('show');
-        } else {
-          scrollBtn.classList.remove('show');
-        }
-
-      });
-
-      scrollBtn.addEventListener('click', (e) => {
-
-        e.preventDefault();
-
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-
-      });
-
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
     });
 
-  </script>
+    scrollBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+  });
+</script>
 
 
 
-  <!-- FOOTER -->
-  <footer class="footer py-5 bg-dark text-white">
+<!-- FOOTER -->
 
-    <div class="container">
+<footer class="footer py-5 bg-dark text-white">
 
-      <div class="row g-4 d-none d-lg-flex">
+  <div class="container">
 
-        <div class="col-md-3">
+    <div class="row g-4 d-none d-lg-flex">
 
-          <h5>Su di me</h5>
-
-          <ul class="list-unstyled">
-
-            <li>
-              <a href="chi-sono.html">Chi sono</a>
-            </li>
-
-            <li>
-              <a
-                href="assets/docs/Portfolio Marta Brentan.pdf"
-                target="_blank"
-              >
-                Portfolio
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="assets/docs/CV Marta Brentan.pdf"
-                target="_blank"
-              >
-                CV
-              </a>
-            </li>
-
-            <li>
-              <a href="blog.html">Blog</a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="col-md-3">
-
-          <h5>Progetti</h5>
-
-          <ul class="list-unstyled">
-
-            <li>
-              <a href="editorial.html">Editorial</a>
-            </li>
-
-            <li>
-              <a href="voice.html">Voice</a>
-            </li>
-
-            <li>
-              <a href="design.html">Design</a>
-            </li>
-
-            <li>
-              <a href="progettazione.html">Progettazione</a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="col-md-3">
-
-          <h5>Contatti</h5>
-
-          <ul class="list-unstyled">
-
-            <li>
-              <a href="mailto:martabrentan@yahoo.com">
-                <i class="bi bi-envelope me-2"></i>Email
-              </a>
-            </li>
-
-            <li>
-              <a href="tel:+393470547503">
-                <i class="bi bi-telephone me-2"></i>Telefono
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.instagram.com/martabrentan"
-                target="_blank"
-              >
-                <i class="bi bi-instagram me-2"></i>Instagram
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.behance.net/martabrentan"
-                target="_blank"
-              >
-                <i class="bi bi-behance me-2"></i>Behance
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://www.linkedin.com/in/martabrentan"
-                target="_blank"
-              >
-                <i class="bi bi-linkedin me-2"></i>LinkedIn
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="col-md-3">
-
-          <h5>Aiuto</h5>
-
-          <ul class="list-unstyled">
-
-            <li>
-              <a href="policy.html">Policy</a>
-            </li>
-
-            <li>
-              <a href="contatti.html">Scrivimi</a>
-            </li>
-
-          </ul>
-
-        </div>
-
+      <div class="col-md-3">
+        <h5>Su di me</h5>
+        <ul class="list-unstyled">
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+          <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
       </div>
 
-
-
-      <div class="footer-mobile d-lg-none">
-
-        <div class="footer-accordion">
-
-          <button
-            class="accordion-btn"
-            data-bs-toggle="collapse"
-            data-bs-target="#f1"
-          >
-            Su di me
-          </button>
-
-          <div id="f1" class="collapse">
-
-            <ul class="list-unstyled ps-3">
-
-              <li>
-                <a href="chi-sono.html">Chi sono</a>
-              </li>
-
-              <li>
-                <a
-                  href="assets/docs/Portfolio Marta Brentan.pdf"
-                  target="_blank"
-                >
-                  Portfolio
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="assets/docs/CV Marta Brentan.pdf"
-                  target="_blank"
-                >
-                  CV
-                </a>
-              </li>
-
-              <li>
-                <a href="blog.html">Blog</a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <div class="footer-accordion">
-
-          <button
-            class="accordion-btn"
-            data-bs-toggle="collapse"
-            data-bs-target="#f2"
-          >
-            Progetti
-          </button>
-
-          <div id="f2" class="collapse">
-
-            <ul class="list-unstyled ps-3">
-
-              <li>
-                <a href="editorial.html">Editorial</a>
-              </li>
-
-              <li>
-                <a href="voice.html">Voice</a>
-              </li>
-
-              <li>
-                <a href="design.html">Design</a>
-              </li>
-
-              <li>
-                <a href="progettazione.html">Progettazione</a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <div class="footer-accordion">
-
-          <button
-            class="accordion-btn"
-            data-bs-toggle="collapse"
-            data-bs-target="#f3"
-          >
-            Contatti
-          </button>
-
-          <div id="f3" class="collapse">
-
-            <ul class="list-unstyled ps-3">
-
-              <li>
-                <a href="mailto:martabrentan@yahoo.com">
-                  Email
-                </a>
-              </li>
-
-              <li>
-                <a href="tel:+393470547503">
-                  Telefono
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <div class="footer-accordion">
-
-          <button
-            class="accordion-btn"
-            data-bs-toggle="collapse"
-            data-bs-target="#f4"
-          >
-            Aiuto
-          </button>
-
-          <div id="f4" class="collapse">
-
-            <ul class="list-unstyled ps-3">
-
-              <li>
-                <a href="policy.html">Policy</a>
-              </li>
-
-              <li>
-                <a href="contatti.html">Scrivimi</a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <div class="footer-social-mobile text-center mt-4">
-
-          <a
-            href="https://www.instagram.com/martabrentan"
-            target="_blank"
-          >
-            <i class="bi bi-instagram"></i>
-          </a>
-
-          <a
-            href="https://www.behance.net/martabrentan"
-            target="_blank"
-          >
-            <i class="bi bi-behance"></i>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/martabrentan"
-            target="_blank"
-          >
-            <i class="bi bi-linkedin"></i>
-          </a>
-
-        </div>
-
+      <div class="col-md-3">
+        <h5>Progetti</h5>
+        <ul class="list-unstyled">
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="voice.html">Voice</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="progettazione.html">Progettazione</a></li>
+        </ul>
       </div>
 
+      <div class="col-md-3">
+        <h5>Contatti</h5>
+        <ul class="list-unstyled">
+          <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
+          <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
+          <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+          <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+        </ul>
+      </div>
 
-      <hr class="my-4" />
-
-      <p class="text-center small">
-        © 2026 Marta Brentan – Tutti i diritti riservati
-      </p>
+      <div class="col-md-3">
+        <h5>Aiuto</h5>
+        <ul class="list-unstyled">
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contatti.html">Scrivimi</a></li>
+        </ul>
+      </div>
 
     </div>
 
-  </footer>
+
+    <div class="footer-mobile d-lg-none">
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+        <div id="f1" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+        <div id="f2" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="voice.html">Voice</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="progettazione.html">Progettazione</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+        <div id="f3" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+            <li><a href="tel:+393470547503">Telefono</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+        <div id="f4" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-social-mobile text-center mt-4">
+        <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <p class="text-center small">© 2026 Marta Brentan – Tutti i diritti riservati</p>
+
+  </div>
+
+</footer>
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -69,12 +69,16 @@
     .lm-white{background:#fff}
     .lm-label{font-family:var(--lm-sans)!important;font-size:.78rem!important;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--lm-gray);margin-bottom:1rem!important}
     .lm-dark .lm-label{color:#ff7a50}
-    .lm h2{font-size:clamp(2rem,3.8vw,3.2rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:1.25rem}
+    .lm h3{font-size:clamp(2rem,3.8vw,3.2rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:1.25rem}
     .lm-lead{font-size:1.3rem!important;max-width:660px!important}
-    .lm-hero{padding:4.5rem 0 5rem}
-    .lm-breadcrumb{font-family:var(--lm-sans);font-size:.85rem;color:var(--lm-gray);margin-bottom:3rem}
-    .lm-breadcrumb a{color:var(--lm-ink)}.lm-breadcrumb a:hover{color:var(--lm-orange)}
-    .lm-hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:center}
+    .lm-hero{padding:0;position:relative}
+    .lm-hero-txt{padding:4.5rem 0 5rem}
+    .lm-hero .lm-hero-img{align-self:stretch;margin:0 0 -5rem;position:relative;z-index:1}
+    .lm-hero .lm-hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% top}
+    .lm-hero + .lm-dark{position:relative;z-index:2}
+    .lm-breadcrumb{font-size:.85rem;color:#666;margin-bottom:3rem}
+    .lm-breadcrumb a{color:#444}.lm-breadcrumb a:hover{color:var(--lm-orange)}
+    .lm-hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:stretch}
     .lm-title{font-size:clamp(3.2rem,7vw,6rem)!important;font-weight:700!important;letter-spacing:-.04em;line-height:.95;margin-bottom:1.5rem}
     .lm-title span{display:block;font-weight:300;font-family:var(--lm-serif);font-style:italic;letter-spacing:0}
     .lm-meta{margin:2rem 0 0;font-family:var(--lm-sans)}.lm-meta div{margin-bottom:1rem}
@@ -102,6 +106,37 @@
     .lm-stat{border-top:2px solid var(--lm-orange);padding-top:1rem}
     .lm-stat strong{display:block;font-family:var(--lm-sans);font-size:2.8rem;font-weight:600;line-height:1;letter-spacing:-.03em}
     .lm-stat span{font-family:var(--lm-sans);font-size:.9rem;display:block;margin-top:.6rem;line-height:1.4;opacity:.85}
+    .lm-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:1.25rem}
+    .lm-card{background:rgba(255,255,255,.07);border-top:3px solid var(--lm-orange);border-radius:6px;padding:1.4rem 1.25rem}
+    .lm-card b{display:block;font-family:var(--lm-sans);font-size:1.15rem;font-weight:600;margin-bottom:.5rem;color:#fff}
+    .lm-card p{font-family:var(--lm-sans);font-size:.95rem!important;line-height:1.5;margin:0!important;opacity:.88}
+    @media(max-width:991px){.lm-cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:576px){.lm-cards{grid-template-columns:1fr}}
+    .lm-social{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:720px;margin-top:1.5rem}
+    .lm-social2{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:720px;margin-top:1rem}
+    .lm-soc-one{max-width:720px;margin-top:1rem}
+    .lm-menus{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.5rem;align-items:start;margin-top:3rem}
+    .lm-menus img{display:block;width:100%;height:auto}
+    .lm-kit{background:var(--lm-bg);border-radius:14px;padding:2rem;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:2rem 3rem;margin-top:1.25rem}
+    .lm-kit img{display:block;height:auto;max-width:100%}
+    .lm-row{display:grid;gap:1.25rem;margin-top:1.25rem;align-items:start}
+    .lm-row img{display:block;width:100%;height:auto}
+    .lm-row.c3{grid-template-columns:repeat(3,1fr)}.lm-row.c4{grid-template-columns:repeat(4,1fr)}.lm-row.c6{grid-template-columns:repeat(6,1fr);gap:1rem}
+    .lm-row.c6 .lm-fig img{border:1px solid #e3e3e1}
+    .lm-row.c6 figcaption{text-align:center}
+    .lm-sub{margin-top:3.5rem!important}
+    @media(max-width:991px){.lm-row.c4{grid-template-columns:repeat(2,1fr)}.lm-row.c6{grid-template-columns:repeat(3,1fr)}.lm-menus{grid-template-columns:1fr 1fr}.lm-menus figure:first-child{grid-column:1/-1}.lm-hero .lm-hero-img{margin:0 0 -3rem}.lm-hero .lm-hero-img img{position:static;height:auto;object-fit:initial}.lm-hero-txt{padding:3rem 0 2rem}}
+    @media(max-width:576px){.lm-social2{grid-template-columns:repeat(2,1fr)}.lm-kit{padding:1.25rem;gap:1.5rem}.lm-hero .lm-hero-img{margin:0 0 -2rem}}
+    .lm-socrow{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:center;margin-top:2.5rem}
+    .lm-socrow .lm-social,.lm-socrow .lm-social2,.lm-socrow .lm-soc-one{max-width:none}
+    .lm-phone{max-width:250px;margin:0 auto}
+    .lm-phone img{border-radius:26px;box-shadow:0 18px 40px rgba(0,22,33,.18)}
+    .lm-laptop{width:100%;max-width:440px;margin:0 auto}
+    .lm-laptop .scr{border:8px solid #14181b;border-bottom-width:10px;border-radius:12px 12px 0 0;background:#000;overflow:hidden}
+    .lm-laptop .scr img{display:block;width:100%;height:auto}
+    .lm-laptop .base{height:12px;width:112%;margin:0 -6%;background:linear-gradient(#dcdee0,#aeb2b6);border-radius:0 0 16px 16px;box-shadow:0 14px 24px rgba(0,22,33,.18)}
+    .lm-stack.sm{max-width:640px}
+    @media(max-width:991px){.lm-socrow{grid-template-columns:1fr;gap:2rem}}
     .lm-list{margin:1.5rem 0 0;padding:0;list-style:none;font-family:var(--lm-serif);font-size:1.1rem}
     .lm-list li{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.18)}
     .lm-list li b{font-family:var(--lm-sans);font-weight:600}
@@ -110,19 +145,30 @@
     .lm-btn:hover{background:var(--lm-orange);border-color:var(--lm-orange);color:#fff!important}
     .lm-dark .lm-btn{color:#fff}
     .lm-btn-row{margin-top:2rem}
-    .lm-more{background:#fff}
-    .lm-more-list{display:flex;flex-wrap:wrap;justify-content:center;gap:1.75rem}
     .lm-icons{display:flex!important;flex-flow:row wrap;justify-content:center;gap:2.5rem 1.5rem;margin-top:3rem}
-.lm-icons .lm-ico{flex:0 0 calc((100% - 5 * 1.5rem) / 6);max-width:calc((100% - 5 * 1.5rem) / 6)}
+    .lm-icons .lm-ico{flex:0 0 calc((100% - 5 * 1.5rem) / 6);max-width:calc((100% - 5 * 1.5rem) / 6)}
+    .lm-ico{margin:0;text-align:center}
+    .lm-ico img{display:block;width:72px;height:72px;object-fit:contain;margin:0 auto}
+    .lm-ico figcaption{font-family:var(--lm-sans);font-size:.85rem;color:var(--lm-gray);margin-top:.8rem}
     @media(max-width:991px){
       .lm-section{padding:4.5rem 0}
       .lm-hero-grid,.lm-two,.lm-type{grid-template-columns:1fr;gap:2.5rem}
       .lm-grid3{grid-template-columns:1fr}.lm-stats{grid-template-columns:repeat(2,1fr)}
       .lm-sw{grid-template-columns:repeat(2,1fr)}
+      .lm-icons .lm-ico{flex-basis:calc((100% - 3 * 1.5rem) / 4);max-width:calc((100% - 3 * 1.5rem) / 4)}
     }
     @media(max-width:576px){
       .lm-section{padding:3.5rem 0}.lm-hero{padding-top:3rem}.lm-grid2,.lm-stats{grid-template-columns:1fr}
+      .lm-icons{gap:2rem 1rem}
+      .lm-icons .lm-ico{flex-basis:calc((100% - 2 * 1rem) / 3);max-width:calc((100% - 2 * 1rem) / 3)}
+      .lm-ico img{width:60px;height:60px}
     }
+
+    /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
+    .more-projects { background: #fff; padding: 6rem 0; }
+    .more-projects .more-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+    @media (max-width: 991px) { .more-projects { padding: 4.5rem 0; } }
+    @media (max-width: 576px) { .more-projects { padding: 3.5rem 0; } }
   </style>
 
 </head>
@@ -194,241 +240,265 @@
 
 </nav>
 
-<main class="lm">
+<main>
+<div class="lm">
 
-  <!-- HERO -->
-  <section class="lm-hero">
-    <div class="container">
-      <p class="lm-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Limes</span></p>
-      <div class="lm-hero-grid">
-        <div>
-          <h1 class="lm-title">Limes <span>Redesign</span></h1>
-          <p class="lm-lead">Una rivista italiana di geopolitica, anche online. Dalla brand identity al prototipo, passando per la ricerca.</p>
-          <dl class="lm-meta">
-            <div><dt>Ambito</dt><dd>Brand identity e UX/UI design di sito e app</dd></div>
-            <div><dt>Percorso</dt><dd>Brand identity · Discovery · Wireframe · Prototipo · User test</dd></div>
-            <div><dt>Strumenti</dt><dd>Figma, Google Form, Maze, WCAG 2.1</dd></div>
-          </dl>
-        </div>
-        <figure class="lm-fig"><img src="assets/img/sfondo-progetto-finale.webp " alt="Mockup del nuovo sito e della rivista Limes su laptop, tablet e smartphone" loading="lazy"></figure>
-      </div>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="lm-hero">
+<div class="container">
+<div class="lm-hero-grid">
+<div class="lm-hero-txt">
+<p class="lm-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Limes</span></p>
+<h1 class="lm-title">Limes <span>Redesign</span></h1>
+<p class="lm-lead">Una rivista italiana di geopolitica, anche online. Dalla brand identity al prototipo, passando per la ricerca.</p>
+<dl class="lm-meta">
+<div><dt>Ambito</dt><dd>Brand identity e UX/UI design di sito e app</dd></div>
+<div><dt>Percorso</dt><dd>Brand identity · Discovery · Wireframe · Prototipo · User test</dd></div>
+<div><dt>Strumenti</dt><dd>Figma, Google Form, Maze, WCAG 2.1</dd></div>
+</dl>
+</div>
+<figure class="lm-fig lm-hero-img"><img src="assets/img/sfondo-progetto-finale.webp" alt="Mockup del nuovo sito e della rivista Limes su laptop, tablet e smartphone" loading="lazy"></figure>
+</div>
+</div>
+</section>
 
-  <!-- PROGETTO -->
-  <section class="lm-section lm-dark">
-    <div class="container">
-      <p class="lm-label">Il progetto</p>
-      <p class="lm-quote">La qualità di un contenuto non è indipendente dalla <span>qualità della sua interfaccia.</span></p>
-      <div class="lm-two">
-        <p>Limes, fondata nel 1993 da Lucio Caracciolo, è una rivista di geopolitica del gruppo GEDI. Lavoro tra editoria e design, e credo che chiunque maneggi le parole per lavoro debba sporcarsi le mani con la grafica.</p>
-        <p>Limes ha contenuti di altissimo livello, ma il sito non li traduce: l’impianto grafico è datato, la navigazione poco chiara, la gerarchia debole. E c’è un pubblico giovane, quello della Scuola di Limes, che trova una piattaforma lontana dalle sue abitudini.</p>
-      </div>
-      <div class="lm-two" style="margin-top:2rem">
-        <div><p class="lm-label">Mission</p><p>Offrire strumenti di lettura del mondo contemporaneo che vadano oltre la cronaca, per capire le logiche profonde di conflitti e alleanze.</p></div>
-        <div><p class="lm-label">Vision</p><p>Diffondere una cultura geopolitica in Italia e costruire una comunità di lettori capaci di interpretare il mondo con più consapevolezza.</p></div>
-      </div>
-    </div>
-  </section>
+<!-- PROGETTO -->
+<section class="lm-section lm-dark">
+<div class="container">
+<p class="lm-label">Il progetto</p>
+<p class="lm-quote">La qualità di un contenuto non è indipendente dalla <span>qualità della sua interfaccia.</span></p>
+<div class="lm-two">
+<p>Limes, fondata nel 1993 da Lucio Caracciolo, è una rivista di geopolitica del gruppo GEDI. Lavoro tra editoria e design, e credo che chiunque maneggi le parole per lavoro debba sporcarsi le mani con la grafica.</p>
+<p>Limes ha contenuti di altissimo livello, ma il sito non li traduce: l’impianto grafico è datato, la navigazione poco chiara, la gerarchia debole. E c’è un pubblico giovane, quello della Scuola di Limes, che trova una piattaforma lontana dalle sue abitudini.</p>
+</div>
+<div class="lm-two" style="margin-top:2rem">
+<div><p class="lm-label">Mission</p><p>Offrire strumenti di lettura del mondo contemporaneo che vadano oltre la cronaca, per capire le logiche profonde di conflitti e alleanze.</p></div>
+<div><p class="lm-label">Vision</p><p>Diffondere una cultura geopolitica in Italia e costruire una comunità di lettori capaci di interpretare il mondo con più consapevolezza.</p></div>
+</div>
+</div>
+</section>
 
-  <!-- LOGO -->
-  <section class="lm-section">
-    <div class="container">
-      <p class="lm-label">01 · Brand identity · Logo</p>
-      <h2>Il simbolo era già lì</h2>
-      <div class="lm-two">
-        <p class="lm-lead">Cercavo qualcosa già presente nel sistema visivo di Limes, ma mai elevato a simbolo. L’ho trovato nelle mappe parlanti di Laura Canali.</p>
-        <p>Le mappe usano da sempre un marker preciso: tre cerchi concentrici con un punto al centro, il bull’s-eye marker della cartografia. L’ho semplificato e l’ho messo al posto del puntino della i di Limes. Il logotipo è in Cardo, un serif umanistico pensato per la lettura lunga.</p>
-      </div>
-      <div class="lm-stack">
-        <figure class="lm-fig"><img src="assets/img/lm-logo-chiaro-scuro.webp" alt="Il nuovo logo in versione grande, media e piccola, in positivo e in negativo" loading="lazy"></figure>
-        <div class="lm-grid2">
-          <figure class="lm-fig"><img src="assets/img/lm-logo-app.webp" alt="Il nuovo logo e il logo attuale come icona dell’app" loading="lazy"></figure>
-          <figure class="lm-fig"><img src="assets/img/lm-logo-rivista.webp" alt="Il nuovo logo e il logo attuale sulla copertina della rivista" loading="lazy"></figure>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- SISTEMA VISIVO -->
+<section class="lm-section">
+<div class="container">
+<p class="lm-label">01 · Il nuovo sistema visivo</p>
+<h3>Il simbolo era già lì</h3>
+<div class="lm-two">
+<p class="lm-lead">Cercavo qualcosa già presente nel sistema visivo di Limes, ma mai elevato a simbolo. L’ho trovato nelle mappe parlanti di Laura Canali.</p>
+<p>Le mappe usano da sempre un marker preciso: tre cerchi concentrici con un punto al centro, il bull’s-eye marker della cartografia. L’ho semplificato e l’ho messo al posto del puntino della i di Limes. Il logotipo è in Cardo, un serif umanistico pensato per la lettura lunga.</p>
+</div>
+<div class="lm-stack">
+<figure class="lm-fig"><img src="assets/img/lm-logo-chiaro-scuro.webp" alt="Il nuovo logo in versione grande, media e piccola, in positivo e in negativo" loading="lazy"></figure>
+<div class="lm-grid2">
+<figure class="lm-fig"><img src="assets/img/lm-logo-app.webp" alt="Il nuovo logo e il logo attuale come icona dell’app" loading="lazy"></figure>
+<figure class="lm-fig"><img src="assets/img/lm-logo-rivista.webp" alt="Il nuovo logo e il logo attuale sulla copertina della rivista" loading="lazy"></figure>
+</div>
+</div>
+<p class="lm-label" style="margin-top:5rem">02 · Palette</p>
+<h3>Distinguere senza decorare</h3>
+<p class="lm-lead">Bianco e blu notte definiscono lo spazio della lettura, il grigio gestisce la gerarchia. L’arancione, evoluzione di quello originale, è l’accento della rivista. Il blu persiano è solo della Scuola: segnala un ambiente diverso.</p>
+<div class="lm-sw">
+<div style="background:#F3F3F2;color:#001621;outline:1px solid #ddd;outline-offset:-1px"><b>Bianco</b>#F3F3F2 · sfondo</div>
+<div style="background:#001621"><b>Blu notte</b>#001621 · testo</div>
+<div style="background:#67706C"><b>Grigio</b>#67706C · secondario</div>
+<div style="background:#FF4103"><b>Arancione</b>#FF4103 · rivista</div>
+<div style="background:#035AA7"><b>Blu persiano</b>#035AA7 · scuola</div>
+</div>
 
-  <!-- PALETTE E TIPOGRAFIA -->
-  <section class="lm-section lm-white">
-    <div class="container">
-      <p class="lm-label">02 · Palette</p>
-      <h2>Distinguere senza decorare</h2>
-      <p class="lm-lead">Bianco e nero definiscono lo spazio della lettura, il grigio gestisce la gerarchia. L’arancione, evoluzione di quello originale, è l’accento della rivista. Il blu persiano è solo della Scuola: segnala un ambiente diverso.</p>
-      <div class="lm-sw">
-        <div style="background:#F3F3F2;color:#001621;outline:1px solid #ddd;outline-offset:-1px"><b>Bianco</b>#F3F3F2 · sfondo</div>
-        <div style="background:#001621"><b>Nero</b>#001621 · testo</div>
-        <div style="background:#67706C"><b>Grigio</b>#67706C · secondario</div>
-        <div style="background:#FF4103"><b>Arancione</b>#FF4103 · rivista</div>
-        <div style="background:#035AA7"><b>Blu persiano</b>#035AA7 · scuola</div>
-      </div>
-      <div class="lm-stack"><figure class="lm-fig"><img src="assets/img/lm-palette-uso.webp" alt="Esempio di articolo con la palette applicata" loading="lazy"></figure></div>
+<p class="lm-label" style="margin-top:5rem">03 · Tipografia</p>
+<h3>Una coppia che non si sovrappone mai</h3>
+<div class="lm-type">
+<div><p class="lm-label">Neue Haas Grotesk · navigazione e titoli</p><p class="big a">Il mondo oggi</p><p>Discende dall’Helvetica, con proporzioni più raffinate e più leggibile a piccole dimensioni: autorevolezza senza pesantezza.</p></div>
+<div><p class="lm-label">Cardo · logo e testi</p><p class="big b">Le conseguenze (in)attese</p><p>Un serif umanistico per la lettura accademica di lunga durata. Quando l’utente vede Haas sa che sta navigando, quando vede Cardo sa che sta leggendo.</p></div>
+</div>
+<p class="lm-label" style="margin-top:5rem">04 · Icone</p>
+<h3>Poche, chiare, tutte uguali</h3>
+<div class="lm-icons">
+<figure class="lm-ico"><img src="assets/img/account.svg" alt="" loading="lazy"><figcaption>Account</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/cerca.svg" alt="" loading="lazy"><figcaption>Cerca</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/hamburger_menu.svg" alt="" loading="lazy"><figcaption>Menu</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/lock.svg" alt="" loading="lazy"><figcaption>Lucchetto</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/mail.svg" alt="" loading="lazy"><figcaption>Mail</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/notifiche.svg" alt="" loading="lazy"><figcaption>Notifiche</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/preferiti_outline.svg" alt="" loading="lazy"><figcaption>Preferiti</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/condividi.svg" alt="" loading="lazy"><figcaption>Condividi</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/scarica.svg" alt="" loading="lazy"><figcaption>Scarica</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/ascolta.svg" alt="" loading="lazy"><figcaption>Ascolta</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/podcast.svg" alt="" loading="lazy"><figcaption>Podcast</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/pdf.svg" alt="" loading="lazy"><figcaption>PDF</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/luogo.svg" alt="" loading="lazy"><figcaption>Luogo</figcaption></figure>
+<figure class="lm-ico"><img src="assets/img/scuola.svg" alt="" loading="lazy"><figcaption>Scuola</figcaption></figure>
+</div>
+<p class="lm-label" style="margin-top:5rem">05 · Social</p>
+<h3>Lo stesso sistema, fuori dal sito</h3>
+<div class="lm-socrow">
+<div>
+<p class="lm-label lm-sub" style="margin-top:0!important">Instagram · Scuola di Limes</p>
+<div class="lm-social">
+<figure class="lm-fig"><img src="assets/img/lm-ig-openday.webp" alt="Post Instagram: Open day della Scuola di Limes" loading="lazy"></figure>
+<figure class="lm-fig"><img src="assets/img/lm-ig-candidarsi.webp" alt="Post Instagram: come candidarsi" loading="lazy"></figure>
+<figure class="lm-fig"><img src="assets/img/lm-ig-destinati.webp" alt="Post Instagram: la domanda della VI edizione" loading="lazy"></figure>
+</div>
+</div>
+<figure class="lm-fig lm-phone"><img src="assets/img/lm-mock-instagram.webp" alt="Il profilo Instagram di Limes con il post del nuovo numero della rivista" loading="lazy"></figure>
+</div>
+<div class="lm-socrow">
+<div>
+<p class="lm-label lm-sub" style="margin-top:0!important">YouTube</p>
+<figure class="lm-fig lm-soc-one"><img src="assets/img/lm-yt-banner.webp" alt="Banner del canale YouTube di Limes" loading="lazy"></figure>
+<div class="lm-social2">
+<figure class="lm-fig"><img src="assets/img/lm-video-balcani.webp" alt="Copertina video: Traffico di droga nei Balcani" loading="lazy"></figure>
+<figure class="lm-fig"><img src="assets/img/lm-video-cipro.webp" alt="Copertina video: Cipro, serratura della porta mediorientale" loading="lazy"></figure>
+<figure class="lm-fig"><img src="assets/img/lm-video-acquisizioni.webp" alt="Copertina video: le acquisizioni territoriali statunitensi" loading="lazy"></figure>
+<figure class="lm-fig"><img src="assets/img/lm-video-kivu.webp" alt="Copertina video: un cuore di metallo incandescente, il Kivu" loading="lazy"></figure>
+</div>
+</div>
+<div class="lm-laptop"><div class="scr"><img src="assets/img/lm-mock-youtube.webp" alt="Il profilo YouTube di Limes su un computer portatile" loading="lazy"></div><div class="base"></div></div>
+</div>
+</div>
+</section>
 
-      <p class="lm-label" style="margin-top:5rem">03 · Tipografia</p>
-      <h2>Una coppia che non si sovrappone mai</h2>
-      <div class="lm-type">
-        <div><p class="lm-label">Neue Haas Grotesk · navigazione e titoli</p><p class="big a">Il mondo oggi</p><p>Discende dall’Helvetica, con proporzioni più raffinate e più leggibile a piccole dimensioni: autorevolezza senza pesantezza.</p></div>
-        <div><p class="lm-label">Cardo · logo e testi</p><p class="big b">Le conseguenze (in)attese</p><p>Un serif umanistico per la lettura accademica di lunga durata. Quando l’utente vede Haas sa che sta navigando, quando vede Cardo sa che sta leggendo.</p></div>
-      </div>
-    </div>
-  </section>
+<!-- DISCOVERY -->
+<section class="lm-section lm-dark">
+<div class="container">
+<p class="lm-label">06 · Discovery</p>
+<h3>Autorevole per chi c’era, chiaro per chi arriva</h3>
+<p class="lm-lead">Due esigenze complementari: mantenere l’autorevolezza per il lettore storico e offrire un’esperienza digitale coinvolgente ai nuovi lettori.</p>
+<p class="lm-label" style="margin-top:3rem">Cosa non funzionava</p>
+<div class="lm-cards">
+<div class="lm-card"><b>Visibilità</b><p>Paywall invisibile, pubblicità invasiva, doppia navigazione tra header e hamburger.</p></div>
+<div class="lm-card"><b>Coerenza</b><p>Palette incoerente, bottoni diversi, nessuna icona.</p></div>
+<div class="lm-card"><b>Utente</b><p>Niente preferiti, tempo di lettura o dark mode; l’abbonamento porta fuori dal sito.</p></div>
+<div class="lm-card"><b>WCAG 2.1</b><p>Contrasti sotto i minimi, tastiera incompleta, componenti muti per gli screen reader.</p></div>
+</div>
+<div style="margin-top:2.5rem">
+<p class="lm-label">Competitor</p>
+<p>Limes si distingue per la profondità analitica e per la cartografia, quasi unica tra i competitor, ma senza mappe interattive. Il paywall è soft e non dichiarato in homepage. Mancano ricerca con filtri, dark mode, ascolto degli articoli, tempo di lettura e preferiti.</p>
+</div>
+<div class="lm-stats">
+<div class="lm-stat"><strong>14</strong><span>rispondenti alla survey, 11 tra i 25 e i 35 anni</span></div>
+<div class="lm-stat"><strong>14/14</strong><span>leggono da smartphone</span></div>
+<div class="lm-stat"><strong>10/14</strong><span>vogliono un’indicazione chiara dei contenuti a pagamento</span></div>
+<div class="lm-stat"><strong>12/14</strong><span>abbandonano per le troppe pubblicità</span></div>
+</div>
+<div class="lm-menus">
+<figure class="lm-fig"><img src="assets/img/lm-sitemap-attuale.webp" alt="La sitemap attuale del sito" loading="lazy"><figcaption>La sitemap attuale segue la logica della rivista cartacea</figcaption></figure>
+<figure class="lm-fig"><img src="assets/img/lm-menu-chiaro.webp" alt="Il nuovo menu in versione chiara" loading="lazy"><figcaption>Il nuovo menu: rubriche, carte, scuola, preferiti</figcaption></figure>
+<figure class="lm-fig"><img src="assets/img/lm-menu-scuro.webp" alt="Il nuovo menu in dark mode" loading="lazy"><figcaption>Lo stesso menu in dark mode</figcaption></figure>
+</div>
+</div>
+</section>
 
-  <!-- ICONE E SOCIAL -->
-  <section class="lm-section">
-    <div class="container">
-      <p class="lm-label">04 · Icone</p>
-      <h2>Poche, chiare, tutte uguali</h2>
-      <div class="lm-icons">
-        <figure class="lm-ico"><img src="assets/img/account.svg" alt="" loading="lazy"><figcaption>Account</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/cerca.svg" alt="" loading="lazy"><figcaption>Cerca</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/hamburger_menu.svg" alt="" loading="lazy"><figcaption>Menu</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/lock.svg" alt="" loading="lazy"><figcaption>Lucchetto</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/mail.svg" alt="" loading="lazy"><figcaption>Mail</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/notifiche.svg" alt="" loading="lazy"><figcaption>Notifiche</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/preferiti_outline.svg" alt="" loading="lazy"><figcaption>Preferiti</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/condividi.svg" alt="" loading="lazy"><figcaption>Condividi</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/scarica.svg" alt="" loading="lazy"><figcaption>Scarica</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/ascolta.svg" alt="" loading="lazy"><figcaption>Ascolta</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/podcast.svg" alt="" loading="lazy"><figcaption>Podcast</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/pdf.svg" alt="" loading="lazy"><figcaption>PDF</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/luogo.svg" alt="" loading="lazy"><figcaption>Luogo</figcaption></figure>
-        <figure class="lm-ico"><img src="assets/img/scuola.svg" alt="" loading="lazy"><figcaption>Scuola</figcaption></figure>
-      </div>
-      <p class="lm-label" style="margin-top:5rem">05 · Social</p>
-      <h2>Lo stesso sistema, fuori dal sito</h2>
-      <div class="lm-stack">
-        <figure class="lm-fig"><img src="assets/img/lm-social-instagram.webp" alt="Post e stories Instagram della rivista" loading="lazy"></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-social-youtube.webp" alt="Canale YouTube di Limes con la nuova identità" loading="lazy"></figure>
-      </div>
-    </div>
-  </section>
+<!-- WIREFRAME E PROTOTIPI -->
+<section class="lm-section lm-white">
+<div class="container">
+<p class="lm-label">07 · Wireframe</p>
+<h3>Prima la struttura</h3>
+<p class="lm-lead">Homepage, chi siamo, articolo libero e a pagamento, rivista, scuola, mappe e carte: ogni pagina in desktop e mobile, poi il wireflow del percorso di abbonamento.</p>
+<div class="lm-grid2">
+<figure class="lm-fig"><img src="assets/img/lm-wire-home.webp" alt="Wireframe della homepage desktop e mobile" loading="lazy"></figure>
+<figure class="lm-fig"><img src="assets/img/lm-wire-paywall.webp" alt="Wireframe dell’articolo con paywall" loading="lazy"></figure>
+</div>
+<div class="lm-stack sm"><figure class="lm-fig"><img src="assets/img/lm-wireflow.webp" alt="Wireflow del percorso di abbonamento in mobile" loading="lazy"></figure></div>
+<p class="lm-label" style="margin-top:5rem">08 · UI kit</p>
+<h3>Pochi componenti, usati ovunque</h3>
+<p class="lm-lead">Bottoni con quattro stati, interruttore dark mode, schede, copertine, video, abbonamenti e mappe con zoom. Ogni elemento esiste una volta sola e si ripete in tutte le pagine.</p>
+<p class="lm-label lm-sub">Bottoni e interruttore</p>
+<div class="lm-kit">
+<img src="assets/img/lm-ui-btn-pdf.webp" alt="Bottone Leggi in pdf nei quattro stati" loading="lazy">
+<img src="assets/img/lm-ui-btn-accedi.webp" alt="Bottone Accedi nei quattro stati" loading="lazy">
+<img src="assets/img/lm-ui-btn-abbonati.webp" alt="Bottone Abbonati nei quattro stati" loading="lazy">
+<img src="assets/img/lm-ui-toggle.webp" alt="Interruttore dark mode acceso e spento" loading="lazy">
+</div>
+<p class="lm-label lm-sub">Schede redazione</p>
+<div class="lm-row c3">
+<img src="assets/img/lm-card-caracciolo.webp" alt="Scheda redazione: Lucio Caracciolo" loading="lazy">
+<img src="assets/img/lm-card-cuscito.webp" alt="Scheda redazione: Giorgio Cuscito" loading="lazy">
+<img src="assets/img/lm-card-canali.webp" alt="Scheda redazione: Laura Canali" loading="lazy">
+</div>
+<p class="lm-label lm-sub">Copertine della rivista</p>
+<div class="lm-row c3">
+<img src="assets/img/lm-cover-italia.webp" alt="Copertina del numero 1/2026" loading="lazy">
+<img src="assets/img/lm-cover-israele.webp" alt="Copertina del numero 9/2025" loading="lazy">
+<img src="assets/img/lm-cover-america.webp" alt="Copertina del numero 2/2026" loading="lazy">
+</div>
+<p class="lm-label lm-sub">Card video</p>
+<div class="lm-stack" style="margin-top:1.25rem"><figure class="lm-fig"><img src="assets/img/lm-video-riga.webp" alt="Le card video in sequenza" loading="lazy"></figure></div>
+<p class="lm-label lm-sub">Abbonamenti</p>
+<div class="lm-row c4">
+<img src="assets/img/lm-prezzo-mese.webp" alt="Card abbonamento mensile" loading="lazy">
+<img src="assets/img/lm-prezzo-anno.webp" alt="Card abbonamento annuale" loading="lazy">
+<img src="assets/img/lm-prezzo-studenti.webp" alt="Card abbonamento per studenti e docenti" loading="lazy">
+<img src="assets/img/lm-prezzo-cartacea.webp" alt="Card abbonamento digitale e cartaceo" loading="lazy">
+</div>
 
-  <!-- DISCOVERY -->
-  <section class="lm-section lm-dark">
-    <div class="container">
-      <p class="lm-label">06 · Discovery</p>
-      <h2>Autorevole per chi c’era, chiaro per chi arriva</h2>
-      <p class="lm-lead">Due esigenze complementari: mantenere l’autorevolezza per il lettore storico e offrire un’esperienza digitale coinvolgente ai nuovi lettori.</p>
-      <div class="lm-two" style="margin-top:3rem">
-        <div>
-          <p class="lm-label">Analisi euristica e accessibilità</p>
-          <ul class="lm-list">
-            <li><b>Visibilità del sistema.</b> Paywall invisibile, pubblicità invasiva, navigazione doppia tra header e hamburger.</li>
-            <li><b>Coerenza visiva.</b> Palette incoerente, bottoni diversi, nessuna icona.</li>
-            <li><b>Gestione dell’utente.</b> Niente preferiti, tempo di lettura o dark mode; l’abbonamento porta fuori dal sito.</li>
-            <li><b>WCAG 2.1.</b> Contrasti sotto i minimi, tastiera incompleta, componenti muti per gli screen reader.</li>
-          </ul>
-        </div>
-        <div>
-          <p class="lm-label">Competitor</p>
-          <p>Limes si distingue per la profondità analitica e per la cartografia, quasi unica tra i competitor, ma senza mappe interattive. Il paywall è soft e non dichiarato in homepage. Mancano ricerca con filtri, dark mode, ascolto degli articoli, tempo di lettura e preferiti.</p>
-        </div>
-      </div>
-      <div class="lm-stats">
-        <div class="lm-stat"><strong>14</strong><span>rispondenti alla survey, 11 tra i 25 e i 35 anni</span></div>
-        <div class="lm-stat"><strong>14/14</strong><span>leggono da smartphone</span></div>
-        <div class="lm-stat"><strong>10/14</strong><span>vogliono un’indicazione chiara dei contenuti a pagamento</span></div>
-        <div class="lm-stat"><strong>12/14</strong><span>abbandonano per le troppe pubblicità</span></div>
-      </div>
-      <div class="lm-grid2">
-        <figure class="lm-fig"><img src="assets/img/lm-sitemap-attuale.webp" alt="La sitemap attuale del sito" loading="lazy"><figcaption>La sitemap attuale segue la logica della rivista cartacea</figcaption></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-sitemap-nuova.webp" alt="La nuova sitemap con header fisso e hamburger menu" loading="lazy"><figcaption>La nuova sitemap: header fisso, rubriche, carte, scuola, preferiti</figcaption></figure>
-      </div>
-    </div>
-  </section>
+<p class="lm-label" style="margin-top:6rem">09 · Prototipi</p>
+<h3>La chiarezza non è il contrario della profondità</h3>
+<p class="lm-lead">Sei pagine navigabili, dalla home all’abbonamento. Il paywall diventa esplicito ma non aggressivo; l’abbonamento resta dentro il sito.</p>
+<div class="lm-row c6" style="margin-top:3rem">
+<figure class="lm-fig"><img src="assets/img/lm-proto-home.webp" alt="Prototipo della homepage" loading="lazy"><figcaption>Homepage</figcaption></figure>
+<figure class="lm-fig"><img src="assets/img/lm-pag-articolo-paywall.webp" alt="Prototipo dell’articolo con paywall" loading="lazy"><figcaption>Articolo con paywall</figcaption></figure>
+<figure class="lm-fig"><img src="assets/img/lm-pag-abbonamento.webp" alt="Prototipo della pagina di abbonamento" loading="lazy"><figcaption>Abbonamento</figcaption></figure>
+<figure class="lm-fig"><img src="assets/img/lm-pag-rivista.webp" alt="Prototipo della pagina Rivista" loading="lazy"><figcaption>Rivista</figcaption></figure>
+<figure class="lm-fig"><img src="assets/img/lm-pag-chi-siamo.webp" alt="Prototipo della pagina Chi siamo" loading="lazy"><figcaption>Chi siamo</figcaption></figure>
+<figure class="lm-fig"><img src="assets/img/lm-pag-carte.webp" alt="Prototipo della pagina Carte" loading="lazy"><figcaption>Carte</figcaption></figure>
+</div>
+<div class="lm-btn-row"><a class="lm-btn" href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?t=LRww6LLrKSBG5jfW-0" target="_blank" rel="noopener noreferrer">UI kit e prototipi su Figma <i class="bi bi-arrow-up-right"></i></a></div>
+</div>
+</section>
 
-  <!-- WIREFRAME -->
-  <section class="lm-section">
-    <div class="container">
-      <p class="lm-label">07 · Wireframing</p>
-      <h2>Prima la struttura</h2>
-      <p class="lm-lead">Homepage, chi siamo, articolo libero e a pagamento, rivista, scuola, mappe e carte: ogni pagina in desktop e mobile, poi il wireflow del percorso di abbonamento.</p>
-      <div class="lm-grid2">
-        <figure class="lm-fig"><img src="assets/img/lm-wire-home.webp" alt="Wireframe della homepage desktop e mobile" loading="lazy"></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-wire-articolo.webp" alt="Wireframe dell’articolo libero" loading="lazy"></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-wire-paywall.webp" alt="Wireframe dell’articolo con paywall" loading="lazy"></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-wire-scuola.webp" alt="Wireframe della pagina Scuola" loading="lazy"></figure>
-      </div>
-      <div class="lm-stack"><figure class="lm-fig"><img src="assets/img/lm-wireflow.webp" alt="Wireflow del percorso di abbonamento in mobile" loading="lazy"></figure></div>
-      <div class="lm-btn-row"><a class="lm-btn" href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?t=LRww6LLrKSBG5jfW-0" target="_blank" rel="noopener noreferrer">Wireframe su Figma <i class="bi bi-arrow-up-right"></i></a></div>
-    </div>
-  </section>
+<!-- USER TEST -->
+<section class="lm-section lm-dark">
+<div class="container">
+<p class="lm-label">10 · User test</p>
+<h3>Si capisce cosa è gratis?</h3>
+<p class="lm-lead">Test remoto e senza moderatore su Maze, sul prototipo mobile: navigazione libera e due task. Sedici partecipanti, dodici in linea con i criteri.</p>
+<div class="lm-stats">
+<div class="lm-stat"><strong>74,3 s</strong><span>durata media dell’esplorazione libera</span></div>
+<div class="lm-stat"><strong>75%</strong><span>trova l’articolo gratuito, ma con il 44,4% di misclick</span></div>
+<div class="lm-stat"><strong>70%</strong><span>completa l’abbonamento, in 65,8 s</span></div>
+<div class="lm-stat"><strong>3</strong><span>problemi ricorrenti emersi</span></div>
+</div>
+<div class="lm-two" style="margin-top:3rem">
+<div>
+<ul class="lm-list">
+<li><b>Lucchetto non percepito.</b> Due utenti pensano che tutto il sito sia a pagamento.</li>
+<li><b>Dopo l’abbonamento.</b> Non è chiaro se sia ricorrente e come disdire.</li>
+<li><b>Notifiche.</b> Un utente chiede come sarà avvisato delle nuove uscite.</li>
+</ul>
+</div>
+<div>
+<p>Le modifiche non stravolgono l’architettura. L’icona del lucchetto è affiancata dall’etichetta «SOLO ABBONATI», il riepilogo ordine spiega ricorrenza e disdetta, e la conferma porta all’articolo che aveva motivato l’acquisto.</p>
+</div>
+</div>
+<div class="lm-stack"><figure class="lm-fig"><img src="assets/img/lm-test-modifiche.webp" alt="Le schermate modificate dopo il test: etichetta Solo abbonati e riepilogo ordine" loading="lazy"></figure></div>
 
-  <!-- UI KIT E PROTOTIPI -->
-  <section class="lm-section lm-white">
-    <div class="container">
-      <p class="lm-label">08 · Prototyping</p>
-      <h2>La chiarezza non è il contrario della profondità</h2>
-      <p class="lm-lead">Un UI kit con griglia, menu, bottoni, componenti, card e mappe interattive, e sei prototipi navigabili. Il paywall diventa esplicito ma non aggressivo; l’abbonamento resta dentro il sito.</p>
-      <div class="lm-grid2">
-        <figure class="lm-fig"><img src="assets/img/lm-uikit-menu.webp" alt="UI kit: griglia e menu" loading="lazy"></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-uikit-bottoni.webp" alt="UI kit: bottoni" loading="lazy"></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-uikit-card.webp" alt="UI kit: card di redazione e di prodotto" loading="lazy"></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-uikit-mappe.webp" alt="UI kit: mappe e carte con zoom" loading="lazy"></figure>
-      </div>
-      <div class="lm-grid3">
-        <figure class="lm-fig"><img src="assets/img/lm-proto-home.webp" alt="Prototipo della homepage" loading="lazy"><figcaption>Homepage</figcaption></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-proto-articolo.webp" alt="Prototipo dell’articolo libero" loading="lazy"><figcaption>Articolo libero</figcaption></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-proto-paywall.webp" alt="Prototipo dell’articolo con paywall" loading="lazy"><figcaption>Articolo con paywall</figcaption></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-proto-rivista.webp" alt="Prototipo della pagina Rivista" loading="lazy"><figcaption>Rivista</figcaption></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-proto-scuola.webp" alt="Prototipo della pagina Scuola" loading="lazy"><figcaption>Scuola</figcaption></figure>
-        <figure class="lm-fig"><img src="assets/img/lm-proto-mappe.webp" alt="Prototipo di mappe e carte" loading="lazy"><figcaption>Mappe e carte</figcaption></figure>
-      </div>
-      <div class="lm-btn-row"><a class="lm-btn" href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?t=LRww6LLrKSBG5jfW-0" target="_blank" rel="noopener noreferrer">UI kit e prototipi su Figma <i class="bi bi-arrow-up-right"></i></a></div>
-    </div>
-  </section>
+</div>
+</section>
 
-  <!-- USER TEST -->
-  <section class="lm-section lm-dark">
-    <div class="container">
-      <p class="lm-label">09 · User test</p>
-      <h2>Si capisce cosa è gratis?</h2>
-      <p class="lm-lead">Test remoto e senza moderatore su Maze, sul prototipo mobile: navigazione libera e due task. Sedici partecipanti, dodici in linea con i criteri.</p>
-      <div class="lm-stats">
-        <div class="lm-stat"><strong>74,3 s</strong><span>durata media dell’esplorazione libera</span></div>
-        <div class="lm-stat"><strong>75%</strong><span>trova l’articolo gratuito, ma con il 44,4% di misclick</span></div>
-        <div class="lm-stat"><strong>70%</strong><span>completa l’abbonamento, in 65,8 s</span></div>
-        <div class="lm-stat"><strong>3</strong><span>problemi ricorrenti emersi</span></div>
-      </div>
-      <div class="lm-two" style="margin-top:3rem">
-        <div>
-          <ul class="lm-list">
-            <li><b>Lucchetto non percepito.</b> Due utenti pensano che tutto il sito sia a pagamento.</li>
-            <li><b>Dopo l’abbonamento.</b> Non è chiaro se sia ricorrente e come disdire.</li>
-            <li><b>Notifiche.</b> Un utente chiede come sarà avvisato delle nuove uscite.</li>
-          </ul>
-        </div>
-        <div>
-          <p>Le modifiche non stravolgono l’architettura. L’icona del lucchetto è affiancata dall’etichetta «SOLO ABBONATI», il riepilogo ordine spiega ricorrenza e disdetta, e la conferma porta all’articolo che aveva motivato l’acquisto.</p>
-        </div>
-      </div>
-      <div class="lm-stack"><figure class="lm-fig"><img src="assets/img/lm-test-modifiche.webp" alt="Le schermate modificate dopo il test: etichetta Solo abbonati e riepilogo ordine" loading="lazy"></figure></div>
-     
-    </div>
-  </section>
+<!-- RIEPILOGO -->
+<section class="lm-section">
+<div class="container">
+<p class="lm-label">Riepilogo</p>
+<h3>Il design al servizio della geopolitica</h3>
+<div class="lm-two">
+<p>Limes produce analisi di altissimo livello, ma le consegnava in una piattaforma che non era all’altezza. Il sistema visivo è coerente, la navigazione semplificata, il checkout interno al sito, il paywall esplicito.</p>
+<p>Nascono funzioni nuove: dark mode, salvataggio, condivisione, ascolto degli articoli e zoom sulle carte. Resta da sviluppare l’app, con un’esperienza distinta dal sito mobile ma coerente con esso.</p>
+</div>
+<div class="lm-btn-row">
+<a class="lm-btn" href="assets/docs/Progetto Finale UX UI di Marta Brentan.pdf" download>Scarica il progetto (PDF) <i class="bi bi-download"></i></a>
+<a class="lm-btn" href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?t=LRww6LLrKSBG5jfW-0" target="_blank" rel="noopener noreferrer">Il progetto su Figma <i class="bi bi-arrow-up-right"></i></a>
+</div>
+</div>
+</section>
 
-  <!-- RIEPILOGO -->
-  <section class="lm-section">
-    <div class="container">
-      <p class="lm-label">Riepilogo</p>
-      <h2>Il design al servizio della geopolitica</h2>
-      <div class="lm-two">
-        <p>Limes produce analisi di altissimo livello, ma le consegnava in una piattaforma che non era all’altezza. Il sistema visivo è coerente, la navigazione semplificata, il checkout interno al sito, il paywall esplicito.</p>
-        <p>Nascono funzioni nuove: dark mode, salvataggio, condivisione, ascolto degli articoli e zoom sulle carte. Resta da sviluppare l’app, con un’esperienza distinta dal sito mobile ma coerente con esso.</p>
-      </div>
-      <div class="lm-btn-row">
-        <a class="lm-btn" href="assets/docs/Progetto Finale UX UI di Marta Brentan.pdf" download>Scarica il progetto (PDF) <i class="bi bi-download"></i></a>
-        <a class="lm-btn" href="https://www.figma.com/design/DZBzWbu8LVIykrGbmdtUXt/LIMES?t=LRww6LLrKSBG5jfW-0" target="_blank" rel="noopener noreferrer">Il progetto su Figma <i class="bi bi-arrow-up-right"></i></a>
-      </div>
-    </div>
-  </section>
+</div><!-- /lm -->
 
   <!-- ALTRI PROGETTI -->
-  <section class="lm-section lm-more">
+  <section class="more-projects">
     <div class="container text-center">
       <h2 class="section-title mb-5">Altri progetti</h2>
-      <div class="lm-more-list">
+      <div class="more-list">
         <a href="ecodream.html" class="project-card">
           <img src="assets/img/sfondo-discovery.webp" alt="Prototipo della homepage Ecodream" loading="lazy">
           <div class="project-content"><h5>Ecodream Design</h5><p>Wireframe, test, UI e accessibilità</p><p class="text-muted small">start2impact</p></div>

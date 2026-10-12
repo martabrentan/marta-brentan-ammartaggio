@@ -116,7 +116,46 @@
     .hp-res{margin:1.5rem 0 0;padding:0;list-style:none;font-size:.9rem}
     .hp-res li{padding:.55rem 0;border-bottom:1px solid rgba(0,0,0,.12)}
     .hp-more{background:#fff}
-    .hp-more-list{display:flex;flex-wrap:wrap;justify-content:center;gap:1.75rem}
+
+/* ALTRI PROGETTI — due schede affiancate */
+.more-projects .more-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.more-projects .project-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  text-align: left;
+}
+
+.more-projects .project-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.more-projects .project-content {
+  padding-top: 1rem;
+}
+
+/* Su smartphone: una scheda per riga */
+@media (max-width: 576px) {
+  .more-projects .more-list {
+    grid-template-columns: 1fr;
+  }
+
+  .more-projects .project-card img {
+    height: 240px;
+  }
+}
     @media(max-width:991px){
       .hp-section{padding:4.5rem 0}
       .hp-hero-grid,.hp-two,.hp-mv,.hp-personas,.hp-pers{grid-template-columns:1fr;gap:2.5rem}
@@ -339,18 +378,19 @@
     </div>
   </section>
 
+ 
   <!-- ALTRI PROGETTI -->
-   <section class="hp-section hp-more">
+  <section class="more-projects">
     <div class="container text-center">
       <h2 class="section-title mb-5">Altri progetti</h2>
-      <div class="hp-more-list">
+      <div class="more-list">
         <a href="ecodream.html" class="project-card">
           <img src="assets/img/sfondo-discovery.webp" alt="Prototipo della homepage Ecodream" loading="lazy">
           <div class="project-content"><h5>Ecodream Design</h5><p>Wireframe, test, UI e accessibilità</p><p class="text-muted small">start2impact</p></div>
         </a>
-        <a href="agenti-ai.html" class="project-card">
-          <img src="assets/img/Robot-chatbot-.webp" alt="Mascotte dell’assistente AI" loading="lazy">
-          <div class="project-content"><h5>Agenti AI per UX/UI</h5><p>Un chatbot per Ecodream</p><p class="text-muted small">start2impact</p></div>
+        <a href="includo.html" class="project-card">
+          <img src="assets/img/sfondo-includo.webp" alt="Mockup Includo Brand Guidelines" loading="lazy">
+          <div class="project-content"><h5>Includo Brand Guidelines</h5><p>Logo, palette, icone e social</p><p class="text-muted small">start2impact</p></div>
         </a>
       </div>
     </div>
@@ -395,6 +435,7 @@
   </section>
 
 </main>
+
 
 
 

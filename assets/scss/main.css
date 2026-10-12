@@ -363,89 +363,267 @@ p {
     font-size: 1.3rem;
   }
 }
-/* ==========================================================
-   AREA CARDS
-========================================================== */
-.card-base, .area-card {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 18px;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  color: #FAF9F6;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  aspect-ratio: 4/3;
-}
-.card-base h3, .area-card h3 {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  font-family: "Fraunces", serif;
-  font-weight: 700;
-  font-size: 1.8rem;
-  text-align: center;
-  transition: color 0.3s ease;
-}
-.card-base .overlay, .area-card .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
-  transition: 0.3s ease;
-}
-.card-base:hover, .area-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-}
-.card-base:hover h3, .area-card:hover h3 {
-  color: #007A78;
-}
-.card-base:hover .overlay, .area-card:hover .overlay {
-  background: rgba(255, 255, 255, 0.25);
+/* ========================================
+   PORTFOLIO — GLASS CARDS
+======================================== */
+.portfolio-areas {
+  padding: 5rem 0;
 }
 
-.area-card::before {
+.portfolio-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+/* Card principale */
+.portfolio-glass-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  min-height: 500px;
+  height: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 28px;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: #333333;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Immagini originali */
+.portfolio-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+/* Overlay scuro */
+.portfolio-glass-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
-  transition: 0.3s;
-}
-.area-card:hover::before {
-  background: rgba(255, 255, 255, 0.25);
-}
-.area-card h3 {
-  color: #FAF9F6;
-}
-.area-card.editorial {
-  background-image: url("../img/sfondo-editorial.webp");
-}
-.area-card.voice {
-  background-image: url("../img/sfondo-voice.webp");
-}
-.area-card.design {
-  background-image: url("../img/sfondo-design.webp");
-}
-.area-card.progettazione {
-  background-image: url("../img/sfondo-progettazione.webp");
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(15, 18, 18, 0.25) 0%, rgba(15, 18, 18, 0.35) 25%, rgba(15, 18, 18, 0.6) 48%, rgba(15, 18, 18, 0.82) 72%, rgba(15, 18, 18, 0.94) 100%);
+  pointer-events: none;
 }
 
-@media (max-width: 576px) {
-  .area-card {
-    aspect-ratio: 1/1;
+/* Categoria in vetro */
+.portfolio-card-category {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  z-index: 2;
+  max-width: calc(100% - 2.2rem);
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  font-family: "Epilogue", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.4;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Contenuto: flusso verticale naturale */
+.portfolio-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 1.25rem;
+  margin-top: auto;
+}
+
+/* Elimina i puntini decorativi */
+.portfolio-card-dots {
+  display: none !important;
+}
+
+/* Titolo */
+.portfolio-card-content h2 {
+  margin: 0 0 0.65rem;
+  color: #FFFFFF;
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.35rem, 1.5vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+/* Descrizione */
+.portfolio-card-content p {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: "Epilogue", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  overflow-wrap: break-word;
+}
+
+/* Tag */
+.portfolio-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+}
+
+.portfolio-card-tags span {
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  font-family: "Epilogue", sans-serif;
+  font-size: 0.66rem;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Pulsante */
+.portfolio-card-button {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 100%;
+  min-height: 46px;
+  box-sizing: border-box;
+  margin-top: 0;
+  padding: 0.75rem;
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: #333333;
+  font-family: "Epilogue", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.portfolio-card-button i {
+  flex-shrink: 0;
+  font-size: 1rem;
+  transition: transform 0.25s ease;
+}
+
+/* Hover */
+@media (hover: hover) {
+  .portfolio-glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.16);
+    color: #FFFFFF;
   }
-  .area-card h3 {
-    font-size: 1.4rem;
+  .portfolio-glass-card:hover .portfolio-card-bg {
+    transform: scale(1.045);
+  }
+  .portfolio-glass-card:hover .portfolio-card-button {
+    background: #007A78;
+    color: #FFFFFF;
+  }
+  .portfolio-glass-card:hover .portfolio-card-button i {
+    transform: translateX(4px);
+  }
+}
+/* Focus da tastiera */
+.portfolio-glass-card:focus-visible {
+  outline: 3px solid #009B98;
+  outline-offset: 5px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+@media (min-width: 576px) and (max-width: 1199px) {
+  .portfolio-areas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .portfolio-glass-card {
+    min-height: 480px;
+  }
+  .portfolio-card-content {
+    padding: 1.5rem;
+  }
+  .portfolio-card-content h2 {
+    font-size: 1.7rem;
+  }
+  .portfolio-card-content p {
+    font-size: 0.88rem;
+  }
+}
+/* ========================================
+   SMARTPHONE
+======================================== */
+@media (max-width: 575px) {
+  .portfolio-areas {
+    padding: 3rem 0;
+  }
+  .portfolio-areas-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+  }
+  .portfolio-glass-card {
+    min-height: 0;
+    height: auto;
+    border-radius: 25px;
+  }
+  .portfolio-card-content {
+    padding: 1.35rem;
+  }
+  .portfolio-card-content h2 {
+    font-size: 1.65rem;
+  }
+  .portfolio-card-content p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+  .portfolio-card-button {
+    min-height: 48px;
+  }
+}
+/* ========================================
+   ACCESSIBILITÀ — MOVIMENTO RIDOTTO
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-glass-card,
+  .portfolio-card-bg,
+  .portfolio-card-button,
+  .portfolio-card-button i {
+    transition: none;
+  }
+  .portfolio-glass-card:hover,
+  .portfolio-glass-card:hover .portfolio-card-bg {
+    transform: none;
   }
 }
 /* ==========================================================

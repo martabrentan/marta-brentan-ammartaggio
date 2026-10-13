@@ -63,8 +63,7 @@
     .ae p{font-size:1.1rem;max-width:none;margin-left:0;margin-right:0;line-height:1.75}
     .ae .section-title{color:var(--n)}
     .ae-wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
-    .ae-breadcrumb{font-size:.85rem;color:#556;margin:0 0 3rem!important}
-    .ae-breadcrumb a{color:var(--n)}
+    
     .ae-hero{padding:4.5rem 0 3rem}
     .ae .ae-title{font-size:clamp(2.8rem,7vw,5.8rem);line-height:1;letter-spacing:-.025em;margin-bottom:1.5rem}
     .ae .ae-title em{color:var(--te);font-weight:400}
@@ -119,6 +118,9 @@
 
 .ae-fig {
   margin: 0;
+}
+.ae .case-breadcrumb {
+  margin-bottom: 2.5rem;
 }
 
     /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
@@ -204,10 +206,16 @@
   
   <!-- HERO -->
    
-<div class="ae">
+<div class="ae"> 
   <section class="ae-hero">
     <div class="ae-wrap">
-<p class="lm-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Aesthetics e ed Estetica 4.0</span></p>
+      <nav class="case-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="progettazione.html">Progettazione</a>
+        <span aria-hidden="true">›</span>
+        <span class="current" aria-current="page">Aesthetics ed Estetica 4.0</span> <br>
+      </nav>      
       <h1 class="ae-title">Due siti, <em>da zero.</em></h1>
       <p class="ae-sub">Per Aesthetics 4.0 ed Estetica 4.0 sono andata oltre i prototipi: ho costruito due siti su WordPress, online e visitabili.</p>
       <dl class="ae-credits">

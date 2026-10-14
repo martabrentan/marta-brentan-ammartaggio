@@ -123,6 +123,22 @@
   margin-bottom: 2.5rem;
 }
 
+    /* ---------- le parole ---------- */
+    .ae-voice{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+    .ae-vc{border-radius:14px;padding:2rem;display:flex;flex-direction:column;gap:1.1rem}
+    .ae-vc.a{background:var(--ice)}.ae-vc.b{background:var(--n);color:#fff}
+    .ae-vc .who{margin:0!important;font-size:.76rem!important;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--bl)}
+    .ae-vc.b .who{color:#9fd3ee}
+    .ae-vc h3{margin:0;font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.2}
+    .ae-vc.b h3{color:#fff}
+    .ae-vc .sub{margin:0!important;font-size:1.02rem!important}
+    .ae-vc.b .sub{color:#fff}
+    .ae-vc ul{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+    .ae-vc li{padding:.4rem .9rem;border-radius:999px;border:1px solid currentColor;font-size:.88rem;font-weight:600}
+    .ae-vc blockquote{margin:0;padding-top:1rem;border-top:1px solid rgba(26,42,94,.2);font-family:"Fraunces",serif;font-size:1.15rem;line-height:1.5}
+    .ae-vc.b blockquote{border-color:rgba(255,255,255,.3);color:#fff}
+    @media(max-width:991px){.ae-voice{grid-template-columns:1fr}}
+
     /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
     .more-projects { background: #fff; padding: 6rem 0; }
     .more-projects .more-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
@@ -310,9 +326,32 @@
   </section>
   
 
+  <section class="ae-band">
+    <div class="ae-wrap">
+      <p class="ae-lab">04 · Le parole</p><h2 class="ae-h">Stessa azienda, due modi di parlare</h2>
+      <div class="ae-txt"><p>I testi dei due siti li ho scritti da zero. A chi lavora nel settore parlo di scienza e protocolli, a chi cerca un trattamento di cura e benessere.</p></div>
+      <div class="ae-voice">
+        <div class="ae-vc a">
+          <p class="who">Estetica 4.0 · professionisti</p>
+          <h3>Scienza biomarina al servizio della pelle</h3>
+          <p class="sub">Cosmetici professionali e macchinari di nuova generazione per farmacie, centri estetici e studi medici. Formazione continua e supporto tecnico dedicato.</p>
+          <ul><li>Scopri i brand</li><li>Diventa rivenditore</li></ul>
+          <blockquote>«Oggi parlare di estetica professionale significa parlare di scienza, protocolli evoluti e integrazione delle competenze.»</blockquote>
+        </div>
+        <div class="ae-vc b">
+          <p class="who">Aesthetics 4.0 · clienti</p>
+          <h3>La cura che meriti, dentro e fuori</h3>
+          <p class="sub">Il tuo spazio di bellezza e benessere a Moncalieri. Estetica di base e avanzata, proprietà terapeutiche marine e un team dedicato a prendersi cura di te ogni volta.</p>
+          <ul><li>Prenota</li><li>Scopri di più</li></ul>
+          <blockquote>«Le mani parlano di te prima ancora che tu apra bocca.»</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="ae-band navy">
     <div class="ae-wrap">
-      <p class="ae-lab">04 · Dietro le quinte</p><h2 class="ae-h">Prima di costruire</h2>
+      <p class="ae-lab">05 · Dietro le quinte</p><h2 class="ae-h">Prima di costruire</h2>
       <div class="ae-txt"><p>Persone di riferimento e un percorso utente per ciascun sito.</p></div>
       <div class="ae-stack"><div class="ae-2"><figure class="ae-fig "></figure></div>
         <figure class="ae-fig "><img src="assets/img/ae-journey-estetica.webp" alt="User journey di Estetica 4.0" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/ae-journey-aesthetics.webp" alt="User journey di Aesthetics 4.0" loading="lazy"></figure></div>
@@ -320,7 +359,7 @@
   </section>
   <section class="ae-band">
     <div class="ae-wrap">
-      <p class="ae-lab">05 · Struttura e UI</p><h2 class="ae-h">Mappe, griglia, componenti</h2>
+      <p class="ae-lab">06 · Struttura e UI</p><h2 class="ae-h">Mappe, griglia, componenti</h2>
       <div class="ae-txt"><p>Estetica 4.0 guida per mestiere, Aesthetics 4.0 resta essenziale. Componenti modulari in Elementor, così il cliente aggiorna i contenuti da solo.</p></div>
       <div class="ae-2"><figure class="ae-fig "><img src="assets/img/ae-sitemap-estetica.webp" alt="Sitemap di Estetica 4.0" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/ae-sitemap-aesthetics.webp" alt="Sitemap di Aesthetics 4.0" loading="lazy"></figure></div>
       <div class="ae-stack" style="margin-top:1.5rem"><figure class="ae-fig "><img src="assets/img/ae-griglia.webp" alt="La griglia su desktop e mobile" loading="lazy"></figure></div>

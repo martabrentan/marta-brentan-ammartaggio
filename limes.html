@@ -188,6 +188,20 @@
       .lm-ico img{width:60px;height:60px}
     }
 
+    /* ---------- le parole dell'interfaccia ---------- */
+    .lm-words{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.25rem}
+    .lm-w{display:flex;flex-direction:column;border:1px solid #e3e3e1;border-radius:10px;overflow:hidden;background:#fff;font-family:var(--lm-sans)}
+    .lm-w h4{margin:0;padding:1.1rem 1.25rem .9rem;font-size:1.05rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+    .lm-w .tag{display:block;margin-bottom:.35rem;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--lm-gray)}
+    .lm-w .before,.lm-w .after{margin:0!important;padding:1rem 1.25rem;font-family:var(--lm-sans)!important;font-size:.95rem!important;line-height:1.5!important}
+    .lm-w .before{background:var(--lm-bg);color:var(--lm-gray)}
+    .lm-w .after{flex:1;background:var(--lm-ink);color:#fff}
+    .lm-w .before b,.lm-w .after b{display:block;margin-bottom:.3rem;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+    .lm-w .after b{color:#ff7a50}
+    .lm-w .after q{display:block;font-size:1.02rem;quotes:none}
+    .lm-w-tone{margin-top:1.25rem;padding:1.25rem 1.5rem;border-left:3px solid var(--lm-orange);background:var(--lm-bg);font-family:var(--lm-sans);font-size:1rem;line-height:1.6}
+    @media(max-width:991px){.lm-words{grid-template-columns:1fr}}
+
     /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
     .more-projects { background: #fff; padding: 6rem 0; }
     .more-projects .more-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
@@ -466,6 +480,27 @@
 <img src="assets/img/lm-prezzo-studenti.webp" alt="Card abbonamento per studenti e docenti" loading="lazy">
 <img src="assets/img/lm-prezzo-cartacea.webp" alt="Card abbonamento digitale e cartaceo" loading="lazy">
 </div>
+
+<p class="lm-label lm-sub">Le parole dell'interfaccia</p>
+<p class="lm-lead" style="margin-bottom:0">Il test ha mostrato tre punti in cui l'interfaccia non spiegava abbastanza. Li ho risolti con poche parole, nel posto in cui servono.</p>
+<div class="lm-words">
+<div class="lm-w">
+<h4><span class="tag">Paywall</span>Che cosa è a pagamento</h4>
+<p class="before"><b>Prima</b>Solo il lucchetto. Due utenti pensano che tutto il sito sia a pagamento.</p>
+<p class="after"><b>Dopo</b><q>SOLO ABBONATI</q>L'etichetta accanto all'icona dice che cosa è riservato.</p>
+</div>
+<div class="lm-w">
+<h4><span class="tag">Riepilogo ordine</span>Come si disdice</h4>
+<p class="before"><b>Prima</b>Nessuna indicazione: la disdetta non è chiara.</p>
+<p class="after"><b>Dopo</b><q>Puoi disdirlo in qualsiasi momento dal tuo account.</q>Una riga esplicita, prima di confermare.</p>
+</div>
+<div class="lm-w">
+<h4><span class="tag">Dopo l'acquisto</span>Che cosa succede ora</h4>
+<p class="before"><b>Prima</b>Nessuna istruzione dopo il pagamento.</p>
+<p class="after"><b>Dopo</b><q>Grazie per l'acquisto! Controlla la tua mail oppure continua a leggere l'articolo, riprendi da dove eri rimasto…</q>Con il pulsante «Continua a leggere».</p>
+</div>
+</div>
+<p class="lm-w-tone"><b>La voce.</b> Si dà del tu, le azioni sono verbi brevi («Abbonati», «Accedi», «Leggi in pdf», «Conferma ordine») e ogni messaggio dice una cosa sola. L'autorevolezza resta ai contenuti: l'interfaccia indica solo dove andare.</p>
 
 <p class="lm-label" style="margin-top:6rem">09 · Prototipi</p>
 <h3>La chiarezza non è il contrario della profondità</h3>

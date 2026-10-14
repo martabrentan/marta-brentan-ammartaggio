@@ -182,6 +182,19 @@
       .ec-type .big{font-size:3.5rem}
     }
 
+    /* ---------- le parole dell'interfaccia ---------- */
+    .ec-words{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+    .ec-w{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;border:1px solid rgba(30,43,36,.15);background:#fff}
+    .ec .ec-w h3{margin:0;padding:1.3rem 1.4rem .9rem;font-size:1.1rem;font-weight:600;line-height:1.3}
+    .ec-w h3 span{display:block;margin-bottom:.35rem;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ec-green)}
+    .ec .ec-w p{margin:0;padding:1rem 1.4rem;font-size:.92rem;line-height:1.55}
+    .ec .ec-w .before{background:var(--ec-cream);color:#5b655f}
+    .ec .ec-w .after{flex:1;background:var(--ec-green);color:#fff}
+    .ec-w p b{display:block;margin-bottom:.3rem;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+    .ec .ec-w .after b{color:#dbe5d7}
+    .ec-w q{display:block;font-size:1rem;font-weight:500;quotes:none}
+    @media(max-width:991px){.ec-words{grid-template-columns:1fr}}
+
     /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
     .more-projects { background: #fff; padding: 6rem 0; }
     .more-projects .more-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
@@ -440,6 +453,32 @@
     </div>
   </section>
 
+
+  <!-- LE PAROLE -->
+  <section class="ec-section ec-cream">
+    <div class="container">
+      <p class="ec-label">Le parole dell'interfaccia</p>
+      <h2>Dire le cose come le cerca chi compra</h2>
+      <p class="ec-lead">Nell'analisi del sito molti problemi erano di linguaggio: lingue mescolate, link che non dicono dove portano, informazioni che mancano al momento della scelta.</p>
+      <div class="ec-words">
+        <div class="ec-w">
+          <h3><span>Menu e titoli</span>Una sola lingua</h3>
+          <p class="before"><b>Prima</b>Funzione «Translate» e titoli di immagini e link in inglese (SUSTAINABLE FASHION BRAND, ACHIEVEMENTS, INITIATIVES), in un sito scelto in italiano.</p>
+          <p class="after"><b>Dopo</b><q>Traduzione</q>Una funzione che traduce davvero e voci di menu e link in italiano.</p>
+        </div>
+        <div class="ec-w">
+          <h3><span>Link e pulsanti</span>Un nome che dice dove porta</h3>
+          <p class="before"><b>Prima</b>«Scopri di più» sotto un testo, senza contesto. Link grigi, poco distinguibili dal testo.</p>
+          <p class="after"><b>Dopo</b><q>Nome chiaro che descrive scopo e destinazione</q>Niente «Clicca qui»; link con colore e formato sempre riconoscibili.</p>
+        </div>
+        <div class="ec-w">
+          <h3><span>Shop</span>Le informazioni, prima dell'acquisto</h3>
+          <p class="before"><b>Prima</b>Nomi e codici prodotto vaghi, nessuna indicazione su spedizioni e resi.</p>
+          <p class="after"><b>Dopo</b><q>Ogni prodotto sarà spedito entro 2/3 giorni lavorativi. È possibile fare cambio o reso entro 14 giorni dalla consegna del pacco.</q>Nomi come «EMESS – Borsa in tessuto», con il materiale sotto; pulsanti «Filtri», «Ordina», «Aggiungi al carrello».</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ACCESSIBILITA -->
   <section class="ec-section ec-on-dark">

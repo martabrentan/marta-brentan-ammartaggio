@@ -132,10 +132,11 @@
       line-height: 1.7;
     }
 
+    /* progetti in orizzontale: 3 in fila, scorrimento laterale su mobile */
     .progettazione-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 2rem 1.5rem;
+      gap: 1.5rem;
       align-items: stretch;
     }
 
@@ -278,8 +279,16 @@
 
     @media (max-width: 991.98px) {
       .progettazione-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.75rem;
+        gap: 1rem;
+      }
+
+      .progettazione-card-body {
+        padding: 1.15rem;
+      }
+
+      .progettazione-card-description {
+        font-size: 0.86rem;
+        line-height: 1.65;
       }
 
       .progettazione-intro {
@@ -289,20 +298,23 @@
     }
 
 
-    /* MOBILE */
+    /* MOBILE: scorrimento orizzontale */
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 767.98px) {
       .progettazione-grid {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1.5rem;
+        display: flex;
+        gap: 1rem;
+        margin-right: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
       }
 
-      .progettazione-card-body {
-        padding: 1.25rem;
-      }
-
-      .progettazione-card h3 {
-        font-size: 1.35rem;
+      .progettazione-card {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
       }
 
       .progettazione-intro .norman-quote {

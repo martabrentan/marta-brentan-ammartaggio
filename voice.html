@@ -68,115 +68,38 @@
       --vo-line: rgba(51, 51, 51, 0.12);
     }
 
-    /* ---------- SEI REGOLE ---------- */
-    .vo-rules-sec { padding: 1rem 0 4rem; }
-    .vo-eyebrow {
-      margin: 0 0 .75rem; font-family: "Epilogue", sans-serif; font-size: .72rem;
-      font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--vo-teal);
+    /* ---------- PROGETTI (stessa card della pagina Progettazione) ---------- */
+    .vo-projects { padding: 1rem 0 5rem; }
+    .vo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem 1.5rem; align-items: stretch; }
+    .vo-card {
+      display: flex; flex-direction: column; min-width: 0; height: 100%; overflow: hidden;
+      color: inherit; text-decoration: none; background: #fff; border-radius: 4px;
+      transition: transform .25s ease, box-shadow .25s ease;
     }
-    .vo-rules-sec h2 { margin: 0 0 .5rem; }
-    .vo-rules-note { max-width: 640px; margin: 0 0 2rem; font-size: 1rem; color: #555; }
+    .vo-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(0, 0, 0, .08); color: inherit; }
+    .vo-card:focus-visible { outline: 3px solid var(--vo-teal); outline-offset: 4px; }
+    .vo-card-image { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #eae8e2; }
+    .vo-card-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .vo-card:hover .vo-card-image img { transform: scale(1.035); }
+    .vo-card-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 1.5rem; text-align: left; }
+    .vo-card-number { display: block; margin: 0 0 .9rem; max-width: none; color: var(--vo-teal); font-size: .72rem; font-weight: 600; letter-spacing: .09em; line-height: 1.5; text-transform: uppercase; }
+    .vo-card h3 { margin: 0 0 .9rem; font-family: "Fraunces", serif; font-size: 1.4rem; font-weight: 600; line-height: 1.3; text-align: left; }
+    .vo-card-description { max-width: none; margin: 0 0 1.25rem; font-size: .94rem; line-height: 1.75; text-align: left; }
+    .vo-card-meta { max-width: none; margin: auto 0 0; padding-top: .25rem; color: #666; font-size: .8rem; text-align: left; }
+    .vo-card-cta { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.25rem; color: var(--vo-teal); font-size: .9rem; font-weight: 600; }
+    .vo-card:hover .vo-card-cta { text-decoration: underline; text-underline-offset: 4px; }
 
-    .vo-rules { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; margin: 0; padding: 0; list-style: none; }
-    @media (min-width: 640px)  { .vo-rules { grid-template-columns: repeat(3, 1fr); } }
-    @media (min-width: 1100px) { .vo-rules { grid-template-columns: repeat(6, 1fr); } }
-
-    .vo-rule {
-      display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem;
-      height: 100%; min-height: 15rem; margin: 0; padding: 1.1rem;
-      border-radius: 14px;
-      background: var(--tile-bg); color: var(--tile-fg);
-      border: 1px solid var(--vo-line);
+    @media (max-width: 991.98px) { .vo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem; } }
+    @media (max-width: 575.98px) {
+      .vo-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+      .vo-card-body { padding: 1.25rem; }
+      .vo-projects { padding-bottom: 3rem; }
     }
-    .vo-rules > li:nth-child(1) .vo-rule { --tile-bg: var(--vo-teal); --tile-fg: #fff; border-color: var(--vo-teal); }
-    .vo-rules > li:nth-child(2) .vo-rule { --tile-bg: #fff;           --tile-fg: var(--vo-ink); }
-    .vo-rules > li:nth-child(3) .vo-rule { --tile-bg: var(--vo-tint); --tile-fg: var(--vo-ink); border-color: transparent; }
-    .vo-rules > li:nth-child(4) .vo-rule { --tile-bg: #fff;           --tile-fg: var(--vo-ink); }
-    .vo-rules > li:nth-child(5) .vo-rule { --tile-bg: var(--vo-tint); --tile-fg: var(--vo-ink); border-color: transparent; }
-    .vo-rules > li:nth-child(6) .vo-rule { --tile-bg: var(--vo-ink);  --tile-fg: #fff; border-color: var(--vo-ink); }
-
-    .vo-ui { display: flex; flex-direction: column; gap: .5rem; align-items: flex-start; font-family: "Epilogue", sans-serif; font-size: .95rem; font-weight: 600; line-height: 1.3; }
-    .vo-ui-msg { margin: 0; max-width: none; font-size: .95rem; line-height: 1.35; }
-    .vo-ui-pill { display: inline-block; padding: .4rem .85rem; border-radius: 999px; background: var(--vo-teal); color: #fff; font-size: .9rem; }
-    .vo-rules > li:nth-child(1) .vo-ui-pill,
-    .vo-rules > li:nth-child(6) .vo-ui-pill { background: #fff; color: var(--vo-ink); }
-    .vo-rules > li:nth-child(1) .vo-ui-pill { color: var(--vo-teal); }
-    .vo-ui-pill--ghost { background: transparent !important; color: inherit !important; box-shadow: inset 0 0 0 2px currentColor; }
-    .vo-ui-field { display: block; width: 100%; padding: .5rem .7rem; border-radius: .5rem; background: rgba(255,255,255,.55); box-shadow: inset 0 0 0 2px var(--vo-ink); }
-    .vo-rules > li:nth-child(1) .vo-ui-field { background: rgba(255,255,255,.14); box-shadow: inset 0 0 0 2px #fff; }
-    .vo-rules > li:nth-child(6) .vo-ui-field { background: rgba(255,255,255,.1); box-shadow: inset 0 0 0 2px #fff; }
-    .vo-ui-row { display: flex; gap: .4rem; flex-wrap: wrap; }
-    .vo-rule figcaption { margin: 0; font-size: .92rem; line-height: 1.4; }
-
-    @media (prefers-reduced-motion: no-preference) {
-      .vo-rule { animation: vo-in .6s cubic-bezier(.2,.7,.2,1) both; }
-      .vo-rules > li:nth-child(2) .vo-rule { animation-delay: .08s; }
-      .vo-rules > li:nth-child(3) .vo-rule { animation-delay: .16s; }
-      .vo-rules > li:nth-child(4) .vo-rule { animation-delay: .24s; }
-      .vo-rules > li:nth-child(5) .vo-rule { animation-delay: .32s; }
-      .vo-rules > li:nth-child(6) .vo-rule { animation-delay: .4s; }
-      @keyframes vo-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-    }
-
-    /* ---------- GRUPPI DI PROGETTI ---------- */
-    .vo-group { padding: 0 0 4.5rem; }
-    .vo-group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1.5rem; margin-bottom: 1.75rem; }
-    .vo-group-head h2 { margin: 0; }
-    .vo-group-head p { margin: 0; max-width: 46ch; font-size: 1rem; color: #555; }
-
-    .vo-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
-    .vo-grid--pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    @media (max-width: 991px) { .vo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 640px) { .vo-grid, .vo-grid--pair { grid-template-columns: 1fr; } }
-
-    /* ---------- CARD PROGETTO ---------- */
-    .vo-case {
-      display: flex; flex-direction: column; min-width: 0; overflow: hidden;
-      background: #fff; color: var(--vo-ink);
-      border: 1px solid var(--vo-line); border-radius: 16px;
-    }
-
-    .vo-case-image { display: block; overflow: hidden; aspect-ratio: 4 / 3; background: #eeece6; }
-    .vo-case-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
-    .vo-case-image:hover img { transform: scale(1.03); }
-
-    .vo-case-body { display: flex; flex: 1; flex-direction: column; padding: 1.5rem; text-align: left; }
-    .vo-case-number { margin: 0 0 .9rem; max-width: none; font-family: "Epilogue", sans-serif; font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; line-height: 1.5; color: var(--vo-teal); }
-    .vo-case-body h3 { margin: 0 0 1rem; font-family: "Fraunces", serif; font-size: 1.8rem; font-weight: 700; line-height: 1.15; color: var(--vo-ink); text-align: left; }
-    .vo-case-body > p:not(.vo-case-number) { margin: 0; max-width: none; font-size: .98rem; line-height: 1.7; text-align: left; }
-
-    .vo-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0 1.5rem; padding: 0; list-style: none; }
-    .vo-tags li { padding: .35rem .75rem; border: 1px solid rgba(0, 122, 120, .35); border-radius: 999px; color: #285b59; font-size: .75rem; font-weight: 500; line-height: 1.4; }
-
-    .vo-case-link {
-      display: inline-flex; align-items: center; gap: .5rem; align-self: flex-start; margin-top: auto;
-      padding-top: .25rem; color: var(--vo-teal); font-weight: 600; text-decoration: none;
-    }
-    .vo-case-link:hover { color: var(--vo-teal); text-decoration: underline !important; text-underline-offset: 4px; }
-    .vo-case-link:focus-visible, .vo-case-image:focus-visible { outline: 3px solid var(--vo-teal); outline-offset: 4px; }
-
-    /* dettagli di un progetto (Orizon) */
-    .vo-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; margin: 1.25rem 0 1.5rem; }
-    .vo-facts h4 { margin: 0 0 .25rem; font-family: "Epilogue", sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--vo-teal); }
-    .vo-facts p { margin: 0; max-width: none; font-size: .9rem; line-height: 1.55; }
-    @media (max-width: 520px) { .vo-facts { grid-template-columns: 1fr; } }
-
-
-    @media (max-width: 575px) {
-      .vo-case-body { padding: 1.25rem; }
-      .vo-rules-sec { padding-bottom: 3rem; }
-      .vo-group { padding-bottom: 3rem; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .vo-case-image img, .vo-case-link { transition: none; }
-    }
+    @media (prefers-reduced-motion: reduce) { .vo-card, .vo-card-image img { transition: none; } }
 
     /* ---------- BLOG PROMO ---------- */
     .voice-blog, .voice-blog .container { text-align: center !important; }
     .voice-blog p { text-align: center !important; margin-left: auto !important; margin-right: auto !important; max-width: 750px; }
-
-    /* titoli di sezione h5 */
-    .vo-rules-sec h5 { margin-bottom: 1.5rem; }
   </style>
 </head>
 
@@ -328,193 +251,65 @@
   </section>
 
 
-  <!-- UX WRITING -->
-  <section class="vo-group" aria-labelledby="vo-ux-title">
+  <!-- PROGETTI -->
+  <section class="vo-projects" aria-label="Progetti Voice">
     <div class="container">
-      <div class="vo-group-head">
-        <h4 id="vo-ux-title">UX writing</h4>
-        <p>Tre progetti in cui testi e interfaccia sono stati pensati insieme.</p>
-      </div>
-
       <div class="vo-grid">
 
-        <!-- 01 — LIMES -->
-        <article class="vo-case vo-limes">
-          <a href="limes.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
-            <img src="assets/img/lm-hero.webp" alt="" loading="lazy">
-          </a>
-          <div class="vo-case-body">
-            <p class="vo-case-number">01 / Architettura editoriale</p>
+        <a href="limes.html" class="vo-card">
+          <div class="vo-card-image"><img src="assets/img/lm-hero.webp" alt="Mockup del redesign di Limes" loading="lazy"></div>
+          <div class="vo-card-body">
+            <span class="vo-card-number">01 / UX WRITING</span>
             <h3>Limes</h3>
-            <p>
-              Come rendere più accessibile un patrimonio editoriale
-              complesso senza perdere profondità e identità.
-              La progettazione mette in relazione gerarchia dei
-              contenuti, navigazione e strumenti per orientarsi
-              tra gli articoli.
-            </p>
-            <ul class="vo-tags">
-              <li>Information architecture</li>
-              <li>Gerarchia editoriale</li>
-              <li>Microcopy</li>
-            </ul>
-            <a href="limes.html" class="vo-case-link">
-              Scopri il progetto
-              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-            </a>
+            <p class="vo-card-description">Etichette, messaggi e testi del checkout che spiegano cosa è a pagamento, come si disdice e cosa succede dopo l’acquisto. Parole nate dal test con gli utenti, dentro il redesign di una rivista di geopolitica.</p>
+            <p class="vo-card-meta">Information architecture · Microcopy · start2impact</p>
+            <span class="vo-card-cta">Scopri il progetto <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
           </div>
-        </article>
+        </a>
 
-        <!-- 02 — ECODREAM -->
-        <article class="vo-case vo-ecodream">
-          <a href="ecodream.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
-            <img src="assets/img/sfondo-discovery.webp" alt="" loading="lazy">
-          </a>
-          <div class="vo-case-body">
-            <p class="vo-case-number">02 / Linguaggio dell'interfaccia</p>
+        <a href="ecodream.html" class="vo-card">
+          <div class="vo-card-image"><img src="assets/img/sfondo-discovery.webp" alt="Mockup e ricerca UX/UI per il redesign di Ecodream Design" loading="lazy"></div>
+          <div class="vo-card-body">
+            <span class="vo-card-number">02 / UX WRITING</span>
             <h3>Ecodream</h3>
-            <p>
-              Progettare un percorso digitale in cui testi, azioni
-              e gerarchie visive lavorano insieme. La chiarezza
-              dei contenuti diventa parte dell'esperienza e un
-              elemento da verificare attraverso i test con gli utenti.
-            </p>
-            <ul class="vo-tags">
-              <li>CTA e microcopy</li>
-              <li>Accessibilità</li>
-              <li>User testing</li>
-            </ul>
-            <a href="ecodream.html" class="vo-case-link">
-              Scopri il progetto
-              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-            </a>
+            <p class="vo-card-description">Un solo linguaggio per tutta l’interfaccia: menu e link in italiano, nomi che dicono dove portano, informazioni su spedizioni e resi prima dell’acquisto.</p>
+            <p class="vo-card-meta">CTA e microcopy · Accessibilità · start2impact</p>
+            <span class="vo-card-cta">Scopri il progetto <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
           </div>
-        </article>
+        </a>
 
-        <!-- 03 — AESTHETICS 4.0 -->
-        <article class="vo-case vo-aesth">
-          <a href="aesthetics.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
-            <img src="assets/img/sfondo-progetto-estetica.webp" alt="" loading="lazy">
-          </a>
-          <div class="vo-case-body">
-            <p class="vo-case-number">03 / Content design</p>
-            <h3>Aesthetics 4.0 / Estetica 4.0</h3>
-            <p>
-              Due siti, due pubblici e due registri comunicativi.
-              Ho organizzato i contenuti e adattato il linguaggio
-              alle esigenze delle clienti del centro estetico
-              e dei professionisti che cercano prodotti e formazione.
-            </p>
-            <ul class="vo-tags">
-              <li>Tone of voice</li>
-              <li>Content architecture</li>
-              <li>CTA</li>
-            </ul>
-            <a href="aesthetics.html" class="vo-case-link">
-              Scopri il progetto
-              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-            </a>
+        <a href="aesthetics.html" class="vo-card">
+          <div class="vo-card-image"><img src="assets/img/sfondo-progetto-estetica.webp" alt="Mockup dei siti Aesthetics 4.0 ed Estetica 4.0" loading="lazy"></div>
+          <div class="vo-card-body">
+            <span class="vo-card-number">03 / CONTENT DESIGN</span>
+            <h3>Aesthetics 4.0 ed Estetica 4.0</h3>
+            <p class="vo-card-description">Testi scritti da zero per due siti e due pubblici: scienza e protocolli per i professionisti, cura e benessere per le clienti del centro.</p>
+            <p class="vo-card-meta">Tone of voice · Content architecture · Progetto professionale</p>
+            <span class="vo-card-cta">Scopri il progetto <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
           </div>
-        </article>
+        </a>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- COPY E TONE OF VOICE -->
-  <section class="vo-group" aria-labelledby="vo-copy-title">
-    <div class="container">
-      <div class="vo-group-head">
-        <h4 id="vo-copy-title">Copy e tone of voice</h4>
-        <p>Testi per un hotel e voce per i social di un brand di viaggi sostenibili.</p>
-      </div>
-
-      <div class="vo-grid vo-grid--pair">
-
-        <!-- 04 — HOTEL POMELIA -->
-        <article class="vo-case vo-pomelia" id="hotel-pomelia">
-          <a href="hotelpomelia.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
-            <img src="assets/img/sfondo-copywriting.webp" alt="" loading="lazy">
-          </a>
-          <div class="vo-case-body">
-            <p class="vo-case-number">04 / Copywriting editoriale</p>
+        <a href="hotelpomelia.html" class="vo-card">
+          <div class="vo-card-image"><img src="assets/img/sfondo-copywriting.webp" alt="Hotel Pomelia" loading="lazy"></div>
+          <div class="vo-card-body">
+            <span class="vo-card-number">04 / COPYWRITING EDITORIALE</span>
             <h3>Hotel Pomelia</h3>
-            <p>
-              Un blog post per raccontare una destinazione attraverso i contenuti
-              del blog, valorizzando il territorio e l'esperienza
-              di soggiorno. La scrittura accompagna il lettore
-              alla scoperta di un modo più lento e consapevole
-              di viaggiare.
-            </p>
-
-            <div class="vo-facts">
-              <div>
-                <h4>A chi parla</h4>
-                <p>A chi condivide i valori dei fondatori: uno sguardo sull'innovazione e informazioni curiose su turismo lento, energia rinnovabile, materiali di recupero e alimentazione a km 0.</p>
-              </div>
-              <div>
-                <h4>Il tone of voice</h4>
-                <p>Né troppo colloquiale né amichevole: coinvolgente e accogliente, ma anche divulgativo e riflessivo, adatto a una giovane coppia come a due adulti esperti di viaggi sostenibili.</p>
-              </div>
-            </div>
-
-            <ul class="vo-tags">
-              <li>Blog writing</li>
-              <li>Storytelling</li>
-              <li>SEO content</li>
-            </ul>
-            <a href="hotelpomelia.html" class="vo-case-link">
-              Scopri il progetto
-              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-            </a>
+            <p class="vo-card-description">Un blog post per raccontare una destinazione attraverso i contenuti del blog, valorizzando il territorio e l’esperienza di soggiorno. Un tono coinvolgente e accogliente, ma anche divulgativo e riflessivo, per chi ama un modo più lento e consapevole di viaggiare.</p>
+            <p class="vo-card-meta">Blog writing · Storytelling · SEO content</p>
+            <span class="vo-card-cta">Scopri il progetto <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
           </div>
-        </article>
+        </a>
 
-        <!-- 05 — ORIZON -->
-        <article class="vo-case vo-orizon" id="orizon">
-          <a href="orizon.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
-            <img src="assets/img/ssfondo-progetto-orizon.webp" alt="" loading="lazy">
-          </a>
-          <div class="vo-case-body">
-            <p class="vo-case-number">05 / Identità verbale</p>
+        <a href="orizon.html" class="vo-card">
+          <div class="vo-card-image"><img src="assets/img/ssfondo-progetto-orizon.webp" alt="Orizon" loading="lazy"></div>
+          <div class="vo-card-body">
+            <span class="vo-card-number">05 / IDENTITÀ VERBALE</span>
             <h3>Orizon</h3>
-            <p>
-              Definire una voce riconoscibile e coerente con i valori
-              del brand. Un linguaggio caldo e diretto traduce
-              l'identità del progetto in contenuti pensati per
-              la comunicazione social.
-            </p>
-
-            <div class="vo-facts">
-              <div>
-                <h4>Il concept</h4>
-                <p>L'orizzonte come segno ricorrente e le impronte come messaggio: viaggiare lasciando solo impronte.</p>
-              </div>
-              <div>
-                <h4>A chi parla</h4>
-                <p>Giovani tra i 25 e i 35 anni attenti all'overtourism; in secondo piano, chi organizza viaggi aziendali.</p>
-              </div>
-              <div>
-                <h4>La voce</h4>
-                <p>Estetica e tecnologica. Informa prima di promuovere: ai valori aziendali preferisce tre gesti da viaggiatore.</p>
-              </div>
-              <div>
-                <h4>I contenuti</h4>
-                <p>Un carosello sui viaggi responsabili, un post per l'app, una story e un post LinkedIn per il team building.</p>
-              </div>
-            </div>
-
-            <ul class="vo-tags">
-              <li>Tone of voice</li>
-              <li>Social copywriting</li>
-              <li>Brand voice</li>
-            </ul>
-            <a href="orizon.html" class="vo-case-link">
-              Scopri il progetto
-              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
-            </a>
+            <p class="vo-card-description">Una voce riconoscibile e coerente con i valori del brand: un linguaggio caldo e diretto, per giovani attenti all’overtourism, tradotto in carosello, post, story e LinkedIn.</p>
+            <p class="vo-card-meta">Tone of voice · Social copywriting · Brand voice</p>
+            <span class="vo-card-cta">Scopri il progetto <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
           </div>
-        </article>
+        </a>
 
       </div>
     </div>

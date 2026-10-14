@@ -95,13 +95,23 @@ h3 {
   color: $color-text;
 }
 
+
 p {
   font-size: 1.2rem;
   line-height: 1.65;
   max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  margin-left: 0;
+  margin-right: 0;
 }
+
+@media (max-width: 576px) {
+  p {
+    font-size: 0.95rem;
+  }
+}
+
 
 
 @media(max-width:576px) {
@@ -1813,8 +1823,349 @@ p {
 }
 
 
+/* CONTENT DESIGN & UX WRITING */
 
+.content-design {
+  --content-ink: #333333;
+  --content-accent: #007A78;
+  --content-paper: #FAF9F6;
 
+  background: var(--content-paper);
+  color: var(--content-ink);
+}
+
+.content-design-header {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.content-eyebrow,
+.content-case-number {
+  font-family: "Epilogue", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+}
+
+.content-eyebrow {
+  margin-bottom: 1rem;
+  color: var(--content-accent);
+}
+
+.content-title {
+  margin-bottom: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.content-title em {
+  color: var(--content-accent);
+  font-weight: 400;
+}
+
+.content-intro {
+  max-width: 650px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.content-design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.content-case {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(51, 51, 51, 0.12);
+  border-radius: 10px;
+}
+
+.content-case-image {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #eeece6;
+}
+
+.content-case-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.content-case-image:hover img {
+  transform: scale(1.03);
+}
+
+.content-case-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.content-case-number {
+  margin-bottom: 0.9rem;
+  color: var(--content-accent);
+  font-size: 0.65rem;
+}
+
+.content-case-body h3 {
+  margin-bottom: 1rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.content-case-body > p:not(.content-case-number) {
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.content-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.content-tags li {
+  padding: 0.4rem 0.65rem;
+  border: 1px solid rgba(0, 122, 120, 0.3);
+  border-radius: 100px;
+  color: #285b59;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.content-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  color: var(--content-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.content-case-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.content-case-link:focus-visible,
+.content-case-image:focus-visible {
+  outline: 3px solid var(--content-accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 991px) {
+  .content-design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .content-design-header {
+    margin-bottom: 2rem;
+  }
+
+  .content-design-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .content-case-body {
+    padding: 1.25rem;
+  }
+}
+/* CONTENT DESIGN & UX WRITING */
+
+.content-design {
+  --content-ink: #333333;
+  --content-accent: #007A78;
+  --content-paper: #FAF9F6;
+
+  background: var(--content-paper);
+  color: var(--content-ink);
+}
+
+.content-design-header {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.content-eyebrow,
+.content-case-number {
+  font-family: "Epilogue", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+}
+
+.content-eyebrow {
+  margin-bottom: 1rem;
+  color: var(--content-accent);
+}
+
+.content-title {
+  margin-bottom: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.content-title em {
+  color: var(--content-accent);
+  font-weight: 400;
+}
+
+.content-intro {
+  max-width: 650px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.content-design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.content-case {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(51, 51, 51, 0.12);
+  border-radius: 10px;
+}
+
+.content-case-image {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #eeece6;
+}
+
+.content-case-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.content-case-image:hover img {
+  transform: scale(1.03);
+}
+
+.content-case-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.content-case-number {
+  margin-bottom: 0.9rem;
+  color: var(--content-accent);
+  font-size: 0.65rem;
+}
+
+.content-case-body h3 {
+  margin-bottom: 1rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.content-case-body > p:not(.content-case-number) {
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.content-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.content-tags li {
+  padding: 0.4rem 0.65rem;
+  border: 1px solid rgba(0, 122, 120, 0.3);
+  border-radius: 100px;
+  color: #285b59;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.content-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  color: var(--content-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.content-case-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.content-case-link:focus-visible,
+.content-case-image:focus-visible {
+  outline: 3px solid var(--content-accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 991px) {
+  .content-design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .content-design-header {
+    margin-bottom: 2rem;
+  }
+
+  .content-design-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .content-case-body {
+    padding: 1.25rem;
+  }
+}
+```
 
 /* ==========================================================
    RESPONSIVE BLOG

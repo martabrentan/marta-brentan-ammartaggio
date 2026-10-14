@@ -1,438 +1,817 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc" data-blockingmode="auto" type="text/javascript"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- COOKIEBOT -->
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Design – Marta Brentan</title>
   <meta name="description" content="Visual design e brand identity: loghi, palette, tipografia e sistemi visivi coerenti per i brand.">
-<meta name="keywords" content="design, visual design, brand identity, loghi, palette colori, Marta Brentan">
-<meta name="author" content="Marta Brentan">
-<meta property="og:title" content="Design – Marta Brentan">
-<meta property="og:description" content="Progetti di visual design e brand identity che uniscono estetica, funzionalità e riconoscibilità...">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://martabrentan.github.io/marta-brentan-ammartaggio/design.html">
-<meta property="og:image" content="https://martabrentan.github.io/marta-brentan-ammartaggio/assets/img/sfondo-design.webp">
-<meta property="og:image:alt" content="Copertina pagina design Marta Brentan">
+  <meta name="keywords" content="design, visual design, brand identity, loghi, palette colori, Marta Brentan">
+  <meta name="author" content="Marta Brentan">
+
+  <meta property="og:title" content="Design – Marta Brentan">
+  <meta property="og:description" content="Progetti di visual design e brand identity che uniscono estetica, funzionalità e riconoscibilità.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://martabrentan.github.io/marta-brentan-ammartaggio/design.html">
+  <meta property="og:image" content="https://martabrentan.github.io/marta-brentan-ammartaggio/assets/img/sfondo-design.webp">
+  <meta property="og:image:alt" content="Copertina della pagina Design di Marta Brentan">
+
   <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/scss/main.css">
+
+  <!-- BOOTSTRAP -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS PRINCIPALE -->
+  <link rel="stylesheet" href="assets/scss/main.css">
+
+  <!-- CSS PAGINA DESIGN -->
+  <style>
+    /* INTRODUZIONE */
+
+    .design-intro {
+      color: #333333;
+      background-color: #FAF9F6;
+    }
+
+    .design-intro .container {
+      max-width: 1140px;
+    }
+
+    .design-intro .row {
+      display: block;
+    }
+
+    .design-intro .oz-breadcrumb {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .design-intro h1,
+    .design-intro h2,
+    .design-intro h3,
+    .design-intro p {
+      text-align: left;
+    }
+
+    .design-intro h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .design-intro .intro {
+      max-width: 900px;
+      margin-bottom: 2rem;
+    }
+
+    .design-intro .design-quote {
+      margin: 2.5rem 0 1.5rem;
+      padding-left: 1.25rem;
+      border-left: 3px solid #007A78;
+    }
+
+    .design-intro .design-quote blockquote {
+      margin: 0 0 0.75rem;
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      line-height: 1.6;
+    }
+
+    .design-intro .design-quote p {
+      margin: 0;
+    }
+
+    .design-intro .intro-copy {
+      max-width: 900px;
+      line-height: 1.8;
+    }
+
+
+    /* SEZIONE PROGETTI */
+
+    .design-projects {
+      padding: 2rem 0 5rem;
+      color: #333333;
+      background-color: #FAF9F6;
+    }
+
+    .design-projects .container {
+      max-width: 1140px;
+    }
+
+    .design-projects-heading {
+      margin-bottom: 2rem;
+    }
+
+    .design-projects-heading h2 {
+      margin-bottom: 0.75rem;
+    }
+
+    .design-projects-heading p {
+      max-width: 720px;
+      margin-bottom: 0;
+      line-height: 1.7;
+    }
+
+    .design-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem 1.5rem;
+      align-items: stretch;
+    }
+
+    .design-project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-width: 0;
+      overflow: hidden;
+      color: inherit;
+      text-decoration: none;
+      background-color: #ffffff;
+      border-radius: 4px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .design-project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .design-project-card:focus-visible {
+      outline: 3px solid #007A78;
+      outline-offset: 4px;
+    }
+
+    .design-project-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background-color: #eae8e2;
+    }
+
+    .design-project-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .design-project-card:hover .design-project-image img {
+      transform: scale(1.035);
+    }
+
+    .design-project-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+    }
+
+    .design-project-number {
+      display: block;
+      margin-bottom: 0.9rem;
+      color: #007A78;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .design-project-card h3 {
+      margin-bottom: 0.9rem;
+      font-family: "Fraunces", serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .design-project-description {
+      margin-bottom: 1.25rem;
+      font-size: 0.93rem;
+      line-height: 1.75;
+    }
+
+    .design-project-tools {
+      margin-top: auto;
+      padding-top: 0.25rem;
+      color: #666666;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .design-project-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+      color: #007A78;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .design-project-card:hover .design-project-cta {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+
+    /* CONTATTI */
+
+    .contact-cta {
+      background-color: #ffffff;
+    }
+
+
+    /* SCROLL UP */
+
+    .scrollup-mobile {
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .scrollup-mobile.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scrollup-mobile img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+
+    /* TABLET */
+
+    @media (max-width: 991.98px) {
+      .design-projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.75rem;
+      }
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 575.98px) {
+      .design-projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+      }
+
+      .design-project-body {
+        padding: 1.25rem;
+      }
+
+      .design-project-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .design-intro .design-quote {
+        margin-top: 2rem;
+      }
+
+      .design-projects {
+        padding-bottom: 3rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .design-project-card,
+      .design-project-image img,
+      .scrollup-mobile {
+        transition: none;
+      }
+    }
+  </style>
 </head>
 
-<body>
-
+<body id="top">
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-white py-3">
     <div class="container">
+
       <a class="navbar-brand" href="index.html">
-        <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+        <img
+          src="assets/img/LOGO.png"
+          alt="Logo Marta Brentan"
+          height="36">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Apri il menu di navigazione">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-            
-      <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
-<li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
-<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-<li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
 
-<li class="nav-item d-none d-lg-block ms-lg-3">
-  <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
-    Scarica Portfolio
-  </a>
-</li>
+          <li class="nav-item">
+            <a class="nav-link" href="chi-sono.html">Chi sono</a>
+          </li>
 
-<li class="nav-item d-none d-lg-block ms-2">
-  <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
-    Scarica CV
-  </a>
-</li>
+          <li class="nav-item">
+            <a class="nav-link" href="progetti.html">Progetti</a>
+          </li>
 
-          <!-- MOBILE -->
-          <li class="nav-item d-lg-none">
-            <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="nav-link">
-              <i class="bi bi-download me-2"></i>Portfolio
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contatti.html">Contatti</a>
+          </li>
+
+          <li class="nav-item d-none d-lg-block ms-lg-3">
+            <a
+              class="btn btn-primary"
+              href="assets/docs/Portfolio Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener">
+              Scarica Portfolio
             </a>
           </li>
-          <li class="nav-item d-lg-none">
-            <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" class="nav-link">
-              <i class="bi bi-download me-2"></i>CV
+
+          <li class="nav-item d-none d-lg-block ms-2">
+            <a
+              class="btn custom-outline"
+              href="assets/docs/CV Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener">
+              Scarica CV
             </a>
           </li>
+
+          <!-- LINK MOBILE -->
+          <li class="nav-item d-lg-none">
+            <a
+              href="assets/docs/Portfolio Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener"
+              class="nav-link">
+              <i class="bi bi-download me-2" aria-hidden="true"></i>
+              Portfolio
+            </a>
+          </li>
+
+          <li class="nav-item d-lg-none">
+            <a
+              href="assets/docs/CV Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener"
+              class="nav-link">
+              <i class="bi bi-download me-2" aria-hidden="true"></i>
+              CV
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
 
 
-    <!-- INTRO -->
+  <!-- INTRODUZIONE -->
+  <section class="design-intro page-intro py-5">
+    <div class="container">
+      <div class="row">
 
+        <p class="oz-breadcrumb">
+          <a href="index.html">Home</a> ›
+          <span aria-current="page">Design</span>
+        </p>
 
-    <section class="page-intro py-5">
-  <div class="container">
-    <div class="row">
-       <p class="oz-breadcrumb">
-        <a href="index.html">Home</a>› <span>Design</span>
-      </p>
-        <h1 class="fw-bold mb-4">Design</h1>
-     
+        <h1 class="fw-bold">Design</h1>
+
         <h2 class="intro">
-          Visual design e brand identity, color palette, tipografia, loghi e icone che uniscono estetica,
-          funzionalità e riconoscibilità.
+          Visual design e brand identity: palette cromatiche, tipografia,
+          loghi e icone che uniscono estetica, funzionalità e riconoscibilità.
         </h2>
-       <h5> <em> “The world is complex, and so too must be the activities that we perform. But that doesn't mean that we must live in continual frustration.” <br> </em></h5>
-<h5><br> <strong>Donald Norman</strong> <br> </h5>
-        <p> <br>
-Il lavoro con i <strong>libri</strong> mi ha insegnato a guardare alla comunicazione attraverso gerarchie, ritmo, tipografia e cura del dettaglio.
-Negli anni ho imparato che il <strong> modo </strong> in cui un contenuto viene presentato è importante <strong> quanto </strong> il contenuto stesso 
-- una convinzione che non sempre trova spazio in un ambiente ancora molto concentrato solo sul testo. 
-Da questa intuizione è nato il desiderio di occuparmi di come le persone lo incontrano, lo leggono, lo capiscono e lo usano e ho scelto di ampliare 
-il mio percorso nel design della comunicazione, con una specializzazione in <strong> Graphic Design. </strong> <br>
- Oggi cerco di costruire sistemi visivi capaci di dare forma a un contenuto e renderlo <strong>  immediatamente riconoscibile.</strong>
-Una brand identity funziona quando  riesce a tradurre valori, tono e personalità in forme, colori e ritmi visivi <strong> che 
-          parlano da soli</strong>. Loghi, 
-          palette e tipografia </strong> diventano così strumenti per dare direzione.
 
-        </p>
+        <div class="design-quote">
+          <blockquote>
+            “The world is complex, and so too must be the activities that we
+            perform. But that doesn't mean that we must live in continual frustration.”
+          </blockquote>
+          <p><strong>Donald Norman</strong></p>
+        </div>
 
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-   <!-- PROGETTO LIMES -->
-<section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4">
- <h2 class="intro">
-Selected projects </h2>
-      <div class="col-lg-7">
-        <h3 class="fw-bold mb-4">Limes Brand Guidelines</h3>
-
-        <p>
-          Ho creato le <strong>Brand Guidelines</strong> per Limes, rivista italiana di geopolitica, 
-          anche online. Ho quindi ideato e sviluppato un <strong>logo</strong>; impostato una 
-          <strong>color palette</strong> e una scelta di <strong>font</strong> da utilizzare per la 
-          comunicazione del brand; creato un <strong>icon pack</strong> con uno stile coerente a quello 
-          del magazine; progettato le grafiche social per Instagram, Facebook e YouTube.
-      
-          Per ricostruire il logo, ho cercato qualcosa che fosse già presente nel sistema visivo di 
-          Limes, ma che non fosse mai stato elevato a <strong>simbolo</strong>. 
-          La risposta l’ho trovata nelle mappe parlanti di Laura Canali, elemento distintivo 
-          dell’identità visiva della rivista. <br>
-          
-          <strong>Strumenti: </strong> Figma, Canva, Adobe Creative Suite
-        </p>
-      </div>
-
-      <!-- CARD PROGETTO LIMES -->
-      <div class="col-lg-5">
-        <a href="limes.html"
-           class="project-card d-block">
-
-          <img src="assets/img/sfondo-progetto-finale.webp"
-               alt="Mockup progetto Limes"
-               loading="lazy">
-
-          <div class="project-content">
-            <h5>Limes Brand Guidelines</h5>
-            <p>Logo, Tipo, Icone, Color palette, Social</p>
-            <p class="text-muted small">start2impact</p>
-          </div>
-
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-   
-
-   <!-- PROGETTO ORIZON -->
-<section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4">
-
-      <div class="col-lg-7">
-        <h3 class="fw-bold mb-4">Grafica per social media</h3>
-
-        <p>
-          Progetto concept di ricerca e progettazione di identità visiva e contenuti social realizzato per <strong>Orizon</strong>, agenzia di viaggi ipotetica fondata da una coppia con vent'anni di esperienza nel turismo. 
-          Ho analizzato quattro tour operator italiani su colori, font e tono di voce, per trovare uno spazio libero nel mercato. Dopodiché ho progettato una palette costruita su una foto di 
-          tramonto e una coppia di font che riprende il carattere del logo, infine in contenuti social. 
-          Per <strong>Instagram</strong> ho progettato un carosello informativo sull'overtourism, un post singolo per il download dell'app e una story animata per un evento. 
-          Per <strong>LinkedIn</strong>, immagine profilo, copertina e due post — uno per un webinar sui viaggi aziendali, uno di recap da una conferenza di settore. 
-          Per <strong>YouTube</strong>, immagine profilo, copertina adattata a desktop e mobile, e una thumbnail.<br>
-      
-          <strong>Strumenti: </strong> Figma, Canva, Adobe Creative Suite
-        </p>
-      </div>
-
-      <!-- CARD PROGETTO ORIZON -->
-      <div class="col-lg-5">
-        <a href="orizon.html"
-           class="project-card d-block">
-
-          <img src="assets/img/sfondo-grafica-social-media.webp"
-               alt="Mockup progetto Orizon"
-               loading="lazy">
-
-          <div class="project-content">
-            <h5>Grafica per social media</h5>
-            <p>Logo, Tipo, Icone, Color palette, Social</p>
-            <p class="text-muted small">personale</p>
-          </div>
-
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-   
-      <!-- PROGETTO 1 -->
-      <section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4">
-
-      <div class="col-lg-7">
-        <h3 class="fw-bold mb-4">Includo Brand Guidelines</h3>
-<p>
-            Ho creato Brand Guidelines per un ente di formazione di nome <strong>IncluDO</strong>. Ho quindi ideato e sviluppato un 
-            <strong> logo </strong>; impostato una <strong> color palette </strong> e una scelta di <strong> font </strong> da utilizzare per la comunicazione del 
-            brand; un <strong> icon pack </strong> con uno stile coerente a quello del brand; progettato le grafiche social, quindi instagram post, 
-            facebook post e canale youtube. 
-          Il logo deriva da una mia associazione tra il termine unione, che rispecchia la <strong> mission</strong> dell’ente, ovvero
-            creare una comunità inclusiva che permetta ai giovani migranti e alle persone più svantaggiate di sentirsi 
-            parte della società e di stare insieme, e il termine manualità, ciò che contraddistingue i tradizionali mestieri 
-            centenari, perché la loro salvaguardia è la <strong> vision </strong> dell’ente. <br>
-            <strong>Strumenti: </strong> Figma, Canva, Adobe Creative Suite
+        <div class="intro-copy">
+          <p>
+            Il lavoro con i <strong>libri</strong> mi ha insegnato a guardare
+            alla comunicazione attraverso gerarchie, ritmo, tipografia e cura
+            del dettaglio. Negli anni ho imparato che il
+            <strong>modo</strong> in cui un contenuto viene presentato è
+            importante <strong>quanto</strong> il contenuto stesso: una
+            convinzione che non sempre trova spazio in un ambiente ancora molto
+            concentrato solo sul testo.
           </p>
-      </div>
 
-      <!-- CARD PROGETTO 1 -->
-    <div class="col-lg-5">
-  <a href="includo.html"
-     class="project-card d-block">
+          <p>
+            Da questa intuizione è nato il desiderio di occuparmi di come le
+            persone incontrano i contenuti, li leggono, li capiscono e li usano.
+            Ho scelto così di ampliare il mio percorso nel design della
+            comunicazione, con una specializzazione in
+            <strong>Graphic Design</strong>.
+          </p>
 
-    <img src="assets/img/sfondo-includo.webp"
-         alt="Mockup progetto IncluDO"
-         loading="lazy">
-
-    <div class="project-content">
-      <h5>IncluDO Brand Guidelines</h5>
-      <p>Logo, Tipo, Icone, Color palette, Social</p>
-      <p class="text-muted small">start2impact</p>
-    </div>
-
-  </a>
-</div>
-    </div>
-  </div>
-</section>
-
-      <!-- PROGETTO 2 -->
-      <section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4"><div class="col-lg-7">
-        <h3 class="fw-bold mb-4">Legale Scuola Brand Guidelines</h3>
-
-          <p>Ho creato Brand Guidelines per lo studio Legale Scuola. 
-            Ho quindi ideato e sviluppato un <strong> logo </strong>; impostato una <strong> color palette </strong> e una scelta 
-            di <strong> font </strong> da utilizzare per la comunicazione dello studio legale. 
-            Infine ho progettato le <strong> grafiche social </strong>, quindi instagram post e facebook post. 
-           Il logo doveva conservare un aspetto professionale e svilupparsi in orizzontale. 
-              Dopo una prima proposta con una stilografica semplificata — simbolo comune al mondo giuridico 
-              e scolastico — abbiamo scelto una direzione più pulita e istituzionale: utilizzare solo le 
-              <strong> iniziali</strong>, in linea con i <strong> competitors</strong>.<br>
-            <strong>Strumenti: </strong> Canva, Adobe Creative Suite
+          <p>
+            Oggi cerco di costruire sistemi visivi capaci di dare forma a un
+            contenuto e renderlo <strong>immediatamente riconoscibile</strong>.
+            Una brand identity funziona quando riesce a tradurre valori, tono e
+            personalità in forme, colori e ritmi visivi
+            <strong>che parlano da soli</strong>. Loghi, palette e tipografia
+            diventano così strumenti per dare direzione.
           </p>
         </div>
 
-      <!-- CARD PROGETTO 2 -->
-  
-      <div class="col-lg-5">
-  <a href="legalescuola.html"
-     class="project-card d-block">
-
-    <img src="assets/img/sfondo-legalescuola.webp"
-         alt="Mockup progetto Legale Scuola"
-         loading="lazy">
-
-    <div class="project-content">
-      <h5>Legale Scuola Brand Guidelines</h5>
-      <p>Logo, Tipo, Icone, Color palette, Social</p>
-      <p class="text-muted small">studio</p>
+      </div>
     </div>
+  </section>
 
-  </a>
-</div>
 
+  <!-- PROGETTI SELEZIONATI -->
+  <section class="design-projects">
+    <div class="container">
+
+
+
+      <div class="design-projects-grid">
+
+        <!-- PROGETTO 01: LIMES -->
+        <a href="limes.html" class="design-project-card">
+
+          <div class="design-project-image">
+            <img
+              src="assets/img/sfondo-progetto-finale.webp"
+              alt="Mockup delle Brand Guidelines di Limes"
+              loading="lazy">
+          </div>
+
+          <div class="design-project-body">
+
+            <span class="design-project-number">
+              01 / BRAND IDENTITY
+            </span>
+
+            <h3>Limes Brand Guidelines</h3>
+
+            <p class="design-project-description">
+              Ho sviluppato un sistema visivo per Limes, rivista italiana di
+              geopolitica: logo, palette cromatica, tipografia, icone e grafiche
+              social. Per il simbolo ho cercato un elemento già presente
+              nell’identità della rivista, trovando ispirazione nelle mappe
+              parlanti di Laura Canali.
+            </p>
+
+            <p class="design-project-tools">
+              <strong>Strumenti:</strong> Figma, Canva, Adobe Creative Suite
+              <br>
+              <strong>Progetto:</strong> start2impact
+            </p>
+
+            <span class="design-project-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 02: ORIZON -->
+        <a href="orizon.html" class="design-project-card">
+
+          <div class="design-project-image">
+            <img
+              src="assets/img/sfondo-grafica-social-media.webp"
+              alt="Progetto di identità visiva e contenuti social per Orizon"
+              loading="lazy">
+          </div>
+
+          <div class="design-project-body">
+
+            <span class="design-project-number">
+              02 / SOCIAL DESIGN
+            </span>
+
+            <h3>Orizon — Grafica social</h3>
+
+            <p class="design-project-description">
+              Un progetto concept per un’agenzia di viaggi immaginaria.
+              Dopo aver analizzato quattro tour operator italiani, ho definito
+              palette, tipografia e linguaggio visivo, progettando contenuti per
+              Instagram, LinkedIn e YouTube, tra caroselli, post, stories e
+              copertine.
+            </p>
+
+            <p class="design-project-tools">
+              <strong>Strumenti:</strong> Figma, Canva, Adobe Creative Suite
+              <br>
+              <strong>Progetto:</strong> personale
+            </p>
+
+            <span class="design-project-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 03: INCLUDO -->
+        <a href="includo.html" class="design-project-card">
+
+          <div class="design-project-image">
+            <img
+              src="assets/img/sfondo-includo.webp"
+              alt="Mockup delle Brand Guidelines di IncluDO"
+              loading="lazy">
+          </div>
+
+          <div class="design-project-body">
+
+            <span class="design-project-number">
+              03 / BRAND IDENTITY
+            </span>
+
+            <h3>IncluDO Brand Guidelines</h3>
+
+            <p class="design-project-description">
+              Ho progettato logo, palette, tipografia, icone e grafiche social
+              per un ente di formazione orientato all’inclusione e alla
+              valorizzazione dei mestieri tradizionali. Il logo nasce
+              dall’incontro tra l’idea di unione e quella di manualità,
+              due concetti centrali nella missione e nella vision del progetto.
+            </p>
+
+            <p class="design-project-tools">
+              <strong>Strumenti:</strong> Figma, Canva, Adobe Creative Suite
+              <br>
+              <strong>Progetto:</strong> start2impact
+            </p>
+
+            <span class="design-project-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 04: LEGALE SCUOLA -->
+        <a href="legalescuola.html" class="design-project-card">
+
+          <div class="design-project-image">
+            <img
+              src="assets/img/sfondo-legalescuola.webp"
+              alt="Mockup delle Brand Guidelines per Legale Scuola"
+              loading="lazy">
+          </div>
+
+          <div class="design-project-body">
+
+            <span class="design-project-number">
+              04 / VISUAL IDENTITY
+            </span>
+
+            <h3>Legale Scuola Brand Guidelines</h3>
+
+            <p class="design-project-description">
+              Ho sviluppato l’identità visiva di uno studio legale, definendo
+              logo, palette cromatica, tipografia e grafiche social. Il lavoro
+              ha richiesto di mantenere un aspetto professionale e istituzionale,
+              con un logo orizzontale. La soluzione finale valorizza le iniziali,
+              in una direzione pulita e riconoscibile.
+            </p>
+
+            <p class="design-project-tools">
+              <strong>Strumenti:</strong> Canva, Adobe Creative Suite
+              <br>
+              <strong>Progetto:</strong> studio
+            </p>
+
+            <span class="design-project-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 05: AMMARTAGGIO -->
+        <a href="ammartaggio.html" class="design-project-card">
+
+          <div class="design-project-image">
+            <img
+              src="assets/img/sfondo-htmlcss.jpeg"
+              alt="Mockup del sito web e dell'identità visiva di Ammartaggio"
+              loading="lazy">
+          </div>
+
+          <div class="design-project-body">
+
+            <span class="design-project-number">
+              05 / PERSONAL BRAND
+            </span>
+
+            <h3>Ammartaggio Brand Guidelines</h3>
+
+            <p class="design-project-description">
+              Ho ideato il logo, scelto palette e tipografia e creato un UI Kit
+              in Figma per progettare wireframe e prototipi. Il sito unisce
+              editoria e design digitale: la virgoletta richiama il lavoro sui
+              testi, mentre i pixel colorati rappresentano il passaggio dalla
+              parola all’interfaccia.
+            </p>
+
+            <p class="design-project-tools">
+              <strong>Strumenti:</strong> Figma, Canva, Adobe Creative Suite,
+              Visual Studio Code, GitHub
+              <br>
+              <strong>Progetto:</strong> personale
+            </p>
+
+            <span class="design-project-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 06: AESTHETICS 4.0 -->
+        <a href="aesthetics.html" class="design-project-card">
+
+          <div class="design-project-image">
+            <img
+              src="assets/img/sfondo-progetto-estetica.webp"
+              alt="Mockup dei siti Aesthetics 4.0 ed Estetica 4.0"
+              loading="lazy">
+          </div>
+
+          <div class="design-project-body">
+
+            <span class="design-project-number">
+              06 / DIGITAL DESIGN
+            </span>
+
+            <h3>Aesthetics &amp; Estetica 4.0</h3>
+
+            <p class="design-project-description">
+              Ho progettato e sviluppato due siti web con obiettivi, contenuti
+              e pubblici differenti, costruendo un ecosistema digitale coerente
+              per clienti finali e professionisti del settore. Mi sono occupata
+              della struttura informativa, dell’esperienza di navigazione e
+              dell’implementazione in WordPress.
+            </p>
+
+            <p class="design-project-tools">
+              <strong>Strumenti:</strong> Adobe Creative Suite, WordPress,
+              Elementor Pro
+              <br>
+              <strong>Progetto:</strong> professionale
+            </p>
+
+            <span class="design-project-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
- <!-- PROGETTO 3 -->
-      <section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4"><div class="col-lg-7">
-        <h3 class="fw-bold mb-4">Ammartaggio Brand Guidelines </h3>
 
-          <p>Ho disegnato il <strong>logo </strong>, scelto la <strong>color palette</strong> e la <strong>tipografia</strong> più in linea con il mio progetto.
-Successivamente ho creato un <strong>UI Kit</strong> su Figma che agevolasse la creazione dei miei <strong>wireframe</strong> che poi ho “animato” in <strong>prototipi</strong>.
-Infine ho scritto il <strong> codice html e css  </strong> tramite Visual Studio Code necessario alla pubblicazione del mio sito web su GitHub.
-          
-          Questo progetto nasce dall’esigenza di unire i due mondi che mi appartengono: l’editoria e il design digitale.
-Il logo rappresenta la trasformazione tra linguaggio e interfaccia, tra <strong>parola</strong> e <strong>pixel</strong>.
-La virgoletta scura resta legata alla parola, all’editoria, alla tradizione. È il segno di chi <strong>lavora sui testi</strong> e simbolo a cui sono tanto legata da essermelo tatuata.
-I pixel colorati portano la vibrazione del <strong>digitale</strong>, trasmettono dinamismo e apertura.<br>
-<strong>Strumenti: </strong> Figma, Canva, Adobe Creative Suite, Visual studio code, Github
-</p>
+  <!-- CONTATTI -->
+  <section class="contact-cta py-5">
+    <div class="container">
+
+      <h2 class="section-title text-center mb-5">
+        Hai un progetto, un testo o un'idea? Parliamone.
+      </h2>
+
+      <form
+        action="https://formspree.io/f/manvqedl"
+        method="POST"
+        class="contact-form">
+
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            required>
         </div>
 
- <!-- CARD PROGETTO 3 -->
- 
-      <div class="col-lg-5">
-  <a href="ammartaggio.html"
-     class="project-card d-block">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required>
+        </div>
 
-    <img src="assets/img/sfondo-htmlcss.jpeg"
-         alt="Mockup progetto Ammartaggio"
-         loading="lazy">
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required></textarea>
+        </div>
 
-    <div class="project-content">
-      <h5>Ammartaggio Brand Guidelines</h5>
-      <p>Da dove nasce l'idea di questo sito web e come è stato progettato</p>
-      <p class="text-muted small">start2impact</p>
+        <button type="submit" class="btn btn-primary">
+          Invia
+        </button>
+
+      </form>
     </div>
+  </section>
 
+
+  <!-- SCROLL UP MOBILE -->
+  <a
+    href="#top"
+    class="scrollup-mobile d-lg-none"
+    aria-label="Torna all'inizio della pagina">
+
+    <img src="assets/icons/scroll up.png" alt="">
   </a>
-</div>
-    </div>
-  </div>
-</section>
-  
-      <!-- PROGETTO 4 -->
-      <section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4">
 
-      <div class="col-lg-7">
-        <h3 class="fw-bold mb-4">Aesthetics & Estetica 4.0 Visual Identity </h3>
-         <p>Ho progettato e sviluppato due siti web con obiettivi, contenuti e pubblici differenti, 
-          costruendo un ecosistema digitale coerente ma capace di parlare a clienti finali e professionisti del settore.
-   Mi sono occupata dell’intero processo di progettazione e sviluppo dei due siti web, 
-dalla <strong> definizione della struttura informativa fino all’implementazione in WordPress. </strong>
-    <br>Nota:</strong> i loghi dei due brand erano già stati realizzati prima del mio coinvolgimento 
-nel progetto <br>
-<strong>Strumenti: </strong> Adobe Creative Suite, WordPress
-      </p>
-      </div>
-
-      <!-- CARD PROGETTO 4 -->
-    <div class="col-lg-5">
-  <a href="aesthetics.html"
-     class="project-card d-block">
-
-    <img src="assets/img/sfondo-progetto-estetica.webp"
-         alt="Mockup progetto Aesthetics 4.0"
-         loading="lazy">
-
-    <div class="project-content">
-      <h5> Progettazione di due siti web</h5>
-      <p>Aesthetics ed Estetica 4.0: settore beauty</p>
-      <p class="text-muted small">personale</p>
-    </div>
-
-  </a>
-</div>
-    </div>
-  </div>
-</section>
-
-   <!-- CONTACT -->
-<section class="contact-cta py-5">
-
-  <div class="container">
-
-    <h2 class="section-title text-center mb-5">
-      Hai un progetto, un testo o un'idea? Parliamone.
-    </h2>
-
-    <form action="https://formspree.io/f/manvqedl"
-          method="POST"
-          class="contact-form">
-
-      <div class="form-group">
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Messaggio</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary">
-        Invia
-      </button>
-
-    </form>
-
-  </div>
-
-</section>
-<!-- SCROLL UP MOBILE -->
-<a href="#" class="scrollup-mobile d-lg-none">
-  <img src="assets/icons/scroll up.png" alt="Torna su">
-</a>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
 
   <!-- FOOTER -->
   <footer class="footer py-5 bg-dark text-white">
     <div class="container">
 
+      <!-- FOOTER DESKTOP -->
       <div class="row g-4 d-none d-lg-flex">
 
         <div class="col-md-3">
           <h5>Su di me</h5>
           <ul class="list-unstyled">
             <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li>
+              <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener">
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener">
+                CV
+              </a>
+            </li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
@@ -450,40 +829,86 @@ nel progetto <br>
         <div class="col-md-3">
           <h5>Contatti</h5>
           <ul class="list-unstyled">
-            <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
-            <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
-            <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
-            <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
-            <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+            <li>
+              <a href="mailto:martabrentan@yahoo.com">
+                <i class="bi bi-envelope me-2" aria-hidden="true"></i>Email
+              </a>
+            </li>
+            <li>
+              <a href="tel:+393470547503">
+                <i class="bi bi-telephone me-2" aria-hidden="true"></i>Telefono
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/martabrentan" target="_blank" rel="noopener">
+                <i class="bi bi-instagram me-2" aria-hidden="true"></i>Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/martabrentan" target="_blank" rel="noopener">
+                <i class="bi bi-behance me-2" aria-hidden="true"></i>Behance
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/martabrentan" target="_blank" rel="noopener">
+                <i class="bi bi-linkedin me-2" aria-hidden="true"></i>LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
 
         <div class="col-md-3">
           <h5>Aiuto</h5>
           <ul class="list-unstyled">
-            <li><a href="policy.html"> Policy</a></li>
+            <li><a href="policy.html">Policy</a></li>
             <li><a href="contatti.html">Scrivimi</a></li>
           </ul>
         </div>
 
       </div>
 
+
+      <!-- FOOTER MOBILE -->
       <div class="footer-mobile d-lg-none">
 
         <div class="footer-accordion">
-          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+          <button
+            class="accordion-btn"
+            data-bs-toggle="collapse"
+            data-bs-target="#f1"
+            aria-controls="f1"
+            aria-expanded="false">
+            Su di me
+          </button>
+
           <div id="f1" class="collapse">
             <ul class="list-unstyled ps-3">
-                <li><a href="chi-sono.html">Chi sono</a></li>
-              <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+              <li><a href="chi-sono.html">Chi sono</a></li>
+              <li>
+                <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener">
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener">
+                  CV
+                </a>
+              </li>
               <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-accordion">
-          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+          <button
+            class="accordion-btn"
+            data-bs-toggle="collapse"
+            data-bs-target="#f2"
+            aria-controls="f2"
+            aria-expanded="false">
+            Progetti
+          </button>
+
           <div id="f2" class="collapse">
             <ul class="list-unstyled ps-3">
               <li><a href="editorial.html">Editorial</a></li>
@@ -495,7 +920,15 @@ nel progetto <br>
         </div>
 
         <div class="footer-accordion">
-          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+          <button
+            class="accordion-btn"
+            data-bs-toggle="collapse"
+            data-bs-target="#f3"
+            aria-controls="f3"
+            aria-expanded="false">
+            Contatti
+          </button>
+
           <div id="f3" class="collapse">
             <ul class="list-unstyled ps-3">
               <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
@@ -505,31 +938,76 @@ nel progetto <br>
         </div>
 
         <div class="footer-accordion">
-          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+          <button
+            class="accordion-btn"
+            data-bs-toggle="collapse"
+            data-bs-target="#f4"
+            aria-controls="f4"
+            aria-expanded="false">
+            Aiuto
+          </button>
+
           <div id="f4" class="collapse">
             <ul class="list-unstyled ps-3">
-              <li><a href="policy.html"> Policy</a></li>
-              <li><a href="contatti.html"> Scrivimi </a></li>
-              
+              <li><a href="policy.html">Policy</a></li>
+              <li><a href="contatti.html">Scrivimi</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-social-mobile text-center mt-4">
-          <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
-          <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/martabrentan" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="bi bi-instagram" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://www.behance.net/martabrentan" target="_blank" rel="noopener" aria-label="Behance">
+            <i class="bi bi-behance" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/martabrentan" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="bi bi-linkedin" aria-hidden="true"></i>
+          </a>
         </div>
+
       </div>
 
-      <hr class="my-4" />
-      <p class="text-center small">© 2026 Marta Brentan – Tutti i diritti riservati</p>
+      <hr class="my-4">
+
+      <p class="text-center small">
+        © 2026 Marta Brentan – Tutti i diritti riservati
+      </p>
 
     </div>
   </footer>
 
+
+  <!-- JAVASCRIPT -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollBtn = document.querySelector(".scrollup-mobile");
+
+      if (!scrollBtn) return;
+
+      function updateScrollButton() {
+        scrollBtn.classList.toggle("show", window.scrollY > 200);
+      }
+
+      window.addEventListener("scroll", updateScrollButton, { passive: true });
+
+      updateScrollButton();
+
+      scrollBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
-

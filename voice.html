@@ -1,388 +1,731 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" id="top">
+
 <head>
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc" data-blockingmode="auto" type="text/javascript"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- COOKIEBOT -->
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Voice – Marta Brentan</title>
+
   <meta name="description" content="Tone of voice, copywriting e UX writing: la voce dei brand tra chiarezza, coerenza e cura del linguaggio.">
-<meta name="keywords" content="voice, copywriting, UX writing, tone of voice, testi, Marta Brentan">
-<meta name="author" content="Marta Brentan">
-<meta property="og:title" content="Voice – Marta Brentan">
-<meta property="og:description" content="Progetti di copywriting e UX writing per siti, interfacce e brand che vogliono una voce chiara e riconoscibile...">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://martabrentan.github.io/marta-brentan-ammartaggio/voice.html">
-<meta property="og:image" content="https://martabrentan.github.io/marta-brentan-ammartaggio/assets/img/sfondo-voice.webp">
-<meta property="og:image:alt" content="Copertina pagina voice Marta Brentan">
-   <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/scss/main.css">
+  <meta name="keywords" content="voice, copywriting, UX writing, tone of voice, content design, Marta Brentan">
+  <meta name="author" content="Marta Brentan">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Voice – Marta Brentan">
+  <meta property="og:description" content="Progetti di copywriting, content design e UX writing per siti, interfacce e brand.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ammartaggio.com/voice.html">
+  <meta property="og:image" content="https://ammartaggio.com/assets/img/sfondo-voice.webp">
+  <meta property="og:image:alt" content="Copertina della pagina Voice di Marta Brentan">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- BOOTSTRAP ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS SITO -->
+  <link rel="stylesheet" href="assets/scss/main.css">
+
+  <!-- CSS PAGINA VOICE -->
+  <style>
+    /* ---------- INTRODUZIONE ---------- */
+    .page-intro .container > .row > .col-12 { min-width: 0; text-align: left; }
+    .vo-breadcrumb { max-width: none; margin: 0 0 1.5rem; padding: 0; font-size: .85rem; color: #666; text-align: left; }
+    .vo-breadcrumb a { color: #444; }
+    .vo-breadcrumb a:hover { color: #007A78; }
+    .page-intro h1 { margin-top: 0; text-align: left; }
+    .page-intro h2.intro { width: 100%; max-width: none; margin: 0 0 1.5rem; padding: 0; text-align: left; }
+    .page-intro .col-12 > p:not(.vo-breadcrumb) {
+      width: 100%; max-width: none; margin-right: 0; margin-left: 0;
+      padding-right: 0; padding-left: 0; line-height: 1.75; text-align: left;
+    }
+
+    /* ---------- VARIABILI DELLA PAGINA ---------- */
+    .vo *, .vo *::before, .vo *::after { box-sizing: border-box; }
+    .vo {
+      --vo-ink: #333333;
+      --vo-teal: #007A78;
+      --vo-teal-light: #009B98;
+      --vo-paper: #FAF9F6;
+      --vo-tint: rgba(0, 122, 120, 0.09);
+      --vo-line: rgba(51, 51, 51, 0.12);
+    }
+
+    /* ---------- SEI REGOLE ---------- */
+    .vo-rules-sec { padding: 1rem 0 4rem; }
+    .vo-eyebrow {
+      margin: 0 0 .75rem; font-family: "Epilogue", sans-serif; font-size: .72rem;
+      font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--vo-teal);
+    }
+    .vo-rules-sec h2 { margin: 0 0 .5rem; }
+    .vo-rules-note { max-width: 640px; margin: 0 0 2rem; font-size: 1rem; color: #555; }
+
+    .vo-rules { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 640px)  { .vo-rules { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 1100px) { .vo-rules { grid-template-columns: repeat(6, 1fr); } }
+
+    .vo-rule {
+      display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem;
+      height: 100%; min-height: 15rem; margin: 0; padding: 1.1rem;
+      border-radius: 14px;
+      background: var(--tile-bg); color: var(--tile-fg);
+      border: 1px solid var(--vo-line);
+    }
+    .vo-rules > li:nth-child(1) .vo-rule { --tile-bg: var(--vo-teal); --tile-fg: #fff; border-color: var(--vo-teal); }
+    .vo-rules > li:nth-child(2) .vo-rule { --tile-bg: #fff;           --tile-fg: var(--vo-ink); }
+    .vo-rules > li:nth-child(3) .vo-rule { --tile-bg: var(--vo-tint); --tile-fg: var(--vo-ink); border-color: transparent; }
+    .vo-rules > li:nth-child(4) .vo-rule { --tile-bg: #fff;           --tile-fg: var(--vo-ink); }
+    .vo-rules > li:nth-child(5) .vo-rule { --tile-bg: var(--vo-tint); --tile-fg: var(--vo-ink); border-color: transparent; }
+    .vo-rules > li:nth-child(6) .vo-rule { --tile-bg: var(--vo-ink);  --tile-fg: #fff; border-color: var(--vo-ink); }
+
+    .vo-ui { display: flex; flex-direction: column; gap: .5rem; align-items: flex-start; font-family: "Epilogue", sans-serif; font-size: .95rem; font-weight: 600; line-height: 1.3; }
+    .vo-ui-msg { margin: 0; max-width: none; font-size: .95rem; line-height: 1.35; }
+    .vo-ui-pill { display: inline-block; padding: .4rem .85rem; border-radius: 999px; background: var(--vo-teal); color: #fff; font-size: .9rem; }
+    .vo-rules > li:nth-child(1) .vo-ui-pill,
+    .vo-rules > li:nth-child(6) .vo-ui-pill { background: #fff; color: var(--vo-ink); }
+    .vo-rules > li:nth-child(1) .vo-ui-pill { color: var(--vo-teal); }
+    .vo-ui-pill--ghost { background: transparent !important; color: inherit !important; box-shadow: inset 0 0 0 2px currentColor; }
+    .vo-ui-field { display: block; width: 100%; padding: .5rem .7rem; border-radius: .5rem; background: rgba(255,255,255,.55); box-shadow: inset 0 0 0 2px var(--vo-ink); }
+    .vo-rules > li:nth-child(1) .vo-ui-field { background: rgba(255,255,255,.14); box-shadow: inset 0 0 0 2px #fff; }
+    .vo-rules > li:nth-child(6) .vo-ui-field { background: rgba(255,255,255,.1); box-shadow: inset 0 0 0 2px #fff; }
+    .vo-ui-row { display: flex; gap: .4rem; flex-wrap: wrap; }
+    .vo-rule figcaption { margin: 0; font-size: .92rem; line-height: 1.4; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .vo-rule { animation: vo-in .6s cubic-bezier(.2,.7,.2,1) both; }
+      .vo-rules > li:nth-child(2) .vo-rule { animation-delay: .08s; }
+      .vo-rules > li:nth-child(3) .vo-rule { animation-delay: .16s; }
+      .vo-rules > li:nth-child(4) .vo-rule { animation-delay: .24s; }
+      .vo-rules > li:nth-child(5) .vo-rule { animation-delay: .32s; }
+      .vo-rules > li:nth-child(6) .vo-rule { animation-delay: .4s; }
+      @keyframes vo-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    }
+
+    /* ---------- GRUPPI DI PROGETTI ---------- */
+    .vo-group { padding: 0 0 4.5rem; }
+    .vo-group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1.5rem; margin-bottom: 1.75rem; }
+    .vo-group-head h2 { margin: 0; }
+    .vo-group-head p { margin: 0; max-width: 46ch; font-size: 1rem; color: #555; }
+
+    .vo-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+    .vo-grid--pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 991px) { .vo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .vo-grid, .vo-grid--pair { grid-template-columns: 1fr; } }
+
+    /* ---------- CARD PROGETTO ---------- */
+    .vo-case {
+      display: flex; flex-direction: column; min-width: 0; overflow: hidden;
+      background: #fff; color: var(--vo-ink);
+      border: 1px solid var(--vo-line); border-radius: 16px;
+    }
+
+    .vo-case-image { display: block; overflow: hidden; aspect-ratio: 4 / 3; background: #eeece6; }
+    .vo-case-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+    .vo-case-image:hover img { transform: scale(1.03); }
+
+    .vo-case-body { display: flex; flex: 1; flex-direction: column; padding: 1.5rem; text-align: left; }
+    .vo-case-number { margin: 0 0 .9rem; max-width: none; font-family: "Epilogue", sans-serif; font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; line-height: 1.5; color: var(--vo-teal); }
+    .vo-case-body h3 { margin: 0 0 1rem; font-family: "Fraunces", serif; font-size: 1.8rem; font-weight: 700; line-height: 1.15; color: var(--vo-ink); text-align: left; }
+    .vo-case-body > p:not(.vo-case-number) { margin: 0; max-width: none; font-size: .98rem; line-height: 1.7; text-align: left; }
+
+    .vo-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0 1.5rem; padding: 0; list-style: none; }
+    .vo-tags li { padding: .35rem .75rem; border: 1px solid rgba(0, 122, 120, .35); border-radius: 999px; color: #285b59; font-size: .75rem; font-weight: 500; line-height: 1.4; }
+
+    .vo-case-link {
+      display: inline-flex; align-items: center; gap: .5rem; align-self: flex-start; margin-top: auto;
+      padding-top: .25rem; color: var(--vo-teal); font-weight: 600; text-decoration: none;
+    }
+    .vo-case-link:hover { color: var(--vo-teal); text-decoration: underline !important; text-underline-offset: 4px; }
+    .vo-case-link:focus-visible, .vo-case-image:focus-visible { outline: 3px solid var(--vo-teal); outline-offset: 4px; }
+
+    /* dettagli di un progetto (Orizon) */
+    .vo-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; margin: 1.25rem 0 1.5rem; }
+    .vo-facts h4 { margin: 0 0 .25rem; font-family: "Epilogue", sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--vo-teal); }
+    .vo-facts p { margin: 0; max-width: none; font-size: .9rem; line-height: 1.55; }
+    @media (max-width: 520px) { .vo-facts { grid-template-columns: 1fr; } }
+
+
+    @media (max-width: 575px) {
+      .vo-case-body { padding: 1.25rem; }
+      .vo-rules-sec { padding-bottom: 3rem; }
+      .vo-group { padding-bottom: 3rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .vo-case-image img, .vo-case-link { transition: none; }
+    }
+
+    /* ---------- BLOG PROMO ---------- */
+    .voice-blog, .voice-blog .container { text-align: center !important; }
+    .voice-blog p { text-align: center !important; margin-left: auto !important; margin-right: auto !important; max-width: 750px; }
+
+    /* titoli di sezione h5 */
+    .vo-rules-sec h5 { margin-bottom: 1.5rem; }
+  </style>
 </head>
 
 <body>
 
-
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-white py-3">
     <div class="container">
+
       <a class="navbar-brand" href="index.html">
-        <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+        <img
+          src="assets/img/LOGO.png"
+          alt="Marta Brentan, homepage"
+          height="36">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Apri il menu di navigazione">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-            
-      <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
-<li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
-<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-<li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
 
-<li class="nav-item d-none d-lg-block ms-lg-3">
-  <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
-    Scarica Portfolio
-  </a>
-</li>
+          <li class="nav-item">
+            <a class="nav-link" href="chi-sono.html">Chi sono</a>
+          </li>
 
-<li class="nav-item d-none d-lg-block ms-2">
-  <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
-    Scarica CV
-  </a>
-</li>
+          <li class="nav-item">
+            <a class="nav-link" href="progetti.html">Progetti</a>
+          </li>
 
-          <!-- MOBILE -->
-          <li class="nav-item d-lg-none">
-            <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" class="nav-link">
-              <i class="bi bi-download me-2"></i>Portfolio
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contatti.html">Contatti</a>
+          </li>
+
+          <!-- DOWNLOAD DESKTOP -->
+          <li class="nav-item d-none d-lg-block ms-lg-3">
+            <a
+              class="btn btn-primary"
+              href="assets/docs/Portfolio Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              Scarica Portfolio
             </a>
           </li>
-          <li class="nav-item d-lg-none">
-            <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" class="nav-link">
-              <i class="bi bi-download me-2"></i>CV
+
+          <li class="nav-item d-none d-lg-block ms-2">
+            <a
+              class="btn custom-outline"
+              href="assets/docs/CV Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              Scarica CV
             </a>
           </li>
+
+          <!-- DOWNLOAD MOBILE -->
+          <li class="nav-item d-lg-none">
+            <a
+              href="assets/docs/Portfolio Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link">
+              <i class="bi bi-download me-2" aria-hidden="true"></i>
+              Portfolio
+            </a>
+          </li>
+
+          <li class="nav-item d-lg-none">
+            <a
+              href="assets/docs/CV Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link">
+              <i class="bi bi-download me-2" aria-hidden="true"></i>
+              CV
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
 
+  <main class="vo">
 
+  <!-- INTRODUZIONE -->
+  <section class="page-intro py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
 
-  <!-- INTRO -->
-   <section class="page-intro py-5">
-  <div class="container">
-    <div class="row">
-       <p class="oz-breadcrumb">
-        <a href="index.html">Home</a>› <span>Voice</span>
-      </p>
-        <h1 class="fw-bold mb-4">Voice</h1>
-    
+          <p class="vo-breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true"> › </span>
+            <span aria-current="page">Voice</span>
+          </p>
 
-        <h2 class="intro">
-          Testi, articoli, copy e contenuti per web e social che uniscono chiarezza, 
-          tono e creatività.
-        </h2>
+          <h1 class="fw-bold mb-4">Voice</h1>
 
-        <p>
-        Da quando ho messo piede in questo mondo, una <strong> incontrollabile empatia nei confronti delle altre persone </strong> mi ha inseguito 
-        come un’ombra. Finché ha riguardato i miei conoscenti, i miei amici e i miei famigliari, è andata ancora bene. 
-        Poi ha iniziato a prendere il dominio anche sulle vite degli sconosciuti, facendomi vivere davvero poco serenamente. 
-        L’estrema attenzione verso gli altri e, di conseguenza, l’estrema cautela che utilizzo quando compio ogni tipologia di azione
-        che possa o meno influire sulle vite altrui, mi portano via molto tempo e altrettanta energia. Dall’altra parte, però, so che 
-        osservare così tanto le persone mi allena a prevedere le loro azioni, i loro errori, i loro movimenti, le loro preferenze, i loro
-         gusti, i loro modi di fare, le loro stranezze, ciò che dicono e ciò che non dicono. E credo che ciò si possa definire 
-         <strong> materiale utile per scrivere </strong>. </p>
+          <h2 class="intro">
+            Copy, content e UX writing: parole per web e social
+            che aiutano a orientarsi, capire cosa fare e scegliere
+            come procedere.
+          </h2>
+
+          <p>
+            Da quando ho messo piede in questo mondo, una
+            <strong>incontrollabile empatia nei confronti delle altre persone</strong>
+            mi ha inseguito come un'ombra. Finché ha riguardato
+            i miei conoscenti, i miei amici e i miei famigliari,
+            è andata ancora bene. Poi ha iniziato a prendere
+            il dominio anche sulle vite degli sconosciuti,
+            facendomi vivere davvero poco serenamente.
+          </p>
+
+          <p>
+            L'estrema attenzione verso gli altri e, di conseguenza,
+            l'estrema cautela che utilizzo quando compio ogni
+            tipologia di azione che possa o meno influire sulle
+            vite altrui, mi portano via molto tempo e altrettanta
+            energia.
+          </p>
+
+          <p>
+            Dall'altra parte, però, so che osservare così tanto
+            le persone mi allena a prevedere le loro azioni,
+            i loro errori, i loro movimenti, le loro preferenze,
+            i loro gusti, i loro modi di fare, le loro stranezze,
+            ciò che dicono e ciò che non dicono.
+            E credo che ciò si possa definire
+            <strong>materiale utile per scrivere</strong>.
+          </p>
+
         </div>
       </div>
     </div>
   </section>
 
-  <section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4">
+  <!-- SEI REGOLE -->
+  <section class="vo-rules-sec" aria-labelledby="vo-rules-title">
+    <div class="container">
+      <p class="vo-eyebrow">Come scrivo</p>
+      <h5 id="vo-rules-title">Sei regole che seguo quando scrivo per un'interfaccia</h5>
 
-    <!-- PROGETTO COPY -->
-<section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4">
- <h2 class="intro">
-Selected projects        </h2>
-      <div class="col-lg-7">
-        <h3 class="fw-bold mb-4">Copywriting per Hotel Pomelia</h3>
-
-        <p>
-          Copywriting per un hotel sito in Sicilia, <strong>Hotel Pomelia</strong>.
-          I figli dei fondatori non volevano rinunciare alla tradizione alberghiera di famiglia,
-          ma non volevano nemmeno fare a meno dell’innovazione necessaria per ridurre l’impatto
-          sull’ambiente.
-
-          Ho scritto un blog post che invogliasse i clienti attenti al <strong>turismo lento</strong>
-          a valutare l’idea di passare le vacanze in Hotel Pomelia. Ho quindi analizzato il
-          <strong>target</strong>, il <strong>tone of voice</strong>, i <strong>principi di persuasione</strong>
-          utili e l’<strong>UVP</strong> da rendere al meglio.
-        </p>
-      </div>
-
-      <div class="col-lg-5">
-        <a href="hotelpomelia.html"
-           class="project-card d-block">
-
-          <img src="assets/img/sfondo-copywriting.webp"
-               alt="Mockup progetto Copywriting"
-               loading="lazy">
-
-          <div class="project-content">
-            <h5>Copywriting Hotel Pomelia</h5>
-            <p>Target, TOV, Principi di persuasione, UVP, CTA</p>
-            <p class="text-muted small">start2impact</p>
-          </div>
-
-        </a>
-      </div>
-
+      <ul class="vo-rules">
+        <li>
+          <figure class="vo-rule">
+            <div class="vo-ui">
+              <span class="vo-ui-pill">Pubblica</span>
+              <p class="vo-ui-msg">Pubblicato.</p>
+            </div>
+            <figcaption>Un'azione ha sempre lo stesso nome, dal bottone alla conferma.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="vo-rule">
+            <div class="vo-ui">
+              <span class="vo-ui-field">••••</span>
+              <p class="vo-ui-msg">Inserisci almeno 8 caratteri.</p>
+            </div>
+            <figcaption>Un errore dice cosa è successo e come correggerlo.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="vo-rule">
+            <div class="vo-ui">
+              <p class="vo-ui-msg">Nessun articolo salvato. Salva il primo dalla pagina di un articolo.</p>
+            </div>
+            <figcaption>Una schermata vuota invita a fare il primo passo.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="vo-rule">
+            <div class="vo-ui">
+              <div class="vo-ui-row">
+                <span class="vo-ui-pill">Archivio</span>
+                <span class="vo-ui-pill">Abbonamento</span>
+              </div>
+            </div>
+            <figcaption>Le cose si chiamano come le chiama chi le usa.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="vo-rule">
+            <div class="vo-ui">
+              <p class="vo-ui-msg">Eliminare l'articolo? Non potrai recuperarlo.</p>
+              <div class="vo-ui-row">
+                <span class="vo-ui-pill">Elimina</span>
+                <span class="vo-ui-pill vo-ui-pill--ghost">Annulla</span>
+              </div>
+            </div>
+            <figcaption>Un'azione che non si annulla lo dice prima.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="vo-rule">
+            <div class="vo-ui">
+              <span class="vo-ui-field">nome@email.it</span>
+              <p class="vo-ui-msg">Usiamo l'indirizzo solo per inviarti la conferma.</p>
+            </div>
+            <figcaption>Un campo spiega perché chiede un dato.</figcaption>
+          </figure>
+        </li>
+      </ul>
     </div>
-  </div>
-</section>
+  </section>
 
- <!-- PROGETTO ORIZON -->
-<section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4">
-
-      <div class="col-lg-7">
-        <h3 class="fw-bold mb-4">TOV e copy per un'agenzia di viaggi sostenibili</h3>
-
-        <p>
-    Ho definito il <strong>tono di voce</strong> di Orizon, agenzia di viaggi ipotetica, e scritto i <strong>testi per Instagram, YouTube e LinkedIn</strong>. 
-Dall'analisi di quattro competitor è emerso un TOV con pattern chiaro — o scanzonato e goliardico, o istituzionale e impersonale. 
-Ho scelto una terza via: caldo e diretto, ma adulto, che parla di viaggiatori e non di turisti senza mai scadere nella predica sulla sostenibilità. 
-Ho dato voce ai fondatori in prima persona, invece di un tono aziendale anonimo, e costruito un carosello instagram informativo sull'overtourism pensato per essere 
-condiviso prima ancora che per vendere.
-
-        </p>
+  <!-- UX WRITING -->
+  <section class="vo-group" aria-labelledby="vo-ux-title">
+    <div class="container">
+      <div class="vo-group-head">
+        <h5 id="vo-ux-title">UX writing</h5>
+        <p>Tre progetti in cui testi e interfaccia sono stati pensati insieme.</p>
       </div>
 
-      <div class="col-lg-5">
-        <a href="orizon.html"
-           class="project-card d-block">
+      <div class="vo-grid">
 
-          <img src="assets/img/sfondo-grafica-social-media.webp"
-               alt="Mockup progetto grafica per social media"
-               loading="lazy">
-
-          <div class="project-content">
-            <h5>Grafica per social media</h5>
-            <p>TOV e copy per Orizon: agenzia di viaggi </p>
-            <p class="text-muted small">personale</p>
-          </div>
-
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-     <!-- PROGETTO PERSONALE -->
-<section class="voice-project py-5">
-  <div class="container">
-    <div class="row align-items-start gy-4">
-
-      <div class="col-lg-7">
-        <h3 class="fw-bold mb-4">Scrittura di testi e codice per Ammartaggio</h3>
-
-        <p>
-          Questo progetto nasce dall’esigenza di unire i due mondi che mi appartengono:
-          l’editoria e il design digitale.
-
-          Due anni fa ho acquistato il dominio www.ammartaggio.com per avere uno spazio digitale
-          “tutto mio” su cui poter scrivere articoli e recensioni libresche.
-
-          Oggi l’ho trasformato in un <strong>sito web personale completo</strong>, senza più fare
-          affidamento su WordPress, ma mettendo a frutto lo studio fatto fino ad ora in
-          <strong>HTML &amp; CSS</strong>.
-
-          Due tipologie di scrittura, <strong>il codice e le parole</strong>. Scrivo testi pensando a chi legge,
-          ma anche a come il contenuto vive nello spazio digitale.
-        </p>
-      </div>
-
-      <div class="col-lg-5">
-        <a href="ammartaggio.html"
-           class="project-card d-block">
-
-          <img src="assets/img/sfondo-htmlcss.jpeg"
-               alt="Mockup progetto HTML e CSS"
-               loading="lazy">
-
-          <div class="project-content">
-            <h5>HTML &amp; CSS</h5>
-            <p>Da dove nasce l’idea di questo sito web e come è stato progettato</p>
-            <p class="text-muted small">start2impact</p>
-          </div>
-
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-      <!-- PROGETTO ESTETICA -->
-      <div class="col-lg-7">
-        <h3 class="fw-bold mb-4">TOV e Copy per Aesthetics & Estetica 4.0</h3>
-
-        <p>
-          L’organizzazione dei contenuti è stata progettata per semplificare la consultazione delle 
-informazioni e guidare l’utente lungo percorsi di navigazione chiari. Ho strutturato titoli, 
-sezioni e call to action privilegiando leggibilità, gerarchia visiva e facilità di aggiornamento, 
-adattando il linguaggio ai differenti pubblici dei due siti.
-Per la comunicazione di <strong> Estetica 4.0 </strong> ho adottato un <strong> linguaggio tecnico e informativo, </strong> rivolto principalmente a professionisti del settore. L’obiettivo era comunicare affidabili
-tà, innovazione e valore dei prodotti attraverso contenuti chiari e orientati alla formazione. 
-Per <strong> Aesthetics 4.0 </strong> ho utilizzato invece un <strong> tono più emozionale e orientato all’esperienza, </strong> 
-valorizzando il rapporto con il cliente e accompagnandolo nella scoperta dei trattamenti. 
-Il linguaggio combina professionalità e vicinanza, con l’obiettivo di rendere accessibili servizi 
-specialistici e tecnologie avanzate.
- </p>
-        <br>
-        <p>
-    
-          
-
-        </p>
-      </div>
-
-
-    
-              <div class="col-lg-5">
-
-          <a href="aesthetics.html" class="project-card">
-
-            <img src="assets/img/sfondo-progetto-estetica.webp"
-                 alt="Mockup progetto Aesthetics 4.0"
-                 loading="lazy">
-
-            <div class="project-content">
-              <h5>Progettazione di due siti web</h5>
-              <p>Aesthetics ed Estetica 4.0: settore beauty</p>
-              <p class="text-muted small">personale</p>
-           </div>
-
+        <!-- 01 — LIMES -->
+        <article class="vo-case vo-limes">
+          <a href="limes.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/lm-hero.webp" alt="" loading="lazy">
           </a>
-        </div>
+          <div class="vo-case-body">
+            <p class="vo-case-number">01 / Architettura editoriale</p>
+            <h3>Limes</h3>
+            <p>
+              Come rendere più accessibile un patrimonio editoriale
+              complesso senza perdere profondità e identità.
+              La progettazione mette in relazione gerarchia dei
+              contenuti, navigazione e strumenti per orientarsi
+              tra gli articoli.
+            </p>
+            <ul class="vo-tags">
+              <li>Information architecture</li>
+              <li>Gerarchia editoriale</li>
+              <li>Microcopy</li>
+            </ul>
+            <a href="limes.html" class="vo-case-link">
+              Scopri il progetto
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
 
-  
- </div>
+        <!-- 02 — ECODREAM -->
+        <article class="vo-case vo-ecodream">
+          <a href="ecodream.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/sfondo-discovery.webp" alt="" loading="lazy">
+          </a>
+          <div class="vo-case-body">
+            <p class="vo-case-number">02 / Linguaggio dell'interfaccia</p>
+            <h3>Ecodream</h3>
+            <p>
+              Progettare un percorso digitale in cui testi, azioni
+              e gerarchie visive lavorano insieme. La chiarezza
+              dei contenuti diventa parte dell'esperienza e un
+              elemento da verificare attraverso i test con gli utenti.
+            </p>
+            <ul class="vo-tags">
+              <li>CTA e microcopy</li>
+              <li>Accessibilità</li>
+              <li>User testing</li>
+            </ul>
+            <a href="ecodream.html" class="vo-case-link">
+              Scopri il progetto
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 03 — AESTHETICS 4.0 -->
+        <article class="vo-case vo-aesth">
+          <a href="aesthetics.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/sfondo-progetto-estetica.webp" alt="" loading="lazy">
+          </a>
+          <div class="vo-case-body">
+            <p class="vo-case-number">03 / Content design</p>
+            <h3>Aesthetics 4.0 / Estetica 4.0</h3>
+            <p>
+              Due siti, due pubblici e due registri comunicativi.
+              Ho organizzato i contenuti e adattato il linguaggio
+              alle esigenze delle clienti del centro estetico
+              e dei professionisti che cercano prodotti e formazione.
+            </p>
+            <ul class="vo-tags">
+              <li>Tone of voice</li>
+              <li>Content architecture</li>
+              <li>CTA</li>
+            </ul>
+            <a href="aesthetics.html" class="vo-case-link">
+              Scopri il progetto
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
   </section>
 
-
-<!-- BLOG PROMO -->
-<section class="voice-blog blog-promo py-5 mt-4">
-  <div class="container text-center">
-    
-    <h4 class="fw-bold mb-3">Ammartaggio: il mio Blog</h4>
-
-    <p class="small mb-4 text-muted">
-      Mi impegno a non giudicare mai un libro dalla sua copertina, specie quando è bellissima.
-    </p>
-
-    <p>
-      Se vuoi anche tu atterrare sulla superficie del pianeta Marta, segui il mio Ammartaggio.  
-      Marta è l’ultimo dei pianeti di tipo terrestre – e cerca il più possibile di rimanere tale –, 
-      chiamato pianeta rosso per via del suo colore caratteristico causato dalla sua scarsa melanina.  
-      Marta prende il nome dell’omonima divinità cristiana – la sorella di Maria – e il suo 
-      simbolo astrologico "II" rappresenta la sua capacità di adattarsi alle situazioni ostili 
-      (non senza fatica e lamentele).
-    </p>
-
-    <a href="https://ammartaggio.com/blog.html" target="_blank" class="btn btn-primary mt-3 px-4">
-      Leggi il mio Blog
-    </a>
-
-  </div>
-</section>
-
-
-   <!-- CONTACT -->
-<section class="contact-cta py-5">
-
-  <div class="container">
-
-    <h2 class="section-title text-center mb-5">
-      Hai un progetto, un testo o un'idea? Parliamone.
-    </h2>
-
-    <form action="https://formspree.io/f/manvqedl"
-          method="POST"
-          class="contact-form">
-
-      <div class="form-group">
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name" required>
+  <!-- COPY E TONE OF VOICE -->
+  <section class="vo-group" aria-labelledby="vo-copy-title">
+    <div class="container">
+      <div class="vo-group-head">
+        <h5 id="vo-copy-title">Copy e tone of voice</h5>
+        <p>Testi per un hotel e voce per i social di un brand di viaggi sostenibili.</p>
       </div>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+      <div class="vo-grid vo-grid--pair">
+
+        <!-- 04 — HOTEL POMELIA -->
+        <article class="vo-case vo-pomelia" id="hotel-pomelia">
+          <a href="hotelpomelia.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/sfondo-copywriting.webp" alt="" loading="lazy">
+          </a>
+          <div class="vo-case-body">
+            <p class="vo-case-number">04 / Copywriting editoriale</p>
+            <h3>Hotel Pomelia</h3>
+            <p>
+              Un blog post per raccontare una destinazione attraverso i contenuti
+              del blog, valorizzando il territorio e l'esperienza
+              di soggiorno. La scrittura accompagna il lettore
+              alla scoperta di un modo più lento e consapevole
+              di viaggiare.
+            </p>
+
+            <div class="vo-facts">
+              <div>
+                <h4>A chi parla</h4>
+                <p>A chi condivide i valori dei fondatori: uno sguardo sull'innovazione e informazioni curiose su turismo lento, energia rinnovabile, materiali di recupero e alimentazione a km 0.</p>
+              </div>
+              <div>
+                <h4>Il tone of voice</h4>
+                <p>Né troppo colloquiale né amichevole: coinvolgente e accogliente, ma anche divulgativo e riflessivo, adatto a una giovane coppia come a due adulti esperti di viaggi sostenibili.</p>
+              </div>
+            </div>
+
+            <ul class="vo-tags">
+              <li>Blog writing</li>
+              <li>Storytelling</li>
+              <li>SEO content</li>
+            </ul>
+            <a href="hotelpomelia.html" class="vo-case-link">
+              Scopri il progetto
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 05 — ORIZON -->
+        <article class="vo-case vo-orizon" id="orizon">
+          <a href="orizon.html" class="vo-case-image" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/ssfondo-progetto-orizon.webp" alt="" loading="lazy">
+          </a>
+          <div class="vo-case-body">
+            <p class="vo-case-number">05 / Identità verbale</p>
+            <h3>Orizon</h3>
+            <p>
+              Definire una voce riconoscibile e coerente con i valori
+              del brand. Un linguaggio caldo e diretto traduce
+              l'identità del progetto in contenuti pensati per
+              la comunicazione social.
+            </p>
+
+            <div class="vo-facts">
+              <div>
+                <h4>Il concept</h4>
+                <p>L'orizzonte come segno ricorrente e le impronte come messaggio: viaggiare lasciando solo impronte.</p>
+              </div>
+              <div>
+                <h4>A chi parla</h4>
+                <p>Giovani tra i 25 e i 35 anni attenti all'overtourism; in secondo piano, chi organizza viaggi aziendali.</p>
+              </div>
+              <div>
+                <h4>La voce</h4>
+                <p>Estetica e tecnologica. Informa prima di promuovere: ai valori aziendali preferisce tre gesti da viaggiatore.</p>
+              </div>
+              <div>
+                <h4>I contenuti</h4>
+                <p>Un carosello sui viaggi responsabili, un post per l'app, una story e un post LinkedIn per il team building.</p>
+              </div>
+            </div>
+
+            <ul class="vo-tags">
+              <li>Tone of voice</li>
+              <li>Social copywriting</li>
+              <li>Brand voice</li>
+            </ul>
+            <a href="orizon.html" class="vo-case-link">
+              Scopri il progetto
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
       </div>
+    </div>
+  </section>
 
-      <div class="form-group">
-        <label for="message">Messaggio</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
+  </main>
 
-      <button type="submit" class="btn btn-primary">
-        Invia
-      </button>
+  <!-- BLOG PROMO -->
+  <section class="voice-blog blog-promo py-5 mt-4">
+    <div class="container text-center">
 
-    </form>
+      <h4 class="fw-bold mb-3">Ammartaggio: il mio Blog</h4>
 
-  </div>
+      <p class="small mb-4 text-muted">
+        Mi impegno a non giudicare mai un libro dalla sua copertina,
+        specie quando è bellissima.
+      </p>
 
-</section>
-<!-- SCROLL UP MOBILE -->
-<a href="#" class="scrollup-mobile d-lg-none">
-  <img src="assets/icons/scroll up.png" alt="Torna su">
-</a>
+      <p>
+        Se vuoi anche tu atterrare sulla superficie del pianeta
+        Marta, segui il mio Ammartaggio. Marta è l'ultimo dei pianeti
+        di tipo terrestre – e cerca il più possibile di rimanere tale –,
+        chiamato pianeta rosso per via del suo colore caratteristico
+        causato dalla sua scarsa melanina. Marta prende il nome
+        dell'omonima divinità cristiana – la sorella di Maria – e
+        il suo simbolo astrologico "II" rappresenta la sua capacità
+        di adattarsi alle situazioni ostili (non senza fatica e lamentele).
+      </p>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.querySelector('.scrollup-mobile');
+      <a
+        href="https://ammartaggio.com/blog.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary mt-3 px-4">
+        Leggi il mio Blog
+      </a>
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="contact-cta py-5">
+    <div class="container">
+
+      <h2 class="section-title text-center mb-5">
+        Hai un progetto, un testo o un'idea? Parliamone.
+      </h2>
+
+      <form
+        action="https://formspree.io/f/manvqedl"
+        method="POST"
+        class="contact-form">
+
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Invia
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- SCROLL UP MOBILE -->
+  <a
+    href="#top"
+    class="scrollup-mobile d-lg-none"
+    aria-label="Torna all'inizio della pagina">
+    <img src="assets/icons/scroll up.png" alt="">
+  </a>
+
+  <!-- JAVASCRIPT SCROLL UP -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollBtn = document.querySelector(".scrollup-mobile");
+
+      if (!scrollBtn) return;
+
+      function updateScrollButton() {
+        scrollBtn.classList.toggle("show", window.scrollY > 200);
       }
-    });
 
-    scrollBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
+      window.addEventListener("scroll", updateScrollButton, {
+        passive: true
+      });
 
+      updateScrollButton();
+
+      scrollBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer class="footer py-5 bg-dark text-white">
     <div class="container">
 
+      <!-- FOOTER DESKTOP -->
       <div class="row g-4 d-none d-lg-flex">
 
         <div class="col-md-3">
           <h5>Su di me</h5>
           <ul class="list-unstyled">
             <li><a href="chi-sono.html">Chi sono</a></li>
-            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li>
+              <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">Portfolio</a>
+            </li>
+            <li>
+              <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+            </li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
@@ -400,40 +743,79 @@ specialistici e tecnologie avanzate.
         <div class="col-md-3">
           <h5>Contatti</h5>
           <ul class="list-unstyled">
-            <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
-            <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
-            <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
-            <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
-            <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+            <li>
+              <a href="mailto:martabrentan@yahoo.com">
+                <i class="bi bi-envelope me-2" aria-hidden="true"></i>Email
+              </a>
+            </li>
+            <li>
+              <a href="tel:+393470547503">
+                <i class="bi bi-telephone me-2" aria-hidden="true"></i>Telefono
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/martabrentan" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram me-2" aria-hidden="true"></i>Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/martabrentan" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-behance me-2" aria-hidden="true"></i>Behance
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/martabrentan" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-linkedin me-2" aria-hidden="true"></i>LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
 
         <div class="col-md-3">
           <h5>Aiuto</h5>
           <ul class="list-unstyled">
-            <li><a href="policy.html"> Policy</a></li>
+            <li><a href="policy.html">Policy</a></li>
             <li><a href="contatti.html">Scrivimi</a></li>
           </ul>
         </div>
 
       </div>
 
+      <!-- FOOTER MOBILE -->
       <div class="footer-mobile d-lg-none">
 
         <div class="footer-accordion">
-          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+          <button
+            class="accordion-btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#f1"
+            aria-expanded="false"
+            aria-controls="f1">
+            Su di me
+          </button>
+
           <div id="f1" class="collapse">
             <ul class="list-unstyled ps-3">
-                <li><a href="chi-sono.html">Chi sono</a></li>
-                <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
-              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+              <li><a href="chi-sono.html">Chi sono</a></li>
+              <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+              <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
               <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-accordion">
-          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+          <button
+            class="accordion-btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#f2"
+            aria-expanded="false"
+            aria-controls="f2">
+            Progetti
+          </button>
+
           <div id="f2" class="collapse">
             <ul class="list-unstyled ps-3">
               <li><a href="editorial.html">Editorial</a></li>
@@ -445,7 +827,16 @@ specialistici e tecnologie avanzate.
         </div>
 
         <div class="footer-accordion">
-          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+          <button
+            class="accordion-btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#f3"
+            aria-expanded="false"
+            aria-controls="f3">
+            Contatti
+          </button>
+
           <div id="f3" class="collapse">
             <ul class="list-unstyled ps-3">
               <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
@@ -455,28 +846,62 @@ specialistici e tecnologie avanzate.
         </div>
 
         <div class="footer-accordion">
-          <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+          <button
+            class="accordion-btn"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#f4"
+            aria-expanded="false"
+            aria-controls="f4">
+            Aiuto
+          </button>
+
           <div id="f4" class="collapse">
             <ul class="list-unstyled ps-3">
-              <li><a href="policy.html"> Policy </a></li>
-              <li><a href="contatti.html"> Scrivimi </a></li>
+              <li><a href="policy.html">Policy</a></li>
+              <li><a href="contatti.html">Scrivimi</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-social-mobile text-center mt-4">
-          <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
-          <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a
+            href="https://www.instagram.com/martabrentan"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram">
+            <i class="bi bi-instagram" aria-hidden="true"></i>
+          </a>
+
+          <a
+            href="https://www.behance.net/martabrentan"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Behance">
+            <i class="bi bi-behance" aria-hidden="true"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/martabrentan"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <i class="bi bi-linkedin" aria-hidden="true"></i>
+          </a>
         </div>
+
       </div>
 
-      <hr class="my-4" />
-      <p class="text-center small">© 2026 Marta Brentan – Tutti i diritti riservati</p>
+      <hr class="my-4">
+
+      <p class="text-center small">
+        © 2026 Marta Brentan – Tutti i diritti riservati
+      </p>
 
     </div>
   </footer>
 
+  <!-- BOOTSTRAP JAVASCRIPT -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

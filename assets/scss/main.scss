@@ -71,7 +71,23 @@ a {
     color: $color-primary !important;
   }
 }
+.motion {
+  max-width: 560px;
+  margin: 3rem auto;
+}
 
+.motion video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.motion figcaption {
+  margin-top: .75rem;
+  font-size: .875rem;
+  text-align: center;
+}
 
 /* ==========================================================
    TYPOGRAPHY

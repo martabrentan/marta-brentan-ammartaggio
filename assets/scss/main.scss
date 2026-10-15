@@ -71,24 +71,6 @@ a {
     color: $color-primary !important;
   }
 }
-.motion {
-  max-width: 560px;
-  margin: 3rem auto;
-}
-
-.motion video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-.motion figcaption {
-  margin-top: .75rem;
-  font-size: .875rem;
-  text-align: center;
-}
-
 /* ==========================================================
    TYPOGRAPHY
 ========================================================== */
@@ -127,15 +109,6 @@ p {
     font-size: 0.95rem;
   }
 }
-
-
-
-@media(max-width:576px) {
-  p {
-    font-size: .95rem;
-  }
-}
-
 
 
 /* ==========================================================
@@ -179,7 +152,6 @@ p {
 }
 
 
-
 /* ==========================================================
    HERO + PAGE INTRO
 ========================================================== */
@@ -189,6 +161,12 @@ p {
   h1 {
     font-family: $font-secondary;
     color: $color-text;
+  }
+
+  /* il p globale è allineato a sinistra: qui lo centro */
+  p {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -484,7 +462,7 @@ p {
 ======================================== */
 
 .portfolio-areas {
-  padding: 5rem 0;
+  padding: 1.5rem 0 5rem;
 }
 
 .portfolio-areas-grid {
@@ -722,7 +700,7 @@ p {
 
 @media (max-width: 575px) {
   .portfolio-areas {
-    padding: 3rem 0;
+    padding: 1rem 0 3rem;
   }
 
   .portfolio-areas-grid {
@@ -807,7 +785,6 @@ p {
 }
 
 
-
 .hl-item {
 
   display:flex;
@@ -829,14 +806,12 @@ p {
 }
 
 
-
 .hl-item-left {
 
   display:flex;
   align-items:baseline;
   gap:1.5rem;
 }
-
 
 
 .hl-num {
@@ -847,7 +822,6 @@ p {
   width:24px;
   flex-shrink:0;
 }
-
 
 
 .hl-title {
@@ -865,7 +839,6 @@ p {
 }
 
 
-
 .hl-tag {
 
   font-size:11px;
@@ -879,12 +852,9 @@ p {
 }
 
 
-
 .hl-item:hover .hl-tag {
   color:#555;
 }
-
-
 
 
 /* immagine che segue il cursore */
@@ -926,7 +896,6 @@ p {
 }
 
 
-
 .hl-download {
 
   display:flex;
@@ -949,9 +918,6 @@ p {
 }
 
 
-
-
-
 /* MOBILE GALLERY */
 
 @media(max-width:768px){
@@ -967,11 +933,9 @@ p {
   }
 
 
-
   .hl-title {
     font-size:1.1rem;
   }
-
 
 
   .hl-img-cursor {
@@ -979,11 +943,9 @@ p {
   }
 
 
-
   .hl-item-left {
     flex:1;
   }
-
 
 
   .hl-mob-img {
@@ -1016,7 +978,6 @@ p {
   }
 
 
-
   .hl-item.mob-active {
 
 
@@ -1031,7 +992,6 @@ p {
       color:$color-primary;
       opacity:.7;
     }
-
 
 
     .hl-mob-img {
@@ -1099,8 +1059,6 @@ p {
 }
 
 
-
-
 /* ==========================================================
    LIGHTBOX
 ========================================================== */
@@ -1130,7 +1088,6 @@ p {
   transition:background .3s ease;
 
 
-
   &.open {
 
     background:rgba(0,0,0,.88);
@@ -1138,7 +1095,6 @@ p {
     pointer-events:auto;
   }
 }
-
 
 
 .hl-lightbox-img {
@@ -1159,7 +1115,6 @@ p {
   transition:.3s ease;
 
 
-
   .open & {
 
     opacity:1;
@@ -1167,7 +1122,6 @@ p {
     transform:scale(1);
   }
 }
-
 
 
 .hl-lightbox-close {
@@ -1198,7 +1152,6 @@ p {
 }
 
 
-
 .hl-lightbox-info {
 
   position:absolute;
@@ -1218,12 +1171,10 @@ p {
   transition:opacity .3s ease .1s;
 
 
-
   .open & {
     opacity:1;
   }
 }
-
 
 
 .hl-lightbox-info-tag {
@@ -1240,7 +1191,6 @@ p {
 }
 
 
-
 .hl-lightbox-info-title {
 
   font-family:$font-secondary;
@@ -1251,9 +1201,6 @@ p {
 
   margin:0;
 }
-
-
-
 
 
 /* ==========================================================
@@ -1276,7 +1223,6 @@ p {
   max-width:700px;
 
   margin:0 auto;
-
 
 
   img {
@@ -1308,7 +1254,6 @@ p {
     }
   }
 }
-
 
 
 @media(max-width:576px){
@@ -1344,14 +1289,12 @@ p {
   box-shadow:0 6px 18px rgba(0,0,0,.08);
 
 
-
   .form-group {
 
     margin-bottom:1.4rem;
 
     text-align:left;
   }
-
 
 
   label {
@@ -1364,7 +1307,6 @@ p {
 
     margin-bottom:.4rem;
   }
-
 
 
   input,
@@ -1389,7 +1331,6 @@ p {
     transition:.3s ease;
 
 
-
     &:focus {
 
       border-color:$color-primary;
@@ -1397,7 +1338,6 @@ p {
       box-shadow:0 0 0 3px rgba(0,128,128,.18);
     }
   }
-
 
 
   button {
@@ -1417,6 +1357,15 @@ p {
 ========================================================== */
 
 
+/* paragrafi centrati nelle sezioni con testo al centro:
+   il p globale è allineato a sinistra, qui lo centro */
+.bio p,
+.blog-promo p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .bg-dark-portfolio {
 
   background-color:$color-text;
@@ -1424,12 +1373,10 @@ p {
   color:$color-panna;
 
 
-
   h2 {
     color:$color-panna;
   }
 }
-
 
 
 .footer {
@@ -1442,14 +1389,12 @@ p {
     transition:.2s;
 
 
-
     &:hover {
 
       color:$color-primary-light;
     }
   }
 }
-
 
 
 .accordion-btn {
@@ -1471,12 +1416,10 @@ p {
   color:$color-panna;
 
 
-
   .arrow {
 
     transition:.25s;
   }
-
 
 
   &[aria-expanded="true"] {
@@ -1488,8 +1431,6 @@ p {
     }
   }
 }
-
-
 
 
 /* ==========================================================
@@ -1537,12 +1478,10 @@ p {
   transition:.3s ease;
 
 
-
   img {
 
     width:55%;
   }
-
 
 
   &.show {
@@ -1552,7 +1491,6 @@ p {
     visibility:visible;
   }
 }
-
 
 
 @media(min-width:992px){
@@ -1599,14 +1537,11 @@ p {
 }
 
 
-
-
 /* BLOG HERO */
 
 .blog-hero {
 
   background-color:$color-panna;
-
 
 
   h1 {
@@ -1615,7 +1550,6 @@ p {
 
     font-size:clamp(2.2rem,4vw,3.2rem);
   }
-
 
 
   .section-subtitle {
@@ -1627,9 +1561,6 @@ p {
     color:$color-primary;
   }
 }
-
-
-
 
 
 /* BLOG CARDS */
@@ -1644,7 +1575,6 @@ p {
     box-shadow .25s ease;
 
 
-
   &:hover {
 
     transform:translateY(-4px);
@@ -1654,27 +1584,10 @@ p {
 }
 
 
-
-.blog-thumb {
-
-  width:100%;
-
-  height:170px;
-
-  object-fit:cover;
-}
-
-
-
 .blog-excerpt {
 
   line-height:1.5;
 }
-
-
-
-
-
 
 
 .post-header {
@@ -1689,7 +1602,6 @@ p {
 }
 
 
-
 .post-image {
 
   width:100%;
@@ -1702,47 +1614,31 @@ p {
 }
 
 
-.post-content p {
-  max-width: 750px;
-  margin-left: 0;
-  margin-right: 0;
-  text-align: left;
-}
-  h2,
-  h3 {
-
-    margin-top:2rem;
-
-    margin-bottom:1rem;
-
-    font-weight:700;
-  }
-
-
+.post-content {
 
   p {
-
-    margin-bottom:1.2rem;
+    max-width: 750px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1.2rem;
+    text-align: left;
   }
 
-
+  h2,
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
 
   blockquote {
-
-    margin:2rem 0;
-
-    padding:1.2rem 1.5rem;
-
-    border-left:4px solid $color-primary;
-
-    background:rgba(0,0,0,.03);
-
-    border-radius:12px;
+    margin: 2rem 0;
+    padding: 1.2rem 1.5rem;
+    border-left: 4px solid $color-primary;
+    background: rgba(0,0,0,.03);
+    border-radius: 12px;
   }
-
-
-
-
+}
 
 
 /* BLOG INTRO */
@@ -1759,7 +1655,6 @@ p {
   }
 
 
-
   .intro {
 
     font-family:$font-secondary;
@@ -1773,7 +1668,6 @@ p {
 }
 
 
-
 .blog-description {
 
   font-size:1.05rem;
@@ -1782,9 +1676,6 @@ p {
 
   line-height:1.7;
 }
-
-
-
 
 
 /* LISTA ARTICOLI */
@@ -1800,7 +1691,6 @@ p {
 }
 
 
-
 .blog-thumb {
 
   width:260px;
@@ -1809,7 +1699,6 @@ p {
 
   object-fit:cover;
 }
-
 
 
 .blog-text {
@@ -1826,7 +1715,6 @@ p {
     text-align:left;
   }
 }
-
 
 
 .excerpt {
@@ -2010,179 +1898,6 @@ p {
     padding: 1.25rem;
   }
 }
-/* CONTENT DESIGN & UX WRITING */
-
-.content-design {
-  --content-ink: #333333;
-  --content-accent: #007A78;
-  --content-paper: #FAF9F6;
-
-  background: var(--content-paper);
-  color: var(--content-ink);
-}
-
-.content-design-header {
-  max-width: 760px;
-  margin-bottom: 3.5rem;
-}
-
-.content-eyebrow,
-.content-case-number {
-  font-family: "Epilogue", sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  line-height: 1.6;
-}
-
-.content-eyebrow {
-  margin-bottom: 1rem;
-  color: var(--content-accent);
-}
-
-.content-title {
-  margin-bottom: 1.5rem;
-  font-family: "Fraunces", serif;
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
-  font-weight: 600;
-  line-height: 1.08;
-}
-
-.content-title em {
-  color: var(--content-accent);
-  font-weight: 400;
-}
-
-.content-intro {
-  max-width: 650px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-.content-design-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  align-items: stretch;
-}
-
-.content-case {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  overflow: hidden;
-  background: #fff;
-  border: 1px solid rgba(51, 51, 51, 0.12);
-  border-radius: 10px;
-}
-
-.content-case-image {
-  display: block;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: #eeece6;
-}
-
-.content-case-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.content-case-image:hover img {
-  transform: scale(1.03);
-}
-
-.content-case-body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1.5rem;
-}
-
-.content-case-number {
-  margin-bottom: 0.9rem;
-  color: var(--content-accent);
-  font-size: 0.65rem;
-}
-
-.content-case-body h3 {
-  margin-bottom: 1rem;
-  font-family: "Fraunces", serif;
-  font-size: 1.7rem;
-  line-height: 1.2;
-}
-
-.content-case-body > p:not(.content-case-number) {
-  font-size: 0.96rem;
-  line-height: 1.75;
-}
-
-.content-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0.75rem 0 1.5rem;
-  padding: 0;
-  list-style: none;
-}
-
-.content-tags li {
-  padding: 0.4rem 0.65rem;
-  border: 1px solid rgba(0, 122, 120, 0.3);
-  border-radius: 100px;
-  color: #285b59;
-  font-size: 0.75rem;
-  line-height: 1.4;
-}
-
-.content-case-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: auto;
-  padding-top: 0.75rem;
-  color: var(--content-accent);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.content-case-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.content-case-link:focus-visible,
-.content-case-image:focus-visible {
-  outline: 3px solid var(--content-accent);
-  outline-offset: 4px;
-}
-
-@media (max-width: 991px) {
-  .content-design-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 575px) {
-  .content-design-header {
-    margin-bottom: 2rem;
-  }
-
-  .content-design-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .content-case-body {
-    padding: 1.25rem;
-  }
-}
-```
-
 /* ==========================================================
    RESPONSIVE BLOG
 ========================================================== */
@@ -2200,4 +1915,3 @@ p {
 
 
 }
-

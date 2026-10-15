@@ -81,30 +81,6 @@ p {
   margin-right: 0;
 }
 
-.motion {
-  max-width: 560px;
-  margin: 3rem auto;
-}
-
-.motion video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-.motion figcaption {
-  margin-top: .75rem;
-  font-size: .875rem;
-  text-align: center;
-}
-@media (max-width: 576px) {
-  p {
-    font-size: 0.95rem;
-  }
-}
-
-
 @media (max-width: 576px) {
   p {
     font-size: 0.95rem;
@@ -148,6 +124,13 @@ p {
 .hero h1 {
   font-family: "Fraunces", serif;
   color: #333333;
+}
+.hero {
+  /* il p globale è allineato a sinistra: qui lo centro */
+}
+.hero p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-intro h1 {
@@ -393,7 +376,7 @@ p {
    PORTFOLIO — GLASS CARDS
 ======================================== */
 .portfolio-areas {
-  padding: 5rem 0;
+  padding: 1.5rem 0 5rem;
 }
 
 .portfolio-areas-grid {
@@ -609,7 +592,7 @@ p {
 ======================================== */
 @media (max-width: 575px) {
   .portfolio-areas {
-    padding: 3rem 0;
+    padding: 1rem 0 3rem;
   }
   .portfolio-areas-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -1003,6 +986,14 @@ p {
 /* ==========================================================
    DARK SECTION + FOOTER
 ========================================================== */
+/* paragrafi centrati nelle sezioni con testo al centro:
+   il p globale è allineato a sinistra, qui lo centro */
+.bio p,
+.blog-promo p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .bg-dark-portfolio {
   background-color: #333333;
   color: #FAF9F6;
@@ -1117,12 +1108,6 @@ p {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.blog-thumb {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-}
-
 .blog-excerpt {
   line-height: 1.5;
 }
@@ -1143,21 +1128,16 @@ p {
   max-width: 750px;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 1.2rem;
   text-align: left;
 }
-
-h2,
-h3 {
+.post-content h2,
+.post-content h3 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
-
-p {
-  margin-bottom: 1.2rem;
-}
-
-blockquote {
+.post-content blockquote {
   margin: 2rem 0;
   padding: 1.2rem 1.5rem;
   border-left: 4px solid #007A78;
@@ -1208,19 +1188,173 @@ blockquote {
   line-height: 1.6;
   max-width: 580px;
 }
-    /* ---------- motion ---------- */
-    /* ---------- motion ---------- */
 
-    .oz-motion-section {
-      background: #F2C6B6;
-      line-height: 0;
-    }
+/* CONTENT DESIGN & UX WRITING */
+.content-design {
+  --content-ink: #333333;
+  --content-accent: #007A78;
+  --content-paper: #FAF9F6;
+  background: var(--content-paper);
+  color: var(--content-ink);
+}
 
-    .oz-motion-section video {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+.content-design-header {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.content-eyebrow,
+.content-case-number {
+  font-family: "Epilogue", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+}
+
+.content-eyebrow {
+  margin-bottom: 1rem;
+  color: var(--content-accent);
+}
+
+.content-title {
+  margin-bottom: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.content-title em {
+  color: var(--content-accent);
+  font-weight: 400;
+}
+
+.content-intro {
+  max-width: 650px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.content-design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.content-case {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(51, 51, 51, 0.12);
+  border-radius: 10px;
+}
+
+.content-case-image {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: #eeece6;
+}
+
+.content-case-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.content-case-image:hover img {
+  transform: scale(1.03);
+}
+
+.content-case-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.content-case-number {
+  margin-bottom: 0.9rem;
+  color: var(--content-accent);
+  font-size: 0.65rem;
+}
+
+.content-case-body h3 {
+  margin-bottom: 1rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.content-case-body > p:not(.content-case-number) {
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.content-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.content-tags li {
+  padding: 0.4rem 0.65rem;
+  border: 1px solid rgba(0, 122, 120, 0.3);
+  border-radius: 100px;
+  color: #285b59;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.content-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  color: var(--content-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.content-case-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.content-case-link:focus-visible,
+.content-case-image:focus-visible {
+  outline: 3px solid var(--content-accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 991px) {
+  .content-design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 575px) {
+  .content-design-header {
+    margin-bottom: 2rem;
+  }
+  .content-design-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .content-case-body {
+    padding: 1.25rem;
+  }
+}
 /* ==========================================================
    RESPONSIVE BLOG
 ========================================================== */

@@ -344,16 +344,8 @@
     .am-end .am-link:hover { color: var(--am-teal); }
 
 
-    /* ---------- altri progetti ---------- */
 
-    .am-more { background: #fff; }
 
-    .am-more-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.75rem;
-    }
 
 
     /* ---------- tablet e mobile ---------- */
@@ -384,6 +376,30 @@
       .am-section { padding: 3.5rem 0; }
     }
 
+
+
+    /* ---------- LE PAROLE ---------- */
+    .am-words { padding: 6rem 0; }
+    .am-words .am-text { max-width: 52ch !important; margin-bottom: 2.5rem; }
+    .am-words-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; list-style: none; margin: 0; padding: 0; }
+    .am-word {
+      display: flex; flex-direction: column; justify-content: space-between; gap: 2rem;
+      height: 100%; min-height: 16rem; padding: 1.5rem; border-radius: 16px;
+      border: 1px solid rgba(51, 51, 51, .12); background: #fff; color: var(--am-ink);
+    }
+    .am-words-grid > li:nth-child(1) .am-word { background: var(--am-teal); border-color: var(--am-teal); color: #fff; }
+    .am-words-grid > li:nth-child(3) .am-word { background: rgba(0, 122, 120, .09); border-color: transparent; }
+    .am-words-grid > li:nth-child(4) .am-word { background: var(--am-ink); border-color: var(--am-ink); color: #fff; }
+    .am-word-title { margin: 0; font-family: var(--am-serif); font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 600; line-height: 1.1; letter-spacing: -.02em; color: inherit; }
+    .am-word-note { margin: 0; font-size: .92rem; line-height: 1.5; opacity: .9; }
+    @media (max-width: 991.98px) { .am-words-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .am-words { padding: 4.5rem 0; } }
+    @media (max-width: 575.98px) { .am-words-grid { grid-template-columns: minmax(0, 1fr); } .am-word { min-height: 0; } }
+
+    /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
+    .more-projects { background: #fff; padding: 6rem 0; }
+    .more-projects .more-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+    @media (max-width: 991px) { .more-projects { padding: 4.5rem 0; } }
+    @media (max-width: 576px) { .more-projects { padding: 3.5rem 0; } }
   </style>
 
 </head>
@@ -458,7 +474,8 @@
 
 
 
-<main class="am">
+<main>
+<div class="am">
 
 
   <!-- HERO -->
@@ -684,6 +701,31 @@
 
 
 
+  <!-- LE PAROLE -->
+
+  <section class="am-section am-words">
+
+    <div class="container">
+
+      <h2 class="am-heading">Titoli brevi, voce in prima persona.</h2>
+
+      <p class="am-text">
+        I testi del sito sono miei, dal nome ai titoli. Ogni sezione si apre con una frase corta che dice una cosa sola.
+      </p>
+
+      <ul class="am-words-grid">
+        <li><div class="am-word"><p class="am-word-title">Uno spazio tutto mio.</p><p class="am-word-note">L’apertura è in prima persona: il sito è uno spazio (anzi un pianeta) non una vetrina.</p></div></li>
+        <li><div class="am-word"><p class="am-word-title">Parola e pixel.</p><p class="am-word-note">Editoria e digitale in tre parole, come il logo che le tiene insieme.</p></div></li>
+        <li><div class="am-word"><p class="am-word-title">Poi, il codice.</p><p class="am-word-note">Le sezioni seguono il percorso: wireframe, prototipo, codice.</p></div></li>
+        <li><div class="am-word"><p class="am-word-title">Buon ammartaggio!</p><p class="am-word-note">Il nome gioca sull'atterraggio sul pianeta Marta, ma sono anche umile </p></div></li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+
   <!-- CHIUSURA -->
 
   <section class="am-section am-end">
@@ -717,15 +759,17 @@
 
 
 
+  </div><!-- /am -->
+
   <!-- ALTRI PROGETTI -->
 
-  <section class="am-section am-more">
+  <section class="more-projects">
 
     <div class="container text-center">
 
       <h2 class="section-title mb-5">Altri progetti</h2>
 
-      <div class="am-more-list">
+      <div class="more-list">
 
         <a href="includo.html" class="project-card">
           <img src="assets/img/sfondo-includo.webp" alt="Mockup Includo Brand Guidelines" loading="lazy">

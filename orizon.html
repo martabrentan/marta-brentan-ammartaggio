@@ -447,7 +447,16 @@
 
 </head>
 
-
+<script>
+  document.querySelectorAll(".oz-motion-section video").forEach(function (video) {
+    var p = video.play();
+    if (p !== undefined) {
+      p.catch(function () {
+        video.setAttribute("controls", "");
+      });
+    }
+  });
+</script>
 <body>
 
 
@@ -863,6 +872,7 @@
     });
 
   });
+  
 </script>
 
 

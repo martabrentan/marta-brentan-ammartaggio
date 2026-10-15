@@ -1,4 +1,4 @@
-@charset "UTF-8";
+ @charset "UTF-8";
 /* ==========================================================
    VARIABLES
 ========================================================== */
@@ -121,12 +121,12 @@ p {
 /* ==========================================================
    HERO + PAGE INTRO
 ========================================================== */
+.hero {
+  /* il p globale è allineato a sinistra: qui lo centro */
+}
 .hero h1 {
   font-family: "Fraunces", serif;
   color: #333333;
-}
-.hero {
-  /* il p globale è allineato a sinistra: qui lo centro */
 }
 .hero p {
   margin-left: auto;
@@ -938,7 +938,7 @@ p {
    CONTACT SECTION
 ========================================================== */
 .contact-cta {
-  background-color: rgb(242.7142857143, 240.2571428571, 232.8857142857);
+  background-color: #f3f0e9;
 }
 
 .contact-form {
@@ -1070,7 +1070,7 @@ p {
 }
 
 .blog-promo {
-  background-color: rgb(235, 241.38, 238.44);
+  background-color: #ebf1ee;
   border-top: 1px solid rgba(0, 122, 120, 0.08);
   border-bottom: 1px solid rgba(0, 122, 120, 0.08);
 }
@@ -1363,4 +1363,6 @@ p {
     width: 100%;
     height: 200px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

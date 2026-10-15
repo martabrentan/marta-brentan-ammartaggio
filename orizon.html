@@ -406,6 +406,21 @@
     }
 
 
+    /* ---------- motion: video a tutta larghezza ---------- */
+
+    .oz-motion-section {
+      background: var(--oz-pink);
+      line-height: 0;
+    }
+
+    .oz-motion-section video {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+
     /* ---------- tablet e mobile ---------- */
 
     @media (max-width: 991px) {
@@ -447,16 +462,7 @@
 
 </head>
 
-<script>
-  document.querySelectorAll(".oz-motion-section video").forEach(function (video) {
-    var p = video.play();
-    if (p !== undefined) {
-      p.catch(function () {
-        video.setAttribute("controls", "");
-      });
-    }
-  });
-</script>
+
 <body>
 
 
@@ -580,12 +586,14 @@
     </div>
 
   </section>
- 
- <!-- MOTION -->
+
+
+  <!-- MOTION -->
 
   <section class="oz-motion-section">
     <video src="assets/img/orizon-motion-16-9.mp4"
-           autoplay muted loop playsinline
+           poster="assets/img/orizon-motion-poster.jpg"
+           autoplay muted loop playsinline preload="auto"
            aria-label="Animazione Orizon: il sole sorge sull'orizzonte e compaiono le impronte">
     </video>
   </section>
@@ -625,33 +633,26 @@
     </div>
 
   </section>
- 
+
+
   <!-- TONE OF VOICE -->
 
   <section class="oz-section oz-voice oz-on-dark">
 
     <div class="container">
 
-      <div class="oz-voice-grid">
+      <p class="oz-label">Tone of voice</p>
 
-        <div>
+      <ul class="oz-voice-words">
+        <li>Caldo.</li>
+        <li>Diretto.</li>
+        <li>Adulto.</li>
+        <li>Consapevole.</li>
+      </ul>
 
-          <p class="oz-label">Tone of voice</p>
-
-          <ul class="oz-voice-words">
-            <li>Caldo.</li>
-            <li>Diretto.</li>
-            <li>Adulto.</li>
-            <li>Consapevole.</li>
-          </ul>
-
-          <p class="oz-voice-note">
-            Né scanzonata né istituzionale: una terza via.
-          </p>
-
-        </div>
-
-      </div>
+      <p class="oz-voice-note">
+        Né scanzonata né istituzionale: una terza via.
+      </p>
 
     </div>
 
@@ -872,7 +873,6 @@
     });
 
   });
-  
 </script>
 
 
@@ -989,6 +989,18 @@
 
 </footer>
 
+
+<!-- VIDEO: se il telefono blocca l'avvio automatico, mostra il tasto play -->
+<script>
+  document.querySelectorAll(".oz-motion-section video").forEach(function (video) {
+    var p = video.play();
+    if (p !== undefined) {
+      p.catch(function () {
+        video.setAttribute("controls", "");
+      });
+    }
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

@@ -3,6 +3,7 @@
 <head>
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Editorial – Marta Brentan</title>
   <meta name="description" content="Progetti editoriali di Marta Brentan: editing, contenuti, strutture narrative e pagine pensate per la lettura.">
@@ -50,6 +51,12 @@
     @media (max-width: 767.98px) { .ed-grid { grid-template-columns: minmax(0, 1fr); } }
     @media (max-width: 575.98px) { .ed-card-body { padding: 1.25rem; } }
     @media (prefers-reduced-motion: reduce) { .ed-card, .ed-card-image img { transition: none; } }
+
+    /* righe dell'indice: entrata con rimbalzo senza perdere lo scatto del padding all'hover */
+    .js .hl-item[data-reveal] {
+      transition: opacity .5s ease, translate .9s cubic-bezier(.34, 1.56, .64, 1), scale .9s cubic-bezier(.34, 1.56, .64, 1), padding-left .25s ease;
+      transition-delay: var(--d, 0ms), var(--d, 0ms), var(--d, 0ms), 0ms;
+    }
   </style>
 </head>
 
@@ -98,15 +105,15 @@
          <p class="oz-breadcrumb">
         <a href="index.html">Home</a>› <span>Editorial</span>
       </p>
-        <h1 class="fw-bold mb-4">Editorial</h1>
+        <h1 class="fw-bold mb-4" data-type>Editorial</h1>
        
-        <h2 class="intro">
+        <h2 class="intro" data-reveal style="--d:250ms">
 Dal libro al web, dalle copertine alle interfacce        </h2>
-        <p>
+        <p data-reveal style="--d:350ms">
           Quando ho iniziato a impaginare, ho scoperto che un buon libro non è solo fatto di un insieme di battute su un foglio Word.
           Ho capito, insomma, che per creare un libro dalla A alla Z, non avrei dovuto soltanto leggerlo e correggerlo.
           Riassumendo ancor di più: ho imparato che chiunque maneggi le <strong>parole</strong> per lavoro, deve sporcarsi le mani con la
-          <strong>grafica</strong>. Dunque ho iniziato ad osservare la forma oltre la sostanza.
+          <strong><span class="scrib">grafica<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span></strong>. Dunque ho iniziato ad osservare la forma oltre la sostanza.
         </p>
       </div>
     </div>
@@ -115,8 +122,8 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
   <!-- PROGETTI PRINCIPALI -->
   <section class="ed-section" aria-labelledby="ed-selected">
     <div class="container">
-      <h2 id="ed-selected">Selected projects</h2>
-      <div class="ed-grid">
+      <h2 id="ed-selected" data-reveal>Selected projects</h2>
+      <div class="ed-grid" data-reveal-group>
 
         <a href="assets/docs/catalogo 2026.pdf" class="ed-card" target="_blank" rel="noopener">
           <div class="ed-card-image"><img src="assets/img/copertina-catalogo-argo-2026.webp" alt="Catalogo Argonauta Edizioni 2026" loading="lazy"></div>
@@ -147,8 +154,8 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
   <!-- GALLERY -->
   <section class="hl-section">
     <div class="container">
-<h3 class="fw-bold mb-4">Indice progetti</h3>
-      <div class="hl-header">
+<h3 class="fw-bold mb-4" data-reveal>Indice progetti</h3>
+      <div class="hl-header" data-reveal>
         <span class="hl-header-label">Progetto</span>
         <span class="hl-header-label">Tipo</span>
       </div>
@@ -157,7 +164,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
 
 
       
-         <div class="hl-item"
+         <div class="hl-item" data-reveal
            data-img="assets/img/flyer-scrivi-e-pubblica.webp"
            data-title="Flyer Scrivi e pubblica"
            data-tag="Formazione">
@@ -168,7 +175,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Print advertising</span>
       </div>
 
-           <div class="hl-item"
+           <div class="hl-item" data-reveal
            data-img="assets/img/flyer-farelinsegnante.webp"
            data-title="Flyer Fare l'insegnante"
            data-tag="Formazione">
@@ -179,7 +186,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Print advertising</span>
       </div>
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/3-riviste.webp"
            data-title="Layout riviste"
            data-tag="Editorial design">
@@ -190,7 +197,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Editorial design</span>
       </div>
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/millennials.webp"
            data-title="Millennials"
            data-tag="Poster">
@@ -201,7 +208,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Print advertising</span>
       </div>
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/tokyo.webp"
            data-title="Tokyo"
            data-tag="Poster">
@@ -212,7 +219,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Print advertising</span>
       </div>
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/poster-parete.webp"
            data-title="Poster da parete"
            data-tag="Poster">
@@ -223,7 +230,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Print advertising</span>
       </div>
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/tre-poster.webp"
            data-title="Serie poster"
            data-tag="Poster">
@@ -234,7 +241,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Print advertising</span>
       </div>
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/cube mockup.webp"
            data-title="Roll Up per fiera"
            data-tag="Roll up">
@@ -245,7 +252,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Event design</span>
       </div>
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/Festival.webp"
            data-title="Festival"
            data-tag="Event design">
@@ -257,7 +264,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
       </div>
 
       
-       <div class="hl-item"
+       <div class="hl-item" data-reveal
            data-img="assets/img/pannelli euroedizioni.webp"
            data-title="Pannelli per fiera"
            data-tag="Event design">
@@ -269,7 +276,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
       </div>
 
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/Free_Trifold_Flyer_Mockup_3.webp"
            data-title="Brochure evento in libreria"
            data-tag="Brochure">
@@ -281,7 +288,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
       </div>
 
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/brochure-infosistemi.webp"
            data-title="Brochure Infosistemi"
            data-tag="Brochure">
@@ -292,7 +299,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Brand communication</span>
       </div>
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/flyer giusto.webp"
            data-title="Salone del libro di Torino 2026"
            data-tag="Event design">
@@ -303,7 +310,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
         <span class="hl-tag">Brand communication</span>
       </div>
 
-      <div class="hl-item"
+      <div class="hl-item" data-reveal
            data-img="assets/img/flyer fare.webp"
            data-title="Brochure evento fiera"
            data-tag="Brand communication">
@@ -337,13 +344,13 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
 
   <div class="container">
 
-    <h2 class="section-title text-center mb-5">
+    <h2 class="section-title text-center mb-5" data-reveal>
       Hai un progetto, un testo o un'idea? Parliamone.
     </h2>
 
     <form action="https://formspree.io/f/manvqedl"
           method="POST"
-          class="contact-form">
+          class="contact-form" data-reveal>
 
       <div class="form-group">
         <label for="name">Nome</label>
@@ -473,6 +480,7 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
 
 <!-- 1. Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/motion.js" defer></script>
 
 <!-- 2. Scroll up mobile -->
 <script>

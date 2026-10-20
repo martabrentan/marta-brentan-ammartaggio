@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
 
   <!-- COOKIEBOT -->
   <script
@@ -200,14 +201,14 @@
       <p class="ai-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Agenti AI per UX/UI</span></p>
       <div class="ai-hero-grid">
         <div>
-          <h1 class="ai-title">Agenti <span>AI</span> per UX/UI Design</h1>
-          <p class="ai-lead">Un chatbot intelligente al servizio dell'utente: un assistente per il sito di Ecodream Design.</p>
-          <dl class="ai-meta">
+          <h1 class="ai-title" data-reveal>Agenti <span><span class="scrib">AI<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span></span> per UX/UI Design</h1>
+          <p class="ai-lead" data-reveal style="--d:200ms">Un chatbot intelligente al servizio dell'utente: un assistente per il sito di Ecodream Design.</p>
+          <dl class="ai-meta" data-reveal-group>
             <div><dt>Ambito</dt><dd>Progettazione di un assistente AI conversazionale (mobile)</dd></div>
             <div><dt>Strumenti</dt><dd>Figma, Manus, Dovetail, Lovable, ChatGPT</dd></div>
           </dl>
         </div>
-        <figure class="ai-mascot"><img src="assets/img/ai-mascot.webp" alt="La mascotte dell'assistente: un piccolo robot verde con una foglia in testa" loading="eager"></figure>
+        <figure class="ai-mascot" data-reveal style="--d:300ms"><img src="assets/img/ai-mascot.webp" alt="La mascotte dell'assistente: un piccolo robot verde con una foglia in testa" loading="eager"></figure>
       </div>
     </div>
   </section>
@@ -215,7 +216,7 @@
   <!-- INTRO -->
   <section class="ai-section ai-dark">
     <div class="container">
-      <div class="ai-two">
+      <div class="ai-two" data-reveal-group>
         <div>
           <p class="ai-label">Il punto di partenza</p>
           <h2>Analisi dell'e-commerce</h2>
@@ -225,7 +226,7 @@
           <p>L'obiettivo: progettare un assistente AI per la versione mobile che sciolga i dubbi, senza fingere di risolvere ciò che va risolto con un redesign.</p>
         </div>
       </div>
-      <div class="ai-chips">
+      <div class="ai-chips" data-reveal-group>
         <span>Poca assistenza</span><span>Nessuna barra di ricerca</span><span>Mancanza di filtri</span><span>Nessuna recensione</span><span>Testi troppo lunghi</span><span>CTA incoerenti</span><span>Mancano le FAQ</span><span>Utente smarrito</span>
       </div>
     </div>
@@ -234,9 +235,9 @@
   <!-- PROBLEMI E OPPORTUNITA -->
   <section class="ai-section ai-green">
     <div class="container">
-      <p class="ai-label">Analisi</p>
-      <h2>Tre problemi, tre ruoli per il chatbot</h2>
-      <div class="ai-cards">
+      <p class="ai-label" data-reveal>Analisi</p>
+      <h2 data-reveal style="--d:100ms">Tre problemi, tre ruoli per il chatbot</h2>
+      <div class="ai-cards" data-reveal-group>
         <div class="ai-card"><span class="n">01</span><h3>Manca assistenza e riprova sociale</h3><p>Niente FAQ, live chat o recensioni. Per il 50% delle persone intervistate è indispensabile.</p><div class="opp"><b>Un chatbot che supporta.</b> Risponde su spedizioni, resi e materiali in linguaggio naturale.</div></div>
         <div class="ai-card"><span class="n">02</span><h3>Nessuna guida nella scelta</h3><p>Senza filtri e ricerca non si capiscono varianti, modelli e collezioni. Per il 63,6% è indispensabile.</p><div class="opp"><b>Un chatbot che consiglia.</b> «La cerchi per lavoro o per viaggio?»</div></div>
         <div class="ai-card"><span class="n">03</span><h3>Testi lunghi: blog o e-commerce?</h3><p>Blocchi di testo pesanti e gerarchia debole: non è chiaro che si possa comprare.</p><div class="opp"><b>Un chatbot che guida.</b> Sintetizza, racconta il materiale e rimanda ai contenuti.</div></div>
@@ -247,39 +248,39 @@
   <!-- DEFINIZIONE -->
   <section class="ai-section ai-cream">
     <div class="container">
-      <p class="ai-label">L'assistente</p>
-      <h2>Un consulente di prodotto</h2>
-      <div class="ai-two">
+      <p class="ai-label" data-reveal>L'assistente</p>
+      <h2 data-reveal style="--d:100ms">Un consulente di prodotto</h2>
+      <div class="ai-two" data-reveal-group>
         <p>Il suo ruolo principale è aiutare a scegliere con consapevolezza borse e zaini, in base alle esigenze di chi compra. In secondo piano risponde alle domande frequenti su spedizioni, resi, materiali e cura.</p>
         <p>Il tono è chiaro, rassicurante e orientato alla sostenibilità: linguaggio semplice ma accurato, mai tecnico, mai promozionale.</p>
       </div>
-      <p class="ai-quote" style="color:var(--ai-ink)">Non deve sembrare un venditore.<br><span style="color:var(--ai-green)">Deve essere un consulente.</span></p>
+      <p class="ai-quote" data-reveal style="color:var(--ai-ink)">Non deve sembrare un venditore.<br><span style="color:var(--ai-green)">Deve essere un consulente.</span></p>
     </div>
   </section>
 
   <!-- PROGETTAZIONE -->
   <section class="ai-section">
     <div class="container">
-      <p class="ai-label">Progettazione</p>
-      <h2>Dall'icona alla conversazione</h2>
-      <p class="ai-lead">Verde d'accento #A9BB3E, testo #444444, angoli da 3 px e un Roboto 14 pt leggibile da mobile. Contrasto verificato con le WCAG.</p>
-      <div class="ai-screens">
+      <p class="ai-label" data-reveal>Progettazione</p>
+      <h2 data-reveal style="--d:100ms">Dall'icona alla conversazione</h2>
+      <p class="ai-lead" data-reveal style="--d:200ms">Verde d'accento #A9BB3E, testo #444444, angoli da 3 px e un Roboto 14 pt leggibile da mobile. Contrasto verificato con le WCAG.</p>
+      <div class="ai-screens" data-reveal-group>
         <figure><img src="assets/img/ai-entry.webp" alt="Schermata con l’icona dell’assistente e il micro messaggio" loading="lazy"><figcaption>Entry point: sempre visibile in basso a destra, con «Posso aiutarti?» dopo lo scroll</figcaption></figure>
         <figure><img src="assets/img/ai-chat-vuota.webp" alt="Chat vuota con titolo, azioni rapide e barra di input" loading="lazy"><figcaption>La chat vuota: azioni rapide, input testuale e vocale</figcaption></figure>
         <figure><img src="assets/img/ai-primo-messaggio.webp" alt="Primo messaggio dell’utente e indicatore di caricamento a foglia" loading="lazy"><figcaption>Il primo messaggio: lo spinner diventa una foglia</figcaption></figure>
         <figure><img src="assets/img/ai-risposta.webp" alt="Risposta dell’assistente con opzioni e prodotti suggeriti" loading="lazy"><figcaption>La risposta: domande di approfondimento e prodotti dal catalogo</figcaption></figure>
       </div>
-      <figure class="ai-wide"><img src="assets/img/ai-microflow.webp" alt="Micro-flow della conversazione in cinque schermate" loading="lazy"><figcaption>Il micro-flow, dal primo messaggio all'ultima risposta</figcaption></figure>
+      <figure class="ai-wide" data-reveal><img src="assets/img/ai-microflow.webp" alt="Micro-flow della conversazione in cinque schermate" loading="lazy"><figcaption>Il micro-flow, dal primo messaggio all'ultima risposta</figcaption></figure>
     </div>
   </section>
 
   <!-- USO DELL'AI -->
   <section class="ai-section ai-cream">
     <div class="container">
-      <p class="ai-label">Uso dell'AI</p>
-      <h2>Gli strumenti che ho usato</h2>
-      <p class="ai-lead">L'AI ha accelerato il lavoro, la progettazione l'ho fatta io su Figma.</p>
-      <div class="ai-tools">
+      <p class="ai-label" data-reveal>Uso dell'AI</p>
+      <h2 data-reveal style="--d:100ms">Gli strumenti che ho usato</h2>
+      <p class="ai-lead" data-reveal style="--d:200ms">L'AI ha accelerato il lavoro, la progettazione l'ho fatta io su Figma.</p>
+      <div class="ai-tools" data-reveal-group>
         <div class="ai-tool"><h3>Manus</h3><p>Analisi del sito con Similarweb e ricerca dei competitor.</p></div>
         <div class="ai-tool"><h3>Dovetail</h3><p>Sintesi dell'usability test: trascrizioni, insight e pattern.</p></div>
         <div class="ai-tool"><h3>Lovable</h3><p>Prime esplorazioni dei flussi, prima di consolidarli su Figma.</p></div>
@@ -291,7 +292,7 @@
   <!-- RIEPILOGO -->
   <section class="ai-section ai-dark">
     <div class="container">
-      <div class="ai-two">
+      <div class="ai-two" data-reveal-group>
         <div>
           <p class="ai-label">Riepilogo</p>
           <h2>Dalla chat tradizionale a un facilitatore</h2>
@@ -308,8 +309,8 @@
   <!-- ALTRI PROGETTI -->
   <section class="ai-section ai-more">
     <div class="container text-center">
-      <h2 class="section-title mb-5">Altri progetti</h2>
-      <div class="ai-more-list">
+      <h2 class="section-title mb-5" data-reveal>Altri progetti</h2>
+      <div class="ai-more-list" data-reveal-group>
         <a href="ecodream.html" class="project-card">
           <img src="assets/img/sfondo-discovery.webp" alt="Prototipo della homepage Ecodream" loading="lazy">
           <div class="project-content"><h5>Ecodream Design</h5><p>Wireframe, test, UI e accessibilità</p><p class="text-muted small">start2impact</p></div>
@@ -327,14 +328,14 @@
 
     <div class="container">
 
-      <h2 class="section-title text-center mb-5">
-        Hai un progetto, un testo o un'idea? Parliamone.
+      <h2 class="section-title text-center mb-5" data-reveal>
+        Hai un progetto, un testo o un'idea? <span class="scrib">Parliamone.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span>
       </h2>
 
       <form
         action="https://formspree.io/f/manvqedl"
         method="POST"
-        class="contact-form"
+        class="contact-form" data-reveal-group
       >
 
         <div class="form-group">
@@ -509,6 +510,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/motion.js" defer></script>
 
 </body>
 </html>

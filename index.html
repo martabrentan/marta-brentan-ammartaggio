@@ -3,6 +3,7 @@
 <head>
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marta Brentan – Ammartaggio</title>
    <meta name="description" content="Portfolio di Marta Brentan – UX/UI design, editoria, copywriting e progettazione digitale.">
@@ -78,8 +79,8 @@
   <!-- HERO -->
   <section class="hero text-center py-5">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-3">Marta Brentan</h1>
-      <p class="lead">Intreccio editoria, cultura e scrittura con digitale, grafica e design.</p>
+      <h1 class="display-4 fw-bold mb-3" data-type>Marta Brentan</h1>
+      <p class="lead" data-type data-type-delay="700">Intreccio editoria, cultura e scrittura con digitale, grafica e design.</p>
     </div>
   </section>
 
@@ -87,7 +88,7 @@
 <section class="portfolio-areas">
   <div class="container">
 
-    <div class="portfolio-areas-grid">
+    <div class="portfolio-areas-grid" data-reveal-group>
 
       <!-- EDITORIAL -->
       <a href="editorial.html"
@@ -223,9 +224,9 @@
   <!-- CHI SONO -->
   <section class="bio text-center py-5 bg-dark-portfolio">
     <div class="container">
-      <p>
+      <p data-reveal>
         Ciao, sono <strong>Marta Brentan</strong>, classe 98, nata in provincia per poi sognare di abbandonarla e presto rimpiangerla. 
-Ho due virgolette sui polsi, fatte quando ancora non sapevo che avrei occupato gran parte della mia vita a sostituirle con i caporali.  
+Ho due <span class="scrib">virgolette<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span> sui polsi, fatte quando ancora non sapevo che avrei occupato gran parte della mia vita a sostituirle con i caporali.  
       </p>
 
          <div class="cta-buttons d-flex justify-content-center gap-3 mt-4">
@@ -237,7 +238,7 @@ Ho due virgolette sui polsi, fatte quando ancora non sapevo che avrei occupato g
 <!-- SELECTED PROJECTS -->
 <section class="fields py-5 text-center">
   <div class="container-fluid px-0">
-    <h2 class="section-title">Selected projects</h2>
+    <h2 class="section-title" data-reveal>Selected projects</h2>
 
     <div class="projects-carousel">
 
@@ -245,7 +246,7 @@ Ho due virgolette sui polsi, fatte quando ancora non sapevo che avrei occupato g
         <i class="bi bi-chevron-left"></i>
       </button>
 
-      <div class="projects-scroll">
+      <div class="projects-scroll" data-autoscroll>
 
  <!-- CARD 1 -->
       <a href="limes.html"
@@ -353,7 +354,7 @@ Ho due virgolette sui polsi, fatte quando ancora non sapevo che avrei occupato g
 
         <div class="project-content">
           <h5>Redesign Ecodream</h5>
-          <p>UX/UI Redesign di Edocream: e-commerce sostenibile</p>
+          <p>UX/UI Redesign di Ecodream: e-commerce sostenibile</p>
           <p class="text-muted small">start2impact</p>
         </div>
 
@@ -423,7 +424,7 @@ Ho due virgolette sui polsi, fatte quando ancora non sapevo che avrei occupato g
 
 <!-- BLOG PROMO -->
 <section class="voice-blog blog-promo py-5 mt-4">
-  <div class="container text-center">
+  <div class="container text-center" data-reveal>
     
     <h4 class="fw-bold mb-3">Ammartaggio: il mio Blog</h4>
 
@@ -452,13 +453,13 @@ Ho due virgolette sui polsi, fatte quando ancora non sapevo che avrei occupato g
 
   <div class="container">
 
-    <h2 class="section-title text-center mb-5">
+    <h2 class="section-title text-center mb-5" data-reveal>
       Hai un progetto, un testo o un'idea? Parliamone.
     </h2>
 
     <form action="https://formspree.io/f/manvqedl"
           method="POST"
-          class="contact-form">
+          class="contact-form" data-reveal>
 
       <div class="form-group">
         <label for="name">Nome</label>
@@ -631,6 +632,6 @@ Ho due virgolette sui polsi, fatte quando ancora non sapevo che avrei occupato g
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="assets/js/motion.js" defer></script>
 </body>
 </html>

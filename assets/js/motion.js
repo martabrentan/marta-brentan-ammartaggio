@@ -47,7 +47,8 @@
 
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
-      if (!e.isIntersecting) return;
+      // se l'elemento è già stato superato (salto di scroll) lo mostro comunque
+      if (!e.isIntersecting && e.boundingClientRect.top > 0) return;
       var el = e.target;
       el.classList.add('is-in');
       io.unobserve(el);
@@ -57,6 +58,19 @@
   }, { threshold: .15, rootMargin: '0px 0px -6% 0px' });
 
   targets.forEach(function (el) { io.observe(el); });
+
+  // salto di scroll (es. "torna su", ancore): ciò che è già sopra lo schermo compare comunque
+  var sweep;
+  window.addEventListener('scroll', function () {
+    clearTimeout(sweep);
+    sweep = setTimeout(function () {
+      targets.forEach(function (el) {
+        if (!el.classList.contains('is-in') && el.getBoundingClientRect().bottom < 0) {
+          el.classList.add('is-in'); io.unobserve(el);
+        }
+      });
+    }, 120);
+  }, { passive: true });
 
   var tio = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {

@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
 
   <!-- COOKIEBOT -->
   <script
@@ -548,13 +549,13 @@
 
         <div>
 
-          <h1 class="oz-title">Orizon</h1>
+          <h1 class="oz-title" data-type>Orizon</h1>
 
-          <p class="oz-lead">
+          <p class="oz-lead" data-reveal style="--d:300ms">
             Una voce per viaggiare in modo più umano, senza cliché e senza prediche.
           </p>
 
-          <dl class="oz-meta">
+          <dl class="oz-meta" data-reveal-group>
             <div>
               <dt>Ambito</dt>
               <dd>Tone of Voice e social design</dd>
@@ -571,7 +572,7 @@
 
         </div>
 
-        <figure class="oz-hero-visual">
+        <figure class="oz-hero-visual" data-reveal style="--d:200ms">
           <div class="oz-crop oz-crop-iphone">
             <img
               src="assets/img/instagram-orizon.webp"
@@ -604,7 +605,7 @@
 
     <div class="container">
 
-      <div class="oz-brand-grid">
+      <div class="oz-brand-grid" data-reveal-group>
 
         <figure>
           <img
@@ -641,16 +642,16 @@
 
     <div class="container">
 
-      <p class="oz-label">Tone of voice</p>
+      <p class="oz-label" data-reveal>Tone of voice</p>
 
-      <ul class="oz-voice-words">
+      <ul class="oz-voice-words" data-reveal-group>
         <li>Caldo.</li>
         <li>Diretto.</li>
         <li>Adulto.</li>
         <li>Consapevole.</li>
       </ul>
 
-      <p class="oz-voice-note">
+      <p class="oz-voice-note" data-reveal>
         Né scanzonata né istituzionale: una terza via.
       </p>
 
@@ -665,11 +666,11 @@
 
     <div class="container">
 
-      <p class="oz-label">Carosello Instagram</p>
+      <p class="oz-label" data-reveal>Carosello Instagram</p>
 
-      <h2 class="oz-heading">L'overtourism non è chic.</h2>
+      <h2 class="oz-heading" data-reveal>L'overtourism non è <span class="scrib">chic.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span></h2>
 
-      <div class="oz-grid-4">
+      <div class="oz-grid-4" data-reveal-group>
 
         <figure class="oz-crop oz-crop-phone">
           <img src="assets/img/orizon-carosello-1.webp.webp" alt="Carosello sull'overtourism, slide 1 di 4" loading="lazy">
@@ -689,7 +690,7 @@
 
       </div>
 
-      <p class="oz-caption">Un contenuto che informa prima di vendere.</p>
+      <p class="oz-caption" data-reveal>Un contenuto che informa prima di vendere.</p>
 
     </div>
 
@@ -704,9 +705,9 @@
 
     <div class="container">
 
-      <h2 class="oz-heading">YouTube</h2>
+      <h2 class="oz-heading" data-reveal>YouTube</h2>
 
-      <div class="oz-yt-grid">
+      <div class="oz-yt-grid" data-reveal-group>
 
         <figure class="oz-yt-mobile">
           <img
@@ -739,14 +740,14 @@
 
     <div class="container">
 
-      <p class="oz-label">Il risultato</p>
+      <p class="oz-label" data-reveal>Il risultato</p>
 
-      <p class="oz-quote">
+      <p class="oz-quote" data-reveal style="--d:100ms">
         Non dire alle persone come devono viaggiare. Dai loro un motivo per guardare il viaggio diversamente.
       </p>
 
       <a href="assets/docs/Progetto Grafica per social media di Marta Brentan.pdf"
-         class="oz-download"
+         class="oz-download" data-reveal style="--d:200ms"
          target="_blank"
          rel="noopener noreferrer">
         Scarica il progetto completo
@@ -755,7 +756,7 @@
 
     </div>
 
-    <figure class="oz-land oz-crop oz-crop-land">
+    <figure class="oz-land oz-crop oz-crop-land" data-reveal>
       <img
         src="assets/img/ssfondo-progetto-orizon.webp"
         alt="Montagne della Patagonia al tramonto, sopra un lago"
@@ -773,9 +774,9 @@
 
     <div class="container text-center">
 
-      <h2 class="section-title mb-5">Altri progetti</h2>
+      <h2 class="section-title mb-5" data-reveal>Altri progetti</h2>
 
-      <div class="oz-more-list">
+      <div class="oz-more-list" data-reveal-group>
 
         <a href="legalescuola.html" class="project-card">
           <img src="assets/img/sfondo-legalescuola.webp" alt="Mockup Legale Scuola Brand Guidelines" loading="lazy">
@@ -809,14 +810,14 @@
 
     <div class="container">
 
-      <h2 class="section-title text-center mb-5">
-        Hai un progetto, un testo o un'idea? Parliamone.
+      <h2 class="section-title text-center mb-5" data-reveal>
+        Hai un progetto, un testo o un'idea? <span class="scrib">Parliamone.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span>
       </h2>
 
       <form
         action="https://formspree.io/f/manvqedl"
         method="POST"
-        class="contact-form"
+        class="contact-form" data-reveal-group
       >
 
         <div class="form-group">
@@ -1003,6 +1004,7 @@
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/motion.js" defer></script>
 
 </body>
 </html>

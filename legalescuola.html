@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
 
   <!-- COOKIEBOT -->
   <script
@@ -33,7 +34,7 @@
     content="Un'identità sobria per uno studio legale che difende i diritti nella scuola."
   >
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ammartaggio.com/legale-scuola.html">
+  <meta property="og:url" content="https://ammartaggio.com/legalescuola.html">
   <meta property="og:image" content="https://ammartaggio.com/assets/img/sfondo-legalescuola.webp">
   <meta property="og:image:alt" content="Mockup delle brand guidelines Legale Scuola">
 
@@ -516,13 +517,13 @@
 
         <div>
 
-          <h1 class="ls-title">Legale Scuola</h1>
+          <h1 class="ls-title" data-type>Legale Scuola</h1>
 
-          <p class="ls-lead">
+          <p class="ls-lead" data-reveal style="--d:200ms">
             Un'identità per uno studio legale che difende i diritti nella scuola.
           </p>
 
-          <dl class="ls-meta">
+          <dl class="ls-meta" data-reveal-group>
             <div>
               <dt>Ambito</dt>
               <dd>Brand identity, social media e sito web</dd>
@@ -539,7 +540,7 @@
 
         </div>
 
-        <figure>
+        <figure data-reveal style="--d:200ms">
           <img
             src="assets/img/ls-logo-bianco.webp"
             alt="Logo Legale Scuola: le iniziali LS in un riquadro e il nome in Bodoni"
@@ -562,7 +563,7 @@
 
     <div class="container">
 
-      <div class="ls-mv-grid">
+      <div class="ls-mv-grid" data-reveal-group>
 
         <div>
           <h2>Mission</h2>
@@ -592,11 +593,11 @@
 
     <div class="container">
 
-      <h2 class="ls-heading">Un timbro come logo.</h2>
+      <h2 class="ls-heading" data-reveal>Un timbro come <span class="scrib">logo.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span></h2>
 
     
 
-      <div class="ls-versions">
+      <div class="ls-versions" data-reveal-group>
 
         <figure class="ls-version dark">
           <img src="assets/img/ls-logo-bianco.webp" alt="Logo Legale Scuola in bianco su fondo scuro" loading="lazy">
@@ -620,9 +621,9 @@
 
     <div class="container">
 
-      <h2 class="ls-heading">Blu, grigio e verde.</h2>
+      <h2 class="ls-heading" data-reveal>Blu, grigio e verde.</h2>
 
-      <ul class="ls-swatches">
+      <ul class="ls-swatches" data-reveal-group>
 
         <li class="ls-swatch">
           <span class="ls-swatch-box" style="background:#1BA38C"></span>
@@ -651,7 +652,7 @@
 
       </ul>
 
-      <p class="ls-text">
+      <p class="ls-text" data-reveal>
         Giustizia, equilibrio, integrità e autorità. Il verde è la nota meno scontata: armonia e crescita.
       </p>
 
@@ -667,7 +668,7 @@
 
     <div class="container">
 
-      <div class="ls-fonts">
+      <div class="ls-fonts" data-reveal-group>
 
         <div>
           <p class="ls-font-name sans">Futura</p>
@@ -681,6 +682,7 @@
 
       </div>
 
+    </div>
 
   </section>
 
@@ -692,10 +694,11 @@
 
     <div class="container">
 
-      <h2 class="ls-heading">Social media.</h2>
+      <h2 class="ls-heading" data-reveal>Social media.</h2>
 
       <figure>
         <img
+          data-reveal
           src="assets/img/ls-social.webp"
           alt="Cinque post social di Legale Scuola su concorsi pubblici e tutela del candidato"
           class="ls-img"
@@ -714,7 +717,7 @@
 
     <div class="container">
 
-      <h2 class="ls-heading">Sito web.</h2>
+      <h2 class="ls-heading" data-reveal>Sito web.</h2>
 
       <a
         href="https://www.legalescuola.it"
@@ -722,7 +725,7 @@
         rel="noopener noreferrer"
         class="ls-site-link"
       >
-        <figure class="ls-site-fig">
+        <figure class="ls-site-fig" data-reveal>
           <img
             src="assets/img/ls-sito.webp"
             alt="Sito web di Legale Scuola su laptop e smartphone"
@@ -730,7 +733,7 @@
             loading="lazy"
           >
         </figure>
-        <span class="ls-site-cta">
+        <span class="ls-site-cta" data-reveal style="--d:250ms">
           Visita legalescuola.it <i class="bi bi-arrow-up-right"></i>
         </span>
       </a>
@@ -747,13 +750,13 @@
 
     <div class="container">
 
-      <p class="ls-quote">Ricorso is the way.</p>
+      <p class="ls-quote" data-reveal>Ricorso is the way.</p>
 
       <a
         href="assets/docs/Progetto Legalescuola.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        class="ls-download"
+        class="ls-download" data-reveal style="--d:200ms"
       >
         Scarica le brand guidelines complete
         <i class="bi bi-arrow-up-right"></i>
@@ -771,9 +774,9 @@
 
     <div class="container text-center">
 
-      <h2 class="section-title mb-5">Altri progetti</h2>
+      <h2 class="section-title mb-5" data-reveal>Altri progetti</h2>
 
-      <div class="ls-more-list">
+      <div class="ls-more-list" data-reveal-group>
 
         <a href="includo.html" class="project-card">
           <img src="assets/img/sfondo-includo.webp" alt="Mockup Includo Brand Guidelines" loading="lazy">
@@ -807,14 +810,14 @@
 
     <div class="container">
 
-      <h2 class="section-title text-center mb-5">
-        Hai un progetto, un testo o un'idea? Parliamone.
+      <h2 class="section-title text-center mb-5" data-reveal>
+        Hai un progetto, un testo o un'idea? <span class="scrib">Parliamone.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span>
       </h2>
 
       <form
         action="https://formspree.io/f/manvqedl"
         method="POST"
-        class="contact-form"
+        class="contact-form" data-reveal-group
       >
 
         <div class="form-group">
@@ -989,6 +992,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/motion.js" defer></script>
 
 </body>
 </html>

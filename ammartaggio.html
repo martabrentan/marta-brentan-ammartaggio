@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
 
   <!-- COOKIEBOT -->
   <script
@@ -492,13 +493,13 @@
 
         <div>
 
-          <h1 class="am-title">ammartaggio</h1>
+          <h1 class="am-title" data-type>ammartaggio</h1>
 
-          <p class="am-lead">
+          <p class="am-lead" data-reveal style="--d:300ms">
             Il mio sito personale, dal logo al codice.
           </p>
 
-          <dl class="am-meta">
+          <dl class="am-meta" data-reveal-group>
             <div>
               <dt>Ambito</dt>
               <dd>Sito web personale: logo, UI kit, prototipi e codice</dd>
@@ -515,7 +516,7 @@
 
         </div>
 
-        <figure>
+        <figure data-reveal style="--d:200ms">
           <img
             src="assets/img/am-hero.webp"
             alt="Il sito ammartaggio.com su laptop e smartphone"
@@ -538,9 +539,9 @@
 
     <div class="container">
 
-      <h2>Uno spazio tutto mio.</h2>
+      <h2 data-reveal>Uno spazio tutto mio.</h2>
 
-      <p class="am-text">
+      <p class="am-text" data-reveal style="--d:150ms">
         Ho comprato il dominio per scrivere di libri. Oggi è un sito scritto a mano, senza più WordPress.
       </p>
 
@@ -558,7 +559,7 @@
 
       <div class="am-logo-grid">
 
-        <figure>
+        <figure data-reveal>
           <img
             src="assets/img/am-logo.webp"
             alt="Logo ammartaggio: una virgoletta piena e una virgoletta scomposta in pixel colorati"
@@ -569,9 +570,9 @@
 
         <div>
 
-          <h2 class="am-heading">Parola e pixel.</h2>
+          <h2 class="am-heading" data-reveal>Parola e <span class="scrib">pixel.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span></h2>
 
-          <p class="am-text">
+          <p class="am-text" data-reveal style="--d:150ms">
             La virgoletta piena è l'editoria. Quella scomposta in pixel è il digitale. Insieme raccontano come sto cambiando.
           </p>
 
@@ -591,7 +592,7 @@
 
     <div class="container">
 
-      <figure>
+      <figure data-reveal>
         <img
           src="assets/img/am-palette.webp"
           alt="Palette: #FAF9F6 su una texture bianca, #333333 sui tasti di una macchina da scrivere, #007A78 su un'ombra d'inchiostro"
@@ -612,7 +613,7 @@
 
     <div class="container">
 
-      <div class="am-fonts">
+      <div class="am-fonts" data-reveal-group>
 
         <div>
           <p class="am-font-name sans">Epilogue</p>
@@ -638,9 +639,9 @@
 
     <div class="container">
 
-      <h2 class="am-heading">Dal wireframe al prototipo.</h2>
+      <h2 class="am-heading" data-reveal>Dal wireframe al prototipo.</h2>
 
-      <p class="mt-5">
+      <p class="mt-5" data-reveal style="--d:150ms">
         <a
           href="https://www.figma.com/design/RiSBPX9BpTw0RTHmDGhD2B/Sito-web-personale---Marta-Brentan?node-id=2060-1091&t=rcpQuDogER3Vll61-1"
           target="_blank"
@@ -654,7 +655,7 @@
 
     </div>
 
-    <figure class="am-proto-banner">
+    <figure class="am-proto-banner" data-reveal>
       <img
         src="assets/img/am-prototipi.webp"
         alt="Le pagine del sito in versione mobile e desktop, dai wireframe ai prototipi"
@@ -672,9 +673,9 @@
 
     <div class="container">
 
-      <h2 class="am-heading">Poi, il codice.</h2>
+      <h2 class="am-heading" data-reveal>Poi, il codice.</h2>
 
-      <p class="mt-5">
+      <p class="mt-5" data-reveal style="--d:150ms">
         <a
           href="https://github.com/martabrentan/marta-brentan-ammartaggio"
           target="_blank"
@@ -686,7 +687,7 @@
         </a>
       </p>
 
-      <figure class="am-code-fig">
+      <figure class="am-code-fig" data-reveal>
         <img
           src="assets/img/am-struttura.webp"
           alt="Struttura del sito: le undici pagine html e la cartella assets con scss, docs, icons e img"
@@ -707,13 +708,13 @@
 
     <div class="container">
 
-      <h2 class="am-heading">Titoli brevi, voce in prima persona.</h2>
+      <h2 class="am-heading" data-reveal>Titoli brevi, voce in prima persona.</h2>
 
-      <p class="am-text">
+      <p class="am-text" data-reveal style="--d:150ms">
         I testi del sito che stai visitando ora sono stati costruiti, così come il codice, dalla sottoscritta. Ho seguito quattro linee guida principali (che mi sono autoimposta):
       </p>
 
-      <ul class="am-words-grid">
+      <ul class="am-words-grid" data-reveal-group>
         <li><div class="am-word"><p class="am-word-title">Uno spazio tutto mio.</p><p class="am-word-note">L’apertura è in prima persona: il sito è uno spazio (anzi un pianeta), non una vetrina.</p></div></li>
         <li><div class="am-word"><p class="am-word-title">Parola e pixel.</p><p class="am-word-note">Le parole richiamano l'editoria e il digitale, il logo le tiene insieme.</p></div></li>
         <li><div class="am-word"><p class="am-word-title">Poi, il codice.</p><p class="am-word-note">Le sezioni seguono il percorso: wireframe, prototipo, codice.</p></div></li>
@@ -732,9 +733,9 @@
 
     <div class="container">
 
-      <h2 class="am-heading">Buon ammartaggio!</h2>
+      <h2 class="am-heading" data-reveal>Buon <span class="scrib">ammartaggio!<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span></h2>
 
-      <div class="am-end-links">
+      <div class="am-end-links" data-reveal-group>
 
         <a href="https://ammartaggio.com" target="_blank" rel="noopener noreferrer" class="am-link">
           Visita il sito
@@ -767,9 +768,9 @@
 
     <div class="container text-center">
 
-      <h2 class="section-title mb-5">Altri progetti</h2>
+      <h2 class="section-title mb-5" data-reveal>Altri progetti</h2>
 
-      <div class="more-list">
+      <div class="more-list" data-reveal-group>
 
         <a href="includo.html" class="project-card">
           <img src="assets/img/sfondo-includo.webp" alt="Mockup Includo Brand Guidelines" loading="lazy">
@@ -803,14 +804,14 @@
 
     <div class="container">
 
-      <h2 class="section-title text-center mb-5">
-        Hai un progetto, un testo o un'idea? Parliamone.
+      <h2 class="section-title text-center mb-5" data-reveal>
+        Hai un progetto, un testo o un'idea? <span class="scrib">Parliamone.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span>
       </h2>
 
       <form
         action="https://formspree.io/f/manvqedl"
         method="POST"
-        class="contact-form"
+        class="contact-form" data-reveal-group
       >
 
         <div class="form-group">
@@ -985,6 +986,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/motion.js" defer></script>
 
 </body>
 </html>

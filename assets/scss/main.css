@@ -938,7 +938,7 @@ p {
    CONTACT SECTION
 ========================================================== */
 .contact-cta {
-  background-color: rgb(95.1820728291%, 94.218487395%, 91.3277310924%);
+  background-color: rgb(242.7142857143, 240.2571428571, 232.8857142857);
 }
 
 .contact-form {
@@ -1070,7 +1070,7 @@ p {
 }
 
 .blog-promo {
-  background-color: rgb(92.1568627451%, 94.6588235294%, 93.5058823529%);
+  background-color: rgb(235, 241.38, 238.44);
   border-top: 1px solid rgba(0, 122, 120, 0.08);
   border-bottom: 1px solid rgba(0, 122, 120, 0.08);
 }
@@ -1506,3 +1506,77 @@ body::before {
     transform: none !important;
   }
 }
+/* 5. CONFERMA DEL MODULO (testo in motion.js, modificabile con data-thanks-title / data-thanks-text sul <form>) */
+.form-thanks {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+  outline: none;
+}
+.form-thanks .thanks-planet {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 1.75rem;
+  border-radius: 50%;
+  background: #007A78;
+  color: #FAF9F6;
+  font-size: 2.4rem;
+  box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.12);
+  animation: thanks-land 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.form-thanks h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  color: #007A78;
+  margin: 0 0 1rem;
+  animation: thanks-up 0.7s ease 0.45s both;
+}
+.form-thanks p {
+  margin: 0 auto;
+  animation: thanks-up 0.7s ease 0.75s both;
+}
+.form-thanks .thanks-title {
+  position: relative;
+  display: inline-block;
+}
+
+.form-error {
+  margin: 1rem 0 0;
+  color: #b3261e;
+  font-size: 1rem;
+}
+
+@keyframes thanks-land {
+  from {
+    opacity: 0;
+    translate: 0 -140px;
+    scale: 0.4;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+@keyframes thanks-up {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-thanks .thanks-planet,
+  .form-thanks h3,
+  .form-thanks p {
+    animation: none;
+  }
+}/*# sourceMappingURL=main.css.map */

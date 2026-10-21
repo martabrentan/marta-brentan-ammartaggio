@@ -2038,3 +2038,64 @@ body::before {
   .area-card:hover, .vo-card:hover, .design-project-card:hover,
   .progettazione-card:hover, .ed-card:hover { transform: none !important; }
 }
+
+/* 5. CONFERMA DEL MODULO (testo in motion.js, modificabile con data-thanks-title / data-thanks-text sul <form>) */
+.form-thanks {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+  outline: none;
+
+  .thanks-planet {
+    display: grid;
+    place-items: center;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 1.75rem;
+    border-radius: 50%;
+    background: #007A78;
+    color: #FAF9F6;
+    font-size: 2.4rem;
+    box-shadow: inset -10px -10px 0 rgba(0, 0, 0, .12);
+    animation: thanks-land 1s $bounce both;
+  }
+
+  h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    color: #007A78;
+    margin: 0 0 1rem;
+    animation: thanks-up .7s ease .45s both;
+  }
+
+  p {
+    margin: 0 auto;
+    animation: thanks-up .7s ease .75s both;
+  }
+
+  .thanks-title { position: relative; display: inline-block; }
+}
+
+.form-error {
+  margin: 1rem 0 0;
+  color: #b3261e;
+  font-size: 1rem;
+}
+
+@keyframes thanks-land {
+  from { opacity: 0; translate: 0 -140px; scale: .4; }
+  to   { opacity: 1; translate: 0 0; scale: 1; }
+}
+@keyframes thanks-up {
+  from { opacity: 0; translate: 0 18px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-thanks .thanks-planet,
+  .form-thanks h3,
+  .form-thanks p { animation: none; }
+}

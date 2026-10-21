@@ -7,6 +7,65 @@
   // pathLength=1 così il tratteggio funziona su qualsiasi tracciato
   document.querySelectorAll('.scrib path').forEach(function (p) { p.setAttribute('pathLength', '1'); });
 
+  // CONFERMA DEL MODULO: invia in background (Formspree) e mostra un messaggio animato nella pagina.
+  // I testi si cambiano qui sotto, oppure per singola pagina con data-thanks-title / data-thanks-text sul <form>.
+  var THANKS_TITLE = 'Atterraggio riuscito.';
+  var THANKS_TEXT = 'Il tuo messaggio è sbarcato sul pianeta Marta. Ti rispondo al più presto.';
+  var ERROR_TEXT = 'Qualcosa non ha funzionato. Riprova tra poco oppure scrivimi a martabrentan@yahoo.com.';
+  var SCRIB_SVG = '<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg>';
+
+  document.querySelectorAll('form[action*="formspree.io"]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      if (!window.fetch || !window.FormData) return;   // vecchi browser: invio normale
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      var label = btn ? btn.textContent : '';
+      var old = form.querySelector('.form-error');
+      if (old) old.remove();
+      if (btn) { btn.disabled = true; btn.textContent = 'Invio…'; }
+
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+        .then(function (r) { if (!r.ok) throw new Error('formspree ' + r.status); showThanks(form); })
+        .catch(function () {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+          var err = document.createElement('p');
+          err.className = 'form-error';
+          err.setAttribute('role', 'alert');
+          err.textContent = ERROR_TEXT;
+          form.appendChild(err);
+        });
+    });
+  });
+
+  function showThanks(form) {
+    var box = document.createElement('div');
+    box.className = 'form-thanks';
+    box.setAttribute('role', 'status');
+    box.setAttribute('tabindex', '-1');
+
+    var planet = document.createElement('div');
+    planet.className = 'thanks-planet';
+    planet.setAttribute('aria-hidden', 'true');
+    planet.innerHTML = '<i class="bi bi-check-lg"></i>';
+
+    var h = document.createElement('h3');
+    var sc = document.createElement('span');
+    sc.className = 'scrib thanks-title';
+    sc.appendChild(document.createTextNode(form.getAttribute('data-thanks-title') || THANKS_TITLE));
+    sc.insertAdjacentHTML('beforeend', SCRIB_SVG);
+    h.appendChild(sc);
+
+    var p = document.createElement('p');
+    p.textContent = form.getAttribute('data-thanks-text') || THANKS_TEXT;
+
+    box.appendChild(planet); box.appendChild(h); box.appendChild(p);
+    form.parentNode.insertBefore(box, form);
+    form.hidden = true;
+    form.style.display = 'none';
+    setTimeout(function () { sc.classList.add('is-in'); }, 600);   // la sottolineatura si disegna dopo il titolo
+    try { box.focus({ preventScroll: true }); box.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (x) {}
+  }
+
   // i figli di [data-reveal-group] entrano a scaglioni di 80 ms
   document.querySelectorAll('[data-reveal-group]').forEach(function (g) {
     Array.prototype.forEach.call(g.children, function (el, i) {

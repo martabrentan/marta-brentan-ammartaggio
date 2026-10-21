@@ -9,8 +9,8 @@
 
   // CONFERMA DEL MODULO: invia in background (Formspree) e mostra un messaggio animato nella pagina.
   // I testi si cambiano qui sotto, oppure per singola pagina con data-thanks-title / data-thanks-text sul <form>.
-  var THANKS_TITLE = 'Atterraggio riuscito.';
-  var THANKS_TEXT = 'Il tuo messaggio è sbarcato sul pianeta Marta. Ti rispondo al più presto.';
+  var THANKS_TITLE = 'Ammartaggio riuscito.';
+  var THANKS_TEXT = 'Il tuo messaggio è arrivato. Ti rispondo al più presto.';
   var ERROR_TEXT = 'Qualcosa non ha funzionato. Riprova tra poco oppure scrivimi a martabrentan@yahoo.com.';
   var SCRIB_SVG = '<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg>';
 

@@ -177,6 +177,15 @@
       align-items: stretch;
     }
 
+    /* cinque progetti: tre card sulla prima riga, due più larghe sulla seconda */
+    @media (min-width: 768px) {
+      .progettazione-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+      .progettazione-grid > .progettazione-card { grid-column: span 2; }
+      .progettazione-grid > .progettazione-card:nth-child(n+4) { grid-column: span 3; }
+    }
+
     .progettazione-card {
       display: flex;
       flex-direction: column;
@@ -644,6 +653,1092 @@
             <span class="progettazione-card-cta">
               Scopri il progetto
               <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 04: AMMARTAGGIO -->
+        <a href="ammartaggio.html" class="progettazione-card">
+
+          <div class="progettazione-card-image">
+            <img
+              src="assets/img/am-hero.webp"
+              alt="Il sito ammartaggio.com su laptop e smartphone"
+              loading="lazy">
+          </div>
+
+          <div class="progettazione-card-body">
+
+            <span class="progettazione-card-number">
+              04 / SITO PERSONALE
+            </span>
+
+            <h3>ammartaggio.com</h3>
+
+            <p class="progettazione-card-description">
+              Il mio sito personale, dal logo al codice. Ho comprato il
+              dominio per scrivere di libri: oggi è un sito scritto a mano,
+              senza più WordPress. Ho progettato logo, palette, tipografia,
+              wireframe e prototipi, poi l’ho scritto in HTML, CSS e Bootstrap.
+            </p>
+
+            <p class="progettazione-card-meta">Progetto personale · HTML, CSS e Bootstrap</p>
+
+            <span class="progettazione-card-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 05: ARGONAUTA EDIZIONI -->
+        <a href="https://www.argonauta.com" class="progettazione-card" target="_blank" rel="noopener noreferrer">
+
+          <div class="progettazione-card-image">
+            <img
+              src="assets/img/sfondo-progetto-argonauta.webp"
+              alt="Il sito di Argonauta Edizioni"
+              loading="lazy">
+          </div>
+
+          <div class="progettazione-card-body">
+
+            <span class="progettazione-card-number">
+              05 / WEB DESIGN
+            </span>
+
+            <h3>Argonauta Edizioni</h3>
+
+            <p class="progettazione-card-description">
+              Il sito di Argonauta Edizioni, progettato da me e realizzato
+              con WordPress.
+            </p>
+
+            <p class="progettazione-card-meta">Progetto professionale · WordPress</p>
+
+            <span class="progettazione-card-cta">
+              Visita il sito
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTATTI -->
+  <section class="contact-cta py-5">
+    <div class="container">
+
+      <h2 class="section-title text-center mb-5" data-reveal>
+        Hai un progetto, un testo o un'idea? Parliamone.
+      </h2>
+
+      <form
+        action="https://formspree.io/f/xaeqrbdw"
+        method="POST"
+        class="contact-form" data-reveal>
+
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Invia
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+
+  <!-- SCROLL UP MOBILE -->
+  <a
+    href="#top"
+    class="scrollup-mobile d-lg-none"
+    aria-label="Torna all'inizio della pagina">
+
+    <img src="assets/icons/scroll up.png" alt="">
+  </a>
+
+
+  <!-- FOOTER -->
+  <footer class="footer py-5 bg-dark text-white">
+    <div class="container">
+
+      <!-- FOOTER DESKTOP -->
+      <div class="row g-4 d-none d-lg-flex">
+
+        <div class="col-md-3">
+          <h5>Su di me</h5>
+          <ul class="list-unstyled">
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li>
+              <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener">
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener">
+                CV
+              </a>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Progetti</h5>
+          <ul class="list-unstyled">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="voice.html">Voice</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="progettazione.html">Progettazione</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Contatti</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="mailto:martabrentan@yahoo.com">
+                <i class="bi bi-envelope me-2" aria-hidden="true"></i>Email
+              </a>
+            </li>
+            <li>
+              <a href="tel:+393470547503">
+                <i class="bi bi-telephone me-2" aria-hidden="true"></i>Telefono
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/martabrentan" target="_blank" rel="noopener">
+                <i class="bi bi-instagram me-2" aria-hidden="true"></i>Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/martabrentan" target="_blank" rel="noopener">
+                <i class="bi bi-behance me-2" aria-hidden="true"></i>Behance
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/martabrentan" target="_blank" rel="noopener">
+                <i class="bi bi-linkedin me-2" aria-hidden="true"></i>LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Aiuto</h5>
+          <ul class="list-unstyled">
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER MOBILE -->
+      <div class="footer-mobile d-lg-none">
+
+        <div class="footer-accordion">
+          <button
+            class="accordion-btn"
+            data-bs-toggle="collapse"
+            data-bs-target="#f1"
+            aria-controls="f1"
+            aria-expanded="false">
+            Su di me
+          </button>
+
+          <div id="f1" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="chi-sono.html">Chi sono</a></li>
+              <li>
+                <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener">
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener">
+                  CV
+                </a>
+              </li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-accordion">
+          <button
+            class="accordion-btn"
+            data-bs-toggle="collapse"
+            data-bs-target="#f2"
+            aria-controls="f2"
+            aria-expanded="false">
+            Progetti
+          </button>
+
+          <div id="f2" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="editorial.html">Editorial</a></li>
+              <li><a href="voice.html">Voice</a></li>
+              <li><a href="design.html">Design</a></li>
+              <li><a href="progettazione.html">Progettazione</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-accordion">
+          <button
+            class="accordion-btn"
+            data-bs-toggle="collapse"
+            data-bs-target="#f3"
+            aria-controls="f3"
+            aria-expanded="false">
+            Contatti
+          </button>
+
+          <div id="f3" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+              <li><a href="tel:+393470547503">Telefono</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-accordion">
+          <button
+            class="accordion-btn"
+            data-bs-toggle="collapse"
+            data-bs-target="#f4"
+            aria-controls="f4"
+            aria-expanded="false">
+            Aiuto
+          </button>
+
+          <div id="f4" class="collapse">
+            <ul class="list-unstyled ps-3">
+              <li><a href="policy.html">Policy</a></li>
+              <li><a href="contatti.html">Scrivimi</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social-mobile text-center mt-4">
+          <a href="https://www.instagram.com/martabrentan" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="bi bi-instagram" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://www.behance.net/martabrentan" target="_blank" rel="noopener" aria-label="Behance">
+            <i class="bi bi-behance" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/martabrentan" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="bi bi-linkedin" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <hr class="my-4">
+
+      <p class="text-center small">
+        © 2026 Marta Brentan – Tutti i diritti riservati
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/motion.js" defer></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollBtn = document.querySelector(".scrollup-mobile");
+
+      if (!scrollBtn) return;
+
+      function updateScrollButton() {
+        scrollBtn.classList.toggle("show", window.scrollY > 200);
+      }
+
+      window.addEventListener("scroll", updateScrollButton, { passive: true });
+
+      updateScrollButton();
+
+      scrollBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- COOKIEBOT -->
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
+
+  <meta charset="UTF-8">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Progettazione – Marta Brentan</title>
+  <meta name="description" content="Wireframe, prototipi e ricerca: progetti di user experience e interfacce pensate per essere accessibili e usabili.">
+  <meta name="keywords" content="progettazione, UX, wireframe, prototipi, usabilità, accessibilità, Marta Brentan">
+  <meta name="author" content="Marta Brentan">
+
+  <meta property="og:title" content="Progettazione – Marta Brentan">
+  <meta property="og:description" content="Dallo studio dei flussi utente ai wireframe, fino ai prototipi interattivi, per esperienze digitali più chiare.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://martabrentan.github.io/marta-brentan-ammartaggio/progettazione.html">
+  <meta property="og:image" content="https://martabrentan.github.io/marta-brentan-ammartaggio/assets/img/sfondo-progettazione.webp">
+  <meta property="og:image:alt" content="Copertina della pagina Progettazione di Marta Brentan">
+
+  <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
+
+  <!-- BOOTSTRAP -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS PRINCIPALE -->
+  <link rel="stylesheet" href="assets/scss/main.css">
+
+  <!-- CSS PAGINA PROGETTAZIONE -->
+  <style>
+    /* INTRODUZIONE */
+
+    .progettazione-intro {
+      color: #333333;
+      background-color: #FAF9F6;
+    }
+
+    .progettazione-intro .container {
+      max-width: 1140px;
+    }
+
+    .progettazione-intro .row {
+      display: block;
+    }
+
+    .progettazione-intro .oz-breadcrumb {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .progettazione-intro h1,
+    .progettazione-intro h2,
+    .progettazione-intro h3,
+    .progettazione-intro p {
+      text-align: left;
+    }
+
+    .progettazione-intro h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .progettazione-intro .intro {
+      max-width: 900px;
+      margin-bottom: 2rem;
+    }
+
+    .progettazione-intro .norman-quote {
+      margin: 2.5rem 0 1.5rem;
+      padding-left: 1.25rem;
+      border-left: 3px solid #007A78;
+    }
+
+    .progettazione-intro .norman-quote blockquote {
+      margin: 0 0 0.75rem;
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      line-height: 1.5;
+    }
+
+    .progettazione-intro .norman-quote p {
+      margin-bottom: 0;
+    }
+
+    .progettazione-intro .intro-copy {
+      max-width: 900px;
+      line-height: 1.8;
+    }
+
+
+    /* TESTO INTRODUTTIVO: a tutta larghezza, giustificato su due colonne (una sola colonna sotto i 992px) */
+
+    .progettazione-intro .intro {
+      max-width: none;
+    }
+
+    .progettazione-intro .intro-copy {
+      max-width: none;
+    }
+
+    .progettazione-intro .intro-copy p {
+      max-width: none;
+    }
+
+    @media (min-width: 768px) {
+      .progettazione-intro .intro-copy,
+      .progettazione-intro .intro-copy p {
+        text-align: justify;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .progettazione-intro .intro-copy {
+        column-count: 2;
+        column-gap: 3.5rem;
+      }
+
+      .progettazione-intro .intro-copy p {
+        orphans: 3;
+        widows: 3;
+      }
+    }
+
+
+    /* SEZIONE PROGETTI */
+
+    .progettazione-projects {
+      padding-top: 2rem;
+      padding-bottom: 5rem;
+      background-color: #FAF9F6;
+      color: #333333;
+    }
+
+    .progettazione-projects .container {
+      max-width: 1140px;
+    }
+
+    .progettazione-projects .section-heading {
+      margin-bottom: 2rem;
+    }
+
+    .progettazione-projects .section-heading h2 {
+      margin-bottom: 0.75rem;
+    }
+
+    .progettazione-projects .section-heading p {
+      max-width: 720px;
+      margin-bottom: 0;
+      line-height: 1.7;
+    }
+
+    /* progetti in orizzontale: 3 in fila, scorrimento laterale su mobile */
+    .progettazione-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    /* cinque progetti: tre card sulla prima riga, due più larghe sulla seconda */
+    @media (min-width: 768px) {
+      .progettazione-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+      .progettazione-grid > .progettazione-card { grid-column: span 2; }
+      .progettazione-grid > .progettazione-card:nth-child(n+4) { grid-column: span 3; }
+    }
+
+    .progettazione-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      height: 100%;
+      overflow: hidden;
+      color: inherit;
+      text-decoration: none;
+      background: #ffffff;
+      border-radius: 4px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .progettazione-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .progettazione-card:focus-visible {
+      outline: 3px solid #007A78;
+      outline-offset: 4px;
+    }
+
+    .progettazione-card-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background-color: #eae8e2;
+    }
+
+    .progettazione-card-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .progettazione-card:hover .progettazione-card-image img {
+      transform: scale(1.035);
+    }
+
+    .progettazione-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+    }
+
+    .progettazione-card-number {
+      display: block;
+      margin-bottom: 0.9rem;
+      color: #007A78;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .progettazione-card h3 {
+      margin-bottom: 0.9rem;
+      font-family: "Fraunces", serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .progettazione-card-description {
+      margin-bottom: 1.25rem;
+      font-size: 0.94rem;
+      line-height: 1.75;
+    }
+
+    .progettazione-card-meta {
+      margin-top: auto;
+      padding-top: 0.25rem;
+      color: #666666;
+      font-size: 0.8rem;
+    }
+
+    .progettazione-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+      color: #007A78;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .progettazione-card:hover .progettazione-card-cta {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+
+    /* CONTATTI */
+
+    .contact-cta {
+      background-color: #ffffff;
+    }
+
+
+    /* SCROLL UP */
+
+    .scrollup-mobile {
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .scrollup-mobile.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scrollup-mobile img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+
+    /* TABLET */
+
+    @media (max-width: 991.98px) {
+      .progettazione-grid {
+        gap: 1rem;
+      }
+
+      .progettazione-card-body {
+        padding: 1.15rem;
+      }
+
+      .progettazione-card-description {
+        font-size: 0.86rem;
+        line-height: 1.65;
+      }
+
+      .progettazione-intro {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+      }
+    }
+
+
+    /* MOBILE: scorrimento orizzontale */
+
+    @media (max-width: 767.98px) {
+      .progettazione-grid {
+        display: flex;
+        gap: 1rem;
+        margin-right: calc(-1 * var(--bs-gutter-x, 1.5rem) / 2);
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .progettazione-card {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+      }
+
+      .progettazione-intro .norman-quote {
+        margin-top: 2rem;
+      }
+
+      .progettazione-projects {
+        padding-bottom: 3rem;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .js .progettazione-grid > * { opacity: 1; translate: none; scale: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .progettazione-card,
+      .progettazione-card-image img,
+      .scrollup-mobile {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white py-3">
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html">
+        <img
+          src="assets/img/LOGO.png"
+          alt="Logo Marta Brentan"
+          height="36">
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Apri il menu di navigazione">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+
+          <li class="nav-item">
+            <a class="nav-link" href="chi-sono.html">Chi sono</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="progetti.html">Progetti</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contatti.html">Contatti</a>
+          </li>
+
+          <li class="nav-item d-none d-lg-block ms-lg-3">
+            <a
+              class="btn btn-primary"
+              href="assets/docs/Portfolio Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener">
+              Scarica Portfolio
+            </a>
+          </li>
+
+          <li class="nav-item d-none d-lg-block ms-2">
+            <a
+              class="btn custom-outline"
+              href="assets/docs/CV Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener">
+              Scarica CV
+            </a>
+          </li>
+
+          <!-- LINK MOBILE -->
+          <li class="nav-item d-lg-none">
+            <a
+              href="assets/docs/Portfolio Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener"
+              class="nav-link">
+              <i class="bi bi-download me-2" aria-hidden="true"></i>
+              Portfolio
+            </a>
+          </li>
+
+          <li class="nav-item d-lg-none">
+            <a
+              href="assets/docs/CV Marta Brentan.pdf"
+              target="_blank"
+              rel="noopener"
+              class="nav-link">
+              <i class="bi bi-download me-2" aria-hidden="true"></i>
+              CV
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- INTRODUZIONE -->
+  <section class="progettazione-intro page-intro py-5">
+    <div class="container">
+
+      <div class="row">
+
+        <p class="oz-breadcrumb">
+          <a href="index.html">Home</a> ›
+          <span aria-current="page">Progettazione</span>
+        </p>
+
+        <h1 class="fw-bold" data-type>Progettazione</h1>
+
+        <h2 class="intro" data-reveal style="--d:250ms">
+          Ricerca, analisi euristica e WCAG, wireframe, prototipazione e test
+          con utenti reali per creare esperienze digitali accessibili e funzionali.
+        </h2>
+
+        <div class="norman-quote" data-reveal style="--d:300ms">
+          <blockquote>
+            «Perché spingi se c’è scritto tirare? Il problema non sei tu.
+            È la porta che è progettata male.»
+          </blockquote> 
+          <p><strong>Donald Norman</strong></p>
+        </div>
+
+        <div class="intro-copy">
+          <p data-reveal>
+            Questo è un principio che trovo fondamentale anche nel digitale:
+            un’interfaccia dovrebbe parlare il linguaggio delle persone,
+            anticiparne le aspettative e rendere l’interazione il più possibile
+            naturale. Un bottone che nessuno trova, un form difficile da compilare
+            o un flusso che sulla carta sembra intuitivo, ma nella pratica genera
+            confusione, sono tutti segnali che qualcosa nella progettazione non
+            funziona.
+          </p>
+
+          <p data-reveal>
+            Studiando UX/UI ho capito che la differenza sta nei dettagli che
+            spesso non si notano finché non mancano. Per questo, nei miei progetti
+            parto dalla ricerca e dall’analisi: studio gli utenti, osservo i
+            competitor attraverso competitor analysis e benchmark e valuto i
+            flussi attraverso l’<strong>analisi euristica</strong> e i criteri di
+            accessibilità dei <strong>WCAG</strong>.
+          </p>
+
+          <p data-reveal>
+            Da qui costruisco i <strong><span class="scrib">wireframe<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span></strong>, li trasformo in
+            <strong>prototipi</strong> interattivi e li testo con utenti reali,
+            perché è solo mettendo un’interfaccia nelle mani di qualcuno che
+            posso capire se è davvero intuitiva. Il mio principale strumento di
+            progettazione, dall’analisi alla prototipazione, è stato
+            <strong>Figma</strong>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROGETTI SELEZIONATI -->
+  <section class="progettazione-projects">
+    <div class="container">
+
+
+
+      <div class="progettazione-grid" data-reveal-group>
+
+        <!-- PROGETTO 01: LIMES -->
+        <a href="limes.html" class="progettazione-card">
+
+          <div class="progettazione-card-image">
+            <img
+              src="assets/img/sfondo-progetto-finale.webp"
+              alt="Mockup del redesign UX/UI del sito di Limes"
+              loading="lazy">
+          </div>
+
+          <div class="progettazione-card-body">
+
+            <span class="progettazione-card-number">
+              01 / UX/UI REDESIGN
+            </span>
+
+            <h3>Redesign Limes</h3>
+
+            <p class="progettazione-card-description">
+              Ripensare l’esperienza digitale di Limes, rivista italiana di
+              geopolitica parte del gruppo GEDI, fondata nel 1993 da Lucio
+              Caracciolo. Il progetto nasce dalla volontà di rendere più
+              accessibile un patrimonio editoriale di grande valore, intervenendo
+              su navigazione, gerarchia delle informazioni e organizzazione
+              dei contenuti.
+            </p>
+
+            <p class="progettazione-card-meta">Progetto formativo · start2impact</p>
+
+            <span class="progettazione-card-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 02: AESTHETICS 4.0 -->
+        <a href="aesthetics.html" class="progettazione-card">
+
+          <div class="progettazione-card-image">
+            <img
+              src="assets/img/sfondo-progetto-estetica.webp"
+              alt="Mockup dei siti Aesthetics 4.0 ed Estetica 4.0"
+              loading="lazy">
+          </div>
+
+          <div class="progettazione-card-body">
+
+            <span class="progettazione-card-number">
+              02 / WEB DESIGN
+            </span>
+
+            <h3>Due siti web per il settore beauty</h3>
+
+            <p class="progettazione-card-description">
+              Un ecosistema digitale composto da due siti complementari.
+              Per Estetica 4.0 ho lavorato sull’organizzazione dei contenuti
+              dedicati a cosmetici professionali e formazione; per Aesthetics
+              4.0 sulla presenza digitale del centro estetico, valorizzando
+              servizi, pacchetti e trattamenti attraverso una navigazione chiara.
+            </p>
+
+            <p class="progettazione-card-meta">Progetto professionale · WordPress ed Elementor Pro</p>
+
+            <span class="progettazione-card-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 03: ECODREAM -->
+        <a href="ecodream.html" class="progettazione-card">
+
+          <div class="progettazione-card-image">
+            <img
+              src="assets/img/sfondo-discovery.webp"
+              alt="Mockup e ricerca UX/UI per il redesign di Ecodream Design"
+              loading="lazy">
+          </div>
+
+          <div class="progettazione-card-body">
+
+            <span class="progettazione-card-number">
+              03 / UX RESEARCH
+            </span>
+
+            <h3>Redesign Ecodream</h3>
+
+            <p class="progettazione-card-description">
+              Analisi e riprogettazione dell’esperienza digitale di Ecodream
+              Design, brand indipendente di moda sostenibile. Il progetto
+              parte dalle criticità del sito esistente: navigazione poco chiara,
+              assenza di strumenti di ricerca e filtro, gerarchia delle
+              informazioni debole e un’esperienza mobile da migliorare.
+            </p>
+
+            <p class="progettazione-card-meta">Progetto formativo · start2impact</p>
+
+            <span class="progettazione-card-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 04: AMMARTAGGIO -->
+        <a href="ammartaggio.html" class="progettazione-card">
+
+          <div class="progettazione-card-image">
+            <img
+              src="assets/img/am-hero.webp"
+              alt="Il sito ammartaggio.com su laptop e smartphone"
+              loading="lazy">
+          </div>
+
+          <div class="progettazione-card-body">
+
+            <span class="progettazione-card-number">
+              04 / SITO PERSONALE
+            </span>
+
+            <h3>ammartaggio.com</h3>
+
+            <p class="progettazione-card-description">
+              Il mio sito personale, quello che stai guardando ora. Un tempo impostato su WordPress
+              e utilizzato per scrivere di libri, oggi è un sito scritto a mano e utilizzato per mostrare i miei progetti.
+             Ho progettato logo, palette, tipografia,
+              wireframe e prototipi, utili per trasformarlo in codice HTML, CSS e Bootstrap.
+            </p>
+
+            <p class="progettazione-card-meta">Progetto personale · HTML, CSS e Bootstrap</p>
+
+            <span class="progettazione-card-cta">
+              Scopri il progetto
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+        </a>
+
+
+        <!-- PROGETTO 05: ARGONAUTA EDIZIONI -->
+        <a href="https://www.argonauta.com" class="progettazione-card" target="_blank" rel="noopener noreferrer">
+
+          <div class="progettazione-card-image">
+            <img
+              src="assets/img/copertina_progetto_argo.webp"
+              alt="Il sito di Argonauta Edizioni"
+              loading="lazy">
+          </div>
+
+          <div class="progettazione-card-body">
+
+            <span class="progettazione-card-number">
+              05 / WEB DESIGN
+            </span>
+
+            <h3>Argonauta Edizioni</h3>
+
+            <p class="progettazione-card-description">
+              Il sito di Argonauta Edizioni, progettato e realizzato
+              con WordPress. Seguo la gestione dei contenuti e la manutenzione del sito, 
+              aggiornando le novità editoriali e le informazioni sugli eventi.
+            </p>
+
+            <p class="progettazione-card-meta">Progetto professionale · WordPress</p>
+
+            <span class="progettazione-card-cta">
+              Visita il sito
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i> 
             </span>
 
           </div>

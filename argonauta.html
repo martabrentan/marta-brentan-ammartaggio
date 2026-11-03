@@ -106,12 +106,27 @@
     @media (max-width: 576px) { .ar-lb-prev, .ar-lb-next { top: auto; bottom: 1rem; transform: none; } .ar-lb-prev { left: calc(50% - 60px); } .ar-lb-next { right: calc(50% - 60px); } .ar-lb img { max-height: 70vh; } }
     @media (prefers-reduced-motion: reduce) { .ar-lb, .ar-panel-btn { transition: none; } }
 
-    /* testo e crediti */
-    .ar-about { margin-top: 4.5rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; }
-    .ar-about-text p { font-size: clamp(1.15rem, 1.7vw, 1.5rem); line-height: 1.4; margin: 0 0 1.5rem; }
-    .ar-credits { font-size: .95rem; line-height: 1.6; color: rgba(255,255,255,.8); align-self: end; }
-    .ar-credits p { margin: 0 0 .6rem; }
+    /* testo, logo e crediti: il logo sta al centro, le frasi lo circondano */
+    .ar-about { margin-top: 1rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .8fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; margin-bottom: 3.5rem; }
+    .ar-about-p { font-size: clamp(1.05rem, 1.45vw, 1.3rem); line-height: 1.45; margin: 0; }
+    .ar-about-logo { display: flex; justify-content: center; }
+    .ar-about-logo img { display: block; width: 100%; max-width: 360px; height: auto; }
+    .ar-credits { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem clamp(1.5rem, 4vw, 4rem); padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.25); font-size: .95rem; line-height: 1.6; color: rgba(255,255,255,.8); }
+    .ar-credits p { margin: 0; }
     .ar-credits a { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* pulsanti */
+    .ar-cta { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }
+    .ar-btn { display: inline-flex; align-items: center; gap: .6rem; padding: .95rem 1.8rem; border-radius: 999px; font-size: 1.05rem; font-weight: 600; text-decoration: none; border: 2px solid #FACA53; transition: transform .2s ease, background .2s ease, color .2s ease; }
+    .ar-btn:hover { transform: translateY(-3px); text-decoration: none; }
+    .ar-btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+    .ar-btn-main { background: #FACA53; color: #0F1240 !important; }
+    .ar-btn-main:hover { background: #fff; border-color: #fff; }
+    .ar-btn-alt { background: transparent; color: #FACA53 !important; }
+    .ar-btn-alt:hover { background: #FACA53; color: #0F1240 !important; }
+    .ar-end .ar-cta { margin-top: 0; }
+    @media (max-width: 576px) { .ar-btn { width: 100%; justify-content: center; } }
+    @media (prefers-reduced-motion: reduce) { .ar-btn { transition: none; } }
 
     /* chiusura */
     .ar-end { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.9); }
@@ -122,6 +137,8 @@
     @media (max-width: 991px) {
       .ar-g6, .ar-series-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .ar-about { grid-template-columns: 1fr; gap: 2rem; }
+      .ar-about-logo img { max-width: 260px; }
+      .ar-credits { grid-template-columns: 1fr; }
     }
     @media (max-width: 576px) {
       .ar-g2, .ar-g3 { grid-template-columns: 1fr; }
@@ -215,7 +232,23 @@
   <header class="ar-top">
     <p class="ar-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Argonauta Edizioni</span></p>
     <h1 class="ar-title" data-type>Argonauta Edizioni</h1>
+    <div class="ar-cta" data-reveal style="--d:300ms">
+      <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer" class="ar-btn ar-btn-main">Visita il sito <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+      <a href="assets/docs/Catalogo Argonauta Edizioni 2026.pdf" target="_blank" rel="noopener" download class="ar-btn ar-btn-alt">Scarica il catalogo <i class="bi bi-download" aria-hidden="true"></i></a>
+    </div>
   </header>
+  <!-- TESTO, LOGO E CREDITI -->
+  <section class="ar-about">
+    <p class="ar-about-p" data-reveal>Argonauta Edizioni è una casa editrice indipendente torinese con una propria identità letteraria e culturale. La collaborazione copre l’intera comunicazione visiva: dall’impaginazione dei libri al catalogo annuale, dal packaging alla progettazione di locandine per eventi, fino alla gestione e aggiornamento del sito web.</p>
+    <figure class="ar-about-logo" data-reveal style="--d:150ms">
+      <img src="assets/img/ar-logo-bianco.webp" alt="Il marchio di Argonauta Edizioni: un mollusco argonauta giallo e arancio con la scritta ad arco" loading="lazy">
+    </figure>
+    <p class="ar-about-p" data-reveal style="--d:250ms">Un lavoro che richiede coerenza visiva su tutti i touchpoint - dalla stampa al digitale - e una comprensione profonda del mondo editoriale: rispetto delle gerarchie tipografiche, cura dei dettagli, capacità di tradurre l’identità di una casa editrice in materiali che funzionino sia esteticamente che funzionalmente.</p>
+    <div class="ar-credits" data-reveal style="--d:150ms">
+      <p>Ho progettato e sviluppato tramite WordPress il sito web della casa editrice e oggi aggiorno regolarmente l’e-commerce. Aggiungo le novità per lo più corrette e impaginate dalla sottoscritta.</p>
+      <p>Strumenti: InDesign, Illustrator, WordPress, Elementor<br>Online: <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer">argonautaedizioni.com</a></p>
+    </div>
+  </section>
 
   <!-- CATALOGO: APERTURA -->
   <figure class="ar-tile" data-reveal style="--d:200ms">
@@ -230,9 +263,7 @@
       <figure class="ar-tile"><img src="assets/img/ar-libro-fuga-arancio.webp" alt="Il libro Fuga di Rosanna Greco su fondo arancione" loading="lazy"></figure>
       <figure class="ar-tile"><img src="assets/img/ar-libro-fuga-giallo.webp" alt="Il libro Fuga di Rosanna Greco su fondo giallo" loading="lazy"></figure>
     </div>
-    <div class="ar-tile is-navy ar-logo-tile" data-reveal style="margin-top:1rem">
-      <img src="assets/img/ar-logo-bianco.webp" alt="Il marchio di Argonauta Edizioni: un mollusco argonauta giallo e arancio con la scritta ad arco" loading="lazy">
-    </div>
+
   </section>
 
   <!-- COLLANE -->
@@ -267,7 +298,7 @@
 
   <!-- PANNELLI -->
   <section class="ar-group">
-    <p class="ar-label" data-reveal>Pannelli</p>
+    <p class="ar-label" data-reveal>Pannelli per eventi</p>
     <div class="ar-grid ar-g6" data-reveal-group>
       <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-555-big.webp" data-alt="Pannello rosso per 555 di Sergio Bergese, con un pennino" aria-label="Ingrandisci: Pannello rosso per 555 di Sergio Bergese, con un pennino"><img src="assets/img/ar-pannello-555.webp" alt="Pannello rosso per 555 di Sergio Bergese, con un pennino" loading="lazy"></button>
       <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-rigo-big.webp" data-alt="Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile" aria-label="Ingrandisci: Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile"><img src="assets/img/ar-pannello-rigo.webp" alt="Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile" loading="lazy"></button>
@@ -283,7 +314,7 @@
 
   <!-- LOCANDINE -->
   <section class="ar-group">
-    <p class="ar-label" data-reveal>Locandine per eventi</p>
+    <p class="ar-label" data-reveal>Locandine per libreria</p>
     <figure class="ar-tile" data-reveal style="background:#fff">
       <img src="assets/img/ar-locandine-pindaro.webp" alt="Tre locandine della Libreria Argonauta: Il giardino letterario, Libri in tavola, Rilassarsi colorando. In basso la citazione di Pindaro, Pitica IV, versi 327-337, su Giasone e la nave Argo" loading="lazy">
     </figure>
@@ -297,24 +328,12 @@
     </figure>
   </section>
 
-  <!-- TESTO E CREDITI -->
-  <section class="ar-about">
-    <div class="ar-about-text" data-reveal-group>
-      <p>Argonauta Edizioni è una casa editrice indipendente torinese con una propria identità letteraria e culturale. La collaborazione copre l’intera comunicazione visiva: dall’impaginazione dei libri al catalogo annuale, dal packaging alla progettazione di locandine per eventi, fino alla gestione e aggiornamento del sito web.</p>
-      <p>Un lavoro che richiede coerenza visiva su tutti i touchpoint - dalla stampa al digitale - e una comprensione profonda del mondo editoriale: rispetto delle gerarchie tipografiche, cura dei dettagli, capacità di tradurre l’identità di una casa editrice in materiali che funzionino sia esteticamente che funzionalmente.</p>
-    </div>
-    <div class="ar-credits" data-reveal style="--d:150ms">
-      <p>Ho progettato e sviluppato tramite WordPress il sito web della casa editrice e oggi aggiorno regolarmente l’e-commerce. Aggiungo le novità per lo più corrette e impaginate dalla sottoscritta.</p>
-      <p>Strumenti: InDesign, Illustrator, WordPress, Elementor<br>Online: <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer">argonautaedizioni.com</a></p>
-    </div>
-  </section>
 
   <!-- CHIUSURA -->
   <footer class="ar-end">
-    <div class="ar-end-links">
-      <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer">Visita il sito</a>
-      <a href="progettazione.html">Progettazione</a>
-      <a href="contatti.html">Contatti</a>
+    <div class="ar-cta">
+      <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer" class="ar-btn ar-btn-main">Visita il sito <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+      <a href="assets/docs/Catalogo Argonauta Edizioni 2026.pdf" target="_blank" rel="noopener" download class="ar-btn ar-btn-alt">Scarica il catalogo <i class="bi bi-download" aria-hidden="true"></i></a>
     </div>
     <p class="ar-end-line" data-reveal>L’editoria come territorio, il design come strumento per darle voce.</p>
   </footer>
@@ -454,61 +473,6 @@
 
   </section>
 
-
-<!-- LIGHTBOX PANNELLI -->
-<div class="ar-lb" id="arLb" role="dialog" aria-modal="true" aria-label="Pannello ingrandito" aria-hidden="true">
-  <button type="button" class="ar-lb-close" aria-label="Chiudi"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
-  <button type="button" class="ar-lb-prev" aria-label="Pannello precedente"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
-  <button type="button" class="ar-lb-next" aria-label="Pannello successivo"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-  <figure><img alt=""><figcaption></figcaption></figure>
-</div>
-
-<script>
-(function () {
-  var btns = Array.prototype.slice.call(document.querySelectorAll('.ar-panel-btn'));
-  var lb = document.getElementById('arLb');
-  if (!btns.length || !lb) return;
-  var img = lb.querySelector('img'), cap = lb.querySelector('figcaption');
-  var i = 0, opener = null;
-
-  function show(n) {
-    i = (n + btns.length) % btns.length;
-    img.src = btns[i].getAttribute('data-full');
-    img.alt = btns[i].getAttribute('data-alt');
-    cap.textContent = btns[i].getAttribute('data-alt');
-  }
-  function open(n) {
-    opener = btns[n];
-    show(n);
-    lb.classList.add('open');
-    lb.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    lb.querySelector('.ar-lb-close').focus();
-  }
-  function close() {
-    lb.classList.remove('open');
-    lb.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (opener) opener.focus();
-  }
-  btns.forEach(function (b, n) { b.addEventListener('click', function () { open(n); }); });
-  lb.querySelector('.ar-lb-close').addEventListener('click', close);
-  lb.querySelector('.ar-lb-prev').addEventListener('click', function () { show(i - 1); });
-  lb.querySelector('.ar-lb-next').addEventListener('click', function () { show(i + 1); });
-  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
-  document.addEventListener('keydown', function (e) {
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'Escape') close();
-    else if (e.key === 'ArrowLeft') show(i - 1);
-    else if (e.key === 'ArrowRight') show(i + 1);
-    else if (e.key === 'Tab') {
-      var f = lb.querySelectorAll('button'); var first = f[0], last = f[f.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    }
-  });
-})();
-</script>
 
 </main>
 

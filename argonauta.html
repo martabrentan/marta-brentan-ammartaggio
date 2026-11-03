@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
+
+  <!-- COOKIEBOT -->
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Argonauta Edizioni – Editorial design, catalogo e sito web | Marta Brentan</title>
+  <meta name="description" content="Case study Argonauta Edizioni, casa editrice indipendente torinese: impaginazione dei libri, collane, catalogo 2026, pannelli, locandine per eventi e sito web in WordPress.">
+  <meta name="keywords" content="Argonauta Edizioni, editorial design, impaginazione, catalogo, locandine, WordPress, InDesign, Marta Brentan">
+  <meta name="author" content="Marta Brentan">
+
+  <meta property="og:title" content="Argonauta Edizioni – Editorial design, catalogo e sito web | Marta Brentan">
+  <meta property="og:description" content="Case study Argonauta Edizioni, casa editrice indipendente torinese: impaginazione dei libri, collane, catalogo 2026, pannelli, locandine per eventi e sito web in WordPress.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ammartaggio.com/argonauta.html">
+  <meta property="og:image" content="https://ammartaggio.com/assets/img/ar-catalogo-banner.webp">
+  <meta property="og:image:alt" content="Catalogo 2026 di Argonauta Edizioni">
+
+  <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Epilogue:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/scss/main.css">
+
+  <style>
+    /* =========================================================
+       ARGONAUTA EDIZIONI — CASE STUDY
+       Pagina nera e minimale: titolo, immagini a tutta larghezza
+       con angoli arrotondati, un testo, i crediti.
+    ========================================================== */
+    .ar {
+      --ar-yellow: #FACA53;
+      --ar-navy: #0F1240;
+      --ar-radius: 18px;
+      background: #000; color: #fff; overflow: hidden;
+      font-family: "Epilogue", sans-serif;
+      padding-bottom: 2rem;
+    }
+    .ar p { margin-left: 0; margin-right: 0; max-width: none; text-align: left; }
+    .ar figure { margin: 0; }
+    .ar a { color: inherit; }
+    .ar-wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 40px); }
+
+    .ar-top { padding: 3rem 0 2rem; }
+    .ar-breadcrumb { font-size: .85rem; color: rgba(255,255,255,.55); margin-bottom: 1.5rem; }
+    .ar-breadcrumb a:hover { color: #fff; }
+    .ar-title { font-weight: 500; font-size: clamp(2.6rem, 7vw, 6.5rem); line-height: .95; letter-spacing: -.035em; margin: 0; color: #fff; }
+
+    .ar-group { margin-top: 3.5rem; }
+    .ar-label { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.55); margin: 0 0 1rem; }
+    .ar-tile { border-radius: var(--ar-radius); overflow: hidden; background: #d6d6d6; }
+    .ar-tile img { display: block; width: 100%; height: auto; }
+    .ar-grid { display: grid; gap: 1rem; }
+    .ar-g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ar-g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .ar-g6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .ar-tile.is-navy { background: var(--ar-navy); }
+    .ar-tile.is-yellow { background: #FCC454; }
+    .ar-tile.is-cream { background: #FFF8E6; }
+    .ar-logo-tile { display: flex; align-items: center; justify-content: center; padding: clamp(2rem, 6vw, 5rem); }
+    .ar-logo-tile img { width: min(360px, 60%); }
+
+    /* collane */
+    .ar-series-row { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; list-style: none; margin: 0 0 1rem; padding: 0; }
+    .ar-serie { display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem; height: 100%; min-height: 14rem; padding: 1.4rem; border-radius: var(--ar-radius); }
+    .ar-serie-name { margin: 0; font-size: clamp(1.25rem, 1.8vw, 1.6rem); font-weight: 500; line-height: 1.05; letter-spacing: -.02em; color: inherit; }
+    .ar-serie-note { margin: 0; font-size: .85rem; line-height: 1.4; }
+    .ar-series-row > li:nth-child(1) .ar-serie { background: #FACA53; color: #0F1240; }
+    .ar-series-row > li:nth-child(2) .ar-serie { background: #1c2070; color: #fff; }
+    .ar-series-row > li:nth-child(3) .ar-serie { background: #E8751A; color: #fff; }
+    .ar-series-row > li:nth-child(4) .ar-serie { background: #D91E1E; color: #fff; }
+    .ar-series-row > li:nth-child(5) .ar-serie { background: #71B4E0; color: #0F1240; }
+    .ar-series-row > li:nth-child(6) .ar-serie { background: #B28FD0; color: #0F1240; }
+    .ar-scroll { overflow-x: auto; }
+    .ar-scroll img { min-width: 860px; }
+
+    /* pannelli */
+    .ar-panel-btn { display: block; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 12px; overflow: hidden; transition: transform .25s ease; }
+    .ar-panel-btn img { display: block; width: 100%; height: auto; }
+    .ar-panel-btn:hover { transform: translateY(-6px); }
+    .ar-panel-btn:focus-visible { outline: 3px solid var(--ar-yellow); outline-offset: 3px; }
+    .ar-lb { position: fixed; inset: 0; z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: rgba(0, 0, 0, .94); opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s ease; }
+    .ar-lb.open { opacity: 1; visibility: visible; }
+    .ar-lb figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: .9rem; max-width: 100%; }
+    .ar-lb img { display: block; max-width: min(92vw, 640px); max-height: 82vh; width: auto; height: auto; border-radius: 6px; }
+    .ar-lb figcaption { color: #fff; font-size: .9rem; text-align: center; max-width: 60ch; }
+    .ar-lb button { position: absolute; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 0; border-radius: 50%; background: rgba(255,255,255,.14); color: #fff; font-size: 1.3rem; cursor: pointer; }
+    .ar-lb button:hover, .ar-lb button:focus-visible { background: #FACA53; color: #0F1240; outline: none; }
+    .ar-lb-close { top: 1rem; right: 1rem; }
+    .ar-lb-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+    .ar-lb-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+    @media (max-width: 576px) { .ar-lb-prev, .ar-lb-next { top: auto; bottom: 1rem; transform: none; } .ar-lb-prev { left: calc(50% - 60px); } .ar-lb-next { right: calc(50% - 60px); } .ar-lb img { max-height: 70vh; } }
+    @media (prefers-reduced-motion: reduce) { .ar-lb, .ar-panel-btn { transition: none; } }
+
+    /* testo e crediti */
+    .ar-about { margin-top: 4.5rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; }
+    .ar-about-text p { font-size: clamp(1.15rem, 1.7vw, 1.5rem); line-height: 1.4; margin: 0 0 1.5rem; }
+    .ar-credits { font-size: .95rem; line-height: 1.6; color: rgba(255,255,255,.8); align-self: end; }
+    .ar-credits p { margin: 0 0 .6rem; }
+    .ar-credits a { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* chiusura */
+    .ar-end { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.9); }
+    .ar-end-links { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; font-size: 1rem; }
+    .ar-end-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .ar-end-line { margin: 3rem 0 1rem !important; font-size: clamp(1.6rem, 3.6vw, 3rem); line-height: 1.1; letter-spacing: -.02em; max-width: 24ch; }
+
+    @media (max-width: 991px) {
+      .ar-g6, .ar-series-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .ar-about { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 576px) {
+      .ar-g2, .ar-g3 { grid-template-columns: 1fr; }
+      .ar-g6, .ar-series-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .ar-serie { min-height: 0; }
+      .ar-group { margin-top: 2.5rem; }
+    }
+
+    /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
+    .more-projects { background: #fff; padding: 6rem 0; }
+    .more-projects .more-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+    @media (max-width: 991px) { .more-projects { padding: 4.5rem 0; } }
+    @media (max-width: 576px) { .more-projects { padding: 3.5rem 0; } }
+  </style>
+
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg py-3">
+
+  <div class="container">
+
+    <a class="navbar-brand" href="index.html" aria-label="Homepage Marta Brentan">
+      <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Apri navigazione"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+        <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+
+        <li class="nav-item d-none d-lg-block ms-lg-3">
+          <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-none d-lg-block ms-2">
+          <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
+            Scarica CV
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>Portfolio
+          </a>
+        </li>
+
+        <li class="nav-item d-lg-none">
+          <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <i class="bi bi-download me-2"></i>CV
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<main>
+<div class="ar">
+<div class="ar-wrap">
+
+  <!-- TITOLO -->
+  <header class="ar-top">
+    <p class="ar-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Argonauta Edizioni</span></p>
+    <h1 class="ar-title" data-type>Argonauta Edizioni</h1>
+  </header>
+
+  <!-- CATALOGO: APERTURA -->
+  <figure class="ar-tile" data-reveal style="--d:200ms">
+    <img src="assets/img/ar-catalogo-banner.webp" alt="Mani che sollevano il Catalogo 2026 di Argonauta Edizioni, copertina blu notte con la nave dorata" loading="eager">
+  </figure>
+
+  <!-- LIBRI E MARCHIO -->
+  <section class="ar-group">
+    <p class="ar-label" data-reveal>I libri</p>
+    <div class="ar-grid ar-g3" data-reveal-group>
+      <figure class="ar-tile"><img src="assets/img/ar-libro-ombra-luce.webp" alt="Copertina rossa di Nell’ombra della luce, racconti fantastici della pianura piemontese, su fondo blu" loading="lazy"></figure>
+      <figure class="ar-tile"><img src="assets/img/ar-libro-fuga-arancio.webp" alt="Il libro Fuga di Rosanna Greco su fondo arancione" loading="lazy"></figure>
+      <figure class="ar-tile"><img src="assets/img/ar-libro-fuga-giallo.webp" alt="Il libro Fuga di Rosanna Greco su fondo giallo" loading="lazy"></figure>
+    </div>
+    <div class="ar-tile is-navy ar-logo-tile" data-reveal style="margin-top:1rem">
+      <img src="assets/img/ar-logo-bianco.webp" alt="Il marchio di Argonauta Edizioni: un mollusco argonauta giallo e arancio con la scritta ad arco" loading="lazy">
+    </div>
+  </section>
+
+  <!-- COLLANE -->
+  <section class="ar-group">
+    <p class="ar-label" data-reveal>Le collane</p>
+    <ul class="ar-series-row" data-reveal-group>
+      <li><div class="ar-serie"><h3 class="ar-serie-name">Argo Junior</h3><p class="ar-serie-note">Produzione di narrativa per ragazzi (dagli 8 agli 11 anni)</p></div></li>
+      <li><div class="ar-serie"><h3 class="ar-serie-name">Eracle</h3><p class="ar-serie-note">Libri di genere gialli, thriller e noir</p></div></li>
+      <li><div class="ar-serie"><h3 class="ar-serie-name">Corono</h3><p class="ar-serie-note">Fantasy e fantascienza</p></div></li>
+      <li><div class="ar-serie"><h3 class="ar-serie-name">Medea</h3><p class="ar-serie-note">Libri non classificabili in un solo genere</p></div></li>
+      <li><div class="ar-serie"><h3 class="ar-serie-name">Nestore</h3><p class="ar-serie-note">Saggistica</p></div></li>
+      <li><div class="ar-serie"><h3 class="ar-serie-name">Castore e Polluce</h3><p class="ar-serie-note">Racconti</p></div></li>
+    </ul>
+    <div class="ar-tile is-yellow ar-scroll" data-reveal>
+      <img src="assets/img/ar-collane-testi.webp" alt="I testi delle sei collane: Argo Junior, Eracle, Corono, Medea, Nestore, Castore e Polluce" loading="lazy">
+    </div>
+  </section>
+
+  <!-- CATALOGO -->
+  <section class="ar-group">
+    <p class="ar-label" data-reveal>Catalogo 2026</p>
+    <div class="ar-grid ar-g3" data-reveal-group>
+      <figure class="ar-tile"><img src="assets/img/ar-cat-titolo.webp" alt="Pagina gialla del catalogo con il titolo e la nave disegnata" loading="lazy"></figure>
+      <figure class="ar-tile"><img src="assets/img/ar-cat-pagine.webp" alt="Pagine interne del catalogo: la nave e la pagina Su di noi" loading="lazy"></figure>
+      <figure class="ar-tile"><img src="assets/img/ar-cat-mare.webp" alt="Il mare con la nave Argo, con il fumetto «Sali a bordo anche tu»" loading="lazy"></figure>
+    </div>
+    <div class="ar-grid ar-g2" data-reveal-group style="margin-top:1rem">
+      <figure class="ar-tile"><img src="assets/img/ar-cat-retro.webp" alt="Pagina del catalogo con le indicazioni: sfoglia i titoli, scegli la collana, leggi le norme editoriali, manda il tuo manoscritto" loading="lazy"></figure>
+      <figure class="ar-tile"><img src="assets/img/ar-su-di-noi.webp" alt="La pagina Su di noi del catalogo e il libro aperto sulla collana Argo Junior" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- PANNELLI -->
+  <section class="ar-group">
+    <p class="ar-label" data-reveal>Pannelli</p>
+    <div class="ar-grid ar-g6" data-reveal-group>
+      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-555-big.webp" data-alt="Pannello rosso per 555 di Sergio Bergese, con un pennino" aria-label="Ingrandisci: Pannello rosso per 555 di Sergio Bergese, con un pennino"><img src="assets/img/ar-pannello-555.webp" alt="Pannello rosso per 555 di Sergio Bergese, con un pennino" loading="lazy"></button>
+      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-rigo-big.webp" data-alt="Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile" aria-label="Ingrandisci: Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile"><img src="assets/img/ar-pannello-rigo.webp" alt="Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile" loading="lazy"></button>
+      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-ternengo-big.webp" data-alt="Pannello blu per La verità è un’altra cosa di Enrica Ternengo, con un lampione" aria-label="Ingrandisci: Pannello blu per La verità è un’altra cosa di Enrica Ternengo, con un lampione"><img src="assets/img/ar-pannello-ternengo.webp" alt="Pannello blu per La verità è un’altra cosa di Enrica Ternengo, con un lampione" loading="lazy"></button>
+      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-nardo-big.webp" data-alt="Pannello azzurro per Amami Lady di Domenica Nardo, con un cappello di paglia" aria-label="Ingrandisci: Pannello azzurro per Amami Lady di Domenica Nardo, con un cappello di paglia"><img src="assets/img/ar-pannello-nardo.webp" alt="Pannello azzurro per Amami Lady di Domenica Nardo, con un cappello di paglia" loading="lazy"></button>
+      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-simonis-big.webp" data-alt="Pannello nero per Giù nel buio di Antonio Simonis, con una roccia rossa" aria-label="Ingrandisci: Pannello nero per Giù nel buio di Antonio Simonis, con una roccia rossa"><img src="assets/img/ar-pannello-simonis.webp" alt="Pannello nero per Giù nel buio di Antonio Simonis, con una roccia rossa" loading="lazy"></button>
+      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-lupo-big.webp" data-alt="Pannello viola per La Regina Lupo di Pietro Sanfilippo, con un occhio" aria-label="Ingrandisci: Pannello viola per La Regina Lupo di Pietro Sanfilippo, con un occhio"><img src="assets/img/ar-pannello-lupo.webp" alt="Pannello viola per La Regina Lupo di Pietro Sanfilippo, con un occhio" loading="lazy"></button>
+    </div>
+    <figure class="ar-tile" data-reveal style="margin-top:1rem;background:#fff">
+      <img src="assets/img/ar-bancone.webp" alt="Stampa per il bancone: il logo di Argonauta Edizioni ripetuto in motivo" loading="lazy">
+    </figure>
+  </section>
+
+  <!-- LOCANDINE -->
+  <section class="ar-group">
+    <p class="ar-label" data-reveal>Locandine per eventi</p>
+    <figure class="ar-tile" data-reveal style="background:#fff">
+      <img src="assets/img/ar-locandine-pindaro.webp" alt="Tre locandine della Libreria Argonauta: Il giardino letterario, Libri in tavola, Rilassarsi colorando. In basso la citazione di Pindaro, Pitica IV, versi 327-337, su Giasone e la nave Argo" loading="lazy">
+    </figure>
+  </section>
+
+  <!-- SITO -->
+  <section class="ar-group">
+    <p class="ar-label" data-reveal>Sito web e-commerce</p>
+    <figure class="ar-tile is-yellow" data-reveal>
+      <img src="assets/img/ar-sito.webp" alt="Il sito di Argonauta Edizioni su laptop e smartphone" loading="lazy">
+    </figure>
+  </section>
+
+  <!-- TESTO E CREDITI -->
+  <section class="ar-about">
+    <div class="ar-about-text" data-reveal-group>
+      <p>Argonauta Edizioni è una casa editrice indipendente torinese con una propria identità letteraria e culturale. La collaborazione copre l’intera comunicazione visiva: dall’impaginazione dei libri al catalogo annuale, dal packaging alla progettazione di locandine per eventi, fino alla gestione e aggiornamento del sito web.</p>
+      <p>Un lavoro che richiede coerenza visiva su tutti i touchpoint - dalla stampa al digitale - e una comprensione profonda del mondo editoriale: rispetto delle gerarchie tipografiche, cura dei dettagli, capacità di tradurre l’identità di una casa editrice in materiali che funzionino sia esteticamente che funzionalmente.</p>
+    </div>
+    <div class="ar-credits" data-reveal style="--d:150ms">
+      <p>Ho progettato e sviluppato tramite WordPress il sito web della casa editrice e oggi aggiorno regolarmente l’e-commerce. Aggiungo le novità per lo più corrette e impaginate dalla sottoscritta.</p>
+      <p>Strumenti: InDesign, Illustrator, WordPress, Elementor<br>Online: <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer">argonautaedizioni.com</a></p>
+    </div>
+  </section>
+
+  <!-- CHIUSURA -->
+  <footer class="ar-end">
+    <div class="ar-end-links">
+      <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer">Visita il sito</a>
+      <a href="progettazione.html">Progettazione</a>
+      <a href="contatti.html">Contatti</a>
+    </div>
+    <p class="ar-end-line" data-reveal>L’editoria come territorio, il design come strumento per darle voce.</p>
+  </footer>
+
+</div>
+</div><!-- /ar -->
+
+<!-- LIGHTBOX PANNELLI -->
+<div class="ar-lb" id="arLb" role="dialog" aria-modal="true" aria-label="Pannello ingrandito" aria-hidden="true">
+  <button type="button" class="ar-lb-close" aria-label="Chiudi"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+  <button type="button" class="ar-lb-prev" aria-label="Pannello precedente"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+  <button type="button" class="ar-lb-next" aria-label="Pannello successivo"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+</div>
+
+<script>
+(function () {
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.ar-panel-btn'));
+  var lb = document.getElementById('arLb');
+  if (!btns.length || !lb) return;
+  var img = lb.querySelector('img'), cap = lb.querySelector('figcaption');
+  var i = 0, opener = null;
+
+  function show(n) {
+    i = (n + btns.length) % btns.length;
+    img.src = btns[i].getAttribute('data-full');
+    img.alt = btns[i].getAttribute('data-alt');
+    cap.textContent = btns[i].getAttribute('data-alt');
+  }
+  function open(n) {
+    opener = btns[n];
+    show(n);
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lb.querySelector('.ar-lb-close').focus();
+  }
+  function close() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (opener) opener.focus();
+  }
+  btns.forEach(function (b, n) { b.addEventListener('click', function () { open(n); }); });
+  lb.querySelector('.ar-lb-close').addEventListener('click', close);
+  lb.querySelector('.ar-lb-prev').addEventListener('click', function () { show(i - 1); });
+  lb.querySelector('.ar-lb-next').addEventListener('click', function () { show(i + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(i - 1);
+    else if (e.key === 'ArrowRight') show(i + 1);
+    else if (e.key === 'Tab') {
+      var f = lb.querySelectorAll('button'); var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+})();
+</script>
+
+
+
+<!-- ALTRI PROGETTI -->
+
+  <section class="more-projects">
+
+    <div class="container text-center">
+
+      <h2 class="section-title mb-5" data-reveal>Altri progetti</h2>
+
+      <div class="more-list" data-reveal-group>
+
+        <a href="limes.html" class="project-card">
+          <img src="assets/img/sfondo-progetto-finale.webp" alt="Mockup del redesign UX/UI del sito di Limes" loading="lazy">
+          <div class="project-content">
+            <h5>Redesign Limes</h5>
+            <p>UX/UI redesign</p>
+            <p class="text-muted small">start2impact</p>
+          </div>
+        </a>
+
+        <a href="aesthetics.html" class="project-card">
+          <img src="assets/img/sfondo-progetto-estetica.webp" alt="Mockup dei siti Aesthetics 4.0 ed Estetica 4.0" loading="lazy">
+          <div class="project-content">
+            <h5>Due siti web per il settore beauty</h5>
+            <p>Web design</p>
+            <p class="text-muted small">WordPress ed Elementor Pro</p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CONTACT -->
+
+  <section class="contact-cta py-5">
+
+    <div class="container">
+
+      <h2 class="section-title text-center mb-5" data-reveal>
+        Hai un progetto, un testo o un'idea? <span class="scrib">Parliamone.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span>
+      </h2>
+
+      <form
+        action="https://formspree.io/f/xaeqrbdw"
+        method="POST"
+        class="contact-form" data-reveal-group
+      >
+
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Invia</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+<!-- LIGHTBOX PANNELLI -->
+<div class="ar-lb" id="arLb" role="dialog" aria-modal="true" aria-label="Pannello ingrandito" aria-hidden="true">
+  <button type="button" class="ar-lb-close" aria-label="Chiudi"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+  <button type="button" class="ar-lb-prev" aria-label="Pannello precedente"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+  <button type="button" class="ar-lb-next" aria-label="Pannello successivo"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+</div>
+
+<script>
+(function () {
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.ar-panel-btn'));
+  var lb = document.getElementById('arLb');
+  if (!btns.length || !lb) return;
+  var img = lb.querySelector('img'), cap = lb.querySelector('figcaption');
+  var i = 0, opener = null;
+
+  function show(n) {
+    i = (n + btns.length) % btns.length;
+    img.src = btns[i].getAttribute('data-full');
+    img.alt = btns[i].getAttribute('data-alt');
+    cap.textContent = btns[i].getAttribute('data-alt');
+  }
+  function open(n) {
+    opener = btns[n];
+    show(n);
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lb.querySelector('.ar-lb-close').focus();
+  }
+  function close() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (opener) opener.focus();
+  }
+  btns.forEach(function (b, n) { b.addEventListener('click', function () { open(n); }); });
+  lb.querySelector('.ar-lb-close').addEventListener('click', close);
+  lb.querySelector('.ar-lb-prev').addEventListener('click', function () { show(i - 1); });
+  lb.querySelector('.ar-lb-next').addEventListener('click', function () { show(i + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(i - 1);
+    else if (e.key === 'ArrowRight') show(i + 1);
+    else if (e.key === 'Tab') {
+      var f = lb.querySelectorAll('button'); var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+})();
+</script>
+
+</main>
+
+
+
+<!-- SCROLL UP MOBILE -->
+
+<a href="#" class="scrollup-mobile d-lg-none" aria-label="Torna su">
+  <img src="assets/icons/scroll up.png" alt="">
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollBtn = document.querySelector(".scrollup-mobile");
+
+    if (!scrollBtn) return;
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+
+    scrollBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+  });
+</script>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer py-5 bg-dark text-white">
+
+  <div class="container">
+
+    <div class="row g-4 d-none d-lg-flex">
+
+      <div class="col-md-3">
+        <h5>Su di me</h5>
+        <ul class="list-unstyled">
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+          <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Progetti</h5>
+        <ul class="list-unstyled">
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="voice.html">Voice</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="progettazione.html">Progettazione</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Contatti</h5>
+        <ul class="list-unstyled">
+          <li><a href="mailto:martabrentan@yahoo.com"><i class="bi bi-envelope me-2"></i>Email</a></li>
+          <li><a href="tel:+393470547503"><i class="bi bi-telephone me-2"></i>Telefono</a></li>
+          <li><a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+          <li><a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance me-2"></i>Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Aiuto</h5>
+        <ul class="list-unstyled">
+          <li><a href="policy.html">Policy</a></li>
+          <li><a href="contatti.html">Scrivimi</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="footer-mobile d-lg-none">
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f1">Su di me</button>
+        <div id="f1" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="chi-sono.html">Chi sono</a></li>
+            <li><a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">Portfolio</a></li>
+            <li><a href="assets/docs/CV Marta Brentan.pdf" target="_blank">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f2">Progetti</button>
+        <div id="f2" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="voice.html">Voice</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="progettazione.html">Progettazione</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f3">Contatti</button>
+        <div id="f3" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="mailto:martabrentan@yahoo.com">Email</a></li>
+            <li><a href="tel:+393470547503">Telefono</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-accordion">
+        <button class="accordion-btn" data-bs-toggle="collapse" data-bs-target="#f4">Aiuto</button>
+        <div id="f4" class="collapse">
+          <ul class="list-unstyled ps-3">
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="contatti.html">Scrivimi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-social-mobile text-center mt-4">
+        <a href="https://www.instagram.com/martabrentan" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.behance.net/martabrentan" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="https://www.linkedin.com/in/martabrentan" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <p class="text-center small">© 2026 Marta Brentan – Tutti i diritti riservati</p>
+
+  </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/motion.js" defer></script>
+
+</body>
+</html>

@@ -1579,4 +1579,43 @@ body::before {
   .form-thanks p {
     animation: none;
   }
+}
+.about-photo {
+  position: relative;
+  width: min(100%, 380px);
+  margin-top: 40px; /* spazio per la testa che esce dal cerchio */
+}
+
+.about-photo::before { /* cerchio dietro */
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 92%;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #0f766e; /* teal del sito: cambia con il tuo colore */
+  z-index: 0;
+}
+
+.about-photo .about-img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.18)); /* segue il contorno della figura */
+}
+
+@media (max-width: 991px) {
+  .about-photo {
+    width: min(80%, 320px);
+    margin: 24px auto 0;
+  }
 }/*# sourceMappingURL=main.css.map */

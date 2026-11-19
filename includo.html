@@ -408,7 +408,31 @@
     .ic-download:hover,
     .ic-download:focus-visible { color: var(--ic-sand); }
 
-
+.ic-end-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.ic-end-grid > div { flex: 1 1 auto; min-width: 0; }
+.ic-end-grid figure { flex: 0 0 auto; width: min(560px, 44%); }
+.ic-end-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-mask-image:
+    linear-gradient(to right, #000 70%, transparent 100%),
+    linear-gradient(to bottom, #000 70%, transparent 100%);
+  -webkit-mask-composite: source-in;
+          mask-image:
+    linear-gradient(to right, #000 70%, transparent 100%),
+    linear-gradient(to bottom, #000 70%, transparent 100%);
+          mask-composite: intersect;
+}
+@media (max-width: 767px) {
+  .ic-end-grid { flex-direction: column; align-items: flex-start; gap: 2rem; }
+  .ic-end-grid figure { width: min(500px, 80%); }
+}
     /* ---------- altri progetti ---------- */
 
     .ic-more { background: var(--ic-cream); }
@@ -610,7 +634,7 @@
 
       <figure data-reveal style="margin:3rem 0 0">
         <img
-          src="assets/img/includo-mission-vision.webp"
+          src="assets/img/sfondo-includo.webp"
           alt="Mission e Vision di IncluDO: un grembiule con il logo su fondo marrone e un sacchetto del pranzo su fondo verde"
           style="display:block;width:100%;height:auto"
           loading="lazy"
@@ -855,32 +879,29 @@
   </section>
 
 
+<!-- CHIUSURA -->
+<section class="ic-section ic-end">
+  <div class="container">
+    <div class="ic-end-grid">
 
-  <!-- CHIUSURA -->
+      <div>
+        <p class="ic-quote" data-reveal>
+          Ricucire il bisogno di imparare a fare con la volontà di insegnare a fare.
+        </p>
+        <a href="assets/docs/Progetto Grafica UX UI.pdf" target="_blank" rel="noopener noreferrer"
+           class="ic-download" data-reveal style="--d:200ms">
+          Scarica le brand guidelines complete
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+      </div>
 
-  <section class="ic-section ic-end">
-
-    <div class="container">
-
-      <p class="ic-quote" data-reveal>
-        Ricucire il bisogno di imparare a fare con la volontà di insegnare a fare.
-      </p>
-
-      <a
-        href="assets/docs/Progetto Grafica UX UI.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="ic-download" data-reveal style="--d:200ms"
-      >
-        Scarica le brand guidelines complete
-        <i class="bi bi-arrow-up-right"></i>
-      </a>
+      <figure data-reveal style="--d:150ms">
+        <img src="assets/img/app-includo.webp" alt="DESCRIZIONE DELLA FOTO" class="ic-end-img" loading="lazy">
+      </figure>
 
     </div>
-
-  </section>
-
-
+  </div>
+</section>
 
   <!-- ALTRI PROGETTI -->
 

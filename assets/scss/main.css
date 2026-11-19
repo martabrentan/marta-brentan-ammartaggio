@@ -1496,6 +1496,18 @@ body::before {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
+/* Card progetto: copertina orizzontale intera */
+.project-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1252/770;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+}
+
 /* rispetto per chi non vuole movimento */
 @media (prefers-reduced-motion: reduce) {
   .js [data-reveal],

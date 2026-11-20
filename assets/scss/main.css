@@ -242,8 +242,7 @@ p {
 .project-card img {
   width: 100%;
   height: 340px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 16px;
   margin-bottom: 1.2rem;
   transition: transform 0.5s ease;
@@ -338,8 +337,7 @@ p {
 .works-item-media img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
@@ -414,10 +412,8 @@ p {
   z-index: -2;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.6s ease;
 }
 
@@ -724,8 +720,7 @@ p {
 .hl-img-cursor img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hl-img-cursor.visible {
   opacity: 1;
@@ -776,8 +771,7 @@ p {
   .hl-mob-img img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .hl-item.mob-active .hl-title {
     color: #007A78;
@@ -821,8 +815,7 @@ p {
 .about .about-img {
   width: 340px;
   height: 340px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* ==========================================================
@@ -850,8 +843,7 @@ p {
 .hl-lightbox-img {
   max-width: 92vw;
   max-height: 90vh;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 4px;
   cursor: zoom-in;
   opacity: 0;
@@ -923,8 +915,7 @@ p {
 .skills-grid img {
   width: 55px;
   height: 55px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   padding: 4px;
   background: white;
   border-radius: 10px;
@@ -1130,8 +1121,7 @@ p {
   width: 100%;
   height: auto;
   max-height: 380px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .post-content p {
@@ -1183,8 +1173,7 @@ p {
 .blog-thumb {
   width: 260px;
   height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blog-text h3 {
@@ -1275,8 +1264,7 @@ p {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
@@ -1502,10 +1490,8 @@ body::before {
   width: 100%;
   height: auto;
   aspect-ratio: 1252/770;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center top;
-     object-position: center top;
+  object-fit: cover;
+  object-position: center top;
 }
 
 /* rispetto per chi non vuole movimento */
@@ -1631,8 +1617,7 @@ body::before {
   height: auto;
   max-width: none;
   aspect-ratio: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 0;
   box-shadow: none;
   filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.18)); /* segue il contorno della figura */

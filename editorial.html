@@ -154,194 +154,154 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
       </div>
     </div>
   </section>
+<style>, in fondo (togli le vecchie regole .ed-tile/.ed-mosaic se le avevi già incollate) ============ -->
+<style>
+    /* ===== Alcuni lavori: griglia a righe giustificate ===== */
+    .ed-index { padding: 2.5rem 0 4rem; }
+    .ed-index-top { display:flex; justify-content:space-between; align-items:flex-end; gap:1.5rem; border-bottom:2px solid #333333; padding-bottom:1rem; margin-bottom:1rem; }
+    .ed-index-top h3 { margin:0; font-family:"Fraunces",serif; font-weight:700; letter-spacing:-.03em; }
+    .ed-count { margin:0; max-width:none; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:#777; white-space:nowrap; }
+    .ed-mosaic { display:flex; flex-direction:column; gap:var(--g); --g:clamp(.55rem,.9vw,.9rem); }
+    .ed-row { display:flex; gap:var(--g); }
+    .ed-tile { all:unset; box-sizing:border-box; position:relative; display:block; overflow:hidden; border-radius:4px; cursor:zoom-in; background:#eae8e2; flex:var(--ar) 1 0; min-width:0; aspect-ratio:var(--ar); }
+    .ed-tile:focus-visible { outline:3px solid #007A78; outline-offset:4px; }
+    .ed-tile img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s cubic-bezier(.2,.7,.2,1); }
+    .ed-tile:hover img { transform:scale(1.045); }
+    .ed-tile-cap { position:absolute; left:0; right:0; bottom:0; display:flex; gap:.6rem; align-items:baseline; padding:2.2rem .9rem .8rem; font-size:.9rem; line-height:1.2; color:#fff; background:linear-gradient(to top,rgba(10,10,10,.72),rgba(10,10,10,0)); opacity:0; transform:translateY(8px); transition:opacity .3s ease, transform .3s ease; }
+    .ed-tile-cap b { font-family:"Fraunces",serif; font-size:1.1rem; flex:none; color:#fff; }
+    .ed-tile-cap em { display:block; font-style:normal; font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; opacity:.8; margin-top:.25rem; }
+    .ed-tile:hover .ed-tile-cap, .ed-tile:focus-visible .ed-tile-cap { opacity:1; transform:none; }
+    .ed-tile-n { position:absolute; top:.7rem; left:.7rem; padding:.2rem .55rem; border-radius:999px; background:#FAF9F6; color:#007A78; font-size:.72rem; font-weight:600; letter-spacing:.09em; line-height:1.4; }
+    @media (max-width:767.98px){ .ed-row{flex-direction:column} .ed-tile{flex:none;width:100%} .ed-tile-cap{opacity:1;transform:none} .ed-index-top{flex-direction:column;align-items:flex-start} }
+    @media (prefers-reduced-motion:reduce){ .ed-tile img,.ed-tile-cap{transition:none} }
+</style>
 
-  <!-- GALLERY -->
-  <section class="hl-section">
+  <!-- ALCUNI LAVORI: griglia -->
+  <section class="ed-index" aria-labelledby="ed-lavori">
     <div class="container">
-<h3 class="fw-bold mb-4" data-reveal>Alcuni lavori</h3>
-      <div class="hl-header" data-reveal>
-        <span class="hl-header-label">Progetto</span>
-        <span class="hl-header-label">Tipo</span>
+      <div class="ed-index-top" data-reveal>
+        <h4 id="ed-lavori">Alcuni lavori</h4>
       </div>
-
-  
-
-
-      
-         <div class="hl-item" data-reveal
-           data-img="assets/img/flyer-scrivi-e-pubblica.webp"
-           data-title="Flyer Scrivi e pubblica"
-           data-tag="Formazione">
-        <div class="hl-item-left">
-          <span class="hl-num">02</span>
-          <span class="hl-title">Flyer formazione</span>
+      <div class="ed-mosaic" data-reveal-group>
+        <div class="ed-row">
+          <button type="button" class="ed-tile" style="--ar:1.775" data-img="assets/img/ed-01-riviste-brochure.webp" data-title="Riviste e brochure" data-tag="Editorial design" aria-label="Ingrandisci: Riviste e brochure">
+            <img src="assets/img/ed-01-riviste-brochure.webp" alt="Riviste e brochure" loading="lazy">
+            <span class="ed-tile-n">01</span>
+            <span class="ed-tile-cap"><b>01</b><span>Riviste e brochure<em>Editorial design</em></span></span>
+          </button>
+          <button type="button" class="ed-tile" style="--ar:1.775" data-img="assets/img/ed-02-catalogo-editoriale.webp" data-title="Catalogo editoriale" data-tag="Editorial design" aria-label="Ingrandisci: Catalogo editoriale">
+            <img src="assets/img/ed-02-catalogo-editoriale.webp" alt="Catalogo editoriale" loading="lazy">
+            <span class="ed-tile-n">02</span>
+            <span class="ed-tile-cap"><b>02</b><span>Catalogo editoriale<em>Editorial design</em></span></span>
+          </button>
         </div>
-        <span class="hl-tag">Print advertising</span>
-      </div>
-
-           <div class="hl-item" data-reveal
-           data-img="assets/img/flyer-farelinsegnante.webp"
-           data-title="Flyer Fare l'insegnante"
-           data-tag="Formazione">
-        <div class="hl-item-left">
-          <span class="hl-num">03</span>
-          <span class="hl-title">Flyer piattaforma</span>
+        <div class="ed-row">
+          <button type="button" class="ed-tile" style="--ar:0.629" data-img="assets/img/ed-14-poster-millennials.webp" data-title="Poster Millennials" data-tag="Print advertising" aria-label="Ingrandisci: Poster Millennials">
+            <img src="assets/img/ed-14-poster-millennials.webp" alt="Poster Millennials" loading="lazy">
+            <span class="ed-tile-n">03</span>
+            <span class="ed-tile-cap"><b>03</b><span>Poster Millennials<em>Print advertising</em></span></span>
+          </button>
+          <button type="button" class="ed-tile" style="--ar:1.5" data-img="assets/img/ed-03-poster-argonauta.webp" data-title="Poster Argonauta" data-tag="Print advertising" aria-label="Ingrandisci: Poster Argonauta">
+            <img src="assets/img/ed-03-poster-argonauta.webp" alt="Poster Argonauta" loading="lazy">
+            <span class="ed-tile-n">04</span>
+            <span class="ed-tile-cap"><b>04</b><span>Poster Argonauta<em>Print advertising</em></span></span>
+          </button>
         </div>
-        <span class="hl-tag">Print advertising</span>
-      </div>
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/3-riviste.webp"
-           data-title="Layout riviste"
-           data-tag="Editorial design">
-        <div class="hl-item-left">
-          <span class="hl-num">04</span>
-          <span class="hl-title">Riviste</span>
+        <div class="ed-row">
+          <button type="button" class="ed-tile" style="--ar:1.333" data-img="assets/img/ed-12-poster-libreria-relax.webp" data-title="Poster libreria, Relax e atmosfere" data-tag="Print advertising" aria-label="Ingrandisci: Poster libreria, Relax e atmosfere">
+            <img src="assets/img/ed-12-poster-libreria-relax.webp" alt="Poster libreria, Relax e atmosfere" loading="lazy">
+            <span class="ed-tile-n">05</span>
+            <span class="ed-tile-cap"><b>05</b><span>Poster libreria, Relax e atmosfere<em>Print advertising</em></span></span>
+          </button>
+          <button type="button" class="ed-tile" style="--ar:1.333" data-img="assets/img/ed-13-poster-libreria-giardino.webp" data-title="Poster libreria, Il giardino letterario" data-tag="Print advertising" aria-label="Ingrandisci: Poster libreria, Il giardino letterario">
+            <img src="assets/img/ed-13-poster-libreria-giardino.webp" alt="Poster libreria, Il giardino letterario" loading="lazy">
+            <span class="ed-tile-n">06</span>
+            <span class="ed-tile-cap"><b>06</b><span>Poster libreria, Il giardino letterario<em>Print advertising</em></span></span>
+          </button>
         </div>
-        <span class="hl-tag">Editorial design</span>
-      </div>
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/millennials.webp"
-           data-title="Millennials"
-           data-tag="Poster">
-        <div class="hl-item-left">
-          <span class="hl-num">05</span>
-          <span class="hl-title">Poster millennials</span>
+        <div class="ed-row">
+          <button type="button" class="ed-tile" style="--ar:1.99" data-img="assets/img/ed-04-catalogo-argo-junior.webp" data-title="Catalogo, Collana Argo Junior" data-tag="Editorial design" aria-label="Ingrandisci: Catalogo, Collana Argo Junior">
+            <img src="assets/img/ed-04-catalogo-argo-junior.webp" alt="Catalogo, Collana Argo Junior" loading="lazy">
+            <span class="ed-tile-n">07</span>
+            <span class="ed-tile-cap"><b>07</b><span>Catalogo, Collana Argo Junior<em>Editorial design</em></span></span>
+          </button>
+          <button type="button" class="ed-tile" style="--ar:1.546" data-img="assets/img/ed-05-catalogo-sali-a-bordo.webp" data-title="Catalogo, Sali a bordo" data-tag="Editorial design" aria-label="Ingrandisci: Catalogo, Sali a bordo">
+            <img src="assets/img/ed-05-catalogo-sali-a-bordo.webp" alt="Catalogo, Sali a bordo" loading="lazy">
+            <span class="ed-tile-n">08</span>
+            <span class="ed-tile-cap"><b>08</b><span>Catalogo, Sali a bordo<em>Editorial design</em></span></span>
+          </button>
+          <button type="button" class="ed-tile" style="--ar:0.973" data-img="assets/img/ed-06-catalogo-collane.webp" data-title="Catalogo, L’idea delle collane" data-tag="Editorial design" aria-label="Ingrandisci: Catalogo, L’idea delle collane">
+            <img src="assets/img/ed-06-catalogo-collane.webp" alt="Catalogo, L’idea delle collane" loading="lazy">
+            <span class="ed-tile-n">09</span>
+            <span class="ed-tile-cap"><b>09</b><span>Catalogo, L’idea delle collane<em>Editorial design</em></span></span>
+          </button>
         </div>
-        <span class="hl-tag">Print advertising</span>
-      </div>
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/tokyo.webp"
-           data-title="Tokyo"
-           data-tag="Poster">
-        <div class="hl-item-left">
-          <span class="hl-num">06</span>
-          <span class="hl-title">Poster giapponese</span>
+        <div class="ed-row">
+          <button type="button" class="ed-tile" style="--ar:1.546" data-img="assets/img/ed-07-catalogo-copertina.webp" data-title="Catalogo, copertina" data-tag="Editorial design" aria-label="Ingrandisci: Catalogo, copertina">
+            <img src="assets/img/ed-07-catalogo-copertina.webp" alt="Catalogo, copertina" loading="lazy">
+            <span class="ed-tile-n">10</span>
+            <span class="ed-tile-cap"><b>10</b><span>Catalogo, copertina<em>Editorial design</em></span></span>
+          </button>
+          <button type="button" class="ed-tile" style="--ar:1.546" data-img="assets/img/ed-08-catalogo-su-di-noi.webp" data-title="Catalogo, Su di noi" data-tag="Editorial design" aria-label="Ingrandisci: Catalogo, Su di noi">
+            <img src="assets/img/ed-08-catalogo-su-di-noi.webp" alt="Catalogo, Su di noi" loading="lazy">
+            <span class="ed-tile-n">11</span>
+            <span class="ed-tile-cap"><b>11</b><span>Catalogo, Su di noi<em>Editorial design</em></span></span>
+          </button>
+          <button type="button" class="ed-tile" style="--ar:1.333" data-img="assets/img/ed-15-flyer-giu-nel-buio.webp" data-title="Flyer Giù nel buio" data-tag="Print advertising" aria-label="Ingrandisci: Flyer Giù nel buio">
+            <img src="assets/img/ed-15-flyer-giu-nel-buio.webp" alt="Flyer Giù nel buio" loading="lazy">
+            <span class="ed-tile-n">12</span>
+            <span class="ed-tile-cap"><b>12</b><span>Flyer Giù nel buio<em>Print advertising</em></span></span>
+          </button>
         </div>
-        <span class="hl-tag">Print advertising</span>
-      </div>
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/poster-parete.webp"
-           data-title="Poster da parete"
-           data-tag="Poster">
-        <div class="hl-item-left">
-          <span class="hl-num">07</span>
-          <span class="hl-title">Book design</span>
+        <div class="ed-row">
+          <button type="button" class="ed-tile" style="--ar:1.333" data-img="assets/img/ed-09-brochure-giustoscuola.webp" data-title="Brochure GiustoScuola" data-tag="Brand communication" aria-label="Ingrandisci: Brochure GiustoScuola">
+            <img src="assets/img/ed-09-brochure-giustoscuola.webp" alt="Brochure GiustoScuola" loading="lazy">
+            <span class="ed-tile-n">13</span>
+            <span class="ed-tile-cap"><b>13</b><span>Brochure GiustoScuola<em>Brand communication</em></span></span>
+          </button>
+          <button type="button" class="ed-tile" style="--ar:1.333" data-img="assets/img/brochure-infosistemi.webp" data-title="Brochure Infosistemi" data-tag="Brand communication" aria-label="Ingrandisci: Brochure Infosistemi">
+            <img src="assets/img/brochure-infosistemi.webp" alt="Brochure Infosistemi" loading="lazy">
+            <span class="ed-tile-n">14</span>
+            <span class="ed-tile-cap"><b>14</b><span>Brochure Infosistemi<em>Brand communication</em></span></span>
+          </button>
+          <button type="button" class="ed-tile" style="--ar:1.333" data-img="assets/img/ed-11-brochure-fare-linsegnante.webp" data-title="Brochure Fare l’insegnante" data-tag="Brand communication" aria-label="Ingrandisci: Brochure Fare l’insegnante">
+            <img src="assets/img/ed-11-brochure-fare-linsegnante.webp" alt="Brochure Fare l’insegnante" loading="lazy">
+            <span class="ed-tile-n">15</span>
+            <span class="ed-tile-cap"><b>15</b><span>Brochure Fare l’insegnante<em>Brand communication</em></span></span>
+          </button>
         </div>
-        <span class="hl-tag">Print advertising</span>
       </div>
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/tre-poster.webp"
-           data-title="Serie poster"
-           data-tag="Poster">
-        <div class="hl-item-left">
-          <span class="hl-num">08</span>
-          <span class="hl-title">Poster libreria</span>
-        </div>
-        <span class="hl-tag">Print advertising</span>
-      </div>
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/cube mockup.webp"
-           data-title="Roll Up per fiera"
-           data-tag="Roll up">
-        <div class="hl-item-left">
-          <span class="hl-num">09</span>
-          <span class="hl-title">Roll Up per Salone del libro</span>
-        </div>
-        <span class="hl-tag">Event design</span>
-      </div>
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/Festival.webp"
-           data-title="Festival"
-           data-tag="Event design">
-        <div class="hl-item-left">
-          <span class="hl-num">10</span>
-          <span class="hl-title">Poster per festival</span>
-        </div>
-        <span class="hl-tag">Event design</span>
-      </div>
-
-      
-       <div class="hl-item" data-reveal
-           data-img="assets/img/pannelli euroedizioni.webp"
-           data-title="Pannelli per fiera"
-           data-tag="Event design">
-        <div class="hl-item-left">
-          <span class="hl-num">11</span>
-          <span class="hl-title">Pannelli per fiera</span>
-        </div>
-        <span class="hl-tag">Event design</span>
-      </div>
-
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/Free_Trifold_Flyer_Mockup_3.webp"
-           data-title="Brochure evento in libreria"
-           data-tag="Brochure">
-        <div class="hl-item-left">
-          <span class="hl-num">12</span>
-          <span class="hl-title">Brochure evento in libreria</span>
-        </div>
-        <span class="hl-tag">Brand communication</span>
-      </div>
-
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/brochure-infosistemi.webp"
-           data-title="Brochure Infosistemi"
-           data-tag="Brochure">
-        <div class="hl-item-left">
-          <span class="hl-num">13</span>
-          <span class="hl-title">Brochure Infosistemi</span>
-        </div>
-        <span class="hl-tag">Brand communication</span>
-      </div>
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/flyer giusto.webp"
-           data-title="Salone del libro di Torino 2026"
-           data-tag="Event design">
-        <div class="hl-item-left">
-          <span class="hl-num">14</span>
-          <span class="hl-title">Brochure Giustoscuola</span>
-        </div>
-        <span class="hl-tag">Brand communication</span>
-      </div>
-
-      <div class="hl-item" data-reveal
-           data-img="assets/img/flyer fare.webp"
-           data-title="Brochure evento fiera"
-           data-tag="Brand communication">
-        <div class="hl-item-left">
-          <span class="hl-num">15</span>
-          <span class="hl-title">Brochure Fare l'insegnante</span>
-        </div>
-        <span class="hl-tag">Brand communication</span>
-      </div>
-
     </div>
   </section>
 
-  <!-- Cursore immagine -->
-  <div class="hl-img-cursor" id="hlImgCursor">
-    <img id="hlImgEl" src="" alt="">
-  </div>
-
-  <!-- Lightbox custom -->
+  <!-- Lightbox -->
   <div class="hl-lightbox" id="hlLightbox">
-    <button class="hl-lightbox-close" id="hlClose">×</button>
+    <button class="hl-lightbox-close" id="hlClose" aria-label="Chiudi">×</button>
     <img class="hl-lightbox-img" id="hlLbImg" src="" alt="">
     <div class="hl-lightbox-info">
       <p class="hl-lightbox-info-tag" id="hlLbTag"></p>
       <p class="hl-lightbox-info-title" id="hlLbTitle"></p>
     </div>
   </div>
+
+<!-- Griglia lavori: lightbox -->
+<script>
+  (function () {
+    var lb = document.getElementById('hlLightbox'), img = document.getElementById('hlLbImg'),
+        ti = document.getElementById('hlLbTitle'), tg = document.getElementById('hlLbTag');
+    document.querySelectorAll('.ed-tile').forEach(function (it) {
+      it.addEventListener('click', function () {
+        img.src = it.dataset.img; ti.textContent = it.dataset.title || ''; tg.textContent = it.dataset.tag || '';
+        lb.classList.add('open');
+      });
+    });
+    function close() { lb.classList.remove('open'); }
+    document.getElementById('hlClose').addEventListener('click', close);
+    lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
+</script>
+
 
    <!-- CONTACT -->
 <section class="contact-cta py-5">
@@ -505,115 +465,5 @@ Dal libro al web, dalle copertine alle interfacce        </h2>
   });
 </script>
 
-<!-- 3. Hover list gallery (desktop) -->
-<script>
-  (function () {
-    var cursor   = document.getElementById('hlImgCursor');
-    var imgEl    = document.getElementById('hlImgEl');
-    var lightbox = document.getElementById('hlLightbox');
-    var lbImg    = document.getElementById('hlLbImg');
-    var lbTitle  = document.getElementById('hlLbTitle');
-    var lbTag    = document.getElementById('hlLbTag');
-    var closeBtn = document.getElementById('hlClose');
-    var hoverTimer = null;
-
-    document.addEventListener('mousemove', function (e) {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top  = e.clientY + 'px';
-    });
-
-    document.querySelectorAll('.hl-item[data-img]').forEach(function (item) {
-      var src   = item.getAttribute('data-img');
-      var title = item.getAttribute('data-title');
-      var tag   = item.getAttribute('data-tag');
-
-      item.addEventListener('mouseenter', function () {
-        imgEl.src = src;
-        cursor.classList.add('visible');
-        hoverTimer = setTimeout(function () {
-          lbImg.src           = src;
-          lbTitle.textContent = title;
-          lbTag.textContent   = tag;
-          lightbox.classList.add('open');
-        }, 600);
-      });
-
-      item.addEventListener('click', function (e) {
-        if (item.hasAttribute('download')) return;
-        e.preventDefault();
-        clearTimeout(hoverTimer);
-        lbImg.src           = src;
-        lbTitle.textContent = title;
-        lbTag.textContent   = tag;
-        lightbox.classList.add('open');
-      });
-
-      item.addEventListener('mouseleave', function () {
-        cursor.classList.remove('visible');
-        clearTimeout(hoverTimer);
-      });
-    });
-
-    function closeLb() {
-      lightbox.classList.remove('open');
-    }
-    closeBtn.addEventListener('click', closeLb);
-    lightbox.addEventListener('click', function (e) {
-      if (e.target === lightbox) closeLb();
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeLb();
-    });
-  })();
-</script>
-
-<!-- 4. Scroll activation mobile -->
-<script>
-  (function () {
-    if (window.innerWidth > 768) return;
-
-    document.querySelectorAll('.hl-item[data-img]').forEach(function (item) {
-      var src = item.getAttribute('data-img');
-      var wrap = document.createElement('div');
-      wrap.className = 'hl-mob-img';
-      var img = document.createElement('img');
-      img.src = src;
-      img.alt = '';
-      img.loading = 'lazy';
-      wrap.appendChild(img);
-      item.appendChild(wrap);
-    });
-
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('mob-active');
-        } else {
-          entry.target.classList.remove('mob-active');
-        }
-      });
-    }, { threshold: 0.55 });
-
-    document.querySelectorAll('.hl-item[data-img]').forEach(function (item) {
-      observer.observe(item);
-    });
-
-    document.querySelectorAll('.hl-item[data-img]').forEach(function (item) {
-      item.addEventListener('click', function (e) {
-        if (item.hasAttribute('download')) return;
-        e.preventDefault();
-        var lightbox = document.getElementById('hlLightbox');
-        var lbImg    = document.getElementById('hlLbImg');
-        var lbTitle  = document.getElementById('hlLbTitle');
-        var lbTag    = document.getElementById('hlLbTag');
-        if (!lightbox) return;
-        lbImg.src           = item.getAttribute('data-img');
-        lbTitle.textContent = item.getAttribute('data-title') || '';
-        lbTag.textContent   = item.getAttribute('data-tag') || '';
-        lightbox.classList.add('open');
-      });
-    });
-  })();
-</script>
 </body>
 </html>

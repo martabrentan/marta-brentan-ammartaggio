@@ -1,340 +1,528 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
-
-  <!-- COOKIEBOT -->
-  <script
-    id="Cookiebot"
-    src="https://consent.cookiebot.com/uc.js"
-    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
-    data-blockingmode="auto"
-    type="text/javascript">
-  </script>
-
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Argonauta Edizioni – Editorial design, catalogo e sito web | Marta Brentan</title>
   <meta name="description" content="Case study Argonauta Edizioni, casa editrice indipendente torinese: impaginazione dei libri, collane, catalogo 2026, pannelli, locandine per eventi e sito web in WordPress.">
   <meta name="keywords" content="Argonauta Edizioni, editorial design, impaginazione, catalogo, locandine, WordPress, InDesign, Marta Brentan">
   <meta name="author" content="Marta Brentan">
-
+  <meta name="theme-color" content="#007A78">
   <meta property="og:title" content="Argonauta Edizioni – Editorial design, catalogo e sito web | Marta Brentan">
   <meta property="og:description" content="Case study Argonauta Edizioni, casa editrice indipendente torinese: impaginazione dei libri, collane, catalogo 2026, pannelli, locandine per eventi e sito web in WordPress.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ammartaggio.com/argonauta.html">
   <meta property="og:image" content="https://ammartaggio.com/assets/img/ar-catalogo-banner.webp">
   <meta property="og:image:alt" content="Catalogo 2026 di Argonauta Edizioni">
-
   <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Epilogue:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/scss/main.css">
-
   <style>
-   
-    .ar {
-      --ar-yellow: #FACA53;
-      --ar-navy: #0F1240;
-      --ar-radius: 18px;
-      background: #000; color: #fff; overflow: hidden;
-      font-family: "Epilogue", sans-serif;
-      padding-bottom: 2rem;
+    /* griglie: immagini sempre sulla stessa riga, con aria tra i blocchi */
+    .case-block > * + .case-grid { margin-top: 1rem; }
+    .case-block .case-text + .case-grid,
+    .case-block .case-text + .case-fig { margin-top: 2.5rem; }
+    .case-grid > .case-fig,
+    .case-grid > .case-fig + .case-fig { margin: 0; }
+    .ar-gap { margin-top: 1rem; }
+
+    /* logo sul fondo blu del marchio */
+    .ar-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0F1240;
+      border-radius: 14px;
+      padding: clamp(2rem, 6vw, 4rem);
+      margin: 1rem 0 0;
     }
-    .ar p { margin-left: 0; margin-right: 0; max-width: none; text-align: left; }
-    .ar figure { margin: 0; }
-    .ar a { color: inherit; }
-    .ar-wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 40px); }
+    .ar-logo img {
+      display: block;
+      width: min(300px, 60%);
+      height: auto;
+    }
 
-    .ar-top { padding: 3rem 0 2rem; }
-    .ar-breadcrumb { font-size: .85rem; color: rgba(255,255,255,.55); margin-bottom: 1.5rem; }
-    .ar-breadcrumb a:hover { color: #fff; }
-    .ar-title { font-weight: 500; font-size: clamp(2.6rem, 7vw, 6.5rem); line-height: .95; letter-spacing: -.035em; margin: 0; color: #fff; }
+    /* sfondo giallo del marchio */
+    .ar-yellow img {
+      background: #FCC454;
+      border-radius: 14px;
+    }
 
-    .ar-group { margin-top: 3.5rem; }
-    .ar-label { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.55); margin: 0 0 1rem; }
-    .ar-tile { border-radius: var(--ar-radius); overflow: hidden; background: #d6d6d6; }
-    .ar-tile img { display: block; width: 100%; height: auto; }
-    .ar-grid { display: grid; gap: 1rem; }
-    .ar-g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .ar-g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .ar-g6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .ar-tile.is-navy { background: var(--ar-navy); }
-    .ar-tile.is-yellow { background: #FCC454; }
-    .ar-tile.is-cream { background: #FFF8E6; }
-    .ar-logo-tile { display: flex; align-items: center; justify-content: center; padding: clamp(2rem, 6vw, 5rem); }
-    .ar-logo-tile img { width: min(360px, 60%); }
+    /* collane: sei card in riga */
+    .ar-series {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 1rem;
+      list-style: none;
+      margin: 0 0 1rem;
+      padding: 0;
+    }
+    .ar-serie {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+      height: 100%;
+      min-height: 13rem;
+      padding: 1.25rem;
+      border-radius: 14px;
+    }
+    .ar-serie h5 {
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1.1;
+      margin: 0;
+      color: inherit;
+    }
+    .ar-serie p {
+      font-size: .85rem;
+      line-height: 1.4;
+      margin: 0;
+      max-width: none;
+    }
+    .ar-series > li:nth-child(1) .ar-serie { background: #FACA53; color: #0F1240; }
+    .ar-series > li:nth-child(2) .ar-serie { background: #1c2070; color: #fff; }
+    .ar-series > li:nth-child(3) .ar-serie { background: #E8751A; color: #fff; }
+    .ar-series > li:nth-child(4) .ar-serie { background: #D91E1E; color: #fff; }
+    .ar-series > li:nth-child(5) .ar-serie { background: #71B4E0; color: #0F1240; }
+    .ar-series > li:nth-child(6) .ar-serie { background: #B28FD0; color: #0F1240; }
 
-    /* collane */
-    .ar-series-row { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; list-style: none; margin: 0 0 1rem; padding: 0; }
-    .ar-serie { display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem; height: 100%; min-height: 14rem; padding: 1.4rem; border-radius: var(--ar-radius); }
-    .ar-serie-name { margin: 0; font-size: clamp(1.25rem, 1.8vw, 1.6rem); font-weight: 500; line-height: 1.05; letter-spacing: -.02em; color: inherit; }
-    .ar-serie-note { margin: 0; font-size: .85rem; line-height: 1.4; }
-    .ar-series-row > li:nth-child(1) .ar-serie { background: #FACA53; color: #0F1240; }
-    .ar-series-row > li:nth-child(2) .ar-serie { background: #1c2070; color: #fff; }
-    .ar-series-row > li:nth-child(3) .ar-serie { background: #E8751A; color: #fff; }
-    .ar-series-row > li:nth-child(4) .ar-serie { background: #D91E1E; color: #fff; }
-    .ar-series-row > li:nth-child(5) .ar-serie { background: #71B4E0; color: #0F1240; }
-    .ar-series-row > li:nth-child(6) .ar-serie { background: #B28FD0; color: #0F1240; }
-    .ar-scroll { overflow-x: auto; }
-    .ar-scroll img { min-width: 860px; }
-
-    /* pannelli */
-    .ar-panel-btn { display: block; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 12px; overflow: hidden; transition: transform .25s ease; }
+    /* pannelli: sei in riga, si ingrandiscono al click */
+    .ar-panels {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .ar-panel-btn {
+      display: block;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: zoom-in;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform .25s ease;
+    }
     .ar-panel-btn img { display: block; width: 100%; height: auto; }
     .ar-panel-btn:hover { transform: translateY(-6px); }
-    .ar-panel-btn:focus-visible { outline: 3px solid var(--ar-yellow); outline-offset: 3px; }
+    .ar-panel-btn:focus-visible { outline: 3px solid #007A78; outline-offset: 3px; }
+
     .ar-lb { position: fixed; inset: 0; z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: rgba(0, 0, 0, .94); opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s ease; }
     .ar-lb.open { opacity: 1; visibility: visible; }
     .ar-lb figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: .9rem; max-width: 100%; }
     .ar-lb img { display: block; max-width: min(92vw, 640px); max-height: 82vh; width: auto; height: auto; border-radius: 6px; }
     .ar-lb figcaption { color: #fff; font-size: .9rem; text-align: center; max-width: 60ch; }
     .ar-lb button { position: absolute; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 0; border-radius: 50%; background: rgba(255,255,255,.14); color: #fff; font-size: 1.3rem; cursor: pointer; }
-    .ar-lb button:hover, .ar-lb button:focus-visible { background: #FACA53; color: #0F1240; outline: none; }
+    .ar-lb button:hover, .ar-lb button:focus-visible { background: #007A78; color: #fff; outline: none; }
     .ar-lb-close { top: 1rem; right: 1rem; }
     .ar-lb-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
     .ar-lb-next { right: 1rem; top: 50%; transform: translateY(-50%); }
-    @media (max-width: 576px) { .ar-lb-prev, .ar-lb-next { top: auto; bottom: 1rem; transform: none; } .ar-lb-prev { left: calc(50% - 60px); } .ar-lb-next { right: calc(50% - 60px); } .ar-lb img { max-height: 70vh; } }
-    @media (prefers-reduced-motion: reduce) { .ar-lb, .ar-panel-btn { transition: none; } }
-
-    /* testo, logo e crediti: il logo sta al centro, le frasi lo circondano */
-    .ar-about { margin-top: 1rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .8fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; margin-bottom: 3.5rem; }
-    .ar-about-p { font-size: clamp(1.05rem, 1.45vw, 1.3rem); line-height: 1.45; margin: 0; }
-    .ar-about-logo { display: flex; justify-content: center; }
-    .ar-about-logo img { display: block; width: 100%; max-width: 360px; height: auto; }
-    .ar-credits { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem clamp(1.5rem, 4vw, 4rem); padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.25); font-size: .95rem; line-height: 1.6; color: rgba(255,255,255,.8); }
-    .ar-credits p { margin: 0; }
-    .ar-credits a { text-decoration: underline; text-underline-offset: 3px; }
-
-    /* pulsanti */
-    .ar-cta { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }
-    .ar-btn { display: inline-flex; align-items: center; gap: .6rem; padding: .95rem 1.8rem; border-radius: 999px; font-size: 1.05rem; font-weight: 600; text-decoration: none; border: 2px solid #FACA53; transition: transform .2s ease, background .2s ease, color .2s ease; }
-    .ar-btn:hover { transform: translateY(-3px); text-decoration: none; }
-    .ar-btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-    .ar-btn-main { background: #FACA53; color: #0F1240 !important; }
-    .ar-btn-main:hover { background: #fff; border-color: #fff; }
-    .ar-btn-alt { background: transparent; color: #FACA53 !important; }
-    .ar-btn-alt:hover { background: #FACA53; color: #0F1240 !important; }
-    .ar-end .ar-cta { margin-top: 0; }
-    @media (max-width: 576px) { .ar-btn { width: 100%; justify-content: center; } }
-    @media (prefers-reduced-motion: reduce) { .ar-btn { transition: none; } }
-
-    /* chiusura */
-    .ar-end { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.9); }
-    .ar-end-links { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; font-size: 1rem; }
-    .ar-end-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
-    .ar-end-line { margin: 3rem 0 1rem !important; font-size: clamp(1.6rem, 3.6vw, 3rem); line-height: 1.1; letter-spacing: -.02em; max-width: 24ch; }
 
     @media (max-width: 991px) {
-      .ar-g6, .ar-series-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .ar-about { grid-template-columns: 1fr; gap: 2rem; }
-      .ar-about-logo img { max-width: 260px; }
-      .ar-credits { grid-template-columns: 1fr; }
+      .ar-series,
+      .ar-panels { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
     @media (max-width: 576px) {
-      .ar-g2, .ar-g3 { grid-template-columns: 1fr; }
-      .ar-g6, .ar-series-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .ar-series,
+      .ar-panels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .ar-serie { min-height: 0; }
-      .ar-group { margin-top: 2.5rem; }
+      .ar-lb-prev, .ar-lb-next { top: auto; bottom: 1rem; transform: none; }
+      .ar-lb-prev { left: calc(50% - 60px); }
+      .ar-lb-next { right: calc(50% - 60px); }
+      .ar-lb img { max-height: 70vh; }
     }
-
-    /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
-    .more-projects { background: #fff; padding: 6rem 0; }
-    .more-projects .more-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
-    @media (max-width: 991px) { .more-projects { padding: 4.5rem 0; } }
-    @media (max-width: 576px) { .more-projects { padding: 3.5rem 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .ar-lb, .ar-panel-btn { transition: none; }
+    }
   </style>
-
 </head>
 
 
 <body>
 
-<!-- NAVBAR -->
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+      </a>
 
-<nav class="navbar navbar-expand-lg py-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div class="container">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+            
+      <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+<li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
 
-    <a class="navbar-brand" href="index.html" aria-label="Homepage Marta Brentan">
-      <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
-    </a>
+<li class="nav-item d-none d-lg-block ms-lg-3">
+  <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+    Scarica Portfolio
+  </a>
+</li>
 
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Apri navigazione"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<li class="nav-item d-none d-lg-block ms-2">
+  <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+    Scarica CV
+  </a>
+</li>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- MOBILE icons -->
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+              <i class="bi bi-download me-2"></i> Portfolio
+            </a>
+          </li>
 
-      <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+              <i class="bi bi-download me-2"></i> CV
+            </a>
+          </li>
 
-        <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
-        <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <li class="nav-item d-none d-lg-block ms-lg-3">
-          <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
-            Scarica Portfolio
+  <main class="case">
+    <div class="container">
+
+      <p class="case-breadcrumb" data-reveal>
+        <a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › Argonauta Edizioni
+      </p>
+
+      <header class="case-head">
+        <h1 data-reveal>Argonauta Edizioni</h1>
+        <dl class="case-meta" data-reveal>
+          <div><dt>Strumenti</dt><dd>InDesign, Illustrator, WordPress, Elementor</dd></div>
+          <div><dt>Online</dt><dd><a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer">argonautaedizioni.com</a></dd></div>
+        </dl>
+        <p class="case-lead" data-reveal>
+          Argonauta Edizioni è una casa editrice indipendente torinese con una propria identità letteraria e culturale.
+        </p>
+      </header>
+
+      <div class="case-text">
+        <p> <br>
+          La collaborazione copre l’intera comunicazione visiva: dall’impaginazione dei libri al catalogo annuale, dal packaging alla progettazione di locandine per eventi, fino alla gestione e aggiornamento del sito web.
+        </p>
+        <p>
+          Un lavoro che richiede coerenza visiva su tutti i touchpoint - dalla stampa al digitale - e una comprensione profonda del mondo editoriale: rispetto delle gerarchie tipografiche, cura dei dettagli, capacità di tradurre l’identità di una casa editrice in materiali che funzionino sia esteticamente che funzionalmente.
+        </p>
+        <p>
+          Ho progettato e sviluppato tramite WordPress il sito web della casa editrice e oggi aggiorno regolarmente l’e-commerce. Aggiungo le novità per lo più corrette e impaginate dalla sottoscritta.
+        </p>
+      </div>
+
+      <div class="mt-4 mb-4">
+        <a
+          href="https://www.argonautaedizioni.com"
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visita il sito
+        </a>
+        <a
+          href="assets/docs/catalogo 2026.pdf "
+          class="btn ms-2"
+          target="_blank"
+          rel="noopener"
+          download
+        >
+          Scarica il catalogo
+        </a>
+      </div>
+
+      <figure class="case-fig case-hero">
+        <img
+          class="case-img"
+          src="assets/img/ar-catalogo-banner.webp"
+          alt="Mani che sollevano il Catalogo 2026 di Argonauta Edizioni, copertina blu notte con la nave dorata"
+          loading="eager"
+        >
+      </figure>
+
+      <figure class="ar-logo" data-reveal>
+        <img
+          src="assets/img/ar-logo-bianco.webp"
+          alt="Il marchio di Argonauta Edizioni: un mollusco argonauta giallo e arancio con la scritta ad arco"
+          loading="lazy"
+        >
+      </figure>
+
+      <section class="case-block">
+        <h4 data-reveal>Le collane</h4>
+        
+          <figure class="case-fig ar-yellow">
+            <img
+              class="case-img"
+              src="assets/img/ar-collane-testi.webp"
+              alt="I testi delle sei collane: Argo Junior, Eracle, Corono, Medea, Nestore, Castore e Polluce"
+              loading="lazy"
+            >
+          </figure>
+      </section>
+
+      <section class="case-block">
+        <h4 data-reveal>Catalogo 2026</h4>
+        <div class="case-grid case-grid-3">
+          <figure class="case-fig">
+            <img
+              class="case-img case-cover"
+              src="assets/img/ar-cat-titolo.webp"
+              alt="Pagina gialla del catalogo con il titolo e la nave disegnata"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img case-cover"
+              src="assets/img/ar-cat-pagine.webp"
+              alt="Pagine interne del catalogo: la nave e la pagina Su di noi"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img case-cover"
+              src="assets/img/ar-cat-mare.webp"
+              alt="Il mare con la nave Argo, con il fumetto «Sali a bordo anche tu»"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+        <div class="case-grid case-grid-2">
+          <figure class="case-fig">
+            <img
+              class="case-img case-cover"
+              src="assets/img/ar-cat-retro.webp"
+              alt="Pagina del catalogo con le indicazioni: sfoglia i titoli, scegli la collana, leggi le norme editoriali, manda il tuo manoscritto"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img case-cover"
+              src="assets/img/ar-su-di-noi.webp"
+              alt="La pagina Su di noi del catalogo e il libro aperto sulla collana Argo Junior"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <h4 data-reveal>Pannelli per eventi</h4>
+        <div class="ar-panels">
+          <button
+            type="button"
+            class="ar-panel-btn"
+            data-full="assets/img/ar-pannello-555-big.webp"
+            data-alt="Pannello rosso per 555 di Sergio Bergese, con un pennino"
+            aria-label="Ingrandisci: Pannello rosso per 555 di Sergio Bergese, con un pennino"
+          >
+            <img
+              src="assets/img/ar-pannello-555.webp"
+              alt="Pannello rosso per 555 di Sergio Bergese, con un pennino"
+              loading="lazy"
+            >
+          </button>
+          <button
+            type="button"
+            class="ar-panel-btn"
+            data-full="assets/img/ar-pannello-rigo-big.webp"
+            data-alt="Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile"
+            aria-label="Ingrandisci: Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile"
+          >
+            <img
+              src="assets/img/ar-pannello-rigo.webp"
+              alt="Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile"
+              loading="lazy"
+            >
+          </button>
+          <button
+            type="button"
+            class="ar-panel-btn"
+            data-full="assets/img/ar-pannello-ternengo-big.webp"
+            data-alt="Pannello blu per La verità è un’altra cosa di Enrica Ternengo, con un lampione"
+            aria-label="Ingrandisci: Pannello blu per La verità è un’altra cosa di Enrica Ternengo, con un lampione"
+          >
+            <img
+              src="assets/img/ar-pannello-ternengo.webp"
+              alt="Pannello blu per La verità è un’altra cosa di Enrica Ternengo, con un lampione"
+              loading="lazy"
+            >
+          </button>
+          <button
+            type="button"
+            class="ar-panel-btn"
+            data-full="assets/img/ar-pannello-nardo-big.webp"
+            data-alt="Pannello azzurro per Amami Lady di Domenica Nardo, con un cappello di paglia"
+            aria-label="Ingrandisci: Pannello azzurro per Amami Lady di Domenica Nardo, con un cappello di paglia"
+          >
+            <img
+              src="assets/img/ar-pannello-nardo.webp"
+              alt="Pannello azzurro per Amami Lady di Domenica Nardo, con un cappello di paglia"
+              loading="lazy"
+            >
+          </button>
+          <button
+            type="button"
+            class="ar-panel-btn"
+            data-full="assets/img/ar-pannello-simonis-big.webp"
+            data-alt="Pannello nero per Giù nel buio di Antonio Simonis, con una roccia rossa"
+            aria-label="Ingrandisci: Pannello nero per Giù nel buio di Antonio Simonis, con una roccia rossa"
+          >
+            <img
+              src="assets/img/ar-pannello-simonis.webp"
+              alt="Pannello nero per Giù nel buio di Antonio Simonis, con una roccia rossa"
+              loading="lazy"
+            >
+          </button>
+          <button
+            type="button"
+            class="ar-panel-btn"
+            data-full="assets/img/ar-pannello-lupo-big.webp"
+            data-alt="Pannello viola per La Regina Lupo di Pietro Sanfilippo, con un occhio"
+            aria-label="Ingrandisci: Pannello viola per La Regina Lupo di Pietro Sanfilippo, con un occhio"
+          >
+            <img
+              src="assets/img/ar-pannello-lupo.webp"
+              alt="Pannello viola per La Regina Lupo di Pietro Sanfilippo, con un occhio"
+              loading="lazy"
+            >
+          </button>
+        </div>
+          <figure class="case-fig ar-gap">
+            <img
+              class="case-img case-white"
+              src="assets/img/ar-bancone.webp"
+              alt="Stampa per il bancone: il logo di Argonauta Edizioni ripetuto in motivo"
+              loading="lazy"
+            >
+          </figure>
+      </section>
+
+      <section class="case-block">
+        <h4 data-reveal>Locandine per libreria</h4>
+          <figure class="case-fig">
+            <img
+              class="case-img case-white"
+              src="assets/img/tre-poster.webp"
+              alt="Tre locandine della Libreria Argonauta: Tokyo, L’orlogio fa tiktok, avventure quotidiane."
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img case-white"
+              src="assets/img/millennials.webp"
+              alt="Poster: Millenials"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img case-white"
+              src="assets/img/ar-locandine-pindaro.webp"
+              alt="Tre locandine della Libreria Argonauta: Il giardino letterario, Libri in tavola, Rilassarsi colorando. In basso la citazione di Pindaro, Pitica IV, versi 327-337, su Giasone e la nave Argo"
+              loading="lazy"
+            >
+          </figure>
+      </section>
+
+      <section class="case-block">
+        <h4 data-reveal>Sito web e-commerce</h4>
+          <figure class="case-fig ar-yellow">
+            <img
+              class="case-img"
+              src="assets/img/ar-sito.webp"
+              alt="Il sito di Argonauta Edizioni su laptop e smartphone"
+              loading="lazy"
+            >
+          </figure>
+      </section>
+
+    
+
+      <section class="case-more">
+        <h2 class="section-title" data-reveal>Altri progetti</h2>
+        <div class="case-more-list">
+          <a href="limes.html" class="project-card">
+            <img src="assets/img/sfondo-progetto-finale.webp" alt="Mockup del redesign UX/UI del sito di Limes" loading="lazy">
+            <div class="project-content">
+              <h5>Redesign Limes</h5>
+              <p>UX/UI Redesign di Limes: rivista italiana di geopolitica (anche digitale)</p>
+              <p class="text-muted small">personale</p>
+            </div>
           </a>
-        </li>
-
-        <li class="nav-item d-none d-lg-block ms-2">
-          <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
-            Scarica CV
+          <a href="aesthetics.html" class="project-card">
+            <img src="assets/img/sfondo-progetto-estetica.webp" alt="Mockup dei siti Aesthetics 4.0 ed Estetica 4.0" loading="lazy">
+            <div class="project-content">
+              <h5>Due siti web per il settore beauty</h5>
+              <p>Aesthetics ed Estetica 4.0: settore beauty</p>
+              <p class="text-muted small">personale</p>
+            </div>
           </a>
-        </li>
-
-        <li class="nav-item d-lg-none">
-          <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
-            <i class="bi bi-download me-2"></i>Portfolio
-          </a>
-        </li>
-
-        <li class="nav-item d-lg-none">
-          <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
-            <i class="bi bi-download me-2"></i>CV
-          </a>
-        </li>
-
-      </ul>
+        </div>
+      </section>
 
     </div>
+  </main>
 
-  </div>
+  <!-- CONTACT -->
 
-</nav>
+  <section class="contact-cta py-5">
 
+    <div class="container">
 
+      <h2 class="section-title text-center mb-5" data-reveal>
+        Hai un progetto, un testo o un'idea? <span class="scrib">Parliamone.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span>
+      </h2>
 
-<main>
-<div class="ar">
-<div class="ar-wrap">
+      <form
+        action="https://formspree.io/f/xaeqrbdw"
+        method="POST"
+        class="contact-form" data-reveal-group
+      >
 
-  <!-- TITOLO -->
-  <header class="ar-top">
-    <p class="ar-breadcrumb"><a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › <span>Argonauta Edizioni</span></p>
-    <h1 class="ar-title" data-type>Argonauta Edizioni</h1>
-    <div class="ar-cta" data-reveal style="--d:300ms">
-      <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer" class="ar-btn ar-btn-main">Visita il sito <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-      <a href="assets/docs/catalogo 2026.pdf" target="_blank" rel="noopener" download class="ar-btn ar-btn-alt">Scarica il catalogo <i class="bi bi-download" aria-hidden="true"></i></a>
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Invia</button>
+
+      </form>
+
     </div>
-  </header>
-  <!-- TESTO, LOGO E CREDITI -->
-  <section class="ar-about">
-    <p class="ar-about-p" data-reveal>Argonauta Edizioni è una casa editrice indipendente torinese con una propria identità letteraria e culturale. La collaborazione copre l’intera comunicazione visiva: dall’impaginazione dei libri al catalogo annuale, dal packaging alla progettazione di locandine per eventi, fino alla gestione e aggiornamento del sito web.</p>
-    <figure class="ar-about-logo" data-reveal style="--d:150ms">
-      <img src="assets/img/ar-logo-bianco.webp" alt="Il marchio di Argonauta Edizioni: un mollusco argonauta giallo e arancio con la scritta ad arco" loading="lazy">
-    </figure>
-    <p class="ar-about-p" data-reveal style="--d:250ms">Un lavoro che richiede coerenza visiva su tutti i touchpoint - dalla stampa al digitale - e una comprensione profonda del mondo editoriale: rispetto delle gerarchie tipografiche, cura dei dettagli, capacità di tradurre l’identità di una casa editrice in materiali che funzionino sia esteticamente che funzionalmente.</p>
-    <div class="ar-credits" data-reveal style="--d:150ms">
-      <p>Ho progettato e sviluppato tramite WordPress il sito web della casa editrice e oggi aggiorno regolarmente l’e-commerce. Aggiungo le novità per lo più corrette e impaginate dalla sottoscritta.</p>
-      <p>Strumenti: InDesign, Illustrator, WordPress, Elementor<br>Online: <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer">argonautaedizioni.com</a></p>
-    </div>
-  </section>
-
-  <!-- CATALOGO: APERTURA -->
-  <figure class="ar-tile" data-reveal style="--d:200ms">
-    <img src="assets/img/ar-catalogo-banner.webp" alt="Mani che sollevano il Catalogo 2026 di Argonauta Edizioni, copertina blu notte con la nave dorata" loading="eager">
-  </figure>
-
- 
 
   </section>
 
-  <!-- COLLANE -->
-  <section class="ar-group">
-    <p class="ar-label" data-reveal>Le collane</p>
-    <ul class="ar-series-row" data-reveal-group>
-      <li><div class="ar-serie"><h3 class="ar-serie-name">Argo Junior</h3><p class="ar-serie-note">Produzione di narrativa per ragazzi (dagli 8 agli 11 anni)</p></div></li>
-      <li><div class="ar-serie"><h3 class="ar-serie-name">Eracle</h3><p class="ar-serie-note">Libri di genere gialli, thriller e noir</p></div></li>
-      <li><div class="ar-serie"><h3 class="ar-serie-name">Corono</h3><p class="ar-serie-note">Fantasy e fantascienza</p></div></li>
-      <li><div class="ar-serie"><h3 class="ar-serie-name">Medea</h3><p class="ar-serie-note">Libri non classificabili in un solo genere</p></div></li>
-      <li><div class="ar-serie"><h3 class="ar-serie-name">Nestore</h3><p class="ar-serie-note">Saggistica</p></div></li>
-      <li><div class="ar-serie"><h3 class="ar-serie-name">Castore e Polluce</h3><p class="ar-serie-note">Racconti</p></div></li>
-    </ul>
-    <div class="ar-tile is-yellow ar-scroll" data-reveal>
-      <img src="assets/img/ar-collane-testi.webp" alt="I testi delle sei collane: Argo Junior, Eracle, Corono, Medea, Nestore, Castore e Polluce" loading="lazy">
-    </div>
-  </section>
-
-  <!-- CATALOGO -->
-  <section class="ar-group">
-    <p class="ar-label" data-reveal>Catalogo 2026</p>
-    <div class="ar-grid ar-g3" data-reveal-group>
-      <figure class="ar-tile"><img src="assets/img/ar-cat-titolo.webp" alt="Pagina gialla del catalogo con il titolo e la nave disegnata" loading="lazy"></figure>
-      <figure class="ar-tile"><img src="assets/img/ar-cat-pagine.webp" alt="Pagine interne del catalogo: la nave e la pagina Su di noi" loading="lazy"></figure>
-      <figure class="ar-tile"><img src="assets/img/ar-cat-mare.webp" alt="Il mare con la nave Argo, con il fumetto «Sali a bordo anche tu»" loading="lazy"></figure>
-    </div>
-    <div class="ar-grid ar-g2" data-reveal-group style="margin-top:1rem">
-      <figure class="ar-tile"><img src="assets/img/ar-cat-retro.webp" alt="Pagina del catalogo con le indicazioni: sfoglia i titoli, scegli la collana, leggi le norme editoriali, manda il tuo manoscritto" loading="lazy"></figure>
-      <figure class="ar-tile"><img src="assets/img/ar-su-di-noi.webp" alt="La pagina Su di noi del catalogo e il libro aperto sulla collana Argo Junior" loading="lazy"></figure>
-    </div>
-  </section>
-
-  <!-- PANNELLI -->
-  <section class="ar-group">
-    <p class="ar-label" data-reveal>Pannelli per eventi</p>
-    <div class="ar-grid ar-g6" data-reveal-group>
-      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-555-big.webp" data-alt="Pannello rosso per 555 di Sergio Bergese, con un pennino" aria-label="Ingrandisci: Pannello rosso per 555 di Sergio Bergese, con un pennino"><img src="assets/img/ar-pannello-555.webp" alt="Pannello rosso per 555 di Sergio Bergese, con un pennino" loading="lazy"></button>
-      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-rigo-big.webp" data-alt="Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile" aria-label="Ingrandisci: Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile"><img src="assets/img/ar-pannello-rigo.webp" alt="Pannello bianco per Il vento delle masche di Stefano Rigo, con un campanile" loading="lazy"></button>
-      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-ternengo-big.webp" data-alt="Pannello blu per La verità è un’altra cosa di Enrica Ternengo, con un lampione" aria-label="Ingrandisci: Pannello blu per La verità è un’altra cosa di Enrica Ternengo, con un lampione"><img src="assets/img/ar-pannello-ternengo.webp" alt="Pannello blu per La verità è un’altra cosa di Enrica Ternengo, con un lampione" loading="lazy"></button>
-      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-nardo-big.webp" data-alt="Pannello azzurro per Amami Lady di Domenica Nardo, con un cappello di paglia" aria-label="Ingrandisci: Pannello azzurro per Amami Lady di Domenica Nardo, con un cappello di paglia"><img src="assets/img/ar-pannello-nardo.webp" alt="Pannello azzurro per Amami Lady di Domenica Nardo, con un cappello di paglia" loading="lazy"></button>
-      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-simonis-big.webp" data-alt="Pannello nero per Giù nel buio di Antonio Simonis, con una roccia rossa" aria-label="Ingrandisci: Pannello nero per Giù nel buio di Antonio Simonis, con una roccia rossa"><img src="assets/img/ar-pannello-simonis.webp" alt="Pannello nero per Giù nel buio di Antonio Simonis, con una roccia rossa" loading="lazy"></button>
-      <button type="button" class="ar-panel-btn" data-full="assets/img/ar-pannello-lupo-big.webp" data-alt="Pannello viola per La Regina Lupo di Pietro Sanfilippo, con un occhio" aria-label="Ingrandisci: Pannello viola per La Regina Lupo di Pietro Sanfilippo, con un occhio"><img src="assets/img/ar-pannello-lupo.webp" alt="Pannello viola per La Regina Lupo di Pietro Sanfilippo, con un occhio" loading="lazy"></button>
-    </div>
-    <figure class="ar-tile" data-reveal style="margin-top:1rem;background:#fff">
-      <img src="assets/img/ar-bancone.webp" alt="Stampa per il bancone: il logo di Argonauta Edizioni ripetuto in motivo" loading="lazy">
-    </figure>
-  </section>
-
-  <!-- LOCANDINE -->
-  <section class="ar-group">
-    <p class="ar-label" data-reveal>Locandine per libreria</p>
-    <figure class="ar-tile" data-reveal style="background:#fff">
-            <img src="assets/img/tre-poster.webp" alt="Tre locandine della Libreria Argonauta: Tokyo, L'orlogio fa tiktok, avventure quotidiane." loading="lazy">
-               <img src="assets/img/millennials.webp" alt="Poster: Millenials" loading="lazy">
-
-            <img src="assets/img/ar-locandine-pindaro.webp" alt="Tre locandine della Libreria Argonauta: Il giardino letterario, Libri in tavola, Rilassarsi colorando. In basso la citazione di Pindaro, Pitica IV, versi 327-337, su Giasone e la nave Argo" loading="lazy">
-
-    </figure>
-  </section>
-
-  <!-- SITO -->
-  <section class="ar-group">
-    <p class="ar-label" data-reveal>Sito web e-commerce</p>
-    <figure class="ar-tile is-yellow" data-reveal>
-      <img src="assets/img/ar-sito.webp" alt="Il sito di Argonauta Edizioni su laptop e smartphone" loading="lazy">
-    </figure>
-  </section>
 
 
-  <!-- CHIUSURA -->
-  <footer class="ar-end">
-    <div class="ar-cta">
-      <a href="https://www.argonautaedizioni.com" target="_blank" rel="noopener noreferrer" class="ar-btn ar-btn-main">Visita il sito <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-      <a href="assets/docs/Catalogo Argonauta Edizioni 2026.pdf" target="_blank" rel="noopener" download class="ar-btn ar-btn-alt">Scarica il catalogo <i class="bi bi-download" aria-hidden="true"></i></a>
-    </div>
-    <p class="ar-end-line" data-reveal>L’editoria come territorio, il design come strumento per darle voce.</p>
-  </footer>
-
-</div>
-</div><!-- /ar -->
-
-<!--  PANNELLI -->
+<!-- PANNELLI INGRANDITI -->
 <div class="ar-lb" id="arLb" role="dialog" aria-modal="true" aria-label="Pannello ingrandito" aria-hidden="true">
   <button type="button" class="ar-lb-close" aria-label="Chiudi"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
   <button type="button" class="ar-lb-prev" aria-label="Pannello precedente"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
@@ -389,85 +577,6 @@
 })();
 </script>
 
-
-
-<!-- ALTRI PROGETTI -->
-
-  <section class="more-projects">
-
-    <div class="container text-center">
-
-      <h2 class="section-title mb-5" data-reveal>Altri progetti</h2>
-
-      <div class="more-list" data-reveal-group>
-
-        <a href="limes.html" class="project-card">
-          <img src="assets/img/sfondo-progetto-finale.webp" alt="Mockup del redesign UX/UI del sito di Limes" loading="lazy">
-          <div class="project-content">
-            <h5>Redesign Limes</h5>
-            <p>UX/UI redesign</p>
-            <p class="text-muted small">start2impact</p>
-          </div>
-        </a>
-
-        <a href="aesthetics.html" class="project-card">
-          <img src="assets/img/sfondo-progetto-estetica.webp" alt="Mockup dei siti Aesthetics 4.0 ed Estetica 4.0" loading="lazy">
-          <div class="project-content">
-            <h5>Due siti web per il settore beauty</h5>
-            <p>Web design</p>
-            <p class="text-muted small">WordPress ed Elementor Pro</p>
-          </div>
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- CONTACT -->
-
-  <section class="contact-cta py-5">
-
-    <div class="container">
-
-      <h2 class="section-title text-center mb-5" data-reveal>
-        Hai un progetto, un testo o un'idea? <span class="scrib">Parliamone.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span>
-      </h2>
-
-      <form
-        action="https://formspree.io/f/xaeqrbdw"
-        method="POST"
-        class="contact-form" data-reveal-group
-      >
-
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Messaggio</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Invia</button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-
-</main>
 
 
 

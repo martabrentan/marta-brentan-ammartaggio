@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
-
-  <!-- COOKIEBOT -->
-  <script
-    id="Cookiebot"
-    src="https://consent.cookiebot.com/uc.js"
-    data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc"
-    data-blockingmode="auto"
-    type="text/javascript">
-  </script>
-
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4c1b0c3f-aaba-4fc2-b9ed-9b2bc33517dc" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},3000)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Aesthetics 4.0 ed Estetica 4.0 – Due siti web nuovi | Marta Brentan</title>
-
   <meta
     name="description"
     content="Case study: due siti web creati da zero con WordPress ed Elementor Pro per un centro estetico (aesthetics40.it) e un distributore di cosmetici professionali (estetica40.pro)."
@@ -27,7 +15,7 @@
     content="Aesthetics 4.0, Estetica 4.0, WordPress, Elementor Pro, sito web, UX UI design, centro estetico, Marta Brentan"
   >
   <meta name="author" content="Marta Brentan">
-
+  <meta name="theme-color" content="#007A78">
   <meta property="og:title" content="Aesthetics 4.0 ed Estetica 4.0 – Due siti web nuovi | Marta Brentan">
   <meta
     property="og:description"
@@ -36,361 +24,1098 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ammartaggio.com/aesthetics.html">
   <meta property="og:image" content="https://ammartaggio.com/assets/img/ax-laptop-aesthetics.webp">
-  
-
   <link rel="icon" href="assets/icons/LOGO-ico.ico" type="image/x-icon">
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Fraunces:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Epilogue:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/scss/main.css">
-
-
   <style>
+    /* griglie: immagini sempre sulla stessa riga, con aria tra i blocchi */
+    .case-block > * + .case-grid,
+    .case-block > * + .ae-cards { margin-top: 1rem; }
+    .case-block .case-text + .case-grid,
+    .case-block .case-text + .case-fig,
+    .case-block .case-text + .ae-cards,
+    .case-block .case-lead + .ae-cards,
+    .case-block .case-lead + .case-text { margin-top: 2.5rem; }
+    .case-grid > .case-fig,
+    .case-grid > .case-fig + .case-fig { margin: 0; }
 
-    .ae{--n:#1A2A5E;--ice:#E3EDF7;--bl:#046BD2;--ch:#2D2D2D;--te:#1A8AB5;--wh:#FAFAFA;
-      overflow:hidden;color:var(--ch);background:#fff;font-family:"Inter","Montserrat",sans-serif}
-    .ae h1,.ae h2,.ae h3,.ae h4,.ae h5{color:var(--n);font-family:"Fraunces","Cormorant Garamond",serif;font-weight:500}
-    .ae p{font-size:1.1rem;max-width:none;margin-left:0;margin-right:0;line-height:1.75}
-    .ae .section-title{color:var(--n)}
-    .ae-wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
-    
-    .ae-hero{padding:4.5rem 0 3rem}
-    .ae .ae-title{font-size:clamp(2.8rem,7vw,5.8rem);line-height:1;letter-spacing:-.025em;margin-bottom:1.5rem}
-    .ae .ae-title em{color:var(--te);font-weight:400}
-    .ae .ae-sub{font-size:clamp(1.15rem,2vw,1.45rem);max-width:700px;color:#445}
-    .ae-credits{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:3rem 0 0;padding:1.5rem 0;border-top:1px solid #ccd;border-bottom:1px solid #ccd}
-    .ae-credits dt{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bl);font-weight:600;margin-bottom:.3rem}
-    .ae-credits dd{margin:0;font-size:.98rem}
-    .ae-fig{margin:0}.ae-fig img{display:block;width:100%;height:auto}
-    .ae-band{padding:4.5rem 0}
-    .ae-band.ice{background:var(--ice)}.ae-band.dark{background:var(--ch)}.ae-band.navy{background:var(--n)}
-    .ae-band.dark h2,.ae-band.navy h2,.ae-band.dark p,.ae-band.navy p{color:#fff}
-    .ae-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;padding:3.5rem 0 4rem}
-    .ae-intro p:first-child{font-size:1.3rem;color:var(--n)}
-    .ae .ae-h{font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.15;margin:0 0 1rem}
-    .ae-lab{font-size:.76rem!important;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--bl);margin-bottom:.8rem!important}
-    .ae-band.dark .ae-lab,.ae-band.navy .ae-lab{color:#9fd3ee}
-    .ae-txt{max-width:640px;margin-bottom:2.5rem}
-    .ae-txt p{margin-bottom:0}
-    .ae-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
-    .ae-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}
-    .ae-stack{display:grid;gap:1.5rem}
-    .ae-shadow img{border-radius:10px;box-shadow:0 14px 40px rgba(20,30,70,.16)}
-    .ae-strips{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}
-    .ae-strips img{border-radius:18px;box-shadow:0 14px 40px rgba(20,30,70,.16);border:1px solid rgba(0,0,0,.06)}
-    .ae-phones{display:flex;justify-content:center;gap:2rem;align-items:flex-end}
-    .ae-phones .ae-fig{width:min(260px,42%)}
-    .ae-btn{display:inline-flex;gap:.5rem;align-items:center;background:var(--n);color:#fff!important;padding:.85rem 1.6rem;border-radius:999px;font-weight:600;font-size:.98rem;text-decoration:none;transition:.2s}
-    .ae-btn:hover{background:var(--bl)}
-    .ae-btn.alt{background:var(--te)}
-    .ae-btn.line{background:transparent;color:var(--n)!important;border:2px solid var(--n)}
-    .ae-btn.line:hover{background:var(--n);color:#fff!important}
-    .ae-btns{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
-    .ae-visit{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;padding:4.5rem 0}
-    .ae-visit>div{border-radius:14px;padding:2.5rem}
-    .ae-visit .a{background:var(--ice)}.ae-visit .b{background:var(--ch);color:#fff}
-    .ae-visit .b h3,.ae-visit .b p{color:#fff}
-    .ae-visit h3{font-size:2rem;margin-bottom:.5rem}
-    .ae-visit .b .ae-btn{background:var(--te)}
-    .ae-sw{display:flex;gap:.5rem;margin-top:1rem;font-size:.82rem}
-    .ae-sw span{flex:1;padding:1.6rem .6rem .5rem;border-radius:6px}
-    .ae-big{font-family:"Fraunces",serif;font-size:2.2rem;margin:1rem 0 0!important}
-    @media(max-width:991px){.ae-credits{grid-template-columns:1fr 1fr}.ae-intro,.ae-2,.ae-visit{grid-template-columns:1fr}.ae-3{grid-template-columns:1fr}.ae-strips{grid-template-columns:1fr 1fr 1fr;gap:.6rem}.ae-strips img{border-radius:10px}}
-    @media(max-width:576px){.ae-hero{padding:3rem 0 2rem}.ae-credits{grid-template-columns:1fr}.ae-visit>div{padding:1.75rem}.ae-strips{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}
-    .ae-strips img{border-radius:18px;box-shadow:0 14px 40px rgba(20,30,70,.16);border:1px solid rgba(0,0,0,.06)}
-    .ae-phones{gap:1rem}}
-.ae-phones {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 20px;
-}
+    .ae-kicker {
+      font-size: .78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #007A78;
+      margin: 0 0 .4rem;
+    }
+    .ae-sub {
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin: 2.5rem 0 .5rem;
+    }
+    .ae-note {
+      color: #777;
+      font-size: .85rem !important;
+    }
 
-.ae-fig {
-  margin: 0;
-}
-.ae .case-breadcrumb {
-  margin-bottom: 2.5rem;
-}
+    /* card */
+    .ae-cards {
+      display: grid;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+    .ae-cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ae-cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .ae-card {
+      background: #fff;
+      border: 1px solid #DCDAD5;
+      border-radius: 14px;
+      padding: 1.75rem;
+    }
+    .ae-card h5 {
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin: 0 0 .9rem;
+    }
+    .ae-card p,
+    .ae-card li {
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+    .ae-card p { margin: 0 0 .75rem; }
+    .ae-card .btn { margin-top: .5rem; }
 
-    /* ---------- le parole ---------- */
-    .ae-voice{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
-    .ae-vc{border-radius:14px;padding:2rem;display:flex;flex-direction:column;gap:1.1rem}
-    .ae-vc.a{background:var(--ice)}.ae-vc.b{background:var(--n);color:#fff}
-    .ae-vc .who{margin:0!important;font-size:.76rem!important;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--bl)}
-    .ae-vc.b .who{color:#9fd3ee}
-    .ae-vc h3{margin:0;font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.2}
-    .ae-vc.b h3{color:#fff}
-    .ae-vc .sub{margin:0!important;font-size:1.02rem!important}
-    .ae-vc.b .sub{color:#fff}
-    .ae-vc ul{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
-    .ae-vc li{padding:.4rem .9rem;border-radius:999px;border:1px solid currentColor;font-size:.88rem;font-weight:600}
-    .ae-vc blockquote{margin:0;padding-top:1rem;border-top:1px solid rgba(26,42,94,.2);font-family:"Fraunces",serif;font-size:1.15rem;line-height:1.5}
-    .ae-vc.b blockquote{border-color:rgba(255,255,255,.3);color:#fff}
-    @media(max-width:991px){.ae-voice{grid-template-columns:1fr}}
+    /* liste e chip */
+    .ae-list {
+      padding-left: 1.1rem;
+      margin: .5rem 0 0;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+    .ae-list li { margin-bottom: .35rem; }
+    .ae-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      list-style: none;
+      padding: 0;
+      margin: .6rem 0 1rem;
+    }
+    .ae-chips li {
+      border: 1px solid #007A78;
+      color: #007A78;
+      border-radius: 999px;
+      padding: .3rem .85rem;
+      font-size: .85rem;
+      font-weight: 500;
+      margin: 0;
+    }
 
-    /* ---------- altri progetti (identico in tutte le pagine; da spostare in main.css) ---------- */
-    .more-projects { background: #fff; padding: 6rem 0; }
-    .more-projects .more-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
-    @media (max-width: 991px) { .more-projects { padding: 4.5rem 0; } }
-    @media (max-width: 576px) { .more-projects { padding: 3.5rem 0; } }
+    /* numeri */
+    .ae-stat b {
+      display: block;
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+      font-size: 2.8rem;
+      line-height: 1.1;
+      color: #007A78;
+      margin-bottom: .75rem;
+    }
+    .ae-stat .sw {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      vertical-align: -2px;
+      margin-right: .5rem;
+    }
+
+    /* font */
+    .ae-spec .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .ae-spec .aa {
+      display: block;
+      font-size: 4.2rem;
+      line-height: 1.1;
+    }
+    .ae-spec small {
+      display: block;
+      color: #555;
+      font-size: .85rem;
+    }
+    .ae-spec .cg { font-family: "Cormorant Garamond", serif; font-weight: 500; }
+    .ae-spec .in { font-family: "Inter", sans-serif; }
+    .ae-spec .fr { font-family: "Fraunces", serif; }
+    .ae-spec .mo { font-family: "Montserrat", sans-serif; }
+
+    /* scala tipografica */
+    .ae-scale {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #DCDAD5;
+    }
+    .ae-scale .t {
+      display: block;
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+      line-height: 1;
+    }
+    .ae-scale .t.body { font-family: "Epilogue", sans-serif; font-weight: 400; }
+    .ae-scale small {
+      display: block;
+      margin-top: .6rem;
+      color: #777;
+      font-size: .8rem;
+    }
+
+    /* user journey */
+    .ae-steps {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem;
+    }
+    .ae-steps li {
+      background: #fff;
+      border: 1px solid #DCDAD5;
+      border-radius: 999px;
+      padding: .35rem .9rem;
+      font-size: .85rem;
+    }
+    .ae-steps li.arr {
+      background: none;
+      border: 0;
+      padding: 0;
+      color: #007A78;
+    }
+
+    /* screenshot dei siti */
+    .ae-shot {
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top left;
+      border: 1px solid #DCDAD5;
+      border-radius: 10px;
+    }
+    .ae-strip {
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      object-position: top;
+      border: 1px solid #DCDAD5;
+      border-radius: 10px;
+    }
+    .ae-phones {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .ae-phones .case-fig { margin: 0; }
+    .ae-phones img {
+      width: auto;
+      max-width: 100%;
+      max-height: 560px;
+    }
+
+    @media (max-width: 767px) {
+      .ae-cards-2,
+      .ae-cards-3 { grid-template-columns: 1fr; }
+      .ae-scale { gap: 1.5rem; }
+      .ae-spec .aa { font-size: 3.2rem; }
+      .ae-phones { gap: 1rem; }
+      .ae-phones .case-fig { width: 46%; }
+    }
   </style>
-
 </head>
 
 
 <body>
 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
+      </a>
 
-<!-- NAVBAR -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<nav class="navbar navbar-expand-lg py-3">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+            
+      <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
+<li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
 
-  <div class="container">
+<li class="nav-item d-none d-lg-block ms-lg-3">
+  <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+    Scarica Portfolio
+  </a>
+</li>
 
-    <a class="navbar-brand" href="index.html" aria-label="Homepage Marta Brentan">
-      <img src="assets/img/LOGO.png" alt="Logo Marta Brentan" height="36">
-    </a>
+<li class="nav-item d-none d-lg-block ms-2">
+  <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+    Scarica CV
+  </a>
+</li>
 
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Apri navigazione"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+          <!-- MOBILE icons -->
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank">
+              <i class="bi bi-download me-2"></i> Portfolio
+            </a>
+          </li>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="assets/docs/CV Marta Brentan.pdf" target="_blank">
+              <i class="bi bi-download me-2"></i> CV
+            </a>
+          </li>
 
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-
-        <li class="nav-item"><a class="nav-link" href="chi-sono.html">Chi sono</a></li>
-        <li class="nav-item"><a class="nav-link" href="progetti.html">Progetti</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
-
-        <li class="nav-item d-none d-lg-block ms-lg-3">
-          <a class="btn btn-primary" href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
-            Scarica Portfolio
-          </a>
-        </li>
-
-        <li class="nav-item d-none d-lg-block ms-2">
-          <a class="btn custom-outline" href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer">
-            Scarica CV
-          </a>
-        </li>
-
-        <li class="nav-item d-lg-none">
-          <a href="assets/docs/Portfolio Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
-            <i class="bi bi-download me-2"></i>Portfolio
-          </a>
-        </li>
-
-        <li class="nav-item d-lg-none">
-          <a href="assets/docs/CV Marta Brentan.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
-            <i class="bi bi-download me-2"></i>CV
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</nav>
-
-
-
-
-<main class="ic">
-  
-  <!-- HERO -->
-   
-<div class="ae"> 
-  <section class="ae-hero">
-    <div class="ae-wrap">
-      <nav class="case-breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
-        <span aria-hidden="true">›</span>
-        <a href="progettazione.html">Progettazione</a>
-        <span aria-hidden="true">›</span>
-        <span class="current" aria-current="page">Aesthetics ed Estetica 4.0</span> <br>
-      </nav>      
-      <h1 class="ae-title" data-reveal>Due siti, <em><span class="scrib">da zero.<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C40 2, 80 11, 120 6 S220 3, 298 7"/></svg></span></em></h1>
-      <p class="ae-sub" data-reveal style="--d:200ms">Per Aesthetics 4.0 ed Estetica 4.0 sono andata oltre i prototipi: ho costruito due siti su WordPress, online e visitabili.</p>
-      <dl class="ae-credits" data-reveal-group>
-  <div><dt>Progetto</dt><dd>Due siti web nuovi</dd></div>
-  <div><dt>Clienti</dt><dd>Aesthetics 4.0 · Estetica 4.0</dd></div>
-  <div><dt>Il mio ruolo</dt><dd>Ricerca, UX/UI, copy, sviluppo</dd></div>
-  <div><dt>Strumenti</dt><dd>WordPress · Elementor Pro · CSS · JS</dd></div>
-</dl>
-      <div class="ae-btns" data-reveal><a class="ae-btn" href="http://www.aesthetics40.it" target="_blank" rel="noopener noreferrer">aesthetics40.it <i class="bi bi-arrow-up-right"></i></a><a class="ae-btn" href="http://www.estetica40.pro" target="_blank" rel="noopener noreferrer">estetica40.pro <i class="bi bi-arrow-up-right"></i></a></div>
-    </div>
-  </section>
-
-  <section class="ae-band ice" style="padding-bottom:0">
-    <div class="ae-wrap"><figure class="ae-fig ae-hero-img" data-reveal><img src="assets/img/ax-laptop-aesthetics.webp" alt="Il sito Aesthetics 4.0 su laptop" loading="lazy"></figure></div>
-  </section>
-
-  <section class="ae-wrap">
-    <div class="ae-intro" data-reveal-group>
-      <p>Un centro estetico e un’azienda che distribuisce cosmetici professionali: stessa famiglia, pubblici diversi.</p>
-      <p>Ho seguito tutto, dalla ricerca al copy, dalla struttura alle pagine online con WordPress ed Elementor Pro, con un po’ di CSS e JavaScript dove serviva.</p>
-    </div>
-  </section>
-
-  <section class="ae-wrap">
-    <div class="ae-visit" data-reveal-group style="padding-top:0">
-      <div class="a"><p class="ae-lab">Distribuzione professionale</p><h3>Estetica 4.0</h3><p>Cosmetici e formazione per farmacie, centri estetici e studi medici.</p><div class="ae-btns"><a class="ae-btn" href="http://www.estetica40.pro" target="_blank" rel="noopener noreferrer">Visita il sito <i class="bi bi-arrow-up-right"></i></a></div></div>
-      <div class="b"><p class="ae-lab" style="color:#9fd3ee">Centro estetico</p><h3>Aesthetics 4.0</h3><p>Trattamenti, pacchetti e prenotazione per le clienti del centro.</p><div class="ae-btns"><a class="ae-btn" href="http://www.aesthetics40.it" target="_blank" rel="noopener noreferrer">Visita il sito <i class="bi bi-arrow-up-right"></i></a></div></div>
-    </div>
-  </section>
-
-  <section class="ae-band ice">
-    <div class="ae-wrap">
-      <p class="ae-lab" data-reveal>01 · Identità</p><h2 class="ae-h" data-reveal style="--d:100ms">Due palette, un’aria di famiglia</h2>
-      <div class="ae-txt" data-reveal style="--d:200ms"><p>Blu navy e azzurro ghiaccio per la parte scientifica, antracite e azzurro elettrico per il centro. Contrasti alti, sempre.</p></div>
-      <div class="ae-2" data-reveal-group><figure class="ae-fig "><img src="assets/img/ae-palette-estetica.webp" alt="Palette di Estetica 4.0" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/ae-palette-aesthetics.webp" alt="Palette di Aesthetics 4.0" loading="lazy"></figure></div>
-      <div class="ae-2" data-reveal-group style="margin-top:2rem">
-        <div><p class="ae-big">Cormorant Garamond</p><p>con Inter · istituzionale e funzionale</p></div>
-        <div><p class="ae-big">Fraunces</p><p>con Montserrat · ricercato e contemporaneo</p></div>
+        </ul>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <section class="ae-band">
-    <div class="ae-wrap">
-      <p class="ae-lab" data-reveal>02 · Estetica 4.0</p><h2 class="ae-h" data-reveal style="--d:100ms">Per chi lo fa di mestiere</h2>
-      <div class="ae-txt" data-reveal style="--d:200ms"><p>Estetiste, farmacisti, medici: un sito che parla il loro linguaggio e li porta a un contatto.</p></div>
-      <div class="ae-stack ae-shadow" data-reveal-group><figure class="ae-fig "><img src="assets/img/device-estetica.webp" alt="Estetica 4.0: la homepage su laptop con il flacone Exo-Skin" loading="lazy"></figure></div>
-    </div>
-  </section>
-  <section class="ae-band ice">
-    <div class="ae-wrap ae-stack ae-shadow" data-reveal-group>
-      <figure class="ae-fig "><img src="assets/img/ax-e-formazione.webp" alt="La sezione Formazione di Estetica 4.0" loading="lazy"></figure>
-      <figure class="ae-fig "><img src="assets/img/ax-e-percorso.webp" alt="Percorsi per farmacia, centro estetico e studio medico" loading="lazy"></figure>
-      <div class="ae-2"><figure class="ae-fig "><img src="assets/img/ax-e-linee.webp" alt="Le linee viso" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/ax-e-prodotti.webp" alt="Prodotti della linea Renew" loading="lazy"></figure></div>
-      <figure class="ae-fig "><img src="assets/img/ax-e-macchinari.webp" alt="Il catalogo dei macchinari" loading="lazy"></figure>
-    </div>
-  </section>
-  
-  <section class="ae-band dark">
-    <div class="ae-wrap">
-      <p class="ae-lab" data-reveal>03 · Aesthetics 4.0</p><h2 class="ae-h" data-reveal style="--d:100ms">Per chi vuole stare bene</h2>
-      <div class="ae-txt" data-reveal style="--d:200ms"><p>Un tono più caldo, tante foto, un percorso semplice: scopri il centro, scegli un trattamento, prenota.</p></div>
-      <div class="ae-stack ae-shadow" data-reveal-group><figure class="ae-fig "><img src="assets/img/ax-a-hero.webp" alt="Homepage di Aesthetics 4.0" loading="lazy"></figure></div>
-    </div>
-  </section>
-  <section class="ae-band ice">
-    <div class="ae-wrap ae-stack ae-shadow" data-reveal-group>
-      <figure class="ae-fig "><img src="assets/img/ax-a-team.webp" alt="Il team e i momenti unici" loading="lazy"></figure>
-      <figure class="ae-fig "><img src="assets/img/ax-a-percorso.webp" alt="I percorsi di estetica di base" loading="lazy"></figure>
-      <figure class="ae-fig "><img src="assets/img/ax-a-appuntamento.webp" alt="Prendi un appuntamento" loading="lazy"></figure>
-    </div>
-  </section>
+  <main class="case">
+    <div class="container">
 
-  <section class="ae-band">
-    <div class="ae-wrap">
-      <div class="ae-txt"><p class="ae-lab" data-reveal>I due siti web</p><h2 class="ae-h" data-reveal style="--d:100ms">Responsive</h2><p data-reveal style="--d:200ms">Ho reso i due siti navigabili anche da mobile.</p></div>
-      <div class="ae-phones" data-reveal-group><figure class="ae-fig "><img src="assets/img/ax-phone-aesthetics.webp" alt="Aesthetics 4.0 su smartphone" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/ax-phone-estetica.webp" alt="Estetica 4.0 su smartphone" loading="lazy"></figure></div>
-    </div>
-  </section>
+      <p class="case-breadcrumb" data-reveal>
+        <a href="index.html">Home</a> › <a href="progettazione.html">Progettazione</a> › Aesthetics 4.0 ed Estetica 4.0
+      </p>
 
-  <section class="ae-band">
-    <div class="ae-wrap">
-      <div class="ae-txt"><p class="ae-lab" data-reveal>Da telefono</p><h2 class="ae-h" data-reveal style="--d:100ms">Estetica 4.0 mobile</h2><p data-reveal style="--d:200ms">Le stesse pagine, rilette per lo schermo piccolo: brand, linee e prodotti, formazione, contatto.</p></div>
-      <div class="ae-strips" data-reveal-group><figure class="ae-fig "><img src="assets/img/am-e1.webp" alt="Estetica 4.0 su telefono: brand e linee viso" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/am-e2.webp" alt="Estetica 4.0 su telefono: prodotti e brand" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/am-e3.webp" alt="Estetica 4.0 su telefono: percorsi, macchinari, formazione" loading="lazy"></figure></div>
-    </div>
-  </section>
-  <section class="ae-band dark">
-    <div class="ae-wrap">
-      <div class="ae-txt"><p class="ae-lab" data-reveal>Da telefono</p><h2 class="ae-h" data-reveal style="--d:100ms">Aesthetics 4.0 mobile </h2><p data-reveal style="--d:200ms">Chi cerca un trattamento lo fa quasi sempre dallo smartphone: si scorre, si sceglie, si prenota.</p></div>
-      <div class="ae-strips" data-reveal-group><figure class="ae-fig "><img src="assets/img/am-a1.webp" alt="Aesthetics 4.0 su telefono: home e percorsi" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/am-a2.webp" alt="Aesthetics 4.0 su telefono: team e appuntamento" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/am-a3.webp" alt="Aesthetics 4.0 su telefono: dove siamo, modulo, footer" loading="lazy"></figure></div>
-    </div>
-  </section>
-  
+      <header class="case-head">
+        <h1 data-reveal>Aesthetics 4.0 ed Estetica 4.0</h1>
+        <p class="case-services" data-reveal>Progettazione e sviluppo di due siti WordPress con Elementor Pro</p>
+        <dl class="case-meta" data-reveal>
+          <div><dt>Ambito</dt><dd>UX/UI Case Study e Visual Identity</dd></div>
+          <div><dt>Clienti</dt><dd>Aesthetics 4.0, Estetica 4.0</dd></div>
+        </dl>
+        <p class="case-lead" data-reveal>
+          Un ecosistema digitale composto da due siti web complementari, progettati per rispondere a obiettivi, contenuti e utenti differenti.
+        </p>
+      </header>
 
-  <section class="ae-band">
-    <div class="ae-wrap">
-      <p class="ae-lab" data-reveal>04 · Le parole</p><h2 class="ae-h" data-reveal style="--d:100ms">Stessa azienda, due modi di parlare</h2>
-      <div class="ae-txt" data-reveal style="--d:200ms"><p>I testi dei due siti li ho scritti da zero. A chi lavora nel settore parlo di scienza e protocolli, a chi cerca un trattamento di cura e benessere.</p></div>
-      <div class="ae-voice" data-reveal-group>
-        <div class="ae-vc a">
-          <p class="who">Estetica 4.0 · professionisti</p>
-          <h3>Scienza biomarina al servizio della pelle</h3>
-          <p class="sub">Cosmetici professionali e macchinari di nuova generazione per farmacie, centri estetici e studi medici. Formazione continua e supporto tecnico dedicato.</p>
-          <ul><li>Scopri i brand</li><li>Diventa rivenditore</li></ul>
-          <blockquote>«Oggi parlare di estetica professionale significa parlare di scienza, protocolli evoluti e integrazione delle competenze.»</blockquote>
+      <a
+        href="assets/docs/Progetto Aesthetics 4.0 di Marta Brentan.pdf"
+        class="btn mt-3 mb-4"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Scarica il progetto (PDF)
+      </a>
+
+      <section class="case-block">
+        <div class="case-grid case-grid-2">
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ax-laptop-estetica.webp"
+              alt="Il sito Estetica 4.0 su laptop"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ax-laptop-aesthetics.webp"
+              alt="Il sito Aesthetics 4.0 su laptop"
+              loading="lazy"
+            >
+          </figure>
         </div>
-        <div class="ae-vc b">
-          <p class="who">Aesthetics 4.0 · clienti</p>
-          <h3>La cura che meriti, dentro e fuori</h3>
-          <p class="sub">Il tuo spazio di bellezza e benessere a Moncalieri. Estetica di base e avanzata, proprietà terapeutiche marine e un team dedicato a prendersi cura di te ogni volta.</p>
-          <ul><li>Prenota</li><li>Scopri di più</li></ul>
-          <blockquote>«Le mani parlano di te prima ancora che tu apra bocca.»</blockquote>
+      </section>
+
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Progetto</p>
+        <h4 data-reveal>Obiettivi</h4>
+        <p class="case-lead" data-reveal>
+          Un ecosistema digitale composto da due siti web complementari, progettati per rispondere a obiettivi, contenuti e utenti differenti.
+        </p>
+        <div class="case-text">
+          <div>
+            <p>
+              Il progetto nasce con l’obiettivo di creare un ecosistema digitale composto da due siti web complementari, ciascuno con esigenze e target differenti.
+            </p>
+            <p>
+              Per Estetica 4.0, l’obiettivo era progettare una piattaforma dedicata alla distribuzione di cosmetici professionali e alla formazione, organizzando un elevato numero di contenuti e facilitando il contatto con farmacie, centri estetici e professionisti del settore.
+            </p>
+          </div>
+          <div>
+            <p>
+              Per Aesthetics 4.0, il focus era costruire la prima presenza digitale del centro estetico, valorizzandone i servizi e l’offerta di pacchetti e trattamenti attraverso un’esperienza di navigazione chiara e coinvolgente.
+            </p>
+            <p>
+              Entrambi i siti sono stati progettati su WordPress con Elementor Pro.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Progetto</p>
+        <h4 data-reveal>Mission e vision</h4>
+        <div class="ae-cards ae-cards-2">
+          <div class="ae-card">
+            <p class="ae-kicker">Distribuzione professionale</p>
+            <h5>Estetica 4.0</h5>
+            <p><strong>Mission</strong><br>Distribuire prodotti cosmetici professionali di eccellenza e accompagnare ogni distributore in un percorso di formazione continua, perché la qualità di un trattamento nasce dalla preparazione di chi lo applica.</p>
+            <p><strong>Vision</strong><br>Un’estetica professionale dove la scienza biomarina diventa strumento di crescita per chi lavora ogni giorno sulla pelle delle persone. Un futuro in cui farmacie, centri estetici e studi medici parlano lo stesso linguaggio ovvero quello della competenza, della ricerca e della responsabilità.</p>
+            <a
+              href="http://www.estetica40.pro"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              estetica40.pro
+            </a>
+          </div>
+          <div class="ae-card">
+            <p class="ae-kicker">Centro estetico</p>
+            <h5>Aesthetics 4.0</h5>
+            <p><strong>Mission</strong><br>Offrire trattamenti estetici professionali e personalizzati, dall’estetica di base a quella più avanzata, in un ambiente accogliente e competente, dove ogni cliente trova il percorso più adatto a sé grazie alla collaborazione con medici, fisioterapisti e nutrizionisti.</p>
+            <p><strong>Vision</strong><br>Un centro estetico dove la cura della persona è un atto consapevole, multidisciplinare e senza compromessi. Un luogo in cui bellezza e benessere non sono separati, ma due facce della stessa esperienza.</p>
+            <a
+              href="http://www.aesthetics40.it"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              aesthetics40.it
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Progetto</p>
+        <h4 data-reveal>Il mio ruolo</h4>
+        <div class="case-text">
+          <div>
+            <p>
+              Mi sono occupata dell’intero processo di progettazione e sviluppo dei due siti web, dalla definizione della struttura informativa fino all’implementazione in WordPress.
+            </p>
+            <p>
+              Nello specifico ho curato:
+            </p>
+            <ul class="ae-list">
+  <li>ricerca e analisi preliminare</li>
+  <li>architettura dell’informazione e sitemap</li>
+  <li>progettazione dell’interfaccia utente (UI)</li>
+  <li>scelta della palette colori e della tipografia</li>
+  <li>organizzazione dei contenuti e copywriting</li>
+  <li>sviluppo responsive su WordPress con Elementor Pro</li>
+  <li>implementazione di funzionalità personalizzate tramite CSS e JavaScript</li>
+  <li>ottimizzazione dell’esperienza di navigazione</li>
+</ul>
+          </div>
+          <div>
+            <p>
+              <strong>Strumenti utilizzati</strong>
+            </p>
+            <ul class="ae-chips">
+  <li>WordPress</li>
+  <li>Elementor Pro</li>
+  <li>Figma</li>
+  <li>Adobe Photoshop</li>
+  <li>Adobe Illustrator</li>
+  <li>WPForms</li>
+  <li>HTML e CSS</li>
+  <li>Agenti AI</li>
+  <li>JavaScript</li>
+</ul>
+            <p>
+              <em>Nota: i loghi dei due brand erano già stati realizzati prima del mio coinvolgimento nel progetto.</em>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Visual identity</p>
+        <h4 data-reveal>Color palette</h4>
+        <p class="case-lead" data-reveal>
+          Un linguaggio visivo coerente, sviluppato a partire dai loghi esistenti per dare forma all’identità digitale dei due brand.
+        </p>
+        <div class="case-text">
+          <div>
+            <p>
+              Per Estetica 4.0, dedicato alla distribuzione di cosmetici professionali e alla formazione, ho scelto una palette composta da blu navy e azzurro ghiaccio, tonalità associate a precisione, ricerca scientifica e competenza nel settore biomedicale. I colori contribuiscono a costruire un’identità autorevole e contemporanea, adatta al dialogo con professionisti come farmacie, centri estetici e studi medici.
+            </p>
+          </div>
+          <div>
+            <p>
+              Per Aesthetics 4.0, centro estetico specializzato in trattamenti avanzati, ho definito una palette basata su grigio antracite e azzurro elettrico, pensata per unire eleganza, tecnologia e accoglienza. Il contrasto tra tonalità neutre e accenti più vivaci permette di comunicare innovazione mantenendo un’immagine sofisticata e vicina all’esperienza del cliente.
+            </p>
+          </div>
+        </div>
+        <div class="case-grid case-grid-2">
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ae-palette-estetica.webp"
+              alt="Color palette Estetica 4.0"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ae-palette-aesthetics.webp"
+              alt="Color palette Aesthetics 4.0"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Visual identity</p>
+        <h4 data-reveal>Accessibilità</h4>
+        <div class="case-text">
+          <div>
+            <p>
+              La definizione delle palette cromatiche ha tenuto conto non solo dell’identità visiva dei due brand, ma anche della leggibilità e dell’accessibilità dei contenuti digitali.
+            </p>
+            <p>
+              Per entrambi i siti ho utilizzato combinazioni ad alto contrasto tra testo e sfondo, privilegiando colori sufficientemente distinti per garantire una lettura confortevole su desktop e dispositivi mobili.
+            </p>
+          </div>
+          <div>
+            <p>
+              L’attenzione all’accessibilità ha contribuito a costruire un’interfaccia non solo coerente dal punto di vista estetico, ma anche più efficace e utilizzabile da un pubblico eterogeneo.
+            </p>
+          </div>
+        </div>
+        <div class="ae-cards ae-cards-2">
+          <div class="ae-card ae-stat">
+            <p class="ae-kicker">Aesthetics 4.0</p>
+            <b>13.9:1</b>
+            <p><span class="sw" style="background:#2D2D2D"></span>TESTO #2D2D2D</p>
+            <p><span class="sw" style="background:#FAFAFA"></span>SFONDO #FAFAFA</p>
+          </div>
+          <div class="ae-card ae-stat">
+            <p class="ae-kicker">Estetica 4.0</p>
+            <b>11.53:1</b>
+            <p><span class="sw" style="background:#1A2A5E"></span>TESTO #1A2A5E</p>
+            <p><span class="sw" style="background:#E3EDF7"></span>SFONDO #E3EDF7</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Visual identity</p>
+        <h4 data-reveal>Tipografia</h4>
+        <div class="case-text">
+          <div>
+            <p>
+              Per Estetica 4.0 ho scelto l’abbinamento tra Cormorant Garamond e Inter, combinando una serif elegante e istituzionale con una sans serif più funzionale per testi e contenuti informativi. Questa combinazione permette di bilanciare il carattere premium del brand con la necessità di comunicare informazioni tecniche in modo chiaro.
+            </p>
+          </div>
+          <div>
+            <p>
+              Per Aesthetics 4.0 ho utilizzato Fraunces e Montserrat, un sistema che unisce un elemento più ricercato e contemporaneo a una tipografia essenziale e leggibile. La scelta riflette il posizionamento del centro estetico: un ambiente professionale che integra ricerca, tecnologia e attenzione alla persona.
+            </p>
+          </div>
+        </div>
+        <div class="ae-cards ae-cards-2">
+          <div class="ae-card ae-spec">
+            <p class="ae-kicker">Estetica 4.0</p>
+            <div class="pair">
+              <div><span class="aa cg">Aa</span><small>Cormorant Garamond</small></div>
+              <div><span class="aa in">Aa</span><small>Inter</small></div>
+            </div>
+          </div>
+          <div class="ae-card ae-spec">
+            <p class="ae-kicker">Aesthetics 4.0</p>
+            <div class="pair">
+              <div><span class="aa fr">Aa</span><small>Fraunces</small></div>
+              <div><span class="aa mo">Aa</span><small>Montserrat</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Visual identity</p>
+        <h4 data-reveal>Tone of voice</h4>
+        <p class="case-lead" data-reveal>
+          Il tono della comunicazione è stato definito per trasmettere competenza senza risultare distante, mantenendo un equilibrio tra autorevolezza scientifica e approccio umano.
+        </p>
+        <div class="case-text">
+          <div>
+            <p>
+              Per la comunicazione di Estetica 4.0 ho adottato un linguaggio più tecnico e informativo, rivolto principalmente a professionisti del settore. L’obiettivo era comunicare affidabilità, innovazione e valore dei prodotti attraverso contenuti chiari e orientati alla formazione.
+            </p>
+          </div>
+          <div>
+            <p>
+              Per Aesthetics 4.0 ho utilizzato invece un tono più emozionale e orientato all’esperienza, valorizzando il rapporto con il cliente e accompagnandolo nella scoperta dei trattamenti. Il linguaggio combina professionalità e vicinanza, con l’obiettivo di rendere accessibili servizi specialistici e tecnologie avanzate.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Discovery</p>
+        <h4 data-reveal>Benchmark analysis</h4>
+        <p class="case-lead" data-reveal>
+          Analisi del contesto, organizzazione dei contenuti e definizione dei percorsi di navigazione per supportare le esigenze di clienti finali e professionisti.
+        </p>
+        <div class="case-text">
+          <div>
+            <p>
+              Per progettare l’ecosistema digitale di Aesthetics 4.0 ed Estetica 4.0 ho analizzato realtà appartenenti al settore dell’estetica professionale e della cosmetica, con l’obiettivo di individuare modelli di organizzazione dei contenuti, strategie di comunicazione e soluzioni di navigazione efficaci.
+            </p>
+          </div>
+          <div>
+            <p>
+              L’analisi è stata suddivisa in tre categorie, ciascuna rappresentativa di un diverso approccio progettuale.
+            </p>
+          </div>
+        </div>
+        <div class="ae-cards ae-cards-3">
+          <div class="ae-card">
+            <h5>Siti vetrina B2C</h5>
+            <p>Per comprendere come presentare servizi e trattamenti in modo chiaro, valorizzando il brand e guidando l’utente verso la richiesta di informazioni o la prenotazione.</p>
+            <ul class="ae-chips">
+  <li>Beauty Inn</li>
+  <li>Beaire</li>
+  <li>Alfieri6</li>
+</ul>
+          </div>
+          <div class="ae-card">
+            <h5>Siti professionali B2B</h5>
+            <p>Per studiare come organizzare cataloghi, percorsi formativi e contenuti rivolti esclusivamente ai professionisti del settore.</p>
+            <ul class="ae-chips">
+  <li>Alfaparf Milano</li>
+  <li>René D’Essay</li>
+</ul>
+          </div>
+          <div class="ae-card">
+            <h5>Siti ibridi</h5>
+            <p>Per comprendere come gestire contemporaneamente clienti finali e partner professionali all’interno dello stesso ecosistema digitale, mantenendo percorsi chiari e differenziati per ciascun target.</p>
+            <ul class="ae-chips">
+  <li>Dermophisiologique</li>
+  <li>Eva Nueva</li>
+  <li>Revivre</li>
+</ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Discovery</p>
+        <h4 data-reveal>Target</h4>
+        <div class="case-text">
+          <div>
+            <p>
+              Per il sito Estetica 4.0, il target è composto da professionisti del settore estetico interessati alla distribuzione di prodotti cosmetici e tecnologie professionali. In questo caso l’utente non cerca un servizio estetico per sé, ma informazioni utili a valutare una possibile collaborazione commerciale.
+            </p>
+          </div>
+          <div>
+            <p>
+              Per il sito Aesthetics 4.0, invece, il target principale è rappresentato da persone interessate alla cura del proprio aspetto e al benessere della persona, alla ricerca di trattamenti estetici avanzati e soluzioni personalizzate.
+            </p>
+          </div>
+        </div>
+        <div class="case-grid case-grid-2">
+          <figure class="case-fig">
+            <img
+              class="case-img case-sm"
+              src="assets/img/ae-target-estetica.webp"
+              alt="Target di Estetica 4.0"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img case-sm"
+              src="assets/img/ae-target-aesthetics.webp"
+              alt="Target di Aesthetics 4.0"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Discovery</p>
+        <h4 data-reveal>User journey</h4>
+        <p class="ae-sub">Estetica 4.0</p>
+        <ul class="ae-steps">
+  <li>Scoperta dell’azienda</li>
+  <li class="arr" aria-hidden="true">→</li>
+  <li>Analisi dell’offerta</li>
+  <li class="arr" aria-hidden="true">→</li>
+  <li>Approfondimento dei prodotti e servizi</li>
+  <li class="arr" aria-hidden="true">→</li>
+  <li>Valutazione della collaborazione</li>
+  <li class="arr" aria-hidden="true">→</li>
+  <li>Richiesta di contatto</li>
+</ul>
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ae-journey-estetica.webp"
+              alt="User journey di Estetica 4.0"
+              loading="lazy"
+            >
+          </figure>
+        <p class="ae-sub">Aesthetics 4.0</p>
+        <ul class="ae-steps">
+  <li>Ricerca di un trattamento</li>
+  <li class="arr" aria-hidden="true">→</li>
+  <li>Scoperta del centro</li>
+  <li class="arr" aria-hidden="true">→</li>
+  <li>Approfondimento dei servizi</li>
+  <li class="arr" aria-hidden="true">→</li>
+  <li>Valutazione della soluzione più adatta</li>
+  <li class="arr" aria-hidden="true">→</li>
+  <li>Contatto / Prenotazione</li>
+</ul>
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ae-journey-aesthetics.webp"
+              alt="User journey di Aesthetics 4.0"
+              loading="lazy"
+            >
+          </figure>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>Discovery</p>
+        <h4 data-reveal>Sitemap</h4>
+        <p class="case-lead" data-reveal>
+          La sitemap dei due siti è stata progettata tenendo conto della differenza tra i due target di riferimento e degli obiettivi specifici delle attività.
+        </p>
+        <div class="case-text">
+          <div>
+            <p>
+              Per Estetica 4.0 la sitemap è stata sviluppata con un approccio più orientato al pubblico professionale B2B. La struttura del sito è stata pensata per comunicare chiaramente l’offerta e guidare l’utente verso un percorso personalizzato in base al mestiere, quindi se estetista, se farmacista o se medico, e dunque in base alle necessità.
+            </p>
+          </div>
+          <div>
+            <p>
+              Per il sito Aesthetics 4.0 è stata progettata un’architettura orientata alla conversione, con l’obiettivo di accompagnare l’utente nella scoperta dei trattamenti offerti e facilitare la richiesta di informazioni o la prenotazione di un appuntamento in centro estetico.
+            </p>
+          </div>
+        </div>
+        <div class="case-grid case-grid-2">
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ae-sitemap-estetica.webp"
+              alt="Sitemap di Estetica 4.0"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ae-sitemap-aesthetics.webp"
+              alt="Sitemap di Aesthetics 4.0"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>UI Design</p>
+        <h4 data-reveal>Griglia</h4>
+        <p class="case-lead" data-reveal>
+          Griglie, gerarchie visive e componenti modulari progettati per trasformare obiettivi strategici e bisogni degli utenti in un’esperienza digitale chiara, coerente e funzionale.
+        </p>
+        <div class="case-text">
+          <div>
+            <p>
+              Per entrambi i siti ho progettato un sistema visivo basato su griglie modulari, componenti riutilizzabili e una gerarchia tipografica coerente, in modo da garantire uniformità tra le diverse pagine e semplificare la futura gestione dei contenuti in WordPress.
+            </p>
+          </div>
+          <div>
+            <p>
+              L’interfaccia è stata progettata utilizzando un layout modulare responsive basato su Container e Flexbox di Elementor, con una larghezza massima del contenuto di 1250 px per garantire leggibilità e valorizzazione delle immagini sui monitor desktop.
+            </p>
+          </div>
+        </div>
+        <div class="ae-cards ae-cards-3">
+          <div class="ae-card ae-stat">
+            <p class="ae-kicker">Desktop</p>
+            <b>12</b>
+            <p>Colonne · Gutter 24 px</p>
+          </div>
+          <div class="ae-card ae-stat">
+            <p class="ae-kicker">Tablet</p>
+            <b>8</b>
+            <p>Colonne · Gutter 20 px</p>
+          </div>
+          <div class="ae-card ae-stat">
+            <p class="ae-kicker">Mobile</p>
+            <b>4</b>
+            <p>Colonne · Gutter 16 px</p>
+          </div>
+        </div>
+        
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>UI Design</p>
+        <h4 data-reveal>Gerarchia visiva</h4>
+        <div class="case-text">
+          <div>
+            <p>
+              La gerarchia visiva è stata progettata per guidare l’attenzione dell’utente verso le informazioni e le azioni più importanti.
+            </p>
+            <p>
+              Ho definito un sistema basato su:
+            </p>
+            <ul class="ae-list">
+  <li><strong>Titoli</strong> serif per evidenziare le sezioni principali e rafforzare il posizionamento premium del brand.</li>
+  <li><strong>Testi</strong> sans serif per garantire leggibilità nei contenuti informativi.</li>
+  <li><strong>Contrasti</strong> cromatici controllati per mettere in risalto elementi chiave senza compromettere l’eleganza dell’interfaccia.</li>
+  <li><strong>Ritmo verticale</strong> costante tra heading, paragrafi e componenti interattivi.</li>
+</ul>
+          </div>
+          <div>
+            <p>
+              L’obiettivo era creare un’esperienza visiva capace di accompagnare l’utente lungo il percorso di navigazione senza sovraccaricare l’interfaccia.
+            </p>
+            <p class="ae-note">Base Value: 16 · Scale: 1.25</p>
+          </div>
+        </div>
+        <div class="ae-scale">
+          <div><span class="t" style="font-size:61px">H1</span><small>61px · 3.812rem</small></div>
+          <div><span class="t" style="font-size:49px">H2</span><small>49px · 3.062rem</small></div>
+          <div><span class="t" style="font-size:39px">H3</span><small>39px · 2.438rem</small></div>
+          <div><span class="t body" style="font-size:16px">Body</span><small>16px · 1.000rem</small></div>
+          <div><span class="t body" style="font-size:13px">CTA</span><small>13px · 0.812rem</small></div>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>UI Design</p>
+        <h4 data-reveal>Componenti</h4>
+        <div class="case-text">
+          <div>
+            <p>
+              Per garantire coerenza tra le numerose pagine dei due siti ho progettato un piccolo design system modulare, implementato successivamente in Elementor attraverso Global Colors, Global Fonts e template riutilizzabili.
+            </p>
+          </div>
+          <div>
+            <p>
+              L’utilizzo di componenti riutilizzabili ha permesso di mantenere coerenza visiva, velocizzare lo sviluppo e facilitare eventuali aggiornamenti futuri.
+            </p>
+          </div>
+        </div>
+        <div class="ae-cards ae-cards-2">
+          <div class="ae-card">
+            <p class="ae-kicker">Estetica 4.0</p>
+            <h5>Componenti principali</h5>
+            <ul class="ae-list">
+  <li>Hero section con titolo, descrizione e CTA primaria</li>
+  <li>Card 3 clienti per indirizzare immediatamente l’utente</li>
+  <li>Card Brand con immagine, titolo e breve descrizione</li>
+  <li>Sezioni informative a due colonne testo + immagine</li>
+  <li>Call to action finali con focus sul contatto e sulla richiesta di distribuzione</li>
+  <li>Form dinamici su WPForms con contenuti differenziati in base al target</li>
+</ul>
+          </div>
+          <div class="ae-card">
+            <p class="ae-kicker">Aesthetics 4.0</p>
+            <h5>Componenti principali</h5>
+            <ul class="ae-list">
+  <li>Hero section con titolo, descrizione e CTA primaria</li>
+  <li>Card trattamenti e pacchetti con immagine, titolo e breve descrizione</li>
+  <li>Sezioni informative a due colonne testo + immagine</li>
+  <li>Banner promozionali per collegare i due siti dell’ecosistema</li>
+  <li>Call to action finali con focus sul contatto o sulla scoperta dell’altro sito</li>
+</ul>
+          </div>
+        </div>
+        <div class="case-grid case-grid-3">
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-e-percorso.webp"
+              alt="Estetica 4.0: card per medico, centro estetico e farmacia"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-e-linee.webp"
+              alt="Estetica 4.0: card brand con le linee viso"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-e-formazione.webp"
+              alt="Estetica 4.0: la sezione Formazione"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+        <div class="case-grid case-grid-3">
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-a-hero.webp"
+              alt="Aesthetics 4.0: hero della homepage"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-a-percorso.webp"
+              alt="Aesthetics 4.0: card trattamenti"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-a-team.webp"
+              alt="Aesthetics 4.0: sezione a due colonne con il team"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>UI Design</p>
+        <h4 data-reveal>Product design</h4>
+        <div class="case-text">
+          <div>
+            <p>
+              Oltre alle pagine istituzionali e ai percorsi di navigazione, il progetto ha incluso la progettazione di un sistema di presentazione per prodotti cosmetici e macchinari professionali, pensato per il sito Estetica 4.0.
+            </p>
+            <p>
+              L’obiettivo non era creare un e-commerce tradizionale, ma costruire un’esperienza di consultazione capace di supportare il processo decisionale di un pubblico professionale composto da estetiste, farmacie e operatori del settore medical beauty.
+            </p>
+            <p>
+              L’assenza dei prezzi è stata una scelta strategica: il focus dell’interfaccia è stato spostato dalla vendita immediata alla valorizzazione delle caratteristiche professionali del prodotto e alla generazione di contatti commerciali qualificati.
+            </p>
+          </div>
+          <div>
+            <p>
+              Per garantire uniformità e facilità di scansione ho progettato un sistema di card modulari composto da:
+            </p>
+            <ul class="ae-list">
+  <li>immagine prodotto ad alta leggibilità;</li>
+  <li>nome del prodotto o del macchinario;</li>
+  <li>breve descrizione funzionale;</li>
+  <li>categoria o area di utilizzo;</li>
+  <li>call to action per richiedere informazioni o approfondimenti.</li>
+</ul>
+          </div>
+        </div>
+        <div class="case-grid case-grid-2">
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-e-prodotti.webp"
+              alt="Estetica 4.0: le card dei prodotti"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-e-macchinari.webp"
+              alt="Estetica 4.0: il catalogo dei macchinari"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <p class="ae-kicker" data-reveal>UI Design</p>
+        <h4 data-reveal>Call to action</h4>
+        <p class="case-lead" data-reveal>
+          Le call to action sono state progettate come elementi centrali dell’esperienza utente, con l’obiettivo di guidare sia il cliente finale sia il professionista verso il contatto corretto.
+        </p>
+        <div class="ae-cards ae-cards-2">
+          <div class="ae-card">
+            <p class="ae-kicker">Estetica 4.0</p>
+            <ul class="ae-list">
+  <li>richiesta distribuzione;</li>
+  <li>richiesta formazione;</li>
+  <li>informazioni commerciali.</li>
+</ul>
+          </div>
+          <div class="ae-card">
+            <p class="ae-kicker">Aesthetics 4.0</p>
+            <ul class="ae-list">
+  <li>prenotare un appuntamento;</li>
+  <li>richiedere informazioni sui trattamenti e pacchetti;</li>
+  <li>entrare in contatto con il centro anche tramite la scoperta dell’altro sito.</li>
+</ul>
+          </div>
+        </div>
+        <div class="case-text">
+          <p>
+            La distribuzione delle CTA lungo le pagine evita di concentrare la conversione solo nel footer e consente all’utente di agire nel momento in cui raggiunge le informazioni rilevanti.
+          </p>
+        </div>
+        <div class="case-grid case-grid-3">
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-e-cta.webp"
+              alt="Estetica 4.0: call to action finale"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-e-form.webp"
+              alt="Estetica 4.0: form di contatto"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-shot"
+              src="assets/img/ax-a-appuntamento.webp"
+              alt="Aesthetics 4.0: Prendi un appuntamento"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-block">
+        <h4 data-reveal>Responsive</h4>
+        <div class="case-text">
+          <p>
+            Ho reso i due siti navigabili anche da mobile.
+          </p>
+        </div>
+        <div class="ae-phones">
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ax-phone-estetica.webp"
+              alt="Estetica 4.0 su smartphone"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img"
+              src="assets/img/ax-phone-aesthetics.webp"
+              alt="Aesthetics 4.0 su smartphone"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+        <p class="ae-sub">Estetica 4.0</p>
+        <div class="case-grid case-grid-3">
+          <figure class="case-fig">
+            <img
+              class="case-img ae-strip"
+              src="assets/img/am-e1.webp"
+              alt="Estetica 4.0 su telefono, schermata 1"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-strip"
+              src="assets/img/am-e2.webp"
+              alt="Estetica 4.0 su telefono, schermata 2"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-strip"
+              src="assets/img/am-e3.webp"
+              alt="Estetica 4.0 su telefono, schermata 3"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+        <p class="ae-sub">Aesthetics 4.0</p>
+        <div class="case-grid case-grid-3">
+          <figure class="case-fig">
+            <img
+              class="case-img ae-strip"
+              src="assets/img/am-a1.webp"
+              alt="Aesthetics 4.0 su telefono, schermata 1"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-strip"
+              src="assets/img/am-a2.webp"
+              alt="Aesthetics 4.0 su telefono, schermata 2"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="case-fig">
+            <img
+              class="case-img ae-strip"
+              src="assets/img/am-a3.webp"
+              alt="Aesthetics 4.0 su telefono, schermata 3"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-more">
+        <h2 class="section-title" data-reveal>Altri progetti</h2>
+        <div class="case-more-list">
+          <a href="ecodream.html" class="project-card">
+            <img src="assets/img/sfondo-discovery.webp" alt="Prototipo della homepage Ecodream" loading="lazy">
+            <div class="project-content">
+              <h5>Redesign Ecodream</h5>
+              <p>UX/UI Redesign di Ecodream: e-commerce sostenibile</p>
+              <p class="text-muted small">personale</p>
+            </div>
+          </a>
+          <a href="limes.html" class="project-card">
+            <img src="assets/img/lm-hero.webp" alt="Mockup del redesign di Limes" loading="lazy">
+            <div class="project-content">
+              <h5>Limes Redesign</h5>
+              <p>UX/UI Redesign di Limes: rivista italiana di geopolitica (anche digitale)</p>
+              <p class="text-muted small">personale</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
     </div>
-  </section>
-
-  <section class="ae-band navy">
-    <div class="ae-wrap">
-      <p class="ae-lab" data-reveal>05 · Dietro le quinte</p><h2 class="ae-h" data-reveal style="--d:100ms">Prima di costruire</h2>
-      <div class="ae-txt" data-reveal style="--d:200ms"><p>Persone di riferimento e un percorso utente per ciascun sito.</p></div>
-      <div class="ae-stack" data-reveal-group><div class="ae-2"><figure class="ae-fig "></figure></div>
-        <figure class="ae-fig "><img src="assets/img/ae-journey-estetica.webp" alt="User journey di Estetica 4.0" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/ae-journey-aesthetics.webp" alt="User journey di Aesthetics 4.0" loading="lazy"></figure></div>
-    </div>
-  </section>
-  <section class="ae-band">
-    <div class="ae-wrap">
-      <p class="ae-lab" data-reveal>06 · Struttura e UI</p><h2 class="ae-h" data-reveal style="--d:100ms">Mappe, griglia, componenti</h2>
-      <div class="ae-txt" data-reveal style="--d:200ms"><p>Estetica 4.0 guida per mestiere, Aesthetics 4.0 resta essenziale. Componenti modulari in Elementor, così il cliente aggiorna i contenuti da solo.</p></div>
-      <div class="ae-2" data-reveal-group><figure class="ae-fig "><img src="assets/img/ae-sitemap-estetica.webp" alt="Sitemap di Estetica 4.0" loading="lazy"></figure><figure class="ae-fig "><img src="assets/img/ae-sitemap-aesthetics.webp" alt="Sitemap di Aesthetics 4.0" loading="lazy"></figure></div>
-      <div class="ae-stack" data-reveal-group style="margin-top:1.5rem"><figure class="ae-fig "><img src="assets/img/ae-griglia.webp" alt="La griglia su desktop e mobile" loading="lazy"></figure></div>
-    </div>
-  </section>
-
-
-  <section class="ae-wrap" style="padding-top:4rem">
-    <dl class="ae-credits" data-reveal-group>
-  <div><dt>Progetto</dt><dd>Due siti web nuovi</dd></div>
-  <div><dt>Clienti</dt><dd>Aesthetics 4.0 · Estetica 4.0</dd></div>
-  <div><dt>Il mio ruolo</dt><dd>Ricerca, UX/UI, copy, sviluppo</dd></div>
-  <div><dt>Strumenti</dt><dd>WordPress · Elementor Pro · CSS · JS</dd></div>
-</dl>
-    <div class="ae-btns" data-reveal style="justify-content:center;margin:2.5rem 0 4.5rem"><a class="ae-btn" href="http://www.aesthetics40.it" target="_blank" rel="noopener noreferrer">aesthetics40.it <i class="bi bi-arrow-up-right"></i></a><a class="ae-btn" href="http://www.estetica40.pro" target="_blank" rel="noopener noreferrer">estetica40.pro <i class="bi bi-arrow-up-right"></i></a><a class="ae-btn line" href="assets/docs/Progetto Aesthetics 4.0 di Marta Brentan.pdf">Progetto (PDF) <i class="bi bi-download"></i></a></div>
-  </section>
-
-  </div><!-- /ae -->
-
-  <!-- ALTRI PROGETTI -->
-  <section class="more-projects">
-    <div class="container text-center">
-      <h2 class="section-title mb-5" data-reveal>Altri progetti</h2>
-      <div class="more-list" data-reveal-group>
-        <a href="ecodream.html" class="project-card"><img src="assets/img/sfondo-discovery.webp" alt="Prototipo della homepage Ecodream" loading="lazy"><div class="project-content"><h5>Ecodream Design</h5><p>Wireframe, test, UI e accessibilità</p><p class="text-muted small">start2impact</p></div></a>
-        <a href="limes.html" class="project-card"><img src="assets/img/lm-hero.webp" alt="Mockup del redesign di Limes" loading="lazy"><div class="project-content"><h5>Limes Redesign</h5><p>Brand identity e UX/UI di una rivista</p><p class="text-muted small">start2impact</p></div></a>
-      </div>
-    </div>
-  </section>
-
+  </main>
 
   <section class="contact-cta py-5">
 
@@ -428,9 +1153,6 @@
     </div>
 
   </section>
-
-</main>
-
 
 
 <!-- SCROLL UP MOBILE -->

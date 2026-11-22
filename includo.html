@@ -15,6 +15,33 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/scss/main.css">
+<style>
+  /* immagini della griglia sempre allineate sulla stessa riga */
+  .case-grid > .case-fig,
+  .case-grid > .case-fig + .case-fig {
+    margin: 0;
+  }
+
+  /* più aria tra testo e immagini */
+  .case-block .case-text + .case-grid,
+  .case-block .case-text + .case-fig {
+    margin-top: 2.5rem;
+  }
+
+  /* smartphone allineato a destra, che esce dal bordo dello schermo */
+  .case { overflow-x: clip; }
+  .case-fig-phone {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: calc(50% - 50vw);
+  }
+  .case-fig-phone .case-img {
+    width: 460px;
+    max-width: 60vw;
+    height: auto;
+    margin-right: -80px;
+  }
+</style>
 </head>
 
 
@@ -295,7 +322,7 @@
           </div>
         </div>
        
-          <figure class="case-fig">
+          <figure class="case-fig case-fig-phone">
             <img
               class="case-img case-sm"
               src="assets/img/app-includo.webp"

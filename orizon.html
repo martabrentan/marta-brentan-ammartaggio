@@ -127,8 +127,13 @@
     .oz-crop-iphone { aspect-ratio: 2381 / 2653; }
     .oz-crop-iphone img { width: 188.99%; left: -50.52%; top: -7.16%; }
 
-    /* paesaggio Patagonia (2400 x 1192): 
-  
+    /* paesaggio Patagonia (2400 x 1192) */
+    .oz-land img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     /* ---------- hero ---------- */
 
     .oz-hero {
@@ -379,6 +384,15 @@
 
     .oz-land {
       margin-top: 4rem;
+    }
+
+    @media (max-width: 576px) {
+      .oz-land { margin-top: 2.5rem; }
+      .oz-land img {
+        height: 260px;
+        object-fit: cover;
+        object-position: center;
+      }
     }
 
 
@@ -640,9 +654,7 @@
         <li>Consapevole.</li>
       </ul>
 
-      <p class="oz-voice-note" data-reveal>
-        Né scanzonata né istituzionale: una terza via.
-      </p>
+   
 
     </div>
 
@@ -745,7 +757,7 @@
 
     </div>
 
-    
+    <figure class="oz-land">
       <img
         src="assets/img/sfondo-progetto-orizon.webp"
         alt="Montagne della Patagonia al tramonto, sopra un lago"
@@ -767,12 +779,12 @@
 
       <div class="oz-more-list" data-reveal-group>
 
-        <a href="legalescuola.html" class="project-card">
-          <img src="assets/img/sfondo-legalescuola.webp" alt="Mockup Legale Scuola Brand Guidelines" loading="lazy">
+        <a href="biokinesis.html" class="project-card">
+          <img src="assets/img/sfondo-biokinesis.webp" alt="Mockup Biokinesis" loading="lazy">
           <div class="project-content">
-            <h5>Legale Scuola Brand Guidelines</h5>
-            <p>Brand Identity per uno studio legale</p>
-            <p class="text-muted small">studio</p>
+            <h5>Biokinesis Brand Guidelines</h5>
+            <p>Brand Identity per uno studio di pilates, fisioterapia e nutrizione</p>
+            <p class="text-muted small">professionale</p>
           </div>
         </a>
 
@@ -781,7 +793,7 @@
           <div class="project-content">
             <h5>Includo Brand Guidelines</h5>
             <p>Brand Identity per un ente di formazione</p>
-            <p class="text-muted small">start2impact</p>
+            <p class="text-muted small">personale</p>
           </div>
         </a>
 

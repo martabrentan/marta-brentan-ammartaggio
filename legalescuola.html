@@ -81,7 +81,7 @@
     .ls figure { margin: 0; }
 
     .ls h1, .ls h2, .ls h3, .ls h4, .ls h5 { color: var(--ls-dark); }
-    .ls .ls-title { color: #fff; }
+    .ls .ls-title { color: var(--ls-dark); }
     .ls .ls-end .ls-quote { color: #fff; }
     .ls .section-title { color: var(--ls-dark); }
 
@@ -89,8 +89,8 @@
 
     .ls-heading {
       font-family: var(--ls-head);
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
-      line-height: 1;
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
+      line-height: 1.1;
       letter-spacing: -.02em;
       font-weight: 700;
       margin: 0 0 2.5rem;
@@ -98,16 +98,16 @@
 
     .ls-text {
       font-family: var(--ls-body);
-      font-size: 1.3rem;
-      line-height: 1.5;
-      max-width: 34ch !important;
+      font-size: .95rem;
+      line-height: 1.55;
+      max-width: 52ch !important;
       margin: 0;
     }
 
     .ls-caption {
       font-family: var(--ls-body);
-      font-size: 1.05rem;
-      line-height: 1.4;
+      font-size: .9rem;
+      line-height: 1.5;
       margin: 1.25rem 0 0;
       opacity: .75;
     }
@@ -124,30 +124,30 @@
     /* ---------- hero ---------- */
 
     .ls-hero {
-      background: var(--ls-green);
+      background: #fff;
       color: var(--ls-dark);
       padding: 4.5rem 0 5.5rem;
     }
 
     .ls-breadcrumb {
       font-size: .85rem;
-      color:  #fff;
+      color: #777;
       margin-bottom: 3rem;
     }
 
     .ls-breadcrumb a { color: var(--ls-dark); }
-    .ls-breadcrumb a:hover { color: #fff; }
+    .ls-breadcrumb a:hover { color: #007A78; }
 
     .ls-hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
       gap: 4rem;
       align-items: center;
     }
 
     .ls-title {
       font-family: var(--ls-head);
-      font-size: clamp(3.4rem, 8.5vw, 7.5rem);
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
       line-height: .92;
       letter-spacing: -.03em;
       font-weight: 700;
@@ -157,16 +157,16 @@
 
     .ls-lead {
       font-family: var(--ls-body);
-      font-size: clamp(1.4rem, 2.2vw, 1.9rem);
-      line-height: 1.3;
-      max-width: 26ch !important;
+      font-size: 1.15rem;
+      line-height: 1.5;
+      max-width: 34ch !important;
       margin: 0 0 2.5rem;
     }
 
     .ls-meta {
       margin: 0;
       padding-top: 1.75rem;
-      border-top: 1px solid  #fff;
+      border-top: 1px solid #DCDAD5;
       display: grid;
       gap: 1.1rem;
       max-width: 420px;
@@ -175,16 +175,17 @@
     .ls-meta dt {
       font-size: .85rem;
       font-weight: 400;
-      color:  #fff;
+      color: #777;
     }
 
     .ls-meta dd {
       margin: .15rem 0 0;
-      font-size: 1rem;
+      font-size: .95rem;
+      line-height: 1.55;
     }
 
     .ls-hero-logo {
-      width: min(560px, 100%);
+      width: min(760px, 100%);
       height: auto;
       display: block;
       margin-left: auto;
@@ -267,7 +268,7 @@
     .ls-swatch b {
       display: block;
       font-family: var(--ls-body);
-      font-size: 1rem;
+      font-size: .9rem;
       font-weight: 700;
     }
 
@@ -307,8 +308,8 @@
 
     .ls-specimen .body {
       font-family: var(--ls-body);
-      font-size: 1.25rem;
-      line-height: 1.5;
+      font-size: .95rem;
+      line-height: 1.55;
       max-width: 52ch !important;
       margin: 0;
     }
@@ -401,7 +402,7 @@
         gap: 2.5rem;
       }
 
-      .ls-hero-logo { width: min(340px, 80%); margin: 0; }
+      .ls-hero-logo { width: min(420px, 100%); margin: 0; }
 
       .ls-swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
@@ -612,7 +613,7 @@
 
     <div class="container">
 
-      <h2 class="ls-heading" data-reveal>Blu, grigio e verde.</h2>
+      <h2 class="ls-heading" data-reveal>Color palette.</h2>
 
       <ul class="ls-swatches" data-reveal-group>
 
@@ -644,7 +645,8 @@
       </ul>
 
       <p class="ls-text" data-reveal>
-        Giustizia, equilibrio, integrità e autorità. Il verde è la nota meno scontata: armonia e crescita.
+        Giustizia, equilibrio, integrità e autorità. 
+        
       </p>
 
     </div>
@@ -774,16 +776,16 @@
           <div class="project-content">
             <h5>Includo Brand Guidelines</h5>
             <p>Brand Identity per un ente di formazione</p>
-            <p class="text-muted small">start2impact</p>
+            <p class="text-muted small">personale</p>
           </div>
         </a>
 
-        <a href="limes.html" class="project-card">
-          <img src="assets/img/sfondo-progetto-finale.webp" alt="Progetto finale UX UI: redesign Limes" loading="lazy">
+        <a href="biokinesis.html" class="project-card">
+          <img src="assets/img/sfondo-biokinesis.webp" alt="Progetto Biokinesis" loading="lazy">
           <div class="project-content">
-            <h5>Redesign Limes</h5>
-            <p>UX/UI Redesign di Limes: rivista italiana di geopolitica (anche digitale)</p>
-            <p class="text-muted small">start2impact</p>
+            <h5>Biokinesis Brand Guidelines</h5>
+            <p>Brand Identity per uno studio di pilates, fisioterapia e nutrizione</p>
+            <p class="text-muted small">professionale</p>
           </div>
         </a>
 

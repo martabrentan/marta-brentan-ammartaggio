@@ -226,68 +226,47 @@ p {
   display: none;
 }
 
+/* Card progetto (Selected projects) */
 .project-card {
-  flex: 0 0 clamp(320px, 28vw, 420px);
-  width: clamp(320px, 28vw, 420px);
-  padding: 1.4rem;
-  border-radius: 20px;
-  background: #FAF9F6;
+  flex: 0 0 clamp(320px, 30vw, 460px);
+  width: clamp(320px, 30vw, 460px);
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
   text-align: left;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: box-shadow 0.3s ease;
+  scroll-snap-align: start;
 }
 .project-card img {
+  display: block;
   width: 100%;
-  height: 340px;
+  aspect-ratio: 4/3;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 16px;
-  margin-bottom: 1.2rem;
-  transition: transform 0.5s ease;
+  border-radius: 14px;
+  margin-bottom: 0.9rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .project-card h5 {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
+  margin: 0 0 0.25rem;
 }
 .project-card p {
-  font-size: 0.95rem;
-  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  margin: 0 0 0.2rem;
   max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
 }
 .project-card::after {
-  content: "→";
-  position: absolute;
-  top: 2.2rem;
-  right: 2.2rem;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
-  border-radius: 50%;
-  font-size: 1rem;
-  color: #007A78;
-  opacity: 0;
-  transform: translateY(8px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-  transition: 0.3s ease;
-}
-.project-card:hover {
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 .project-card:hover img {
-  transform: scale(1.03);
-}
-.project-card:hover::after {
-  opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 576px) {
@@ -296,11 +275,45 @@ p {
     padding: 1rem 0.5rem 2rem;
   }
   .project-card {
-    flex: 0 0 250px;
-    width: 250px;
+    flex: 0 0 82vw;
+    width: 82vw;
   }
-  .project-card img {
-    height: 240px;
+}
+/* Hover stile paperpaper: la card non si muove, l'immagine cambia mentre ci passi sopra (JS in motion.js) */
+.project-card .project-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  margin-bottom: 0.9rem;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #eae8e2;
+}
+
+.project-card .project-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.project-card .project-media img.is-active {
+  opacity: 1;
+}
+
+.project-card[data-hover]:hover img {
+  transform: none;
+  box-shadow: none;
+} /* solo le card con cambio immagine restano ferme; le altre si sollevano */
+@media (prefers-reduced-motion: reduce) {
+  .project-card .project-media img {
+    transition: none;
   }
 }
 /* ==========================================================
@@ -1484,7 +1497,6 @@ p {
     transform: translateY(-6px) rotate(1deg);
   }
 }
-/* 4. GRANA DI CARTA: effetto stampa, non schermo */
 body::before {
   content: "";
   position: fixed;
@@ -1494,18 +1506,6 @@ body::before {
   opacity: 0.05;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-}
-
-/* Card progetto: copertina orizzontale intera */
-.project-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1252/770;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center top;
-     object-position: center top;
 }
 
 /* rispetto per chi non vuole movimento */

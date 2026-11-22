@@ -1,5 +1,42 @@
 /* MOTION — metti <script src="assets/js/motion.js" defer></script> prima di </body>
    e aggiungi in <head>:  <script>document.documentElement.classList.add('js')</script> */
+/* HOVER CARD PROGETTI: <a class="project-card" data-hover="img-2.webp, img-3.webp">
+   all'hover le immagini si alternano ogni 0,9 s; all'uscita torna la copertina */
+(function () {
+  document.querySelectorAll('.project-card[data-hover]').forEach(function (card) {
+    var cover = card.querySelector('img');
+    if (!cover) return;
+    var extra = card.dataset.hover.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+    if (!extra.length) return;
+
+    var media = document.createElement('div');
+    media.className = 'project-media';
+    cover.parentNode.insertBefore(media, cover);
+    media.appendChild(cover);
+    cover.classList.add('is-active');
+
+    var imgs = [cover];
+    extra.forEach(function (src) {
+      var im = document.createElement('img');
+      im.src = src; im.alt = ''; im.loading = 'lazy';
+      media.appendChild(im); imgs.push(im);
+    });
+
+    var i = 0, timer = null;
+    function show(n) {
+      imgs.forEach(function (im, k) { im.classList.toggle('is-active', k === n); });
+      i = n;
+    }
+    card.addEventListener('mouseenter', function () {
+      show(1 % imgs.length);
+      timer = setInterval(function () { show((i + 1) % imgs.length); }, 900);
+    });
+    card.addEventListener('mouseleave', function () {
+      clearInterval(timer); show(0);
+    });
+  });
+})();
+
 (function () {
   window.__motion = true;   // dice alla pagina che lo script è partito
   var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

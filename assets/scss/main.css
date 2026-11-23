@@ -245,8 +245,7 @@ p {
   width: 100%;
   aspect-ratio: 4/3;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 14px;
   margin-bottom: 0.9rem;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -296,8 +295,7 @@ p {
   width: 100%;
   height: 100%;
   margin: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 0;
   opacity: 0;
   transition: opacity 0.35s ease;
@@ -351,8 +349,7 @@ p {
 .works-item-media img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
@@ -427,10 +424,8 @@ p {
   z-index: -2;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.6s ease;
 }
 
@@ -737,8 +732,7 @@ p {
 .hl-img-cursor img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hl-img-cursor.visible {
   opacity: 1;
@@ -789,8 +783,7 @@ p {
   .hl-mob-img img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .hl-item.mob-active .hl-title {
     color: #007A78;
@@ -834,8 +827,7 @@ p {
 .about .about-img {
   width: 340px;
   height: 340px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* ==========================================================
@@ -863,8 +855,7 @@ p {
 .hl-lightbox-img {
   max-width: 92vw;
   max-height: 90vh;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 4px;
   cursor: zoom-in;
   opacity: 0;
@@ -936,8 +927,7 @@ p {
 .skills-grid img {
   width: 55px;
   height: 55px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   padding: 4px;
   background: white;
   border-radius: 10px;
@@ -1143,8 +1133,7 @@ p {
   width: 100%;
   height: auto;
   max-height: 380px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .post-content p {
@@ -1196,8 +1185,7 @@ p {
 .blog-thumb {
   width: 260px;
   height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blog-text h3 {
@@ -1288,8 +1276,7 @@ p {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
@@ -1584,10 +1571,8 @@ p {
 }
 
 .case-text {
-  -moz-columns: 2;
-       columns: 2;
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
+  columns: 2;
+  column-gap: 3rem;
 }
 
 .case-text p {
@@ -1595,8 +1580,7 @@ p {
   line-height: 1.55;
   max-width: none;
   margin: 0 0 1rem;
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
+  break-inside: avoid;
 }
 
 .case-text p:last-child {
@@ -1669,8 +1653,7 @@ p {
     grid-template-columns: 1fr;
   }
   .case-text {
-    -moz-columns: 1;
-         columns: 1;
+    columns: 1;
   }
   .case-more {
     margin-top: 3rem;
@@ -1679,31 +1662,26 @@ p {
 /* immagini ritagliate in 4:3 o in verticale, per griglie ordinate */
 .case-cover {
   aspect-ratio: 4/3;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .case-tall {
   aspect-ratio: 3/4;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .case-wide {
   aspect-ratio: 21/9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .case-right {
-  -o-object-position: right center;
-     object-position: right center;
+  object-position: right center;
 }
 
 .case-white {
   background: #ffffff;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 /* video (es. creazione del logo) */
@@ -1850,8 +1828,7 @@ body::before {
   height: auto;
   max-width: none;
   aspect-ratio: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 0;
   box-shadow: none;
   filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.18)); /* segue il contorno della figura */
